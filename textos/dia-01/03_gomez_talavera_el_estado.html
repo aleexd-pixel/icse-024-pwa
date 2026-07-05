@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>¿El Estado somos todos? La complejidad de un concepto — ICSE 024</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+
+      font-size: 18px;
+
+      line-height: 1.75;
+
+      padding: 0;
+
+    }
+
+
+
+    .page {
+
+      max-width: 680px;
+
+      margin: 0 auto;
+
+      padding: 4rem 2rem 6rem;
+
+    }
+
+
+
+    .metadatos {
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      padding: 2.5rem 2rem;
+
+      margin-bottom: 4rem;
+
+      text-align: center;
+
+    }
+
+
+
+    .metadatos .titulo-libro {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.15em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1.5rem;
+
+    }
+
+
+
+    .metadatos .titulo-texto {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 2em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      line-height: 1.25;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .metadatos .autor {
+
+      font-size: 1.05em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1rem;
+
+      font-style: italic;
+
+    }
+
+
+
+    .metadatos .info {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.78em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 0.3rem;
+
+    }
+
+
+
+    .metadatos .badge {
+
+      display: inline-block;
+
+      margin-top: 1.2rem;
+
+      padding: 0.35rem 1.2rem;
+
+      background: var(--heading);
+
+      color: #1a1a1a;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.72em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido p {
+
+      text-indent: 1.5em;
+
+      margin-bottom: 0;
+
+      text-align: justify;
+
+      hyphens: auto;
+
+    }
+
+
+
+    .contenido p + p {
+
+      margin-top: 0.9em;
+
+    }
+
+
+
+    .contenido p:first-of-type {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido p.first-of-section {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido h2 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.5em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      margin-top: 3rem;
+
+      margin-bottom: 1rem;
+
+      padding-bottom: 0.5rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido h3 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.2em;
+
+      font-weight: 600;
+
+      font-style: italic;
+
+      color: var(--heading);
+
+      margin-top: 2.5rem;
+
+      margin-bottom: 0.8rem;
+
+    }
+
+
+
+    .contenido h4 {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.95em;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+      color: var(--text-muted);
+
+      margin-top: 2rem;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .contenido blockquote {
+
+      margin: 2rem 0 2rem 1.5rem;
+
+      padding: 1rem 1.5rem;
+
+      border-left: 3px solid var(--accent);
+
+      font-style: italic;
+
+      color: var(--text-muted);
+
+      background: var(--surface);
+
+      font-size: 0.95em;
+
+    }
+
+
+
+    .contenido blockquote p {
+
+      text-indent: 0;
+
+      text-align: left;
+
+    }
+
+
+
+    .contenido ul,
+
+    .contenido ol {
+
+      margin: 1.2rem 0 1.2rem 2rem;
+
+    }
+
+
+
+    .contenido li {
+
+      margin-bottom: 0.5em;
+
+      padding-left: 0.3em;
+
+    }
+
+
+
+    .contenido table {
+
+      width: 100%;
+
+      border-collapse: collapse;
+
+      margin: 2rem 0;
+
+      font-size: 0.9em;
+
+    }
+
+
+
+    .contenido table th {
+
+      background: var(--surface);
+
+      color: var(--heading);
+
+      padding: 0.7rem 1rem;
+
+      text-align: left;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-weight: 500;
+
+      font-size: 0.85em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.03em;
+
+    border-bottom: 2px solid var(--accent); }
+
+
+
+    .contenido table td {
+
+      padding: 0.6rem 1rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido table tr:nth-child(even) {
+
+      background: var(--surface);
+
+    }
+
+
+
+    .contenido .ilegible {
+
+      color: var(--red-soft);
+
+      font-weight: 600;
+
+      background: #3a2020;
+
+      padding: 0.1em 0.3em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido .nota-num {
+
+      font-size: 0.75em;
+
+      vertical-align: super;
+
+      color: var(--accent);
+
+      font-weight: 600;
+
+    }
+
+
+
+    .notas {
+
+      margin-top: 4rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+
+    .notas h2 {
+
+      font-size: 1.1em;
+
+      margin-bottom: 1rem;
+
+      border-bottom: none;
+
+      padding-bottom: 0;
+
+    }
+
+
+
+    .notas p {
+
+      font-size: 0.85em;
+
+      text-indent: 0;
+
+      margin-bottom: 0.6em;
+
+      color: var(--text-muted);
+
+      text-align: left;
+
+    }
+
+
+
+    .separador {
+
+      text-align: center;
+
+      margin: 3rem 0;
+
+      color: var(--border);
+
+      font-size: 1.2em;
+
+      letter-spacing: 0.5em;
+
+    }
+
+
+
+    footer {
+
+      margin-top: 5rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+      text-align: center;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      color: var(--text-muted);
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+    }
+
+
+
+    @media print {
+
+      body { background: #fff; font-size: 12pt; }
+
+      .page { padding: 0; max-width: 100%; }
+
+      .metadatos { break-after: page; border: none; background: none; }
+
+      .contenido h2 { break-after: avoid; }
+
+      .contenido h3 { break-after: avoid; }
+
+      blockquote { break-inside: avoid; }
+
+      table { break-inside: avoid; }
+
+      footer { break-before: avoid; }
+
+    }
+
+
+
+    @media (max-width: 700px) {
+
+      .page { padding: 2rem 1.2rem 4rem; }
+
+      body { font-size: 16px; }
+
+      .metadatos .titulo-texto { font-size: 1.6em; }
+
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="../../css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="metadatos">
+
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+
+      <div class="titulo-texto">¿El Estado somos todos? La complejidad de un concepto</div>
+
+      <div class="autor">Patricio Gómez Talavera</div>
+
+      <div class="info">Páginas originales: 31–38</div>
+
+      <div class="badge">Día 1 — Unidad 1</div>
+
+    </div>
+
+
+
+    <div class="contenido">
+
+      <h2>¿El Estado somos todos? La complejidad de un concepto</h2>
+
+<p>Patricio Gómez Talavera</p>
+
+
+
+<h3>El Estado: origen histórico y formulación teórica</h3>
+
+<p>Pero, ¿qué es el Estado? En este capítulo discutiremos el concepto de estatalidad y la relación con los gobiernos. En primer lugar, nos enfocaremos en su origen y necesidad; en segundo lugar, abordaremos la definición y conceptualización del sociólogo alemán Max Weber, luego, la articulación entre sociedad y Estado a partir de la noción de legitimidad; y, por último, nos concentraremos en los niveles de estatalidad.</p>
+
+<p>El Estado es uno de los protagonistas clave de los estudios sociales y de la vida social misma. Esto se observa sin importar el país estudiado, la disciplina o la nacionalidad del especialista que lo haga ni el momento histórico que se aborde.</p>
+
+<p>La aparición del Estado como actor histórico marca un antes y un después en el desarrollo de las sociedades humanas. Es el Estado el que, en su condición de construcción social y colectiva, genera las leyes que regulan nuestra convivencia. A la vez, se encarga de hacerlas cumplir por distintos medios. El Estado se convierte en el poder que puede cumplir por distintos medios.</p>
+
+
+
+<h3>El Estado: origen histórico</h3>
+
+<p>El Estado es una creación humana. Antes de que las sociedades formaran un Estado, las personas vivían en lo que se conoce como el "estado de naturaleza". Esto significa que no existían leyes que organizaran la vida de las personas, y el más fuerte, por su capacidad para acceder y acumular recursos de todo tipo, terminaba imponiendo sus reglas a los demás.</p>
+
+<p>En algún momento, esas sociedades que no tenían un Estado acordaron establecer un orden que les otorgara más poder frente a otras comunidades y mayor seguridad dentro de la propia. Así fue como se originó el Estado. Mediante este acuerdo, los miembros de la sociedad dejaban de lado algunas de sus prácticas habituales (como, por ejemplo, la defensa personal) para crear una nueva estructura: el Estado.</p>
+
+<p>El Estado tendría la función de defender a todos de agresiones exteriores y a regular las relaciones entre las personas, al reducir la violencia descontrolada, que era peligrosa y causaba división. Además, esta organización también tuvo efectos positivos en la planificación y el desarrollo de la agricultura y la ganadería.</p>
+
+<p>Aunque este Estado aún era pequeño y débil, ayudaba a organizar la defensa y a regular las relaciones entre los habitantes de esa sociedad. El Estado habría surgido a través de un acuerdo efectuado entre todos los habitantes de un territorio. Hobbes señala en su obra Leviatán, publicada en 1651, que una de las motivaciones fundamentales para su construcción era la guerra.</p>
+
+<p>El filósofo británico Thomas Hobbes (1588-1679), quien sostuvo que el Estado había surgido a través de un acuerdo efectuado entre todos los habitantes de un territorio. Para este filósofo era evidente que "durante el tiempo en que los hombres viven sin un poder común que los atemorice a todos, se hallan en la condición o estado que se denomina guerra, una guerra tal que es de todos contra todos".</p>
+
+<p>Hobbes, que concibe como uno de sus roles "...brindar seguridad a la protección de la vida, sino también la de los bienes materiales, dice para el Estado [, mediante la promulgación y ejecución de buenas leyes, que las personas individuales pueden aplicar a sus propios casos" (Hobbes, 2011, p.275).</p>
+
+
+
+<h3>Weber: el Estado y la coerción</h3>
+
+<p>Uno de los primeros avances en la tarea de definir al Estado lo hizo el sociólogo alemán Max Weber (1864-1920) elaboró una definición de Estado muy útil para poder trabajar a partir de ella. Esta definición fue muy importante a principios del siglo XX, y marcó la forma de pensar y reflexionar sobre el Estado en las décadas siguientes.</p>
+
+<p>De hecho, las definiciones fueron cambiando con los aportes de otros científicos sociales y nuevas escuelas de pensamiento, así como por el aumento de la complejidad de los Estados y sociedades a lo largo del tiempo. Sin embargo, la definición propuesta por Weber aún permanece vigente, y esto es así porque señala algunas características básicas sobre lo que define al Estado y su acción.</p>
+
+<p>Según Weber, el Estado es aquella comunidad humana que, dentro de un determinado territorio, reclama para sí el monopolio de la violencia física legítima.</p>
+
+<p>De la definición de Weber se deben tomar dos elementos fundamentales: el primero es el dominio sobre un territorio determinado que debe ser indiscutiblemente propiedad del Estado; el segundo es el monopolio del uso de la violencia legítima dentro de ese territorio, sin que haya una competencia de ninguna clase por parte de ningún otro actor por el control de dicha violencia.</p>
+
+<p>El Estado, entonces, tiene dos elementos que lo distinguen de otras organizaciones humanas: el dominio sobre un territorio y el monopolio del uso de la violencia legítima dentro de ese territorio, sin que haya.</p>
+
+<p>¿Qué significa "monopolio de la violencia legítima"? Significa que dentro del territorio que controla, el Estado es el único que tiene el derecho de usar la violencia. Esta violencia es legítima porque está regulada, organizada y respaldada por las leyes del país. Su legitimidad también proviene del hecho de que las personas que crean las leyes, que definen el uso de la violencia dentro de él.</p>
+
+
+
+<div class="separador">• • •</div>
+
+
+
+<h3>El Estado y la dominación</h3>
+
+<p>Una vez definido el Estado, empiezan a aparecer otras preguntas: ¿el Estado representa a todos los ciudadanos de una sociedad? Es una institución neutral? La respuesta de Weber es contundente: el Estado no es un espacio igualitario; por el contrario, implica que ciertas personas o grupos son capaces de imponer su dominación sobre otras personas o grupos. Al igual que otras formas de organización política que lo han precedido, el Estado es una estructura en la que un grupo de personas ejerce poder sobre otras, y su existencia depende del uso de la violencia legítima (aquella que se considera justa o aceptable).</p>
+
+<p>Para que el Estado siga funcionando, necesita que las personas sometidas obedezcan a la autoridad de quienes tienen el poder en ese momento. En este contexto, ¿cuándo y por qué las personas aceptan esta autoridad? Qué razones internas utilizan para justificarla y qué factores externos apoyan esta forma de dominación?</p>
+
+<p>El Estado no es representativo de la totalidad de la sociedad, ya que la sociedad es heterogénea y conflictiva. Esa heterogeneidad repercute también en la misma conformación del Estado. A veces el conflicto continúa dentro del Estado mismo, y funcionarios compiten entre ellos porque representan los intereses de grupos diferentes. Incluso, siempre hay grupos sociales o individuos que resisten la dominación por parte del Estado.</p>
+
+<p>Un ejemplo de esto son los territorios controlados por guerrillas o grupos de crimen organizado, los que pueden ganar el apoyo de la gente para justificar su uso de la violencia en el área en la que operan. Este tipo de situaciones desafían la autoridad y capacidad del Estado para ejercer su poder legítimamente, lo que lleva a que su influencia en el territorio se vea seriamente afectada. Si dentro del territorio de un Estado existen grupos o personas que pueden ejercer violencia e imponer sus propias reglas fuera del control del Estado esto pondría en duda la existencia misma del Estado.</p>
+
+<p>A todas las demás asociaciones de individuos solo se les concede el derecho a la violencia física en la medida que el Estado lo permita. El Estado es la única fuente del "derecho" a la violencia. Por ejemplo, el ejercicio de la violencia se suele dar a través de la policía o cualquiera de los cuerpos armados que el Estado disponga para eso. Se trata, pues, de una violencia entendida como legítima, dado que es aceptada por la sociedad y está regulada en la legislación.</p>
+
+<p>La violencia estatal tiene una explicación que la legitima (por ejemplo, mantener el orden) y una legalidad que la controla, le da forma e impide que se desborde (las instituciones legalmente reconocidas). La violencia del Estado debe ser legal, es decir, tiene que estar prevista en las leyes. Esto significa que la violencia debe ser legítima y estar regulada por la ley.</p>
+
+<p>Por lo tanto, según Weber, el monopolio de la violencia y el problema de la legitimidad no pueden entenderse de manera separada, ya que son condiciones esenciales de la dominación estatal. Esto quiere decir, sobre todo, que el Estado no puede ejercer violencia si no está apegado a la legalidad que él mismo establece, a través de sistemas de representación social que lo regulan.</p>
+
+
+
+<h3>Legitimaciones de la dominación</h3>
+
+<p>¿Por qué las personas obedecen al Estado? Weber estudió las sociedades a lo largo del tiempo y observó que existen diferentes modos de justificar y aceptar el poder de dominación por parte del Estado. A partir de los datos recopilados, propuso una clasificación que permite pensar la legitimidad de la dominación según los fundamentos que la sostienen. Según el pensador alemán, pueden agruparse en tres tipos: legitimidad basada en el eterno ayer, en el carisma personal y en la legalidad.</p>
+
+<p><strong>La legitimidad del eterno ayer.</strong> Este tipo de legitimidad estaba basada en la costumbre. En este caso, la obediencia no se reflexiona ni se analiza por parte del actor que la ejerce; simplemente se obedece al reconocer la conveniencia de mantener el accionar dentro de marcos tradicionales, consciente o inconscientemente. Las personas obedecen por hábito, repiten su conducta porque saben de tiempos anteriores en los que sus antepasados hicieron lo mismo, y reconocen que, al hacerlo, lograron un desarrollo satisfactorio para sí mismos.</p>
+
+<p><strong>La legitimidad carismática.</strong> El segundo tipo de legitimidad, según la historia de la humanidad también está plagada de momentos en los que una persona, mediante su inteligencia, su magnetismo o su capacidad, apoya y se sostiene con base en el carisma personal de quien lidera. La confianza que inspira en sus seguidores transforma sus decisiones en acatamiento, y sus cualidades percibidas positivamente, en fidelidad. El carisma del líder es el motivo fundamental que legitima la dominación. En sus investigaciones, Weber se centró en este aspecto. Le interesaba explorar el carisma asociado al liderazgo personal de una figura dominante: el caudillo. Cuál es la relación con la dominación? Pues que abre las puertas a reflexionar sobre por qué ciertos grupos de personas obedecen, por qué creen en un líder que los conduce, aunque no sea la costumbre o una norma legal (al respecto, véase el capítulo 7).</p>
+
+<p><strong>La legitimidad de las leyes.</strong> Finalmente, el tercer tipo propuesto por Weber es el de la legitimidad basada en la legalidad; es decir, fundamentada sobre normas racionalmente creadas, las leyes. Este caso es el más habitual en el mundo occidental del siglo XX. Las sociedades se ordenan en torno a la ley, una ley escrita y que coloca al Estado en un papel de arbitro entre parcialidades. Las personas acatan normas e instituciones porque confían en su imparcialidad y en su racionalización colectiva de las conductas aparece aquí como un elemento explicativo de la civilización occidental.</p>
+
+
+
+<h3>Estado y gobierno</h3>
+
+<p>Como señalamos en apartados anteriores, el Estado es una asociación por medio de la cual un grupo, de manera delegada, controla un territorio. Sin embargo, el carisma, asociado a la presencia de una persona que lidera a otras, no es suficiente para explicar el predominio del Estado sobre la sociedad. Para ser efectiva, la violencia ejercida por el Estado para dominar debe ser aceptada por los ciudadanos, y además, debe procurarse conducirlo en representación de los intereses de toda la sociedad, lo cual no resulta fácil en la práctica. Para lograr cierto consenso, hacen falta instituciones sólidas que permitan controlar a quienes ejercen el poder del Estado.</p>
+
+<p>Así, el control del Estado siempre queda en manos de algunos grupos, pero debe procurarse conducirlo en representación de los intereses de la sociedad, para que el accionar estatal no favorezca a un grupo o en favor de determinada ideología.</p>
+
+<p>Si bien la figura más recurrente a la que aludimos es el Estado nacional, existen por debajo de él formas del mismo Estado con niveles de autonomía propia y diferenciada. En la Argentina, por ejemplo, existen los Estados provinciales, los cuales, por virtud de la Constitución, mantienen esferas de influencia que no son compartidas con el Estado nacional, tal es el caso de los recursos hidrocarburíferos o los contenidos que se impartirán en establecimientos de enseñanza estatal. Por debajo de los Estados provinciales, se encuentran los Estados municipales, también con atribuciones propias, como la recolección de residuos o el cobro de determinados impuestos.</p>
+
+<p>Además de entender que existen niveles de estatalidad, es necesario también observar una distinción importante entre Estado y gobierno. El Estado, conforme con la definición dada, es una estructura de existencia permanente, aunque puede cambiar en sus formas. El gobierno, en cambio, está integrado por quienes, en forma contingente y coyuntural, administran el Estado. Los miembros del gobierno tienen un mandato temporalmente determinado, tras el cual deberán dejar sus puestos a nuevos encargados de administrar la estructura burocrática estatal y manejar sus atribuciones.</p>
+
+
+
+<h3>Nación y Estado</h3>
+
+<p>Aunque los Estados suelen formarse y construirse a partir de una comunidad que constituye una nación, no todas las naciones tienen un Estado. Los pueblos kurdos en Turquía e Irak son un ejemplo de una nacionalidad que no cuenta con la estructura de un Estado reconocido.</p>
+
+<p>En la historia de la Argentina, la nación se construyó después de la creación del Estado. Este fue un proceso complejo en el cual la violencia estuvo muy presente. Primero se formó el Estado nacional, y luego, a través de diversas políticas públicas implementadas por los gobiernos de finales del siglo XIX y principios del siglo XX —especialmente las educativas—, se construyó la identidad nacional argentina.</p>
+
+<p>Esto se puede ver más detalladamente en Romero (2017) y sobre todo en el capítulo 4 de este libro. El caso de la Argentina muestra cómo el Estado ha sido responsable de la creación de las identidades nacionales. Las identidades de una nación no son fijas ni inmutables; se van reformulando a medida que las sociedades avanzan por sus propios caminos (Gellner, 2008).</p>
+
+<p>En definitiva, el Estado es una figura compleja, heterogénea, que surge con un carácter arbitral dentro una sociedad en constante cambio, y que no permanece ajeno a este. Su complejidad, su interacción con la percepción pública y los análisis por décadas, y lo continúan haciendo en la actualidad.</p>
+
+
+
+<h2>Referencias bibliográficas</h2>
+
+<p>Gellner, E. (2008). Nations and nationalism. Cornell University Press.</p>
+
+<p>Hobbes, T. (2011). Leviatán. Fondo de Cultura Económica.</p>
+
+<p>Romero, L. A. (2017). Breve historia contemporánea de la Argentina: 1916-2016. Fondo de Cultura Económica.</p>
+
+<p>Weber, M. (2006). El político y el científico. Prometeo.</p>
+
+    </div>
+
+
+    <footer>
+
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aproximaciones a los sistemas federales — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .metadatos {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .metadatos .titulo-libro {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .metadatos .titulo-texto {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2em;
+      font-weight: 600;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .metadatos .autor {
+      font-size: 1.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .metadatos .info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .metadatos .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.35rem 1.2rem;
+      background: var(--heading);
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+    }
+
+    .contenido p {
+      text-indent: 1.5em;
+      margin-bottom: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .contenido p + p {
+      margin-top: 0.9em;
+    }
+
+    .contenido p:first-of-type {
+      text-indent: 0;
+    }
+
+    .contenido p.first-of-section {
+      text-indent: 0;
+    }
+
+    .contenido h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--heading);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contenido h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contenido blockquote {
+      margin: 2rem 0 2rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      font-size: 0.95em;
+    }
+
+    .contenido blockquote p {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    .contenido ul,
+    .contenido ol {
+      margin: 1.2rem 0 1.2rem 2rem;
+    }
+
+    .contenido li {
+      margin-bottom: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .contenido table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9em;
+    }
+
+    .contenido table th {
+      background: var(--surface);
+      color: var(--heading);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--accent); }
+
+    .contenido table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido table tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    .contenido .ilegible {
+      color: var(--red-soft);
+      font-weight: 600;
+      background: #3a2020;
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+    }
+
+    .contenido .nota-num {
+      font-size: 0.75em;
+      vertical-align: super;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .notas {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .notas h2 {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .notas p {
+      font-size: 0.85em;
+      text-indent: 0;
+      margin-bottom: 0.6em;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .separador {
+      text-align: center;
+      margin: 3rem 0;
+      color: var(--border);
+      font-size: 1.2em;
+      letter-spacing: 0.5em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .page { padding: 0; max-width: 100%; }
+      .metadatos { break-after: page; border: none; background: none; }
+      .contenido h2 { break-after: avoid; }
+      .contenido h3 { break-after: avoid; }
+      blockquote { break-inside: avoid; }
+      table { break-inside: avoid; }
+      footer { break-before: avoid; }
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 2rem 1.2rem 4rem; }
+      body { font-size: 16px; }
+      .metadatos .titulo-texto { font-size: 1.6em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+      <div class="titulo-texto">Aproximaciones a los sistemas federales</div>
+      <div class="autor">Sofía Pirsch</div>
+      <div class="info">Páginas originales: 105–114</div>
+      <div class="badge">Día 3 — Unidad 1</div>
+    </div>
+
+    <div class="contenido">
+      <h2>Capítulo 8. Aproximaciones a los sistemas federales</h2>
+<p class="first-of-section">La Constitución de la República Argentina establece en su artículo 1° que la Nación Argentina adopta para su gobierno la forma representativa republicana federal. En esa simple frase, la carta magna del país establece que un presidente va a tener que convivir con gobernadores de 23 provincias diferentes y con el alcalde (jefe de Gobierno) de la Ciudad Autónoma de Buenos Aires (CABA). Como si esto fuera poco, el Poder Legislativo nacional, por su parte, va a tener que convivir con 24 poderes legislativos y judiciales subnacionales.</p>
+<p>Pero ¿qué hace que un Estado sea federal? ¿Hay un modelo único? ¿Cuáles son las condiciones necesarias para que exista el federalismo? ¿Cuándo y por qué elegir una organización federal? El federalismo es positivo para la democracia? ¿Y para la economía? Estos interrogantes han atravesado la historia de los Estados en sus procesos de formación y actualmente continúan siendo motivo de análisis y cuestionamientos.</p>
+<p>En América Latina, solo cuatro países son federales (Brasil, México, Argentina y Venezuela), pero concentran el 65% de la población de la región (Gibson, 2004). Además, la mayor parte de la población de las democracias mundiales más duraderas vive en países federales (Stepan, 2004). Es válido, entonces, preguntarse qué hace diferentes a estos Estados de los que comparten la misma región pero no son federales, así como también qué los diferencia de otros Estados que sí lo son a lo largo y ancho del mundo.</p>
+
+<h3>Características de los sistemas federales</h3>
+<p>La primera y fundamental característica de las federaciones es que poseen una constitución nacional escrita, que especifica y detalla la repartición de poderes entre el gobierno central y los gobiernos subnacionales, de provincias, departamentos, Estados, comunidades autónomas o regiones. En esta constitución deben reflejarse los arreglos entre el gobierno federal y las unidades territoriales constitutivas (las provincias o regiones mencionadas), partiendo de la idea de que todas estas últimas conviven de manera conjunta, anulando cualquier tipo de subordinación. Esto implica que las unidades subnacionales son actores capaces de negociar y vincularse con el Estado nacional, pero también de interactuar de forma directa y sin intermediarios con la ciudadanía que habita en ellas.</p>
+<p>La existencia de esta constitución nacional es fundamental, ya que ella establece que las unidades subnacionales son actores capaces de negociar y vincularse con el Estado nacional, pero también de interactuar de forma directa y sin intermediarios con la ciudadanía que habita en ellas. Esto también supone que los ciudadanos de estas unidades han prestado su consentimiento para sostener este esquema. No es casual, entonces, que en algunos Estados federales (en general, aquellos con varias naciones en su interior) alguna o algunas regiones o provincias lancen consultas populares o referendums para consultar a su población respecto de si quieren escindirse del Estado federal. Cataluña, en este sentido, es un caso emblemático.</p>
+<p>A diferencia de lo mencionado en el párrafo anterior, lo específico del federalismo es que supone la existencia de diferentes niveles de gobierno al interior de los Estados. Estos niveles de gobierno están organizados verticalmente de manera jerárquica: hay un gobierno central (también llamado gobierno nacional o federal) y gobiernos subnacionales, de provincias, departamentos, Estados, comunidades autónomas o regiones (los nombres cambian dependiendo del país).</p>
+<p>En los Estados unitarios existe una unificación vertical en la toma de decisiones, es decir, una concentración del poder en una administración directamente el poder local. En cualquiera de los dos casos, las administraciones locales solo son el brazo ejecutor del gobierno central, ya que no tienen autonomía ni son electas por vía popular (excepto en algunos casos en los que hay elecciones municipales). Estos Estados están fuertemente relacionados con la conformación de los primeros Estados nación en Europa y los procesos de centralización del poder. Países como Gran Bretaña o Uruguay se organizan así.</p>
+<p>Por otro lado, cada una de las unidades territoriales que constituyen el Estado nacional tiene una arquitectura de gobierno específica, y cuentan con poderes Ejecutivo, Legislativo y Judicial separados e independientes. Esto implica que la competencia política sucede a más de un nivel. Además, tanto el gobierno central como los regionales tienen capacidad de recaudación fiscal y el deber de dictarse para sí mismas una constitución. A nivel interno, las provincias argentinas cuentan con la potestad de dictarse para sí mismas una constitución, también pueden recaudar parte de los ingresos mediante la Ley de Coparticipación Federal, modo, el gobierno central se encarga de recaudar y redistribuir buena parte de los ingresos mediante la Ley de Coparticipación Federal.</p>
+
+<h3>Bicameralismo</h3>
+<p>Uno de los aspectos más relevantes a considerar respecto del bicameralismo es que la elección de legisladores para la cámara baja, al igual que la distribución de bancas. Esto es que, en teoría, se busca preservar la idea de que todas las unidades que componen a ese Estado federal, y estas unidades son consideradas iguales entre sí. Por ese motivo, la cantidad de bancas en las cámaras altas puede ser fija (un número determinado de senadores para todas las unidades territoriales por igual) o escalonada (el número de senadores varía según el tamaño de la unidad territorial).</p>
+<p>Muchos Estados federales cuentan con poderes legislativos bicamerales donde una de las cámaras, la cámara baja, representa al pueblo en su conjunto (en el caso de la Argentina, lleva el nombre de Cámara de Diputados) y la otra a las unidades que constituyen la federación representados sus intereses en la arena nacional a través de la cámara alta, que en la Argentina y en otros países se conoce como Senado. Pero ¿esto quiere decir que todos los países que tienen cámaras altas son federales? No, ya que hay países que no son federales y que eligen tener un parlamento bicameral. Sin embargo, por lo general, los países federales tienen cámaras altas o arreglos similares para representar sus intereses en la arena nacional.</p>
+<p>Uno de los aspectos más relevantes a considerar respecto del bicameralismo es que la elección de legisladores para la cámara baja no responde a una lógica proporcional (dependiendo de la cantidad de habitantes de cada provincia, la cantidad de bancas correspondientes). Como se mencionó en las secciones anteriores, este esquema tiene fuertes consecuencias en la dinámica política y condiciona a los actores políticos. La renovación de esta cámara sucede de a tercios cada dos años, ya que los mandatos de los senadores duran seis años.</p>
+<p>Por otro lado, el Senado o cámara alta tiene como finalidad representar en el Poder Legislativo nacional a las unidades subnacionales que son iguales frente al Estado nacional. Por esa razón, la distribución de las bancas no responde a lógicas proporcionales, sino que a cada una de las 24 subunidades le corresponden tres senadores, sin importar cuánta población tengan. La distribución de las 257 bancas entre las 24 provincias debería responder a una lógica proporcional. Lo que la distribución de las 257 bancas entre las 24 provincias debería responder a una lógica proporcional. En realidad, como se verá en la próxima sección, esto no sucede estrictamente así.</p>
+<p>Es importante destacar que, aunque las prerrogativas de cada nivel de gobierno deben plasmarse en la carta magna, la práctica arroja grandes variaciones entre federaciones, ya que se encuentran inmersas en un sistema político con dinámicas propias, por lo que el diseño institucional por sí solo no garantiza el entendimiento del impacto del federalismo en los sistemas en los que se aplica. Cuestiones fiscales y económicas, tipos de sistemas de partidos, sistemas electorales y relaciones entre los titulares de las oficinas nacionales y subnacionales muestran efectivamente variaciones entre federaciones.</p>
+<p>Por otro lado, cada una de las unidades territoriales que constituyen el Estado nacional tiene una arquitectura de gobierno específica, y cuentan con poderes Ejecutivo, Legislativo y Judicial separados e independientes. El grado de autonomía que tienen las subunidades respecto del gobierno central, algo que se ve reflejado en el diseño de las constituciones provinciales. Este último aspecto es de crucial importancia porque las federaciones varían también en relación con cuál es el grado de autonomía que tienen las subunidades respecto del gobierno central.</p>
+<p>Además, las federaciones varían también en relación con cuál es el grado de autonomía que tienen las subunidades respecto del gobierno central. El Estado nacional tiene una arquitectura de gobierno específica, y cada una de las unidades territoriales que constituyen la federación cuentan con la potestad de dictarse para sí mismas una constitución, también pueden recaudar parte de los ingresos mediante la Ley de Coparticipación Federal, además de tener grandes capacidades para transferir fondos de manera discrecional a los gobiernos provinciales. El Estado nacional puede intervenir las provincias (mediante la figura de intervención federal) en caso de que no se respete el sistema republicano y representativo, o en caso de fuertes conflictos o invasiones extranjeras. Durante los gobiernos de Yrigoyen (1916-1922 y 1928-1930), esta fue una herramienta muy usada por el gobierno federal. La última vez que se usó este recurso fue en el gobierno de Néstor Kirchner, quien intervino la provincia de Santiago del Estero luego de dos décadas en que el gobierno local mantuvo prácticas dudosamente democráticas dentro de su territorio.</p>
+
+<h3>Arreglos institucionales del federalismo argentino</h3>
+<p>La República Argentina reconoce constitucionalmente su organisación federal. Las estructuras de organización duales se ven reflejadas en un gobierno nacional o federal y 24 unidades subnacionales: 23 provincias y una ciudad autónoma (la Ciudad de Buenos Aires). Cada una de estas unidades tiene poderes Ejecutivo, Legislativo y Judicial, independientes del gobierno federal. Además, realizan elecciones democráticas tanto en el plano nacional como subnacional.</p>
+<p>A su vez, cada provincia puede elegir el tipo de organización interna. Algunas cuentan con legislaturas bicamerales (como las provincias de Buenos Aires y Mendoza) y otras optaron por legislaturas unicamerales (como la ciudad de Buenos Aires o las provincias de Tierra del Fuego y Tucumán). También pueden decidir la fecha en la que realizarán las elecciones provinciales.</p>
+<p>Teniendo estos modelos en cuenta, Stepan advierte que, a diferencia del caso elaborado por Riker (es decir, el estadounidense), hay federaciones en las que no todas las unidades constitutivas tienen las mismas potestades, sino a países no democráticos. Es el caso de la Unión Soviética, que a través de la fuerza coercitiva del Estado central puso bajo su órbita una serie de Estados previamente independientes, lo que generó un Estado multinacionalism, y democracy: beyond rikerian federalism.</p>
+<p>En muchos países multinacionales los ciudadanos de algunas unidades subnacionales solo podrían ejercer su plena ciudadania si adquirieran el derecho a tener escuelas, estructuras religiosas y legales y medios de comunicacion que se correspondieran con su lenguaje y su cultura. Es, por ejemplo, el caso de Cataluña en España. No así porque se trata de Estados unitarios multiculturales que decidieron mantener un Estado unificado. Bélgica (1969) y España (1975).</p>
+
+<h3>¿Por qué elegir federalismo?</h3>
+<p>¿Por qué los Estados eligen darse arreglos federales para organizarse internamente? ¿Qué factores llevan a que se opte por estas estructuras complejas?</p>
+<p>Históricamente, el federalismo ha tenido gran importancia a la hora de gobernar extensos territorios, resolver problemas de unificación y de integración nacional, así como también se lo ha considerado clave para resolver problemas de unificación y de integración nacional. Dentro de la ciencia política es imposible hablar de federalismo sin hablar de William H. Riker, quien elaboró una primera teoría acerca del origen y la estabilidad en el tiempo de las democracias federales.</p>
+<p>De acuerdo con Riker (1964), toda federación duradera es el resultado de un proceso de negociación entre unidades políticas soberanas que acuerdan renunciar a una parte de su soberanía para unir sus recursos en pos de protegerse y asegurar la seguridad colectiva frente a posibles ataques externos. Esto es lo que, según el autor, daría origen al gobierno nacional. Ahora bien, Riker también asume que uno de los objetivos centrales del federalismo es la protección de los derechos individuales frente a la posible tiranía de la mayoría (o sea, del mismo gobierno central), por lo que crea una serie de instituciones, como la legislatura bicameral, en la que una de las cámaras representa a la población, y la otra, a las subunidades de manera equitativa. De acuerdo con este modelo, todas las subunidades tendrían las mismas competencias.</p>
+<p>El modelo de Riker, si bien fue fundacional, tenía un problema central: estaba asociado con el federalismo estadounidense, y no todos los federalismos del mundo responden a este mismo modelo. Por ese motivo, otro teórico, Alfred Stepan (1999), tomó la definición inicial de Riker pero buscó armar nuevas categorías que permitieran analizar todos los federalismos, más allá del modelo de Estados Unidos. Así, de acuerdo con Stepan, no habría un solo tipo de sistema federal, sino que habría tres modelos diferentes.</p>
+<p>El primero de estos modelos es el ya desarrollado por Riker y que aplica a federaciones como Estados Unidos, Australia o Suiza. Este tipo, que responde a una federación de "poner juntos".</p>
+
+<h3>Federalismo y democracia</h3>
+<p>Uno de los pilares clásicos en las teorías acerca del federalismo es que es beneficioso para la democracia. ¿Es esto así realmente? Pueden considerarse federales los países no democráticos, si consideramos que en un régimen no democrático se cancelan las garantías constitucionales y, por ende, cualquier tipo de arreglo que aparezca plasmado en una constitución?</p>
+<p>Aunque como hemos visto, Stepan otorga una categoría a los sistemas en los que se aplica. Cuestiones fiscales y económicas, tipos de sistemas de partidos, sistemas electorales y relaciones entre los titulares de las oficinas nacionales y subnacionales muestran efectivamente variaciones entre federaciones, ya que se encuentran inmersas en un sistema político con dinámicas propias, por lo que el diseño institucional por sí solo no garantiza el entendimiento del impacto del federalismo en las democracias.</p>
+<p>La distribución de bancas ha sido objeto de repetidas manipulaciones en respuesta a conflictos políticos y cambios de régimen a lo largo de los años (Gibson, 2004). Samuels y Snyder (2001) llevaron adelante un estudio comparativo acerca del mencionado <em>malapportionment</em>. Esta desviación ha sido una importante arma política para las elites que buscaban organizar el sistema político para su beneficio.</p>
+<p>Como se mencionó antes, la violación de la norma de "una persona, un voto" es parte constitutiva de los sistemas federales, aunque esto también alcanza a las cámaras bajas: en la Argentina, la cantidad de votos que se necesitan para que un diputado sea electo en Tierra del Fuego es notoriamente menor que los que se necesitan en la provincia de Buenos Aires. Esto no solo es así por diferencias demográficas, sino porque la ley 22.847 establece un diputado cada 161.000 habitantes, pero también que ninguna provincia puede tener menos de cinco diputados, por lo que para muchas provincias con bajo volumen poblacional, el número de votos que necesitan para elegir un diputado es muy reducido. En este sentido y en distintos países, la distribución de bancas ha sido objeto de repetidas manipulaciones. De hecho, en América Latina, el <em>malapportionment</em> también alcanza a las cámaras altas, que representan las subunidades frente al gobierno central.</p>
+<p>En este último caso, como lo que se representan son unidades y no personas, es habitual que se produzca <em>malapportionment</em>, que implica sobre o subrepresentación de las unidades en las legislaturas nacionales. Ahora bien, en América Latina, las estructuras de las federaciones mundiales muestran que las unidades más pequeñas se encuentran sobrerrepresentadas en las cámaras altas, lo cual tiene impacto en las estrategias políticas tanto de los gobernadores como de los presidentes. Si se tiene en consideración que todas las provincias tienen el mismo número de senadores, pero que la cantidad de votos que necesitan para ganar un senador varía enormemente entre provincias, estos actores pueden utilizar los diferentes recursos extra para cubrir las necesidades de sus provincias o Estados.</p>
+<p>De acuerdo con Gervasoni (2010), las diferencias en los regímenes subnacionales pueden explicarse en buena parte por el origen y la magnitud de sus recursos fiscales. Menores niveles de democracia pueden encontrarse en aquellos Estados subnacionales que reciben grandes subsidios del gobierno central, en detrimento de su capacidad de recaudación directa. Estos denominados Estados rentísticos es más probable que mantengan regímenes con menores niveles de democracia porque los gobernantes utilizan su privilegiada posición fiscal para restringir la competencia política y debilitar las limitaciones institucionales a su poder a través del control de la prensa, de los demás poderes del Estado y de la generación de redes y vínculos, que actúan como elementos que inclinan la cancha en su favor (Gervasoni, 2010).</p>
+<p>El federalismo fiscal crea situaciones rentísticas cuando las unidades reciben transferencias del gobierno central en cantidades mucho mayores a las que obtienen con sus propios impuestos. Este aspecto específico del federalismo contribuye a entender la complejidad del fenómeno y los múltiples caminos que puede transitar una federación, según cómo se vinculen los actores nacionales y subnacionales.</p>
+
+<div class="separador">• • •</div>
+
+<h3>Conclusiones</h3>
+<p>El federalismo es, todavía, fuente de grandes debates. Tanto en torno a si es beneficioso o no para garantizar la estabilidad y la durabilidad de las democracias, como también en relación con las economías nacionales y regionales.</p>
+<p>A lo largo del mundo, las características e instituciones de los países que asumen formas federales varían ampliamente. Es importante notar que, aunque inicialmente el federalismo fue visto como fuente para la estabilización de las democracias, la historia ha llevado el desarrollo de los países por diferentes rumbos, sin que la existencia de diferentes niveles de gobierno garantice la democracia a nivel interno.</p>
+<p>De cualquier manera, el federalismo ha brindado las respuestas que los Estados nacionales más extensos territorialmente, o con mayor cantidad de población, o con mayor diversidad étnica, lingüística o cultural, necesitaban para gobernarse. Es fundamental analizar las particularidades de cada sistema para comprender cómo funcionan en la práctica y qué impacto tienen en la vida de los ciudadanos.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Bonvecchi, A. y Zelaznik, J. (2012). Recursos de gobierno y funcionamiento del presidencialismo en Argentina. En J. Lanzaro (comp.), <em>Presidencialismo y cambio de reglas</em>. CEPyC.</p>
+<p>Gervasoni, C. (2010). A rentier theory of subnational regimes: Fiscal federalism, democracy, and authoritarianism in the argentine provinces. <em>World Politics</em>, 62(2), 302-340. [Versión traducida al castellano en <em>Desarrollo Económico</em>, 50(62), enero-marzo 2011].</p>
+<p>Gibson, E. (2004). Federalism and democracy: Theoretical connections and cautionary insights. En <em>Federalism and democracy in Latin America</em>. The Johns Hopkins University Press.</p>
+<p>Pegoraro, M. y Zulcovsky, F. (2006). Capítulo 5: gobierno. En L. Aznar y M. de Luca (Comps.), <em>Política: cuestiones y problemas</em>. Emece.</p>
+<p>Riker, W. (1964). <em>Federalism: origin, operation, significance</em>. Little, Brown and Company.</p>
+<p>Samuels, D. y Snyder, R. (2001). The value of a vote. Malapportionment in comparative perspective. <em>British Journal of Political Science</em>, 31(4).</p>
+<p>Stepan, A. (1999). Federalism and democracy: Beyond the US model. En <em>Federalism and democracy in Latin America</em>. The Johns Hopkins University Press.</p>
+    </div>
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+</body>
+</html>

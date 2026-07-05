@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terrorismo y terrorismo de Estado — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .metadatos {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .metadatos .titulo-libro {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .metadatos .titulo-texto {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2em;
+      font-weight: 600;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .metadatos .autor {
+      font-size: 1.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .metadatos .info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .metadatos .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.35rem 1.2rem;
+      background: var(--heading);
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+    }
+
+    .contenido p {
+      text-indent: 1.5em;
+      margin-bottom: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .contenido p + p {
+      margin-top: 0.9em;
+    }
+
+    .contenido p:first-of-type {
+      text-indent: 0;
+    }
+
+    .contenido p.first-of-section {
+      text-indent: 0;
+    }
+
+    .contenido h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--heading);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contenido h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contenido blockquote {
+      margin: 2rem 0 2rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      font-size: 0.95em;
+    }
+
+    .contenido blockquote p {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    .contenido ul,
+    .contenido ol {
+      margin: 1.2rem 0 1.2rem 2rem;
+    }
+
+    .contenido li {
+      margin-bottom: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .contenido table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9em;
+    }
+
+    .contenido table th {
+      background: var(--surface);
+      color: var(--heading);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--accent); }
+
+    .contenido table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido table tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    .contenido .ilegible {
+      color: var(--red-soft);
+      font-weight: 600;
+      background: #3a2020;
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+    }
+
+    .contenido .nota-num {
+      font-size: 0.75em;
+      vertical-align: super;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .notas {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .notas h2 {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .notas p {
+      font-size: 0.85em;
+      text-indent: 0;
+      margin-bottom: 0.6em;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .separador {
+      text-align: center;
+      margin: 3rem 0;
+      color: var(--border);
+      font-size: 1.2em;
+      letter-spacing: 0.5em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .page { padding: 0; max-width: 100%; }
+      .metadatos { break-after: page; border: none; background: none; }
+      .contenido h2 { break-after: avoid; }
+      .contenido h3 { break-after: avoid; }
+      blockquote { break-inside: avoid; }
+      table { break-inside: avoid; }
+      footer { break-before: avoid; }
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 2rem 1.2rem 4rem; }
+      body { font-size: 16px; }
+      .metadatos .titulo-texto { font-size: 1.6em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+      <div class="titulo-texto">Terrorismo y terrorismo de Estado</div>
+      <div class="autor">Mariano Statello</div>
+      <div class="info">Páginas originales: 151–161</div>
+      <div class="badge">Día 6 — Unidad 2</div>
+    </div>
+
+    <div class="contenido">
+      <h2>Capítulo 12. Terrorismo y terrorismo de Estado: concepto y evolución</h2>
+<p class="first-of-section">A la hora de analizar y comprender al terrorismo como fenómeno político y social existe un primer obstáculo: el concepto en sí mismo. ¿Qué es el terrorismo? Esta es una pregunta que podrá tener variadas respuestas según a quien se la formule, por lo que manejar una definición politológica completa es vital para analizar este tipo de violencia política. En este texto abordaremos primero las definiciones propuestas por Fernando Reinares (2005), experto en la temática. En segundo lugar, analizaremos la evolución del terrorismo en el mundo a través del tiempo, pero no diferenciado totalmente de otros tipos de terrorismo. Analizaremos el terrorismo de Estado como un modo más particular, pero no diferenciado totalmente de otros tipos de terrorismo.</p>
+
+<h3>El concepto terrorismo</h3>
+<p>No hay una sola definición de terrorismo. Por lo pronto, se puede intuir que hay una forma jurídica de referirse a tal tipo de violencia, y otra de índole política o, dicho de otro modo, vulgar. En la vida cotidiana, un mismo acto puede ser descrito como "terrorista" por los representantes de un sector político de la sociedad, y como "resistencia" por los representantes del sector político opuesto. La palabra terrorismo tiene una carga valorativa lo suficientemente potente como para ser utilizada a los fines de deslegitimar a los rivales.</p>
+<p>Lamentablemente, el ámbito jurídico está condicionado por el político. Por ende, a la hora de analizar políticamente el terrorismo como fenómeno se debe tener una definición lo más objetiva y clara posible de este. En este texto vamos a emplear una definición propuesta por Reinares (2005).</p>
+<p>De esta definición se pueden tomar determinadas cualidades que permiten definir un acto violento como terrorista:</p>
+
+<h4>Debe ser un acto político</h4>
+<p>El terrorismo es un acto político en toda regla, puesto que la selección de los blancos busca siempre influir mediante el miedo el comportamiento político. A menudo, el terrorismo es recurso auxiliar a la actividad de algunos grupos políticos. Un acto de violencia es terrorista si el impacto psíquico que provoca en una sociedad o algún segmento de la misma, en términos de ansiedad y miedo, excede con creces sus consecuencias materiales, esto es, los daños físicos ocasionados intencionadamente a personas o cosas.</p>
+
+<h4>Debe tener una dimensión comunicativa</h4>
+<p>El terrorismo posee una dimensión comunicativa, inherente a la actividad en sí, puesto que comunicar de forma directa o implícita —esto último podría ser el boca a boca— es una herramienta para intimidar a los oponentes y para ganar adeptos. Quienes instigan o ejecutan el terrorismo pretenden así condicionar las actitudes y los comportamientos de gobernantes o gobernados.</p>
+
+<p>Es por esta razón que un mismo grupo armado es declarado como terrorista en un país y no en otro. Este fenómeno se da incluso en países europeos y Estados Unidos, pese a ser aliados en la Organización del Tratado del Atlántico Norte (OTAN), no comparten esa clasificación. Los kurdos, que Turquía considera terroristas, mientras que varios países donde se refugian sus miembros.</p>
+
+<p>Dicho de otro modo, la definición de terrorismo para cada país va variando en la medida en que el poder político desea incluir o excluir a un determinado grupo de dicha categoría. Cada país amplía o reduce los alcances de la definición sobre la base de variantes, son producto de la deliberación del poder político y, como es de esperar, están sujetas y condicionadas a los intereses de esos sectores. Incluso en el ámbito jurídico, no existe una definición única de lo que es el terrorismo. Cabría esperar que en materia de derecho penal hubiese una vaguedad menor o más bien nula, pero lo cierto es que, incluso en el ámbito jurídico-político, el ámbito jurídico está condicionado por el político.</p>
+
+<p>Otro ejemplo es el movimiento Polisario de Sahara Occidental, declarado grupo terrorista en Marruecos, pero no en España y en Argelia. Los Peshmerga, conocido por su lucha contra, entre tantos enemigos, al Daesh (conocido como Estado Islámico).</p>
+
+<h3>Clasificaciones del terrorismo</h3>
+<p>Teniendo ahora claro qué es un acto terrorista, se puede comenzar a clasificarlo. Siguiendo a Reinares (2005), a efectos descriptivos y analíticos se pueden establecer varios tipos de violencia terrorista:</p>
+
+<h4>Según la orientación del grupo terrorista respecto del Estado o el poder político dominante</h4>
+<p>Se trata de un grupo que ejerce el terrorismo como forma para mantener el statu quo o para romperlo? El primero, ejercido desde arriba hacia abajo, también llamado terrorismo de Estado, es el predilecto de los regímenes autoritarios y teocráticos, aunque también puede darse en casos de gobiernos democráticamente elegidos. El segundo de los casos, de abajo hacia arriba, es el más común y es ejercido en función de lograr la autonomía de una región o de sustituir un régimen por otro.</p>
+
+<h4>Según el papel del terrorismo dentro de la estrategia general del grupo</h4>
+<p>El terrorismo es un recurso auxiliar o preferente? (Reinares, 1998). En algunos casos, el terrorismo es un recurso auxiliar para las actividades del grupo, como en las bandas del crimen organizado o los grupos insurgentes que combaten al Estado. Tomemos como ejemplo la mafia o el narcotráfico (Jordan, 2023). Si bien no se trata de agrupaciones políticas, el recurso del terror es empleado para condicionar a las autoridades y a la sociedad. Por otro lado, están los grupos no estatales que emplean este tipo de violencia como herramienta principal; comúnmente son llamados por la prensa y por la sociedad como "grupos terroristas", sin más (Jordan, 2023).</p>
+
+<p>El terrorismo internacional y el transnacional se diferencian en que el terrorismo internacional tiene una escala global, puesto que pelean por instalar la Sharia (ley islámica) en todo el mundo. Pero el terrorismo religioso no es patrimonio exclusivo del mundo islámico. El atentado al edificio federal en Oklahoma City (1995), obra de Timothy McVeigh y Terry Nichols, tuvo como motivo manifiesto una venganza por las muertes de los miembros de la secta de los davidianos en Waco (1993). Otro caso resonante fue el de la secta religiosa Aum Shinrikyo en Japón, responsable de varios atentados, como el ataque con gas sarín en el subterráneo de Tokio en 1995. En Israel, el Bat Ayin y el Hilltop Youth han realizado actos terroristas contra la población árabe, y por eso también fueron declarados terroristas por las autoridades israelíes.</p>
+
+<h3>Las cuatro olas del terrorismo</h3>
+<p>A estas clasificaciones se les pueden sumar las aportadas por Rapoport (2002), quien formuló su teoría de las "cuatro olas del terrorismo", según la cual el terrorismo moderno ha evolucionado en ciclos de aproximadamente 40 años, cada uno con motivaciones y características propias.</p>
+
+<h4>La ola "anarquista" (1880–1920)</h4>
+<p>La primera ola, la "anarquista", fue probablemente la primera que podría clasificarse como internacional. Este tipo de terrorismo utilizaba asesinatos políticos y ataques contra figuras de poder como parte de su estrategia para desestabilizar gobiernos. Sus agentes creían que la violencia inspiraría levantamientos populares. Si bien los grupos anarquistas solían estar vinculados entre sí, los ataques podían ser obra de grupos desconectados o individuos aislados autodidactas.</p>
+
+<h4>La ola "anticolonial" (1920–1960)</h4>
+<p>La segunda ola, la "anticolonial", estuvo impulsada por movimientos de independencia en territorios colonizados, como el IRA en Irlanda y el FLN en Argelia. En lugar de ataques indiscriminados, sus tácticas incluían guerrillas urbanas y atentados selectivos contra fuerzas coloniales, buscando socavar el dominio extranjero y obtener, en lo posible, apoyo internacional. Muchos de estos movimientos lograron sus objetivos, y sus tácticas inspiraron a futuros grupos insurgentes.</p>
+
+<h4>La "nueva izquierda" (1960–1990)</h4>
+<p>La tercera ola, la "nueva izquierda", muy influenciada por el Mayo Francés de 1968, fue marcada y moldeada por la Guerra Fría y el marxismo revolucionario. Grupos como la Fracción del Ejército Rojo en Alemania (RAF), mejor conocida como "la banda Baader-Meinhof", y Sendero Luminoso en Perú adoptaron el terrorismo su recurso favorito desde su nacimiento. Con el fin de la Guerra Fría y el marxismo revolucionario, estos grupos solían tener una visión internacionalista, y colaboraban con movimientos similares de otras regiones. A diferencia de la segunda ola, estos grupos solían tener una visión internacionalista.</p>
+
+<h4>La ola "religiosa" (1979–presente)</h4>
+<p>La cuarta ola, la "religiosa", emergió con la Revolución Iraní y la resistencia afgana contra la invasión soviética. Grupos como Al Qaeda y Estado Islámico (Daesh) utilizan atentados suicidas y ataques masivos, y justifican su violencia con interpretaciones extremistas de la religión islámica salafista. Su objetivo tiene una escala global, puesto que pelean por instalar la Sharia en todo el mundo. Pero el terrorismo religioso no es patrimonio exclusivo del mundo islámico.</p>
+
+<p>Es importante diferenciar el terrorismo internacional del transnacional. El terrorismo internacional tiene una escala global, mientras que el transnacional supone la presencia de agentes aislados de todo vínculo con los demás grupos, y que actúan en nombre de la causa común empleando sus propios recursos disponibles —a menudo, un simple cuchillo o una camioneta para arrollar a una multitud—. Estos actores son comúnmente llamados "lobos solitarios", y su naturaleza impredecible los hace aún más aterradores.</p>
+
+<p>La cuarta ola, al igual que la primera, también tiene como peculiaridad la presencia de agentes aislados de todo vínculo con los demás grupos, y que actúan en nombre de la causa común empleando sus propios recursos disponibles. La finalidad era clara: sembrar el terror en todos los demás israelíes y en el exterior, tanto en el mundo musulmán como en Occidente. La jornada del 7 de octubre de 2023, en la que el grupo terrorista Hamas ingresó a suelo israelí y atacó tanto objetivos militares como civiles, fue ampliamente cubierta y difundida por los mismos terroristas, pero también por los simpatizantes extranjeros de la causa palestina. Las redes sociales se llenaron de imágenes de ejecuciones, descuartizamientos y secuestros de civiles, que fueron grabadas por los mismos perpetradores y subidas a las redes —o compartidas con los familiares de las víctimas—, en algunas ocasiones en vivo y en directo.</p>
+
+<p>Por otro lado, las redes sociales se colmaron también de otro tipo de mensajes y propaganda. En ellos, los ataques de Hamas se limitaban a objetivos militares y se ponía poco o ningún énfasis en los secuestros. La muerte de civiles era justificada como daños colaterales de un fuego cruzado o directamente alegando que había sido obra del mismo ejército israelí. Esta acción de propaganda fue iniciada por el grupo Hamas, pero fue mayormente cubierta por simpatizantes de la causa palestina en el exterior.</p>
+
+<p>Esta última ola goza del efecto amplificador de Internet. El uso de las redes sociales y las plataformas de streaming es una dimensión importante e intrínseca del terrorismo. La propagando y la incertidumbre por lo que parecía un avance imparable.</p>
+
+<h3>El terrorismo de Estado</h3>
+<p>El terrorismo de Estado puede tener por blanco a agentes opositores tanto pacíficos como radicalizados, pero siempre la excusa esgrimida para la aplicación de dicho recurso es dar un golpe certero a los opositores tras sus arrestos. Con ella, el temor se propaga mediante el boca a boca. Nace así entre la población la incertidumbre por la desaparición, claramente asociada a la actividad política de la víctima.</p>
+<p>Otra táctica de este tipo de terrorismo estatal es la desaparición de los opositores. En estos casos, la dimensión comunicacional puede adquirir dos formas, una directa y otra indirecta. La directa implica una demostración de fuerza a la vista del público y emplea distintas formas de violencia, como ejecuciones públicas, de modo tal de atemorizar a los opositores y a sus potenciales simpatizantes. Estas tácticas son las predilectas de regímenes teocráticos autoritarios, como los de Afganistán e Irán, pero también de grupos insurgentes dentro de los territorios que controlan.</p>
+<p>La indirecta toma la forma de asesinatos de opositores sin autorías declaradas, es decir, nadie se adjudica el hecho o, en todo caso, se le otorga la autoría a grupos clandestinos parapoliciales.</p>
+
+<p>Desgraciadamente, el terrorismo de Estado no es patrimonio exclusivo de regímenes autoritarios. En algunas ocasiones puede ser un recurso en manos de gobiernos democráticos a la hora de combatir a grupos terroristas. Ejemplo de esto es el caso español: frente a la impunidad con la que la banda terrorista ETA se movía, algunos miembros del gobierno democráticamente elegido de Felipe González apelaron a la conformación de un grupo parapolicial, el llamado Grupo Antiterrorista de Liberación (GAL) (García, 2020). Este estuvo inicialmente conformado por miembros de las fuerzas de seguridad, pero pronto fue integrado en su totalidad por civiles con actividades previas relacionadas con el crimen organizado. Los miembros del GAL se dedicaron a asesinar a los miembros de ETA, pero también a sus colaboradores, independientemente de si tenían o no las manos manchadas de sangre. Tras las denuncias periodísticas sobre la conexión de GAL con el Ministerio del Interior español, se llevó a cabo una investigación y un juicio a los responsables.</p>
+
+<p>Nuevamente, el caso argentino es ejemplo de esta situación puesto que, entre los argumentos con los que se justificó el golpe de Estado de 1976 estaba el acabar con el terrorismo perpetrado por grupos como Montoneros y el Ejército Revolucionario del Pueblo (ERP) (Romero, 2013). La impunidad de los terroristas y la incapacidad del Estado para enfrentarlos a menudo termina siendo la excusa por la cual ciertos sectores polítos apelan a un cambio de régimen que prometa mayor seguridad. El problema de enfrentar a grupos terroristas en un Estado de derecho es que estos grupos no siguen reglas claras, mientras que las fuerzas del Estado deben respetar las leyes y los derechos humanos. Esto incluye garantizar la integridad física y mental de los detenidos y asegurarse de que reciban un juicio justo con derecho a defensa, incluso si el Estado debe proporcionarla.</p>
+
+<p>El uso de agentes del crimen organizado es una táctica frecuente en el terrorismo de Estado. Por ejemplo, en la Argentina, durante el gobierno de María Estela Martínez de Perón (1974–1976) se creó un grupo parapolicial, la Alianza Anticomunista Argentina (Triple A), compuesto por policías, civiles de extracción sindical y ex prisioneros (Romero, 2013). Otro caso conocido fue el de Indonesia (1965–1966). Allí, el régimen militar del dictador Suharto reclutó a gangsters para hacer más eficiente la matanza de comunistas en todo el territorio del país (Oppenheimer, 2012). Cuando el Estado se relaciona con el mundo del crimen, las consecuencias van más allá de una acción puntual. Los intereses de los actores se mezclan, y con la excusa de luchar contra el enemigo, los grupos parapoliciales terminan cometiendo asaltos, asesinatos y secuestros que en realidad responden a conflictos personales o buscan un beneficio propio.</p>
+
+<h3>Conclusiones</h3>
+<p>Como vimos, el terrorismo es algo muy complejo, pero no imposible de definir. Un mismo grupo terrorista puede estar encuadrado en más de una clasificación en la medida en que va mutando su comportamiento para adaptarse a la coyuntura internacional, como se ha podido ver en el caso palestino. La conformación de grupos terroristas no es patrimonio de grupos insurgentes que quieren revertir el orden político, sino que también los hay con el fin de mantener el statu quo, como sucede en el caso del terrorismo de Estado. La dimensión comunicacional es vital para el terrorismo y cumple una función dual: se convierte en la herramienta para propagar el terror producto del atentado en sí, y es un instrumento útil a la hora de buscar apoyos en el mismo público. Por último, la actividad de un grupo terrorista puede tener alcance internacional sin que esto implique necesariamente que sus objetivos políticos sean a escala global.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>García, R. (2020). <em>Patriotas de la muerte: quienes han militado en ETA y por qué</em>. Taurus.</p>
+<p>Jordan, J. (1 de marzo de 2023). Qué es el terrorismo: algunas claves introductorias. <em>Global Strategy</em>. https://global-strategy.org/que-es-terrorismo/</p>
+<p>Oppenheimer, J. (Director). (2012). <em>The act of killing</em> [Documental]. Final Cut for Real.</p>
+<p>Rapoport, D. (2002). The four waves of rebel terror and September 11. <em>Anthropoetics</em>, 8(1), 119–142.</p>
+<p>Reinares, F. (1998). <em>Terrorismo y antiterrorismo</em>. Paidós.</p>
+<p>Reinares, F. (2005). Conceptualizando el terrorismo internacional. <em>Análisis</em>, 82(5). Real Instituto Elcano.</p>
+<p>Romero, L. A. (2013). <em>Breve historia contemporánea de la Argentina: 1916–2010</em> (6.ª ed.). Fondo de Cultura Económica.</p>
+<p>Tardivo, G. y Díaz Cano, E. (2020). Felipe González y el caso de los GAL: una relectura de la política antiterrorista de los gobiernos del PSOE en España entre 1982 y 1996. <em>Espacio Abierto</em>, 29(3), 115–139.</p>
+    </div>
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+</body>
+</html>
+

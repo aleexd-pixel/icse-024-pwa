@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuba: percepciones y realidades sobre un orden político autocrático — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .metadatos {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .metadatos .titulo-libro {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .metadatos .titulo-texto {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2em;
+      font-weight: 600;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .metadatos .autor {
+      font-size: 1.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .metadatos .info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .metadatos .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.35rem 1.2rem;
+      background: var(--heading);
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+    }
+
+    .contenido p {
+      text-indent: 1.5em;
+      margin-bottom: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .contenido p + p {
+      margin-top: 0.9em;
+    }
+
+    .contenido p:first-of-type {
+      text-indent: 0;
+    }
+
+    .contenido p.first-of-section {
+      text-indent: 0;
+    }
+
+    .contenido h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--heading);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contenido h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contenido blockquote {
+      margin: 2rem 0 2rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      font-size: 0.95em;
+    }
+
+    .contenido blockquote p {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    .contenido ul,
+    .contenido ol {
+      margin: 1.2rem 0 1.2rem 2rem;
+    }
+
+    .contenido li {
+      margin-bottom: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .contenido table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9em;
+    }
+
+    .contenido table th {
+      background: var(--surface);
+      color: var(--heading);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--accent); }
+
+    .contenido table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido table tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    .contenido .ilegible {
+      color: var(--red-soft);
+      font-weight: 600;
+      background: #3a2020;
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+    }
+
+    .contenido .nota-num {
+      font-size: 0.75em;
+      vertical-align: super;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .notas {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .notas h2 {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .notas p {
+      font-size: 0.85em;
+      text-indent: 0;
+      margin-bottom: 0.6em;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .separador {
+      text-align: center;
+      margin: 3rem 0;
+      color: var(--border);
+      font-size: 1.2em;
+      letter-spacing: 0.5em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .page { padding: 0; max-width: 100%; }
+      .metadatos { break-after: page; border: none; background: none; }
+      .contenido h2 { break-after: avoid; }
+      .contenido h3 { break-after: avoid; }
+      blockquote { break-inside: avoid; }
+      table { break-inside: avoid; }
+      footer { break-before: avoid; }
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 2rem 1.2rem 4rem; }
+      body { font-size: 16px; }
+      .metadatos .titulo-texto { font-size: 1.6em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Debates para un mundo en transformación</div>
+      <div class="titulo-texto">Cuba: percepciones y realidades sobre un orden político autocrático</div>
+      <div class="autor">Armando Chaguaceda Noriega, Eloy Viera Canive</div>
+      <div class="info">Páginas originales: 133–152</div>
+      <div class="badge">Día 15 — Unidad 5</div>
+    </div>
+
+    <div class="contenido">
+      <h2>Capítulo 8. Cuba: percepciones y realidades sobre un orden político autocrático</h2>
+<p class="first-of-section">En las academias de la región no se comprende bien el esquema de poder vigente en Cuba. Algunos académicos esgrimen para su desinterés respecto de él justificaciones banales, como "es una pequeña isla aislada de la globalización". Otros, desde cierto reduccionismo liberal, se limitan a rechazarlo tan solo porque "no permite elecciones multipartidistas". No pocos, desde el relativismo izquierdista, extienden al gobierno cubano la certificación de ser sobresu naturaleza. Comprometidos con un enfoque riguroso y con horizontes progresistas de análisis político, incluso los trabajadores de países como Chile o Costa Rica disfrutan hoy de más derechos, conquistados a través de sus sindicatos y representantes políticos, que sus pares en Cuba.</p>
+
+<h3>La democracia: ¿de qué estamos hablando?</h3>
+<p>En el mundo, la democracia realmente existente adquiere hoy la forma de una república liberal de masas, erigida sobre el tejido de una sociedad compleja y dentro de los marcos territoriales e institucionales de un Estado-nación. Es dentro de esta democracia —y no desde el liberalismo oligárquico, los populismos autoritarios de cualquier signo ideológico o el socialismo de Estado— donde los sectores populares, a través de una dialectica ciudadanizante que abarca la lucha social, el reconocimiento legal y la incorporación de sus demandas en la política pública, han conseguido beneficios permanentes y derechos universales.</p>
+<p>La democracia siempre se basa en acuerdos que cambian con el tiempo y que se logran gracias a la participación activa de la sociedad. El pluralismo, dentro de las instituciones, no busca eliminar las diferencias ni silenciar a los titulares del poder estatal. La democracia reúne un ideal normativo —un modo de vida que cuestiona las asimetrías de jerarquía y poder dentro del orden social—, un movimiento social —conjunto de actores, luchas y reclamos democratizadores expansivos de la ciudadanía—, un proceso sociohistórico —las fases y horizontes de democratización— y un orden político —el régimen democrático— que institucionaliza los valores, prácticas y reglas que hacen efectivos los derechos a participar, deliberar y ser representados políticamente, y a la renovación periódica de los gobernantes.</p>
+<p>Pero el ideal normativo, en tanto identidad y cultura política, de la "democracia socialista" cubana —allende su retórica— es el compañero revolucionario: personas y colectividades disciplinadas, acríticas y no reclamantes, que dejan a sus gobernantes "velar por los intereses del pueblo". El movimiento social democratizador no existe desde el diseño oficial, puesto que la movilización desde arriba y desde afuera de la sociedad —desde la cúpula del Partido-Estado— es sinónimo de predominio de una casta política marxista, sustituta de la liberal.</p>
+<p>Como ejercicio de imaginación política, es siempre posible pensar en una democracia diferente. Al criticar los fundamentos del liberalismo, pensadores de prosapia socialista (Gramsci, 2013 y 2018; Macpherson, 1973 y 2009) propusieron pensar de forma distinta la organización y la participación política de la población en las sociedades divididas en clases. Otros, desde el liberalismo democrático (Bobbio, 1997 y 2001) reconocieron la pertinencia de explorar, en sintonía con el mejor legado marxista, una modalidad diferente de encauzar la acción de los ciudadanos. Una democracia socialista entendida no como empoderamiento desde arriba, sino como empoderamiento desde abajo, en la que las personas dejan de integrar una "masa" atrapada por la apatía, la resignación y la indiferencia.</p>
+<p>Como proceso sociohistórico, desde la crisis del llamado Período Especial (1990) ha habido escasos avances y, en cambio, un marcado estancamiento e incluso retrocesos en materia de derechos civiles, sociales y políticos. El orden político vigente no introduce las identidades y demandas excluidas dentro de la política: más bien las expropia y administra en nombre de los humildes, incluida aquella legitimamente realizada en nombre del socialismo.</p>
+<p>Las elites latinoamericanas están ideológicamente divididas entre sectores conservadores, reformistas y radicales; también entre segmentos empresariales y políticos. En Cuba, están fundamentalmente fusionadas dentro de un grupo social y un aparato del Estado que es, por su omnipresencia en toda la vida nacional, el principal responsable de la violencia, la desigualdad y la corrupción. Las diferencias que existen en su seno no pueden expresarse, lo que deja al ciudadano sin la posibilidad siquiera de elegir entre modalidades distintas de una gobernanza autoritaria.</p>
+
+<h3>El orden político existente: ¿cómo calificarlo?</h3>
+<p>Como orden político, la isla ha sido gobernada durante seis décadas por un régimen que monopoliza el poder, el conocimiento y la riqueza. El orden político y económico está controlado por una burocracia estatal que opera en alianza con capitales extranjeros y con una élite gerencial local. En la práctica, se trata de un socialismo de Estado con más de Estado que de socialismo, y de una autocracia dominada por un núcleo familiar y militar que, como se lo evalúe, no cumple con los requisitos mínimos para ser considerada una democracia, ni en su aspecto formal ni en el sustantivo.</p>
+<p>Así, el único régimen de matriz totalitaria de la región —el cubano— sigue incrementando incluso su influencia con la consolidación de un ecosistema afín a los regímenes aliados —iliberales y autoritarios— de Nicaragua y Venezuela. Este tipo de regímenes ha demostrado capacidad para sobrevivir durante décadas —a pesar de la intensa presión externa, los malos resultados económicos y los fracasos de las políticas a gran escala— y son uno de los tipos de autoritarismos más duraderos del mundo moderno. El socialismo de Estado vigente en Cuba no introduce las identidades y demandas excluidas dentro de la política; más bien las expropia y administra en nombre de los humildes.</p>
+<p>El problema de parte de las interpretaciones sobre el sistema político cubano realizadas y publicadas bajo el prisma oficial no radica en la inutilidad explicativa de cualquier marxismo, sino en la naturaleza apologética de las referencias al tipo de marxismo —marxismo-leninismo— vigente en el archipiélago. Estos enfoques, presentes en la literatura producida por el gobierno y en los currículos de las carreras universitarias, excluyen referencias centrales del orden vigente, como la burocracia, la policía política y el autoritarismo. En ellos persiste, de modo relevante, el uso de una noción ahistorica e ipsológica como la de revolución, que refiere, de forma indistinta e intencionalmente confusa, al proceso político, la institucionalidad y a sus dirigentes.</p>
+<p>El Partido Comunista de Cuba, el único legal, mantiene su monopolio oficial en la vida política nacional, en tanto vanguardia autoconferida e irrevocable de la nación. Ni en los textos clásicos de Marx ni en el pensamiento de José Martí aparece esta idea de organización monopolizadora de la representación política. Ella no es funcional para la clase obrera del paradigma marxista ni para la alianza multiclasista sustentadora del proyecto martiano.</p>
+
+<h3>La hipercentralización del poder</h3>
+<p>El centralismo democrático es una forma de organización política que, en teoría, permite que todos los miembros de un partido debaten libremente antes de tomar una decisión, todos deben aceptarla y obedecerla sin cuestionarla. En la práctica, aunque se supone que las decisiones se discuten antes de ser implementadas, en la práctica las decisiones del Partido Comunista están por encima del Estado y de cualquier otro líder del país, lo que asegura que el poder real siempre esté en sus manos.</p>
+<p>No resulta democrático un centralismo burocrático en el que el Buró Político del Partido Comunista no es, oficialmente, el jefe del Consejo de Estado (liderado por el presidente de la Asamblea Nacional del Poder Popular [ANPP]) ni del Consejo de Ministros (dirigido por el primer ministro). A pesar de esto, es la persona con más autoridad en el país, porque el Partido Comunista toma todas las decisiones clave. El primer secretario del Partido Comunista es, por lejos, la figura política más poderosa del país, aunque no ocupe formalmente la presidencia de la República ni la jefatura del gobierno.</p>
+<p>El Partido Comunista no representa a toda la población, sino solo a una parte de ella. Sin embargo, en Cuba tiene más poder que el Estado, que en teoría debería gobernar para todos los ciudadanos. La hipercentralización y la personalización en la toma de decisiones en todas las instituciones, con escasa o nula deliberación política, vulnera estructuralmente cualquier idea de participación activa y de reivindicación de derechos inherentes a la matriz republicana. Imposibilitada la ciudadania de deliberar y representarse políticamente, todo queda en las manos de la burocracia.</p>
+<p>Pese a su retórica republicana, el régimen cubano lo es apenas de modo formal. La hipercentralización y la personalización en la toma de decisiones, con escasa o nula deliberación política, vulnera estructuralmente cualquier idea de participación activa y de reivindicación de derechos inherentes a la matriz republicana.</p>
+
+<h3>Elites militares y empresariales</h3>
+<p>En Cuba, algunos militares han ocupado puestos clave tanto en el gobierno como el modelo de éxito que debe seguir el vasto aparato empresarial estatal. No obstante, desde finales de la década de 1980, ha surgido en Cuba una clase empresarial y burocrática dentro de las estructuras de las fuerzas armadas que parece tener independencia de la burocracia partidista. Esta clase, especialmente tras la llegada de Raúl Castro al poder en 2006, ha sido promovida como el modelo de éxito que debe seguir el vasto aparato empresarial estatal que gestiona enormes fondos sin depender del sistema de planificación y presupuesto, instituciones financieras separadas del Banco Central y dirigentes de la institucionalidad estatal y la burocracia del partido comunista.</p>
+<p>Algunos militares han ocupado puestos clave tanto en el gobierno como en la burocracia del partido comunista. Durante años, esta estructura burocrática funcionó sin destacarse públicamente en la política del régimen. Sin embargo, con la retirada oficial de Raúl Castro de la vida pública en el año 2021, algunos de sus miembros más influyentes fueron legitimados con cargos públicos y posiciones clave dentro de la institucionalidad estatal y la burocracia del partido comunista.</p>
+<p>Manuel Marrero Cruz dirigió Gaviota, una de las empresas turísticas más grandes de GAESA. Luego, fue nombrado ministro de Turismo por las Fuerzas Armadas Revolucionarias de Cuba. En 2021, fue elegido diputado de la Asamblea Nacional (el parlamento cubano) y luego pasó a formar parte del Buró Político del Partido Comunista de Cuba (PCC), que es el grupo de dirigentes más importante del partido único que gobierna el país. Luis Alberto Rodríguez López-Callejas, quien fue yerno de Raúl Castro (esposo de su hija), dirigió durante más de veinte años GAESA, un conglomerado de empresas controladas por las Fuerzas Armadas Revolucionarias de Cuba.</p>
+<p>Cuba tiene un fuerte control sobre el poder político y económico del país, ya que los altos mandos de GAESA logran ocupar posiciones clave en el gobierno. Cuando Miguel Díaz-Canel asumió la presidencia de Cuba, lo designó como sucesor suyo en la dirección del Partido Comunista, mostrando cómo la cúpula militar y empresarial del gobierno tiene influencia directa en la política del régimen.</p>
+
+<h3>Actualizando el modelo</h3>
+<p>Para entender el rol de la ANPP, basta con señalar que, en más de cuarenta años de instaurada, ni un solo diputado ha utilizado su iniciativa legislativa para presentar un proyecto de ley y solicitar su debate. En la última legislatura (2023-2028) de 470 diputados solamente 221 llegaron a diputados en la ANPP. La ley cubana establece que al menos el 50 % del poblado Parlamento cubano debería estar compuesto por delegados electos por sus vecinos. Sin embargo, lo que podría parecer la expresión más popular de la "democracia cubana" fenecé ante la inoperancia de un órgano que apenas se reúne y cuya misión casi exclusiva es la de formalizar unanimemente las decisiones tomadas de antemano por las altas esferas del Partido Comunista.</p>
+<p>Con la nueva ley electoral se dificulta aún más el sostenimiento, incluso teórico, de la idea de que el sustrato popular está en la base del poder en Cuba. Cualquier análisis verdaderamente emancipador que examine la estructura de clases, los órganos de poder y el régimen de propiedad en Cuba no puede dejar de cuestionar el supuesto carácter socialista de su modelo. A pesar de la reforma constitucional y de ciertos cambios en el modelo estatal, la burocracia mantiene una posición dominante en la economía, la política y la cultura.</p>
+<p>El régimen cubano ha mutilado la iniciativa política de la ciudadanía y carece de espacios y herramientas que permiten articular toda una teoría sobre el carácter directo y popular de la democracia cubana, pero que, en su fondo y en su forma, dejan muestras suficientes para asegurar que en su diseño subyace una marcada intención de limitar la influencia y participación ciudadana en el poder político.</p>
+<p>La burocratización de los mecanismos de democracia directa reconocidos por la legislación vigente y el control a partir de mecanismos de coacción política hacen que la sociedad civil no los emplee en el impulso de sus agendas y que se expanda y asuma como un hecho la idea de que solo son válidas las iniciativas que parten desde arriba, desde las más altas esferas de poder. Y que aquellas que se promueven desde abajo, desde la autonomía de la ciudadanía, no son el ejercicio legítimo de un derecho ciudadano, sino un acto político contrario a la Revolución, esa categoría ahistorica e inconmensurable con la que se ha identificado el sistema político del país.</p>
+
+<h3>La disputa por los derechos: iniciativas ciudadanas, respuestas estatales</h3>
+<p>La capacidad y vocación de control del gobierno cubano le permitió en 2018 convocar a una consulta popular para recopilar criterios de la ciudadanía sobre algunos aspectos de la nueva constitución sin comprometerse legalmente con sus deseos. Esa es la lógica que permite entender, quizás, por qué no fueron escuchados los reclamos de más de once mil cubanos que solicitaron que se modificaran aspectos de la nueva constitución sin comprometerse legalmente con sus deseos.</p>
+<p>Unas cifras que destacan mucho más si se evalúa el hecho de que después de que las autoridades cubanas modificaron la ley electoral para evitar que la comunidad de cubanos residentes en el exterior tuviese derecho a votar y reducir así la influencia de su voto en el proceso de consulta popular de la constitución. En septiembre de 2022 se registraron los niveles más altos de abstencionismo en la historia del país, con cerca del 25 % del padron electoral sin acudir a las urnas.</p>
+<p>En el referendo del 25 de septiembre de 2022, el rechazo a este mecanismo se reflejó en los altos niveles de abstención registrados en el referendo del 25 de septiembre de 2022. En dicho plebiscito, no solo se sometieron a votación mayoritaria los derechos humanos se priorizan sobre otros. El embargo estadounidense, impuesto desde los primeros años de la década de 1960, ha sido utilizado por el gobierno cubano como justificación para mantener una visión heredada de la Revolución.</p>
+<p>En Cuba, el poder ha sostenido durante décadas un sistema en el que algunos derechos humanos se priorizan sobre otros. El control total de la vida política y jurídica de la nación cubana que detenta el Partido Comunista le permitió no solo ajustar mayoritariamente críticas con la gestión de gobierno, sino también eliminar sin resistencias los espacios que había dejado en el ordenamiento jurídico. La obligación del Estado cubano de garantizar que los electores que se encontraban fuera del territorio nacional en el momento del referendo pudiesen ejercer su derecho al voto fue incumplida y en el exterior solo se le permitió votar al personal que se encontraba en misión oficial.</p>
+
+<h3>Presos políticos: un triste récord cubano</h3>
+<p>A lo largo de años de represión, organizaciones de la sociedad civil cubana que monitorean la situación de los presos políticos han reportado que en Cuba existen aproximadamente mil prisioneros de conciencia. En su informe mundial de 2024, Human Rights Watch respaldó esta cifra y señaló que entre los detenidos se encuentran al menos 34 adolescentes menores de edad. La cifra coloca a Cuba en una posición tristemente protagonica en tanto reúne más presos políticos que otros dos regímenes similares de la región —como el putinismo, que controla un país como Rusia, con una población quince veces mayor que la cubana.</p>
+<p>Este elevado número de prisioneros políticos ha sido utilizado por el régimen cubano como una herramienta de negociación con actores internacionales, como la Unión Europea, el Vaticano y Estados Unidos. En enero de 2025, ante la influencia de ese respaldo popular. A los disidentes el gobierno cubano no les ha permitido sobrevivir políticamente y mucho menos participar en igualdad de condiciones con el Partido Comunista en las decisiones políticas relativas a la nación cubana.</p>
+<p>Después de 2021 ha quedado claro que la limitación de derechos civiles y políticos en Cuba no se ha ceñido exclusivamente, como algunos autores cubanos han sugerido, a pequeños grupos opositores sin respaldo popular. Las limitaciones a los derechos civiles y políticos alcanzan a todos los espacios y actores que no puedan ser controlados por el Partido Comunista, y se han extendido, incluso, al segmento de la nación cubana que, debido a la emigración, ha escapado del alcance de los mecanismos que utiliza el gobierno para controlar y reprimir a quienes se le oponen.</p>
+<p>En segundo lugar, son cada vez más irrefutables las muestras de que esa represión se ejerce no solo contra lideres políticos o activistas de reconocida influencia en la política del país, sino también contra ciudadanos comunes que han expresado, en alguna plataforma virtual o plaza, cuestionamientos contra el orden vigente. A la definitiva cancelación de los derechos políticos de la emigración cubana, que no permite sobrevivir políticamente a quienes se oponen al gobierno y a sus decisiones, se han sumado las tácticas de destierro o negativas al retorno apelando a criterios de seguridad nacional.</p>
+<p>Hoy más que nunca es cuestionable que estudiosos con posturas afines a la intelectualidad de izquierda que cree en la perfectibilidad del modelo cubano. Las organizaciones de la sociedad civil cubana han confirmado la liberación de 212 prisioneros políticos, la mayoría vinculados a las protestas del 11J. No obstante, aproximadamente el 70 % de los excarcelados ya habían cumplido más de la mitad de su condena, lo que los hacía elegibles para la libertad condicional según la legislación cubana.</p>
+
+<h3>Una política asimétrica y distorsionada</h3>
+<p>Desde hace más de diez años, el gobierno cubano ha llevado adelante una estrategia de inversión desequilibrada enfocando sus recursos principalmente desproporcionadamente a un solo sector, en este caso el turismo, en lugar de distribuir los recursos de manera equitativa entre diferentes áreas. Esta política es asimétrica porque favorece al turismo-inversión-educación-sanidad al mismo tiempo que no está respaldada por una base económica sólida ni responde a las necesidades más urgentes del país.</p>
+<p>Como resultado, sectores que históricamente han sido fundamentales en el modelo social cubano, como la agricultura, la salud, la educación y la seguridad social, han quedado relegados y han experimentado un deterioro progresivo. Esto ha afectado la producción de alimentos, el acceso a atención médica y otros artículos básicos. En 2024, el régimen cubano asignó el 40 % de toda la inversión estatal a actividades inmobiliarias, especialmente a la construcción de hoteles. A pesar de la crisis alimentaria que sufre el país, por la cual más del 80 % de los alimentos consumidos son importados, solo dedicó menos del 3 % de su inversión a la agricultura.</p>
+<p>Estos datos revelan que, aunque el número de turistas ha disminuido constantemente, el régimen cubano prefiere invertir 15 veces más en la construcción de hoteles que en la agricultura, la salud y la asistencia social. La crisis económica en Cuba es muy profunda, los cubanos han visto como su expectativa de vida se ha reducido de 78,53 años en 2012 a 71,25 años en 2021, y la mortalidad infantil ha pasado de ser de 4,9 muertes por cada 100.000 nacidos vivos en 2020 a 7,1 en 2024.</p>
+
+<h3>Conclusiones</h3>
+<p>Siendo parte de lo que alguna vez fue una Revolución y hoy no es otra cosa que un poder reaccionario. El orden político vigente necesita una reforma sustantiva y urgente, tanto o más necesaria que la que se requiere en otros segmentos de la sociedad. Partiendo de esos criterios, para el caso que nos ocupa, el orden político vigente contendría diversidad natural de personas e intereses que conforman la nación cubana. Si quiere ser democrático, ese orden debe medirse con apego a sus realizaciones, no a supuestos normativos definidos ex ante.</p>
+<p>Siendo parte del movimiento y programa de izquierda o derecha debe ser medido con apego a sus realizaciones, no a supuestos normativos definidos ex ante. La investigación sobre instituciones y sociales puede evaluarse el saldo variable —en términos de libertad, equidad y prosperidad— de las fuerzas y regímenes políticos realmente existentes, en el último siglo, democratización y derechos humanos evaluando sus consecuencias para las diversas personas e intereses que conforman la nación cubana.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Acosta Gonzalez, E., Picasso Risso, F. y Perrotta Gonzalez, V. (Eds). (2018). Políticas sociales comparadas sobre los cuidados en la vejez y el envejecimiento en América Latina: aproximación comparada a los casos de Chile, Cuba y Uruguay. Programa Regional Políticas Sociales en América Latina (SOPLA). Fundación Konrad Adenauer.</p>
+<p>Albizu Campos, J. C. (18 de junio de 2023). La caída de la esperanza de vida al nacer en Cuba. De la crisis sanitaria a la humanitaria. Horizonte Cubano. horizontecubano.law.columbia.edu/news/la-caida-de-la-esperanza-de-vida-al-nacer-en-cuba-de-la-crisis-sanitaria-la-humanitaria</p>
+<p>Bobbio, N. (1997). Liberalismo y democracia. Fondo de Cultura Económica.</p>
+<p>Bobbio, N. (2001). Ni con Marx ni contra Marx. Fondo de Cultura Económica.</p>
+<p>Bobbio, N. (2009). La democracia liberal y su época. Alianza Editorial.</p>
+<p>Camero Guevara, Y., Chaguaceda Noriega, A., Díaz Torres, I., González Marrero, C., Hernández, H. E., Puerta Riera, M. I. y Arenas, B. (2023). Participacionismo autocrático: un análisis sobre experiencias locales en Cuba, Nicaragua y Venezuela. Revista Foro Cubano, 5(8).</p>
+<p>Chaguaceda Noriega, A. y Peña Barrios, R. F. (2024). Participacionismo autocrático: un análisis sobre experiencias locales en Cuba, Nicaragua y Venezuela. Revista Foro Cubano, 5(8).</p>
+<p>EFE. (24 de marzo de 2025). Cuba concentró el 37,4 % de la inversión estatal en actividades relacionadas con el turismo en 2024, mucho más que en Educación y Sanidad juntos.</p>
+<p>Gramsci, A. (2013). Antología. Akal.</p>
+<p>Gramsci, A. (2018). Notas sobre Maquiavelo, sobre la política y sobre el Estado moderno. Comares.</p>
+<p>Keane, J. (2020). The new despotism. Cambridge University Press.</p>
+<p>Macpherson, C. B. (1973). Democratic theory: essays in retrieval. Clarendon Press.</p>
+<p>Monreal, P. (2025). La planta hotelera en Cuba.</p>
+<p>Nielsen, K. (2025). Análisis del sistema político cubano.</p>
+<p>Thiemann, L. (2023). Sharp Power y redes intelectuales: la presencia de Cuba en América Latina. Dunken.</p>
+<p>Uzcátegui, A. et al. (2025). Estudios sobre el caso cubano.</p>
+    </div>
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+</body>
+</html>
+

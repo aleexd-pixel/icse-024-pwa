@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Conceptos para analizar la sociedad — ICSE 024</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+
+      font-size: 18px;
+
+      line-height: 1.75;
+
+      padding: 0;
+
+    }
+
+
+
+    .page {
+
+      max-width: 680px;
+
+      margin: 0 auto;
+
+      padding: 4rem 2rem 6rem;
+
+    }
+
+
+
+    .metadatos {
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      padding: 2.5rem 2rem;
+
+      margin-bottom: 4rem;
+
+      text-align: center;
+
+    }
+
+
+
+    .metadatos .titulo-libro {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.15em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1.5rem;
+
+    }
+
+
+
+    .metadatos .titulo-texto {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 2em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      line-height: 1.25;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .metadatos .autor {
+
+      font-size: 1.05em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1rem;
+
+      font-style: italic;
+
+    }
+
+
+
+    .metadatos .info {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.78em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 0.3rem;
+
+    }
+
+
+
+    .metadatos .badge {
+
+      display: inline-block;
+
+      margin-top: 1.2rem;
+
+      padding: 0.35rem 1.2rem;
+
+      background: var(--heading);
+
+      color: #1a1a1a;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.72em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido p {
+
+      text-indent: 1.5em;
+
+      margin-bottom: 0;
+
+      text-align: justify;
+
+      hyphens: auto;
+
+    }
+
+
+
+    .contenido p + p {
+
+      margin-top: 0.9em;
+
+    }
+
+
+
+    .contenido p:first-of-type {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido p.first-of-section {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido h2 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.5em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      margin-top: 3rem;
+
+      margin-bottom: 1rem;
+
+      padding-bottom: 0.5rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido h3 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.2em;
+
+      font-weight: 600;
+
+      font-style: italic;
+
+      color: var(--heading);
+
+      margin-top: 2.5rem;
+
+      margin-bottom: 0.8rem;
+
+    }
+
+
+
+    .contenido h4 {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.95em;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+      color: var(--text-muted);
+
+      margin-top: 2rem;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .contenido blockquote {
+
+      margin: 2rem 0 2rem 1.5rem;
+
+      padding: 1rem 1.5rem;
+
+      border-left: 3px solid var(--accent);
+
+      font-style: italic;
+
+      color: var(--text-muted);
+
+      background: var(--surface);
+
+      font-size: 0.95em;
+
+    }
+
+
+
+    .contenido blockquote p {
+
+      text-indent: 0;
+
+      text-align: left;
+
+    }
+
+
+
+    .contenido ul,
+
+    .contenido ol {
+
+      margin: 1.2rem 0 1.2rem 2rem;
+
+    }
+
+
+
+    .contenido li {
+
+      margin-bottom: 0.5em;
+
+      padding-left: 0.3em;
+
+    }
+
+
+
+    .contenido table {
+
+      width: 100%;
+
+      border-collapse: collapse;
+
+      margin: 2rem 0;
+
+      font-size: 0.9em;
+
+    }
+
+
+
+    .contenido table th {
+
+      background: var(--surface);
+
+      color: var(--heading);
+
+      padding: 0.7rem 1rem;
+
+      text-align: left;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-weight: 500;
+
+      font-size: 0.85em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.03em;
+
+    border-bottom: 2px solid var(--accent); }
+
+
+
+    .contenido table td {
+
+      padding: 0.6rem 1rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido table tr:nth-child(even) {
+
+      background: var(--surface);
+
+    }
+
+
+
+    .contenido .ilegible {
+
+      color: var(--red-soft);
+
+      font-weight: 600;
+
+      background: #3a2020;
+
+      padding: 0.1em 0.3em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido .nota-num {
+
+      font-size: 0.75em;
+
+      vertical-align: super;
+
+      color: var(--accent);
+
+      font-weight: 600;
+
+    }
+
+
+
+    .notas {
+
+      margin-top: 4rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+
+    .notas h2 {
+
+      font-size: 1.1em;
+
+      margin-bottom: 1rem;
+
+      border-bottom: none;
+
+      padding-bottom: 0;
+
+    }
+
+
+
+    .notas p {
+
+      font-size: 0.85em;
+
+      text-indent: 0;
+
+      margin-bottom: 0.6em;
+
+      color: var(--text-muted);
+
+      text-align: left;
+
+    }
+
+
+
+    .separador {
+
+      text-align: center;
+
+      margin: 3rem 0;
+
+      color: var(--border);
+
+      font-size: 1.2em;
+
+      letter-spacing: 0.5em;
+
+    }
+
+
+
+    footer {
+
+      margin-top: 5rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+      text-align: center;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      color: var(--text-muted);
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+    }
+
+
+
+    @media print {
+
+      body { background: #fff; font-size: 12pt; }
+
+      .page { padding: 0; max-width: 100%; }
+
+      .metadatos { break-after: page; border: none; background: none; }
+
+      .contenido h2 { break-after: avoid; }
+
+      .contenido h3 { break-after: avoid; }
+
+      blockquote { break-inside: avoid; }
+
+      table { break-inside: avoid; }
+
+      footer { break-before: avoid; }
+
+    }
+
+
+
+    @media (max-width: 700px) {
+
+      .page { padding: 2rem 1.2rem 4rem; }
+
+      body { font-size: 16px; }
+
+      .metadatos .titulo-texto { font-size: 1.6em; }
+
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="../../css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="metadatos">
+
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+
+      <div class="titulo-texto">Conceptos para analizar la sociedad</div>
+
+      <div class="autor">Nadia Yannuzzi</div>
+
+      <div class="info">Páginas originales: 65–76</div>
+
+      <div class="badge">Día 3 — Unidad 1</div>
+
+    </div>
+
+
+
+    <div class="contenido">
+
+      <h2>Capítulo 5. Conceptos para analizar la sociedad</h2>
+
+<p class="first-of-section">Sociedad es un término complejo de definir, sobre todo porque su uso cotidiano habilita múltiples significados. Si se pregunta a alguien qué es la sociedad, pareciera que fuera una obviedad o algo de sentido común; todos tienen alguna idea al respecto. Por eso, el sociólogo Pierre Bourdieu (2005) afirmaba que la gente no necesita a los científicos sociales, porque con el solo hecho de vivir la vida cotidiana, todos tienen ideas sobre qué es la sociedad, cómo funciona, cuál es su papel en ella, qué es el Estado o cómo mejorar su funcionamiento.</p>
+
+<p>Y por eso, en este capítulo definiremos algunos conceptos que se utilizan para hablar más certeramente sobre la sociedad y sus miembros, y la forma en que estos actúan. Sociedad, comunidad, individuo, ciudadano parecen sinónimos, pero no lo son. En ese océano de ideas, sentidos, saberes y debates, términos como estos se utilizan para hablar más certeramente sobre la sociedad y sus miembros, y la forma en que estos actúan.</p>
+
+<p>Desde un punto de vista concreto, se puede decir que la sociedad es el conjunto de personas que viven bajo el mismo Estado. Eso ocurre cuando la sociedad se complejiza y deben definirse roles y funciones que ya no se pueden asumir como sucedía en una comunidad.</p>
+
+
+
+<h3>La sociedad y la ciudadanía</h3>
+
+<p>En un sentido estricto, ser ciudadano implica tener una batería de derechos que cada Estado otorga y garantiza. Cuando nacemos, se certifica en un documento nuestra partida de nacimiento, que indica quiénes son nuestros padres y dónde nacimos y, en función de ello, qué ciudadanía tenemos (después la podremos cambiar, incorporar otras, etcétera). Todas las personas, es decir, cada individuo de la especie humana tiene derechos por el simple hecho de existir, es decir, derechos de nacimiento. Estos son los derechos humanos. Pero eso solo no nos convierte en ciudadanos.</p>
+
+<p>Puesto que no son sinónimos, aunque muchas veces se los utilice como si lo fueran, la segunda es condición del primero. La distinción entre persona y ciudadano es relevante porque la experiencia de la ciudadanía está signada por procesos históricos signados por la violencia, los intereses diversos y opuestos (Jelin, 2012). La lucha por los nuevos derechos es permanente y compleja. Un colectivo logra un objetivo y ambiciona más o sigue en pugna por la implementación. En segundo lugar, la ciudadanía y los derechos que esta conlleva están en expansión constante.</p>
+
+<p>Pero hay otra forma de entender la ciudadanía desde una perspectiva conceptual. Como afirma Elizabeth Jelin siguiendo a Hanna Arendt, la ciudadanía es el derecho a tener derechos, lo que implica que es una arena de combate, porque los derechos se obtienen a través de complejos procesos históricos. Determinar quién tiene derecho a algo supone un reajuste en la distribución del poder e implica para el Estado reconocer y garantizar —o no— ese derecho. Esto sucede porque los derechos se obtienen a través de complejos procesos históricos, los intereses diversos y opuestos.</p>
+
+<p>Cuando otorgar derechos a algún sector implica a la vez limitar a otro, sea en términos concretos (por ejemplo, un cambio en la política de subsidios a un servicio que deja de beneficiar a algún sector) o simbólicos (cuando se otorga algún derecho que es contrario a la idiosincrasia de un determinado grupo confesional). Finalmente, para el Estado, reconocer nuevos derechos implica garantizar su acceso.</p>
+
+<p>Y, por ejemplo, un ciudadano japonés o uno estadounidense en sus respectivos países, las diferencias que haya entre ellos tienen que ver con las diversas dinámicas históricas y sociales de cada país. Esto responde a las diversas dinámicas históricas y sociales de cada país, tradiciones, ubicaciones geográficas, decisiones políticas y sociales. Las diferencias que haya entre ellos tienen que ver con las diversas dinámicas históricas y sociales de cada país. En Canadá en 1918, en Argentina en 1947 y en Arabia Saudita en 2011. Podemos comparar qué derechos tiene un ciudadano argentino y qué derechos tiene un ciudadano de otros países.</p>
+
+<p>Como señala Weber, "todo ordenamiento jurídico influye directamente, en virtud de su estructura, sobre la distribución del poder dentro de la comunidad respectiva" (2002, p. 682). Y esto es problemático, porque emergen o las leyes cambian, algunas personas triunfan y otras pierden, a veces, no tienen que ver con ese derecho en cuestión. Por ejemplo, una demanda que se origina en la sociedad civil. Y eso ocurre cuando un gobierno en control del aparato estatal elige priorizando elementos que, de hecho, se reconoce pero no todo lo extendido que pretendía el sector que lo reclamaba.</p>
+
+<p>Tocqueville señala que no es lo mismo un sistema político democrático (con elecciones legítimas) que una sociedad democrática y, de hecho, la segunda es condición del primero. Lo que nos interesa destacar es el repliegue del individuo a la esfera privada. Entre los múltiples efectos de este proceso de individuación, el que aquí nos interesa destacar es el repliegue del individuo a la esfera privada. Autores clásicos como Emile Durkheim y, principalmente, Alexis de Tocqueville plantean lo deseable que es para los sistemas democráticos que los ciudadanos participen de las cuestiones comunes. Es que fomentar el interés en los asuntos públicos también incrementa la calidad institucional de la democracia.</p>
+
+<p>El Estado es la institución más importante de un país, y frente a su preponderancia como organizador por excelencia de la vida social y distribuyen las diferentes cargas públicas. Las personas que viven bajo un Estado no siempre están conformes y se sientan involucradas. La Modernidad como etapa histórica comienza hacia finales del siglo XV, y una de sus características es la individuación. Es decir, que cada vez más las personas se representan a sí mismas como individuos, y no a algo colectivo, como ocurría, por ejemplo, con los campesinos en la Edad Media. Sus vidas estaban determinadas por el grupo social en el que habían nacido, no tenían derechos personales y nunca podían ser otra cosa que campesinos ni ingresar a otro grupo.</p>
+
+
+
+<h3>La sociedad civil</h3>
+
+<p>Como ya mencionamos, la sociedad y el Estado son dos espacios distintos que se necesitan mutuamente, pero esta necesidad no está exenta de conflictos. Y esto es así porque existe una tensión desde el mismo momento en que un Estado se crea. Esa sociedad lo diseña para obtener los beneficios de una mejor organización. Sin embargo, el Estado —por los recursos que posee— intenta autonomizarse de la sociedad. Esto ocurre porque el Estado no es un ente intangible; está integrado por personas que pueden "concretar sus propios objetivos, que pueden no ser los de la sociedad que los creó, porque, como hemos visto, el Estado no representa los intereses de todas las personas que viven bajo su dominio. Por eso la sociedad genera todo el tiempo instituciones de control sobre el Estado para restar el avance del Estado sobre la sociedad.</p>
+
+<p>Las instituciones de la sociedad civil son instituciones formales que no son creadas por el Estado. Es un conjunto que no pertenece al ámbito estatal ni a las organizaciones políticas (como los partidos políticos), pero que cuenta con su reconocimiento. Son las redes —formales e informales— que se establecen entre grupos de ciudadanos para contraer desde la ciudadanía para impulsar diversos temas de agenda, defender que pueden ser la constitución, las leyes, la participación, las movilizaciones, la opinión pública o la prensa independiente.</p>
+
+<p>La sociedad civil es, entonces, el entramado institucional generado por la ciudadanía para impulsar diversos temas de agenda, defender y promover que cuentan con su reconocimiento. Son las redes —formales e informales— que se establecen entre grupos de ciudadanos para contraer los intereses de todas las personas que viven bajo su dominio. Por eso, estas instituciones fomentan la participación en la esfera pública con objetivos como los siguientes:</p>
+
+<ul>
+
+<li>La defensa de los derechos y leyes que el Estado ya reconoce o ha sancionado, pero cuyo ejercicio y cumplimiento, por diversas razones, no está garantizado. Un ejemplo son las organizaciones de familiares de personas que fallecieron en accidentes vehiculares producto de acciones negligentes de los conductores.</li>
+
+<li>El cumplimiento de funciones que el Estado no está realizando, como las que desarrollan las organizaciones asistenciales que prestan servicios a personas en diversas situaciones de vulnerabilidad.</li>
+
+<li>La ampliación de la constitución moral de la sociedad, que llevan adelante organizaciones que impulsan y visibilizan nuevas problemáticas (por ejemplo, las que sensibilizan sobre violencia de género, o respecto de los usos medicinales del cannabis, o sobre los derechos de los animales, etcétera).</li>
+
+</ul>
+
+
+
+<h3>Los actores sociales</h3>
+
+<p>Para Alain Touraine (2000), los actores sociales son sujetos colectivos que despliegan estrategias de acción para lograr sus objetivos y que se definen en función de los intereses de los miembros que componen este colectivo. Se llaman actores porque desempeñan un papel, como los actores sobre un escenario. Cada persona encarna a diversos actores en función de cada área de la vida: estudiantes, docentes, trabajadores, ciudadanos, socios de un club de fútbol, y la lista sería larga.</p>
+
+<p>Como actores sociales se agrupan con otras personas con intereses o demandas comunes, para aumentar las posibilidades de lograr su objetivo. Algunos ejemplos de actores sociales son los sindicatos, los movimientos sociales (como el feminismo o los movimientos ecologistas), los empresarios y los funcionarios del mismo gobierno. También pueden ser grupos de personas perjudicadas que reclaman al Estado por derechos que no se les han cumplido, como víctimas de violencia institucional, de accidentes viales o estafados por alguna organización legal, entre muchas otras posibilidades.</p>
+
+<p>Para entender el concepto de actores se puede pensar en el Consejo Superior de la Universidad de Buenos Aires. Este es uno de sus principales órganos de gobierno y está compuesto por las autoridades (el rector y decanos de las trece facultades), representantes de los profesores, de los graduados y de los estudiantes. Todos estos son los actores de la comunidad universitaria; cada uno de ellos tiene intereses y busca definir cómo llegan a ocupar sus cargos, cómo se eligen, cuánto duran en sus mandatos, sus atribuciones, etcétera, todo esto está regulado en el Estatuto universitario y en diversos reglamentos.</p>
+
+<p>Touraine (2000) sostiene que es por la lucha entre los actores que la sociedad se transforma. Pero no todos los derechos se obtienen a través de una lucha épica de sus potenciales beneficiarios. En ocasiones, el Estado puede también otorgarlos y gestionarlos sin una presión inmediata que lo obligue a hacerlo. A veces por imitación de conductas de otros países, por modas ideológicas, por consenso de élites o por el intento de cooptación de grupos de interés para pacificar determinadas problemáticas. Sus potestades —lo que puede hacer y lo que no— están determinadas en el Estatuto universitario.</p>
+
+<p>También es clave tener en cuenta que dentro de los actores hay heterogeneidad. No todo el movimiento estudiantil, por ejemplo, está encolumnado tras los mismos ideales y objetivos. Incluso el mismo Estado, en sus diferentes niveles, presenta heterogeneidad. En la pandemia de COVID-19, el Estado nacional tomaba una serie de medidas, mientras que los Estados provinciales iban tomando otras decisiones que a veces entraban en tensión con la directiva nacional. En el caso de los liderazgos, hay ambiciones diversas. Un candidato representa intereses y sectores diferentes y eso imprimirá una dirección a las decisiones y acciones que tome la institución.</p>
+
+<p>Siguiendo con el ejemplo que planteamos anteriormente, dentro de la Universidad de Buenos Aires, las fuerzas políticas tienen sus agrupaciones, que compiten por obtener cargos en los consejos directivos y estimulan a que las personas se agrupen en colectivos con otros ciudadanos con los que comparten ideas y objetivos. Esta distinción es relevante porque se puede pensar que las personas de determinada clase votarán a determinado partido o compartirán las ideas que propone cada partido, cuál es su base electora, quiénes lo apoyan y por qué razones.</p>
+
+<p>Comunidad y sociedad no son lo mismo. La sociedad, como vimos, incluye a todos los que viven bajo un mismo Estado y comparten lazos generales. En cambio, la comunidad implica un sentimiento de pertenencia y solidaridad entre sus miembros mucho más definido y próximo. Pueden existir muchas comunidades dentro de una sociedad. Por ejemplo, las diversas organizaciones comunitarias de migrantes que existen en Argentina o de personas que profesan una misma religión. En 1983, Raúl Alfonsín fue electo presidente, pero no por una sola razón. El acceso público y gratuito a la educación superior sigue siendo visto como un motor del ascenso social y el primer universitario en la familia es motivo de orgullo.</p>
+
+<p>Weber plantea que el poder, es decir, la capacidad de imponer la voluntad por encima de la de los demás, está representado por las clases, estamentos y partidos. Por un lado, las clases se organizan según las relaciones de producción y de adquisición de bienes; los estamentos, según los principios de su consumo de bienes, en las diversas formas específicas de su manera de vivir" (Weber, 2002, pp. 692-693).</p>
+
+
+
+<h3>La organización del poder: clases sociales y partidos</h3>
+
+<p>Hacia mediados del siglo XX, Bourdieu ofreció otra lectura de esta teoría. A lo largo de la trayectoria vital de las personas, estas pueden moverse de clases sociales y de grupos de pertenencia, nada está escrito sobre piedra en nuestro nacimiento. En el imaginario argentino, para algunos, "un buen matrimonio" es visto como un motivo de ascenso social para alguno de los cónyuges. O irse del país, ganar la lotería, declararse de "clase media", más allá de los ingresos y consumos que se tengan.</p>
+
+<p>Podemos pensar la sociedad como una cancha de fútbol, donde cada uno se irá ubicando y moviendo en función de diversas variables: la familia y los vínculos, los grupos sociales y los espacios geográficos en los que nacimos y los que construimos, la educación recibida, los valores y creencias, las experiencias transitadas, etcétera. Lejos de perjudicar a la sociedad, estas diferencias entre los que la integran la potencian. Las clases sociales ya no son grupos cerrados, cuyos límites e intereses estén definidos de manera lineal.</p>
+
+<p>Los partidos se mueven dentro de la esfera del poder para ejercer una influencia y orientar la acción comunitaria. Weber explica que puede haber partidos dentro de, por ejemplo, un club y dentro del Estado. Seguramente, muchas personas siguen las elecciones a presidente del club del fútbol del que son simpatizantes, entendiendo que cada candidato representa intereses y sectores diferentes y que eso imprimirá una dirección a las decisiones y acciones que tome la institución. Estas agrupaciones, que compiten por obtener cargos en los consejos directivos y superior o la conducción de los centros de estudiantes.</p>
+
+
+
+<h3>La acción social</h3>
+
+<p>Max Weber planteó que una acción social cuando es "una acción con sentido propio orientada a la acción de otros" (Durkheim et al., 2004, p. 120), e identifica así cuatro tipos de acciones:</p>
+
+<ol>
+
+<li><strong>Tradicional.</strong> Es una acción que está orientada por las costumbres, por ejemplo, salir vestido a la calle.</li>
+
+<li><strong>Afectiva.</strong> Es una acción vinculada a la emoción del momento, por ejemplo, defenderme ante una agresión.</li>
+
+<li><strong>Racional con arreglo a valores.</strong> Es una acción que se orienta por nuestras creencias y valores (religiosos, políticos, éticos, etcétera).</li>
+
+<li><strong>Racional con arreglo a fines.</strong> Es una acción que se realiza para lograr el objetivo que buscamos conseguir.</li>
+
+</ol>
+
+<p>Esta definición de acción social es discutible a la luz del avance de la teoría social. Tengamos en cuenta que Weber conceptualizó la acción social de esta forma a principios del siglo XX, cuando las ciencias sociales se estaban conformando como campo de conocimiento científico.</p>
+
+<p>En cualquier acción que los actores realizan, están reproduciendo la sociedad. Las personas no están pensando a cada paso qué es lo que tienen que hacer. Eso se llama costumbre. La costumbre es un hecho social e intersubjetivo (porque todos los miembros del grupo comparten ese sentido). Cuando alguien entra a un aula, si es estudiante, sabe dónde sentarse, aunque el docente aún no esté en el salón. Cuando alguien para un colectivo levantando el brazo, el conductor lo interpreta como una señal de que debe detenerse. Estas acciones, tan cotidianas y pequeñas, están llenas de sentido y se realizan de distinto modo.</p>
+
+<p>Weber es de suma utilidad para pensar la sociedad y los procesos sociales. Cuando se analiza un proceso histórico, es posible preguntarse: ¿por qué los actores se comportan de una manera y no de otra?, ¿qué están haciendo?, ¿qué intereses o valores movilizaron a determinados actores a comportarse de una forma u otra, cuál fue su intencionalidad? Veremos en este libro procesos y fenómenos que a simple vista parecen irracionales o exabruptos de locura, como se puede observar en los capítulos de genocidio y terrorismo. Sin negar la atrocidad de ningún crimen, en términos intelectuales, es necesario reflexionar qué fines, qué intereses o valores movilizaron a determinados actores. Por ejemplo, el Cordobazo. Los actores principales de este estallido fueron el movimiento obrero y el movimiento estudiantil, que confluyeron en una jornada de protestas en la ciudad de Córdoba contra la dictadura del general Juan Carlos Onganía, instaurada tres años antes. Son muchos los efectos del Cordobazo y de estallidos similares que lo siguieron.</p>
+
+<p>Recuperar esta distinción clásica entre los tipos de acciones que realiza la sociedad. Para Weber, cuando se analiza una situación histórico-social concreta, primero hay que entender qué están haciendo, qué acciones despliegan, cómo interactúan entre sí y qué objetivos tienen al conceder, negociar o pelear. Y, sobre todo, dónde está el Estado y cuáles son sus estrategias.</p>
+
+
+
+<div class="separador">• • •</div>
+
+
+
+<h3>Conclusiones</h3>
+
+<p>En este capítulo abordamos conceptos clave para analizar la sociedad desde una perspectiva más precisa y alejada del sentido común. Mostramos cómo conceptos como ciudadanía, sociedad civil, actores sociales y acción social permiten comprender mejor las dinámicas que estructuran la vida en sociedad. Asimismo, resaltamos la importancia del Estado en la garantía y distribución de derechos, así como el papel de la sociedad civil y los actores sociales en la lucha por su reconocimiento y expansión.</p>
+
+<p>La sociedad no es un ente homogéneo ni estático, sino un espacio en constante transformación, donde distintos grupos y actores interactúan, cooperan o entran en conflicto. El poder, la participación y la organización social son elementos centrales en este proceso, e influyen en la configuración de derechos, la toma de decisiones y la estructura misma del sistema político y económico.</p>
+
+<p>En definitiva, comprender el concepto de sociedad implica reconocer cómo los diferentes actores ejercen influencia, defienden sus intereses y promueven cambios. De este modo, el estudio de la sociedad se convierte en una herramienta clave para interpretar el presente y pensar alternativas para el futuro.</p>
+
+
+
+<h3>Referencias bibliográficas</h3>
+
+<p>Bourdieu, P. (2005). <em>Capital cultural, escuela y espacio social</em>. Siglo XXI.</p>
+
+<p>Durkheim, E., Portantiero, J. C. y Weber, M. (2004). <em>La sociología clásica: Durkheim y Weber: Estudio preliminar y selección de textos de Juan Carlos Portantiero</em>. Centro Editor de América Latina.</p>
+
+<p>Jelin, E. (2012). Los derechos como resultado de luchas históricas. <em>+E: Revista de Extensión Universitaria</em>, (2), 20-26.</p>
+
+<p>Romero, J. L. (2017). <em>Breve historia de la Argentina</em>. Fondo de Cultura Económica.</p>
+
+<p>Touraine, A. (2000). <em>¿Podremos vivir juntos?</em>. Fondo de Cultura Económica.</p>
+
+    </div>
+
+
+    <footer>
+
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
+

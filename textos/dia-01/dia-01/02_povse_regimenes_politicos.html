@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas para analizar los regímenes políticos — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .metadatos {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .metadatos .titulo-libro {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .metadatos .titulo-texto {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2em;
+      font-weight: 600;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .metadatos .autor {
+      font-size: 1.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .metadatos .info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .metadatos .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.35rem 1.2rem;
+      background: var(--heading);
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+    }
+
+    .contenido p {
+      text-indent: 1.5em;
+      margin-bottom: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .contenido p + p {
+      margin-top: 0.9em;
+    }
+
+    .contenido p:first-of-type {
+      text-indent: 0;
+    }
+
+    .contenido p.first-of-section {
+      text-indent: 0;
+    }
+
+    .contenido h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--heading);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contenido h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contenido blockquote {
+      margin: 2rem 0 2rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      font-size: 0.95em;
+    }
+
+    .contenido blockquote p {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    .contenido ul,
+    .contenido ol {
+      margin: 1.2rem 0 1.2rem 2rem;
+    }
+
+    .contenido li {
+      margin-bottom: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .contenido table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9em;
+    }
+
+    .contenido table th {
+      background: var(--surface);
+      color: var(--heading);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--accent); }
+
+    .contenido table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido table tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    .contenido .ilegible {
+      color: var(--red-soft);
+      font-weight: 600;
+      background: #3a2020;
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+    }
+
+    .contenido .nota-num {
+      font-size: 0.75em;
+      vertical-align: super;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .notas {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .notas h2 {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .notas p {
+      font-size: 0.85em;
+      text-indent: 0;
+      margin-bottom: 0.6em;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .separador {
+      text-align: center;
+      margin: 3rem 0;
+      color: var(--border);
+      font-size: 1.2em;
+      letter-spacing: 0.5em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .page { padding: 0; max-width: 100%; }
+      .metadatos { break-after: page; border: none; background: none; }
+      .contenido h2 { break-after: avoid; }
+      .contenido h3 { break-after: avoid; }
+      blockquote { break-inside: avoid; }
+      table { break-inside: avoid; }
+      footer { break-before: avoid; }
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 2rem 1.2rem 4rem; }
+      body { font-size: 16px; }
+      .metadatos .titulo-texto { font-size: 1.6em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+      <div class="titulo-texto">Herramientas para analizar los regímenes políticos</div>
+      <div class="autor">Max Povse</div>
+      <div class="info">Páginas originales: 21–30</div>
+      <div class="badge">Día 1 — Unidad 1</div>
+    </div>
+
+    <div class="contenido">
+      <h2>Herramientas para analizar los regímenes políticos</h2>
+<p>Max Povse</p>
+
+<h3>¿Qué es un régimen?</h3>
+<p>La palabra régimen es polisémica, es decir, tiene muchos significados. En las ciencias sociales es entendida como un conjunto de reglamentaciones que determinan el funcionamiento de un proceso o sistema, pero en el lenguaje cotidiano también puede estar cargada de un sentido peyorativo, y ser utilizada para definir solo dictaduras, autoritarismos o totalitarismos, es decir, solo regímenes no democráticos (Levi, 2007). Es importante, entonces, recordar que los términos tal como se usan en la vida cotidiana, en los medios de comunicación o en las redes sociales, en las ciencias sociales no necesariamente significan lo mismo cuando se utilizan.</p>
+<p>En particular, hace falta distinguir de qué se habla cuando se habla de régimen político. En este capítulo se lo analizará utilizando la definición genérica del concepto en la ciencia política, que hace referencia al conjunto de reglamentaciones que determinan cómo se accede y cómo se ejerce el poder político en un país.</p>
+
+<h2>¿Cómo se diferencian los regímenes políticos?</h2>
+<p>Para analizar un concepto, en primer lugar debemos definirlo, como acabamos de hacer. En segundo lugar, sobre esa definición debemos establecer criterios para diferenciar una categoría de otra. Por ejemplo, para considerar que un país es una democracia, se suele decir que el poder político lo eligen los ciudadanos por medio de elecciones. Es decir, hay un sistema electoral en el que se vota para elegir representantes, como diputados, senadores, presidentes, gobernadores e intendentes.</p>
+<p>Sin embargo, aunque las elecciones son un requisito fundamental de la democracia, no son suficientes para definir una democracia, porque también hay elecciones en países no democráticos (Levitsky y Way, 2004). Un ejemplo es El Salvador en 2024: en esas elecciones, el presidente Nayib Bukele ganó con casi el 85% de los votos. Pero si un candidato tiene asegurada la victoria sin una competencia real, las elecciones no cumplen su función de permitir que los ciudadanos elijan entre distintas opciones. En ese caso, las elecciones sirven más para confirmar el poder del gobernante que para garantizar una democracia verdadera.</p>
+<p>Asimismo, en El Salvador no hay garantías constitucionales para los opositores porque no existe un sistema judicial independiente ni una comisión electoral imparcial. Lo mismo sucede en otros países de América Latina, como Venezuela, Cuba y Nicaragua, y alrededor del mundo, en Rusia o incluso en China.</p>
+<p>En consecuencia, hay que refinar la búsqueda de criterios. Por ejemplo, además de corroborar que se lleven a cabo elecciones, también se debe observar que estas sean contestadas, es decir, que sean competitivas y que también exista incertidumbre electoral, es decir, la imposibilidad de saber de antemano quién ganará las elecciones. Este es un criterio suficiente para la democracia, porque no basta con que haya elecciones para que un régimen sea una democracia.</p>
+<p>Se debe, entonces, revisar el criterio que se usa para categorizar: si todos los regímenes políticos comparten la misma característica (en este caso, las elecciones), este no es un criterio válido para categorizarlos, porque entonces surge un nuevo problema: dónde establecer los límites entre cada categoría. Esta es una de las preguntas en las que se basa la ciencia, ya que se está constantemente debatiendo qué es cada cosa, cuáles son sus características, dónde empiezan y dónde terminan.</p>
+
+<h3>Categorización por tipos</h3>
+<p>Existen cuatro formas de responder esta pregunta. Para definir si algo pertenece a una categoría, hay que establecer los criterios necesarios y suficientes para ambas categorías al mismo tiempo. La palabra régimen es polisémica, es decir, tiene muchos significados. En las ciencias sociales es entendida como un conjunto de reglamentaciones que determinan el funcionamiento de un proceso o sistema.</p>
+<p>El régimen político es un concepto con un grado de abstracción alto, porque incluye todos los conjuntos de reglamentaciones que determinan cómo se accede y cómo se ejerce el poder político en todos los países. Esto hace que sea un concepto que se aplica a muchos casos, a los que describe poco. Por ejemplo, tanto la dictadura militar del Proceso de Reorganización Nacional como la democracia que vino después son regímenes políticos, pero son extremadamente diferentes.</p>
+<p>En este sentido, un concepto tan abstracto sirve para incluir muchas cosas, pero no permite saber cómo son esas cosas. Si queremos saberlo, necesitamos reducir el grado de abstracción. Esto se hace creando categorías para cada concepto. En este caso, régimen político incluye varias categorías: democracia, autoritarismo, dictadura, totalitarismo, entre otras. Cada una de ellas se aplica a menos casos que el concepto de régimen político, pero los describe mejor. Por ejemplo, si se toma la categoría democracia, no se puede incluir la dictadura del Proceso, y eso dice un poco cómo es una democracia: en principio, no es una dictadura.</p>
+<p>Este razonamiento deja entrever una característica básica del proceso de categorización de un concepto: las categorías deben ser excluyentes entre sí. Pero entonces surge un nuevo problema: dónde establecer los criterios para cada concepto.</p>
+
+<h3>Grado de abstracción</h3>
+<h4>Grado de abstracción alto</h4>
+<ul>
+<li>Es más general y abarcador</li>
+<li>Describe cada caso con poca precisión o detalle</li>
+<li>Se aplica a muchos casos</li>
+</ul>
+<p>Ejemplo: profesional de la salud (incluye médicos, enfermeros, terapeutas, etcétera)</p>
+<h4>Grado de abstracción bajo</h4>
+<ul>
+<li>Es más específico y concreto</li>
+<li>Describe cada caso con detalle y precisión</li>
+<li>Se aplica a pocos casos</li>
+</ul>
+<p>Ejemplo: médico cirujano pediátrico (describe un tipo específico de profesional de la salud)</p>
+<p>(Sartori, 2003).</p>
+
+<h3>Categorización por oposición</h3>
+<p>Una segunda forma de responder la pregunta sobre cómo establecer los criterios para diferenciar una categoría de otra es mediante la oposición. Si ya se estableció cuáles son los criterios necesarios y suficientes para decir que un régimen político es una democracia, se puede crear una categoría que sea su opuesto. En este ejemplo, la democracia. Al mismo tiempo que definimos que es una democracia, automáticamente creamos lo que no es. Surge, entonces, la pregunta, ¿es suficiente decir que un régimen es no democrático para analizarlo? Como hemos visto, hay varios términos que identifican a regímenes dentro de este grupo, como dictadura, autoritarismo y totalitarismo, que no necesariamente son sinónimos.</p>
+<p>El autoritarismo, entonces, está definido por las características exactamente contrarias a la democracia. Es decir, el acceso y el ejercicio del poder no están limitados por un sistema electoral y un Estado de derecho. Quien gobierna no es representante de los ciudadanos, sino que asume ese rol por sí mismo. Algunos ejemplos de cómo sucede esto pueden ser un golpe de Estado, el nombramiento como jefe de Estado o gobierno por parte de un partido sin pasar por las reglas de acceso electoral o, en una monarquía absoluta, por ser parte de la línea de sucesión. En el autoritarismo tampoco existen límites al ejercicio del poder, es decir, no hay una división de poderes y los ciudadanos no tienen derechos civiles y políticos garantizados.</p>
+
+<h3>Categorización por exclusión</h3>
+<p>Existe también una tercera forma de responder la pregunta sobre cómo se diferencian los regímenes políticos: en vez de establecer todos los criterios necesarios y suficientes para ambas categorías al mismo tiempo, podemos definir exhaustivamente los criterios para democracia, y todo lo que no cumpla quedaría encapsulado en la categoría de régimen político no democrático por tipo u oposición.</p>
+<p>Esto es útil para cuando no estamos seguros de si un caso es de una o de otra de las categorías que hemos armado a través de una categorización por tipo u oposición. La categorización por exclusión nos ayuda, porque nos concentramos en la categoría que consideramos más importante o paradigmática, en este ejemplo, la democracia. Al mismo tiempo que definimos que es una democracia, automáticamente creamos lo que no es.</p>
+<p>Surge, entonces, la pregunta, ¿es suficiente decir que un régimen es no democrático para analizarlo? Como hemos visto, hay varios términos que identifican a regímenes dentro de este grupo, como dictadura, autoritarismo y totalitarismo, que no necesariamente son sinónimos.</p>
+
+<h3>Categorización por graduación</h3>
+<p>Cuando se identifican los criterios necesarios y suficientes para que democracia sea liberal o delegativa no hace que sea más democrática o mejor de por sí, sino que solo especifica un subtipo dentro de lo que se acuerda que es una democracia. Cuando se categoriza por graduación, se asume que los casos pueden tener diferentes niveles de democracia en sí (plenas versus deficientes) si se mira la cuantía. O, si miramos la calidad de las democracias, se hace referencia, por ejemplo, a democracias plenas versus democracias deficientes (The Economist Intelligence Unit, 2024).</p>
+<p>Cuánta hace referencia a la cantidad, es decir, cuán democrático es un régimen o no lo es. Hay democracias que están más consolidadas, o que tienen mejores indicadores que otras, y por tanto se dice que son más democráticas: se hace referencia, por ejemplo, a democracias plenas versus democracias deficientes.</p>
+<p>En América Latina, solo Costa Rica y Uruguay entran en la primera subcategoría, gracias a sus fuertes instituciones y culturas, mientras que tienen los regímenes. Si se toma el otro extremo del espectro —los regímenes no democráticos, generalmente llamados autoritarismos—, hay algunos que tienen elecciones, que son amañadas y no representan una instancia en la que la ciudadanía puede decidir su gobierno, pero que son elecciones a pesar de ello. Estos regímenes son llamados autoritarismos competitivos o regímenes híbridos.</p>
+<p>Si, por el contrario, un régimen no democrático es completamente contrario a la democracia en todos sus sentidos, es una autocracia, un autoritarismo cerrado, o un totalitarismo.</p>
+<p>La gran cantidad de categorías que surgen al usar este término conduce al primer problema: podemos añadir tantos adjetivos a un concepto que acabaremos por tener muchas categorías de régimen político con muy pocos casos, o incluso uno solo. Esto no es una forma útil de describir el mundo, y por eso necesitamos crear solo las categorías necesarias para que nuestra descripción se encuentre en equilibrio entre la cantidad de criterios que exige y la cantidad de casos que representa.</p>
+<p>Sin embargo, como ya vimos, si armamos una categoría para cada caso, siempre será necesario establecer al menos una categoría a partir de una tipología, con los criterios de necesidad y suficiencia que hemos descrito. Pero si deseamos incluir todos los casos de régimen político, no nos basta con establecer dos categorías espejo por oposición, porque siempre existirán casos intermedios.</p>
+<p>La diferencia entre categorizar por tipos y por graduación cuando hablamos de regímenes políticos es importante. En este sentido, un concepto tan abstracto sirve para incluir muchas cosas, pero no permite saber cómo son esas cosas. Si queremos saberlo, necesitamos reducir el grado de abstracción. Esto se hace creando categorías para cada concepto.</p>
+
+<h3>¿Cómo se transforma un régimen político?</h3>
+<p>El tercer paso para analizar los regímenes políticos, luego de definir que son y cuáles son sus categorías, es evaluar cuándo se pasa de una categoría a la otra. Se denomina transición el proceso mediante el cual un régimen político cambia de una categoría a otra (ver el capítulo 10). Para que exista una transición, debe haber cambios profundos en un criterio: por ejemplo, que se elimine la libertad de expresión o de reunión, o que se amañen las elecciones.</p>
+<p>Esto indica que los regímenes políticos son fluidos y pueden cambiar, en la medida en que quienes ejercen el poder modifiquen sus propias políticas. Por supuesto, también pueden mantenerse en la misma categoría, o empeorar y nunca cambiar de categoría. El gobierno de Raúl Alfonsín, por ejemplo, llevó adelante, desde el primer día, la persecución ilegal a sus ciudadanos a cargo de la Triple A (Romero, 2017).</p>
+<p>Argentina en 1974 y 1975, a pesar de que existía una abierta persecución ilegal a sus ciudadanos automáticamente deja afuera a un régimen de la categoría democracia, deberíamos considerar autoritario el régimen de México, donde el Ejército fue responsable de la desaparición de personas de la comunidad Nam Qom en 2002 llevada adelante por la policía formoseña, por ejemplo.</p>
+<p>Los criterios que se les imponen a las categorías deben ser siempre los mismos para todos los casos analizados; entonces, si la persecución ilegal a sus ciudadanos automáticamente deja afuera a un régimen de la categoría democracia, deberíamos considerar autoritario el régimen de México, por ejemplo.</p>
+<p>A la inversa, si un régimen autoritario comienza un proceso de democratización —que puede incluir la organización de elecciones libres—, puede pasar a una nueva categoría de autoritarismo, como autoritarismo competitivo, y si deja de limitar las libertades civiles y la división de poderes, puede pasar a ser un régimen democrático.</p>
+<p>La Argentina ha atravesado todo tipo de transiciones, por ejemplo, desde el régimen autoritario de la Revolución Argentina a la democracia con las elecciones de marzo de 1973 y la instauración del gobierno de Héctor Cámpora (Romero, 2017). También hubo una transición desde esa democracia a un nuevo régimen autoritario con el golpe de Estado de marzo de 1976 y el comienzo del Proceso, y nuevamente a la democracia con las elecciones de octubre de 1983 y el comienzo del gobierno de Alfonsín. Desde entonces, la Argentina ha perdurado en un régimen democrático, cuya cuantía y calidad han cambiado a lo largo de las décadas, y hasta sus adjetivos: en todos los cambios de gobierno que ha habido desde 1983, por elecciones o renuncias de presidentes, la Argentina ha mantenido su régimen democrático. Para que no fuera así, deberían haber cambiado los criterios necesarios y suficientes que demandamos de una democracia, y eso no ha ocurrido.</p>
+<p>Es importante, entonces, recordar que los cambios entre diferentes subcategorías de una democracia (de una democracia delegativa a una más plena, por ejemplo, en 1999) no significan un cambio de régimen político, sino un cambio en el tipo de democracia de ese mismo régimen. Los verdaderos cambios de régimen solo ocurren cuando los criterios necesarios y suficientes para que exista una democracia dejan de existir, o viceversa.</p>
+<p>Esta advertencia es útil, entonces, para analizar lo que se percibe coloquialmente cuando se toman livianamente las categorías de democracia y autoritarismo para definir regímenes que son mejor o peor vistos, respectivamente, por la sociedad, los medios y las redes sociales. Los regímenes no son siempre lo que parecen, y su clasificación depende de los criterios que se utilicen para definirlos.</p>
+
+<h2>Referencias bibliográficas</h2>
+<p>Collier, D. y Levitsky, S. (1998). Democracia con adjetivos: innovación conceptual en la investigación comparativa. Agora. Cuadernos de Estudios Políticos, 8, 99-122.</p>
+<p>Levi, L. (2007). Régimen político. En N. Bobbio, N. Matteucci y G. Pasquino (Eds.), Diccionario de política (15.ª ed.). Siglo XXI.</p>
+<p>Levitsky, S. y Way, L. (2004). Elecciones sin democracia: el surgimiento del autoritarismo competitivo. Estudios Políticos, 24, 159-176.</p>
+<p>Romero, L. A. (2017). Breve historia contemporánea de la Argentina: 1916-2016. Fondo de Cultura Económica.</p>
+<p>Sartori, G. (2003). Ingeniería constitucional comparada: una investigación de estructuras, incentivos y resultados. Fondo de Cultura Económica.</p>
+<p>The Economist Intelligence Unit. (2024). La era del conflicto. EIU.</p>
+    </div>
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epílogo — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .metadatos {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .metadatos .titulo-libro {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .metadatos .titulo-texto {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2em;
+      font-weight: 600;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .metadatos .autor {
+      font-size: 1.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .metadatos .info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .metadatos .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.35rem 1.2rem;
+      background: var(--heading);
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+    }
+
+    .contenido p {
+      text-indent: 1.5em;
+      margin-bottom: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .contenido p + p {
+      margin-top: 0.9em;
+    }
+
+    .contenido p:first-of-type {
+      text-indent: 0;
+    }
+
+    .contenido p.first-of-section {
+      text-indent: 0;
+    }
+
+    .contenido h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--heading);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contenido h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contenido blockquote {
+      margin: 2rem 0 2rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      font-size: 0.95em;
+    }
+
+    .contenido blockquote p {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    .contenido ul,
+    .contenido ol {
+      margin: 1.2rem 0 1.2rem 2rem;
+    }
+
+    .contenido li {
+      margin-bottom: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .contenido table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9em;
+    }
+
+    .contenido table th {
+      background: var(--surface);
+      color: var(--heading);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--accent); }
+
+    .contenido table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido table tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    .contenido .ilegible {
+      color: var(--red-soft);
+      font-weight: 600;
+      background: #3a2020;
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+    }
+
+    .contenido .nota-num {
+      font-size: 0.75em;
+      vertical-align: super;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .notas {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .notas h2 {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .notas p {
+      font-size: 0.85em;
+      text-indent: 0;
+      margin-bottom: 0.6em;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .separador {
+      text-align: center;
+      margin: 3rem 0;
+      color: var(--border);
+      font-size: 1.2em;
+      letter-spacing: 0.5em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .page { padding: 0; max-width: 100%; }
+      .metadatos { break-after: page; border: none; background: none; }
+      .contenido h2 { break-after: avoid; }
+      .contenido h3 { break-after: avoid; }
+      blockquote { break-inside: avoid; }
+      table { break-inside: avoid; }
+      footer { break-before: avoid; }
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 2rem 1.2rem 4rem; }
+      body { font-size: 16px; }
+      .metadatos .titulo-texto { font-size: 1.6em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Breve historia contemporánea de la Argentina</div>
+      <div class="titulo-texto">Epílogo</div>
+      <div class="autor">Luis Alberto Romero</div>
+      <div class="info">Páginas originales: 358–final</div>
+      <div class="badge">Día 13 — Unidad 4</div>
+    </div>
+
+    <div class="contenido">
+      <p>NÚMERO: 30</p>
+<p>TEXTO: Epílogo</p>
+<p>AUTOR: Romero</p>
+<p>LIBRO: Romero</p>
+<p>IMÁGENES PROCESADAS: 1 a 4</p>
+<p>PÁGINAS DEL LIBRO: 291 a 300</p>
+<p>ESTADO: extraído</p>
+<div class="separador">• • •</div>
+<p>[Imagen 1 - img_01.jpg]</p>
+<p>BREVE HISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+<p>CRISIS Y RECONSTRUCCI0N, 1999-2005</p>
+<p>358</p>
+<p>359</p>
+<p>de solucion eran buenas. En cuanto.a la sociedad, la primera demanda</p>
+<p>problemas pendientes. Uno de ellos fue la deuda con los organismos inter-</p>
+<p>consistia en el restablecimiento del orden y de la autoridad presidencial.</p>
+<p>nacionales, y especialmente con el Club de Paris. Otro, el grupo de bonis-</p>
+<p>Por detras venian otras dos, que no tenian la misma unanimidad: encon-</p>
+<p>tas que rechazo el canje e inicio un largo litigio. Por entonces no parecian</p>
+<p>trar una salida a la desocupacion y a la pobreza extrema y restituir la legi-</p>
+<p>iurgentes, y se los desatendio; pero apenas siete atios despues se convirtie-</p>
+<p>timidad, el lazo entre gobernantes y gobernados.</p>
+<p>ron en un problema grave.</p>
+<p>La recuperacion de la economia se mantuvo. El Producto Bruto In-</p>
+<p>timidad electoral. En su primera etapa, eso fue compensado por el respaldo</p>
+<p>terno (PB1) creci6 anualrnente alrededor del 9%, y en 2005 alcanzo el nivel</p>
+<p>de Eduardo Duhalde, quien le traspaso a varios de sus ministros. Sobre esa</p>
+<p>que tenia en 1998, antes de que comenzara la larga recesion. El dolar en-</p>
+<p>base, el nuevo presidente se dedico a construir sus propios apoyos y a ade-</p>
+<p>contro un punto de equilibrio alto, que el gobierno mantivo. La industria</p>
+<p>cuar el gobierno a su estilo de conduccion.</p>
+<p>orientada al mercado intermo, con elevada capacidad ociosa, aprovech6 la</p>
+<p>proteccion cambiaria y la depreciacion de los salarios, y su reactivacion co-</p>
+<p>La solucion del problema con los acreedores externos fue la principal tarea</p>
+<p>menzo a influir sobre el empleo, de acuerdo con la vieja logica del stop and</p>
+<p>de Kirchner y Lavagna. Este siguio aportando su capacidad tecnica y su</p>
+<p>go. El sector exportador, tanta agricola como industrial, se beneficio doble-</p>
+<p>talento negociador, y Kirchner le agreg6 un fuerte respaldo politico y oca-</p>
+<p>mente con el dolar alto y la mejora de los precios internacionales. Automo-</p>
+<p>sionalmente una fructifera cuota de dureza e intransigencia. En septiembre</p>
+<p>tores, siderurgia, aluminio y papel recuperaron sus beneficios -el petrdleo</p>
+<p>de 2003, el precario acuerdo con el FMl fue renovado por tres aiios. El</p>
+<p>mermo su volumen exportable-, lo mismo que el sector agricola. La soja, en</p>
+<p>particular, aprovecho la gran demanda de China e India, que elevo de un</p>
+<p>inflacion facilitaron el arreglo de la deuda a corto plazo. Los compromisos</p>
+<p>modo considerable los precias internacionales. El Estado, que desde 2002</p>
+<p>con el Fondo fueron minimos: mantener un superavit fiscal del 3%, iniciar</p>
+<p>aplicaba retenciones a las exportaciones, fue un scio privilegiado de este</p>
+<p>las negociaciones con los acreedores y aceptar la revision periodica de las</p>
+<p>crecirniento.</p>
+<p>cuentas nacionales, que el Fondo practicaba con los paises deudores.</p>
+<p>Por entonces, la politica del Estado fue virtuosa. El stiperavit fiscal, ba-</p>
+<p>Respecto de la cuantiosa deuda externa, el objetivo fue reducirla, sim-</p>
+<p>sado en las retenciones a las exportaciones y en la reduccion de las obli-</p>
+<p>plificarla y sobre todo alargar los plazos de los vencimientos, para inpedir</p>
+<p>gaciones de pago de la deuda, se completo con una moderacion de los</p>
+<p>gastos, en particular las transferencias a las provincias. Esto evito alentar la</p>
+<p>de pago. Tanbien se decidio tratar a todos los acreedores por igual. En sep-</p>
+<p>inflacion, que pese a la reactivacion crecio en forma noderada, y subio del</p>
+<p>tiembre de 2003, se hizo una primera propuesta; en noviembre de 2004,</p>
+<p>se formulo la propuesta final, y en febrero de 2005 se concreto el canje.</p>
+<p>cian a medida que se reactivaba el empleo-, se contuvo el aumento de sa-</p>
+<p>larios, que solo fue significativo en 2005. En cambio, el Estado volco dinero</p>
+<p>en forma de subsidios sociales, con contraprestaciones laborales, y de</p>
+<p>no aceptatan los terminos quedarian fuera de las negociaciones y atados a</p>
+<p>obras publicas, que generaban empleo con rapidez.</p>
+<p>algun lejano fallo judicial.</p>
+<p>El crecimiento de estos anos estuvo principalnente en manos del sector</p>
+<p>El pais ya era por entonces mas creible, y la aceptacion fue alta: el 76%</p>
+<p>exportador, consolidado en los afios noventa: productores agrarios y agroin-</p>
+<p>de los titulos ofertados, a los que se les hizo una quita del 25%, de modo</p>
+<p>dustriales y de cammodities, como el acero o el aluminio, junto con los</p>
+<p>que la deuda total se redujo de 191 a 126 mil millones de dolares. Los pa-</p>
+<p>automotores y su tradicional regimen especial, integrado con Brasil. En</p>
+<p>gos y vencimientos de importancia se postergaron hasta 2012. Quedaron</p>
+<p>2004, una ley estableci6 irnportantes beneficios para las iversiones de es-</p>
+<div class="separador">• • •</div>
+<p>[Imagen 2 - img_02.jpg]</p>
+<p>CRISIS Y RECONSTRUCCI0N, 1999-2005</p>
+<p>361</p>
+<p>360</p>
+<p>BREVE HISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+<p>cas, realizadas por el Estado nacional, que aliviaban el desermpleo. La asig-</p>
+<p>tas empresas. La reactivacion del sector industrial dirigido al mercado in-</p>
+<p>nacion de los planes asistenciales fue otro poderoso elemento de negocia-</p>
+<p>cion con las organizaciones sociales y con los intendentes. Con esos</p>
+<p>utilizacion de la capacidad ociosa, hubo pocas inversiones Huevas, lo que</p>
+<p>recursos fiscales en sus manos, el presidente estaba en condiciones de lle-</p>
+<p>var adelante una politica de tipo discrecional, como la que habia practi-</p>
+<p>rios tuvieron en estos anos de reconstruccion una rentabilidad muy ele-</p>
+<p>cado en la decada anterior en su provincia, Santa Cruz.</p>
+<p>vada, cimentada, como se dijo, en el dolar alto y las salarios bajos.</p>
+<p>La situacion de los trabajadores mejoro. El aumento en la ocupacion</p>
+<p>La crisis social, sin reabsorberse, se manifestaba de manera distinta. En el</p>
+<p>fue significativo, aunque hubo una alta incidencia del empleo precario o</p>
+<p>mundo de la pobreza, habia mas gente con algun tipo de trabajo y fluia</p>
+<p>"en negro", que incluia el trabajo "esclavo" en algunas fabricas. Entre los</p>
+<p>ocupados se contabilizaban los beneficiarios de los planes sociales, pues sul</p>
+<p>mas dinero. Pero el nticleo duro se mantenia. Se sobrevivia con los planes,</p>
+<p>pero no se vislumbraba una salida.</p>
+<p>Su visibilidad era mayor en Buenos Aires y en los noticieros de televi-</p>
+<p>sion. Los cartoneros, tan temibles como inofensivos, estaban mucho mas</p>
+<p>que ocupaban pocos trabajadores, y mucho en la industria y en la cons-</p>
+<p>truccion. En los salarios comenzo una lenta mejoria, que estuvo por detras</p>
+<p>la ciudad seguia ocupado por vendedores ambulantes, cuidadores de autos</p>
+<p>del incremento del empleo. Solo en 2008 se alcanzarian los niveles de in-</p>
+<p>o mendigos, tras los cuales se adivinaban otras redes organizadas. Tambien</p>
+<p>greso real de 2001, que ya eran bajos. El gobierno comenzo a elevar el sa-</p>
+<p>habia delincuentes ocasionales, que se multiplicaban en el conurbano.</p>
+<p>lario minimo y en 2005 reinicio la convocatoria a paritarias, lo que tuvo un</p>
+<p>Este costado peligraso de la pobreza instal6 en la opinion la cuestion de la</p>
+<p>fuerte efecto en la revitalizacion de las alicaidas orgamizaciones sindicales</p>
+<p>y, consecuentemente, en el aumento de los conflictos laborales. Todo ello</p>
+<p>asesinado tras un secuestro, organizo unas marchas multitudinarias recla-</p>
+<p>constituye el mejor indicador de la recuperacion economica.</p>
+<p>mando cambios en las leyes penales, que fuerom en buena medida aproba-</p>
+<p>Los niveles de pobreza declinaron, aunque las cifras -siernpre discuti-</p>
+<p>bles- siguieron siendo muy altas: en 2005 habia 42% de pobres, que in-</p>
+<p>dos por el Congreso. Luego, se las recordaria como unas de las escasas</p>
+<p>cluia el 20% de indigentes. La mejora en la ocupacion tenia un techo y una</p>
+<p>ocasiones en que Kirchner cedio ante una movilizacion publica.</p>
+<p>Las calles y las plazas de Buenos Aires siguieron ocupadas por colum-</p>
+<p>masa considerable dependio de los planes sociales, que el gobierno distri-</p>
+<p>nas de manifestantes provenientes del conurbano. Las habia de todo tipo,</p>
+<p>buyo ampliamente; aunque ayudaban a sobrevivit, estaban lejos de cons-</p>
+<p>orientacion y objetivos. Muchos beneficiarios de planes del gobierno eran</p>
+<p>tituir un trabajo digno o un ingreso suficiente. Fueron un buen elemento</p>
+<p>convocados para apoyarlo. Las organizaciones de perfil opositor se mani-</p>
+<p>de contencion y, a la vez, una herramienta politica poderosa.</p>
+<p>Hacia fines de 2005, no solo habia pasado lo peor de la crisis, sino que</p>
+<p>Los partidos de izquierda, que apostaban a un nuevo brote insurreccional,</p>
+<p>el gobierno estaba en condiciones de desarrollar otro maneja politico. En</p>
+<p>acentuaron su perfil confrontativo. Grupos de trabajadores combinaban el</p>
+<p>materia fiscal, la mayoria de los impuestos, como las retenciones a las ex-</p>
+<p>reclamo sindical tradicional con el recurso a la calle y el corte, sobre todo</p>
+<p>portaciones, no eran coparticipables con las provincias, de modo que hubo</p>
+<p>Ios arganizados en la cTA, cono los aguerridos trabajadores estatales y do-</p>
+<p>una centralizacion de recursos en manos del gobierno nacional. Este con-</p>
+<p>centes. Tambien habia grupos sindicales alineados con la izquierda. En</p>
+<p>virtio su robusta caja fiscal en un instrumento de poder. Los gobernadores</p>
+<p>dependieron de la transferencia de recursos de la Tesoreria de la Nacion</p>
+<p>cambio, no los acompafiaban ya los sectores de clase media, fatigados de</p>
+<p>las molestias generadas por los cortes.</p>
+<div class="separador">• • •</div>
+<p>[Imagen 3 - img_03.jpg]</p>
+<p>362</p>
+<p>BREVEHISTORIA CONTEMPORANEADELAARGENTINA</p>
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+<p>363</p>
+<p>Habia una demanda de orden pablico, recibida de manera ambigua</p>
+<p>rrumpido por completo; continuaron los de apropiacion de bebes nacidos</p>
+<p>en cautiverio, y un ntimero importante de jefes militares estaba en prision</p>
+<p>quedar asociado con alguna forma de represion. Para desactivar la pro-</p>
+<p>y habia recibido condenas. Pero la anulacion de las leyes -dispuesta por el</p>
+<p>testa, atrajeron a las grandes organizaciones sociales con mas afinidad po-</p>
+<p>Congreso y ratificada en 2005 por la Corte Suprema- tuvo un efecto ro-</p>
+<p>litica e ideologica, como la FTv, de Luis D'Elia, el Movimiento Evita, de Eni-</p>
+<p>tundo. Permitio encausar a todas los presuntos participes, militares, poli-</p>
+<p>lio Pérsico, Barrios de Pie, de Jorge Ceballos, y Libres del Sur, de Humberto</p>
+<p>cias o civiles, sin distincion de lango. El proceso fue lento y conplejo, y en</p>
+<p>Tumini. Sus dirigentes recibieron cargos en la administracion, desde donde</p>
+<p>2015 muchas causas seguian sin conclusion. La opinion acompano con</p>
+<p>pudieron favorecer a los suyos en el reparto de los planes sociales; por su</p>
+<p>entusiasrno estas medidas, que ampliaron el apoyo al gobierno. Sin em-</p>
+<p>parte, atemperaron las movilizaciones y apoyaron activamente al gobierno.</p>
+<p>bargo, con el tiempo, crecieron las manifestaciones de preocupacion ante</p>
+<p>Los intendentes del conurbano tuvieron nuevos recursos para fortalecer su</p>
+<p>casos de manejo parcial de los jueces y, sobre todo, por la situacion de los</p>
+<p>poder: administraban una parte de los planes sociales y tambien ejecuta-</p>
+<p>ancianos, condenados o en proceso, a quienes se les nego de manera siste-</p>
+<p>ban las obras publicas financiadas por el gobierno nacional, que utilizaban</p>
+<p>matica la prision domiciliaria.</p>
+<p>empleo local. Por esos caminos, a la vez que se contenian las expresiones</p>
+<p>Por entonces, el presidente establecib estrechos vinculos con las orga-</p>
+<p>de protesta mas duras, el mundo de la pobreza fue convirtiendose en una de</p>
+<p>nizaciones de derechos humanos y en particular con Madres y Abuelas de</p>
+<p>las bases de poder del gobierno.</p>
+<p>Plaza de Mayo, encabezadas respectivamente por Hebe de Bonafini y Es-</p>
+<p>tela de Carlotto. El 24 de marzo de 2004, al recordarse el golpe de 1976,</p>
+<p>Nestor Kirchner busco mas soportes para consolidar y ampliar su autori-</p>
+<p>Kirchner realiz6 otro acto rriuy significativo: en el Colegio Militar orden6</p>
+<p>dad, retaceada por un mezquino resultado electoral inicial. Exploro otros</p>
+<p>al jefe del Ejercito que retirara los cuadros de los expresidentes Videla y</p>
+<p>ambitos de la opinion publica, atendio los reclamos pendientes dejados por</p>
+<p>Bignone.</p>
+<p>Vistos en perspectiva, esos actos de fuerte carga simbolica completa-</p>
+<p>que anteriormente habia encontrado su cauce en el Frepaso.</p>
+<p>ban un largo proceso, iniciado en circunstancias muy dificiles en 1983, al</p>
+<p>La primera medida importante fue la renovacion de la Corte Suprema</p>
+<p>que de un modo u otro contribuyeron los gobiernos anteriores, de acuerdo</p>
+<p>de Justicia. Junto con los politicos, toda la Justicia habia sido cuestionada</p>
+<p>con sus fuerzas. Alfonsin habia sometido a juicio a los excomandantes, y</p>
+<p>con dureza durante la crisis. La Corte en particular era un bastion del me-</p>
+<p>Menem, que Ios indulto, Iogro la subordinacion definitiva del Ejercito al</p>
+<p>poder civil. Kirchner se aparto con vehemencia de esa tradicion, afirmando</p>
+<p>bros. A poco de asumir, Kirchner promovio su reanudacion y desato una</p>
+<p>que en veinte aios el Estado no habia hecho nada por las derechos huma-</p>
+<p>fuerte campana de opinion. Finalmente, obtuvo la renuncia de cuatro de</p>
+<p>nos. Fue una de las primeras manifestaciones de su estilo politico confron-</p>
+<p>los jueces y la remocion por el Congreso de otros dos. Para designar a los</p>
+<p>tativo y polarizador.</p>
+<p>reemplazantes, aplico un novedoso sistema de consulta publica y propuso</p>
+<p>En otras areas de su gabierno, se tomaron medidas tambien acordes</p>
+<p>a cuatro juristas distinguidos e imparciales. A lo largo del tiempo, la reno-</p>
+<p>con la sensibilidad progresista, como las referidas a la procreaciom respon-</p>
+<p>vacion de la Corte fue uno de los logros mas reconocidos de su gobierno.</p>
+<p>sable y a la educacion sexual, asi corno la declaracion de que la protesta</p>
+<p>En simultaneo, propuso la anulacion de las leyes de punto final y obe-</p>
+<p>social no seria criminalizada. En conjunto, todo eso se tradujo en un nivel</p>
+<p>diencia debida, sancionadas en 1987, que bloqueaban los juicios a los res-</p>
+<p>de aprobacion del 75 por ciento.</p>
+<p>ponsables de la represion. Las leyes ya habian sido derogadas en 1998,</p>
+<p>Sobre esa base, Kirchner se propuso construir una plataforma politica</p>
+<p>pero sin efecto retroactivo. Los juicios, por otra parte, no se habian inte-</p>
+<p>alternativa a la del Pl, donde sus rivales aun conservaban un apoyo firme.</p>
+<div class="separador">• • •</div>
+<p>[Imagen 4 - img_04.jpg]</p>
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+<p>365</p>
+<p>364</p>
+<p>BREVEHISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+<p>cos. El recurso autoritario plebiscitario, empleado para forzar la renuncia de</p>
+<p>Las aspiraciones de renovacion dejadas por la crisis y el deterioro organi-</p>
+<p>los jueces de la Corte, no se condecia bien con la institucionalidad demo</p>
+<p>zativo e identitario de todas las fuerzas politicas, incluido el PJ, crearon las</p>
+<p>cratica. La anulacion retroactiva de una ley, como la de obediencia debida,</p>
+<p>condiciones favorables para formar una mueva corriente de opinion, sus-</p>
+<p>menos atin, Hugo Quiroga caracterizo este decisionismo democratico,</p>
+<p>tentada en el apoyo gubernamental y en un discurso capaz de aglutinar</p>
+<p>construido en el margen del Estado de derecho, y a menudo fuera de el.</p>
+<p>simpatias variadas. Este incipiente "relato" --como se lo llamaria despues-</p>
+<p>Muchos recordaron que tal practica ya habia sido ampliamente desarro-</p>
+<p>recuper6 la tradicional y algo olvidada linea nacional, popular y antimpe-</p>
+<p>llada por Kirchner en el gobierna de Santa Cruz. Como en 1989 y en 2002,</p>
+<p>rialista del peronismo, rescato la tradicion de los afnos setenta y repudio el</p>
+<p>la emergencia fue un buen argunento para mantener las facultades excep-</p>
+<p>llamado "neoliberalismo" y las politicas de los anos noventa. Pero ademas</p>
+<p>cionales del Ejecutivo. Otro argumento fue la fragilidad de un Estado que</p>
+<p>confronto con buena parte de la tradicion politica democratica construida</p>
+<p>en apariencia.solo funcionaba cuando lo tensaba una mano dura. Lo mas</p>
+<p>en 1983. Reclamo la paternidad de topicos comunes -como la condena de</p>
+<p>notable desde el punto de vista de la cuitura politica es que estas practicas</p>
+<p>los militares- y se aparto de otras tradiciones de entonces, como el respeto</p>
+<p>no hirieron demasiado la sensibilidad mayoritaria.</p>
+<p>a la ley y a las instituciones, asi como la practica del dialogo plural.</p>
+<p>En octubre de 2005 hubo elecciones parlamentarias, en las que el g0-</p>
+<p>Con ese discurso aglutino a muchas organizaciones sociales, corno va-</p>
+<p>bierno debia ratificar el consenso logrado. La elaboracion de las listas le</p>
+<p>rias de las dedicadas a la defensa de los derechos humanos y otras tantas</p>
+<p>permitio a Kirchner dividir aguas con Duhalde, con quien se nego a esta-</p>
+<p>de origen piquetero, que recibieron distintos tipos de reconocimientos,</p>
+<p>blecer un acuerdo. Su esposa, Cristina Fernandez, derroto en la eleccion de</p>
+<p>ayudas y prebendas. Parte de la cTA acompano esta propuesta, a la que ter-</p>
+<p>senador bonaerense a Chiche. Duhalde, esposa del expresidente. En las</p>
+<p>elecciones legislativas nacionales las listas del gobierno obtuvieron, su-</p>
+<p>mentos sueltos de distintos partidos -cuya division alento- y a figuras po-</p>
+<p>liticas individuales, a las que atrajo. Quienes tenian responsabilidades de</p>
+<p>comodidad a un conjunto muy fragmentado de fuerzas opositoras. Sin em-</p>
+<p>gobierno -intendentes, gobernadores- fueron invitados convincentemente</p>
+<p>bargo, no lograron triunfar en dos grandes ciudades: en Buenos Aires se</p>
+<p>a unirse al nuevo movimiento, liderado por quien administraba Ios princi-</p>
+<p>impuso Compromiso para el Cambio de Mauricio Macri, un recien llegado</p>
+<p>pales recursos fiscales. La propuesta recordaba a la de Peron en 1945: ha-</p>
+<p>a la politica, y en Rosario, Hermes Binner, del Partido Socialista, que gober-</p>
+<p>bia llegado el momento de barajar y dar de nuevo, constituyendo el Frente</p>
+<p>naba la ciudad desde 1995.</p>
+<p>Transversal Nacional y Popular.</p>
+<p>El resultado electoral confirmo ampliamente el liderazgo de Kirchner.</p>
+<p>Su instrumentacion enfrento problemas serios, como la division in</p>
+<p>terna de las organizaciones de derechos humanos y la crA. Ademas, Kirch-</p>
+<p>Economia. Concluida la crisis, comenzaba entonces la era del kirchnerismo.</p>
+<p>ner no pudo prescindir del PJ. pues a la hora de las elecciones era decisivo</p>
+<p>bordinar al pJ en la decisiva provincia de Buenos Aires, debia derrotar a</p>
+<p>Duhalde y su aparato partidario, algo que logro con facilidad utilizando los</p>
+<p>recursos fiscales para disciplinar a las autoridades locales. De ese modo,</p>
+<p>junto con el ideologico e inestable frente transversal, construyo un opaco</p>
+<p>pero eficiente partido del gobierno.</p>
+<p>En esta construccion politica, asi como en la gestion del final de la cri-</p>
+<p>sis, Kirchner hizo un amplio uso de los recursos gubernamentales y politi-</p>
+<div class="separador">• • •</div>
+    </div>
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# Consigna 06 -- 1er Parcial Tema 10
+
+## Metadata
+- **Parcial**: 1er Parcial
+- **Tema**: 10
+- **Consigna**: 06
+- **Puntos**: 0.50
+- **Cantidad de opciones**: 4
+- **Autor(es) referenciado(s)**: Sofía Pirsch
+- **Tipo cognitivo**: Comprensión
+- **Es integradora**: No
+- **Unidades involucradas**: [3]
+- **Textos fuente**: ICSE - Introduccion al Conocimiento de la Sociedad y el Estado
+- **Dia(s) asignado(s)**: N/A
+- **Dificultad estimada**: Media
+- **Estado**: EXTRACCION_INICIAL
+
+## Enunciado
+Según Sofía Pirsch, en los sistemas federales la elección de representantes en la cámara alta (senadores) responde en general a una lógica estrictamente proporcional.
+
+## Opciones
+A) Es verdadero, porque un patrón que se repite a lo largo y a lo ancho de las federaciones mundiales es que las unidades (provincias) más pequeñas se encuentran subrepresentadas en las cámaras altas.
+B) Es falso, porque un patrón que se repite a lo largo y a lo ancho de las federaciones mundiales es que las unidades (provincias) más grandes se encuentran sobrerrepresentadas en las cámaras altas.
+C) Es falso, porque para representar en el plano nacional a todas las unidades (provincias) que componen ese Estado federal, se las considera iguales entre sí. Por eso, todas tienen el mismo número de bancas que es lo opuesto a lo proporcional.
+D) Es verdadero, porque su objetivo es representar en el plano nacional a todas las unidades (provincias) que componen a ese Estado federal, y estas unidades son consideradas diferentes entre sí, sobre todo, en la cantidad de gente que las habita.
+
+## Respuesta correcta
+**C**
+
+## Explicacion de la respuesta correcta
+PENDIENTE_VERIFICACION
+
+## Analisis de distractores
+PENDIENTE_VERIFICACION
+
+## Tags adicionales
+- **Trampa**: No
+- **Conceptos clave**: PENDIENTE_VERIFICACION
+- **Referencia textual**: PENDIENTE_VERIFICACION

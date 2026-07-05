@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo X — Crisis y reconstrucción — ICSE 024</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+
+      font-size: 18px;
+
+      line-height: 1.75;
+
+      padding: 0;
+
+    }
+
+
+
+    .page {
+
+      max-width: 680px;
+
+      margin: 0 auto;
+
+      padding: 4rem 2rem 6rem;
+
+    }
+
+
+
+    .metadatos {
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      padding: 2.5rem 2rem;
+
+      margin-bottom: 4rem;
+
+      text-align: center;
+
+    }
+
+
+
+    .metadatos .titulo-libro {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.15em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1.5rem;
+
+    }
+
+
+
+    .metadatos .titulo-texto {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 2em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      line-height: 1.25;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .metadatos .autor {
+
+      font-size: 1.05em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1rem;
+
+      font-style: italic;
+
+    }
+
+
+
+    .metadatos .info {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.78em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 0.3rem;
+
+    }
+
+
+
+    .metadatos .badge {
+
+      display: inline-block;
+
+      margin-top: 1.2rem;
+
+      padding: 0.35rem 1.2rem;
+
+      background: var(--heading);
+
+      color: #1a1a1a;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.72em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido p {
+
+      text-indent: 1.5em;
+
+      margin-bottom: 0;
+
+      text-align: justify;
+
+      hyphens: auto;
+
+    }
+
+
+
+    .contenido p + p {
+
+      margin-top: 0.9em;
+
+    }
+
+
+
+    .contenido p:first-of-type {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido p.first-of-section {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido h2 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.5em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      margin-top: 3rem;
+
+      margin-bottom: 1rem;
+
+      padding-bottom: 0.5rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido h3 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.2em;
+
+      font-weight: 600;
+
+      font-style: italic;
+
+      color: var(--heading);
+
+      margin-top: 2.5rem;
+
+      margin-bottom: 0.8rem;
+
+    }
+
+
+
+    .contenido h4 {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.95em;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+      color: var(--text-muted);
+
+      margin-top: 2rem;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .contenido blockquote {
+
+      margin: 2rem 0 2rem 1.5rem;
+
+      padding: 1rem 1.5rem;
+
+      border-left: 3px solid var(--accent);
+
+      font-style: italic;
+
+      color: var(--text-muted);
+
+      background: var(--surface);
+
+      font-size: 0.95em;
+
+    }
+
+
+
+    .contenido blockquote p {
+
+      text-indent: 0;
+
+      text-align: left;
+
+    }
+
+
+
+    .contenido ul,
+
+    .contenido ol {
+
+      margin: 1.2rem 0 1.2rem 2rem;
+
+    }
+
+
+
+    .contenido li {
+
+      margin-bottom: 0.5em;
+
+      padding-left: 0.3em;
+
+    }
+
+
+
+    .contenido table {
+
+      width: 100%;
+
+      border-collapse: collapse;
+
+      margin: 2rem 0;
+
+      font-size: 0.9em;
+
+    }
+
+
+
+    .contenido table th {
+
+      background: var(--surface);
+
+      color: var(--heading);
+
+      padding: 0.7rem 1rem;
+
+      text-align: left;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-weight: 500;
+
+      font-size: 0.85em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.03em;
+
+    border-bottom: 2px solid var(--accent); }
+
+
+
+    .contenido table td {
+
+      padding: 0.6rem 1rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido table tr:nth-child(even) {
+
+      background: var(--surface);
+
+    }
+
+
+
+    .contenido .ilegible {
+
+      color: var(--red-soft);
+
+      font-weight: 600;
+
+      background: #3a2020;
+
+      padding: 0.1em 0.3em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido .nota-num {
+
+      font-size: 0.75em;
+
+      vertical-align: super;
+
+      color: var(--accent);
+
+      font-weight: 600;
+
+    }
+
+
+
+    .notas {
+
+      margin-top: 4rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+
+    .notas h2 {
+
+      font-size: 1.1em;
+
+      margin-bottom: 1rem;
+
+      border-bottom: none;
+
+      padding-bottom: 0;
+
+    }
+
+
+
+    .notas p {
+
+      font-size: 0.85em;
+
+      text-indent: 0;
+
+      margin-bottom: 0.6em;
+
+      color: var(--text-muted);
+
+      text-align: left;
+
+    }
+
+
+
+    .separador {
+
+      text-align: center;
+
+      margin: 3rem 0;
+
+      color: var(--border);
+
+      font-size: 1.2em;
+
+      letter-spacing: 0.5em;
+
+    }
+
+
+
+    footer {
+
+      margin-top: 5rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+      text-align: center;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      color: var(--text-muted);
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+    }
+
+
+
+    @media print {
+
+      body { background: #fff; font-size: 12pt; }
+
+      .page { padding: 0; max-width: 100%; }
+
+      .metadatos { break-after: page; border: none; background: none; }
+
+      .contenido h2 { break-after: avoid; }
+
+      .contenido h3 { break-after: avoid; }
+
+      blockquote { break-inside: avoid; }
+
+      table { break-inside: avoid; }
+
+      footer { break-before: avoid; }
+
+    }
+
+
+
+    @media (max-width: 700px) {
+
+      .page { padding: 2rem 1.2rem 4rem; }
+
+      body { font-size: 16px; }
+
+      .metadatos .titulo-texto { font-size: 1.6em; }
+
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="../../css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="metadatos">
+
+      <div class="titulo-libro">Breve historia contemporánea de la Argentina</div>
+
+      <div class="titulo-texto">Capítulo X — Crisis y reconstrucción</div>
+
+      <div class="autor">Luis Alberto Romero</div>
+
+      <div class="info">Páginas originales: 316–357</div>
+
+      <div class="badge">Día 13 — Unidad 4</div>
+
+    </div>
+
+
+
+    <div class="contenido">
+
+      <p>NÚMERO: 29</p>
+
+<p>TEXTO: Capitulo X Crisis y reconstruccion</p>
+
+<p>AUTOR: Romero</p>
+
+<p>LIBRO: Romero</p>
+
+<p>IMÁGENES PROCESADAS: 1 a 10</p>
+
+<p>PÁGINAS DEL LIBRO: 281 a 290</p>
+
+<p>ESTADO: extraído</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 1 - img_01.jpg]</p>
+
+<p>X. Crisis y reconstruccion, 1999-2005</p>
+
+<p>EL GoBrERNo de la Alianza debio enfrentar un complejo problena econo-</p>
+
+<p>mico, centrado en el mantenimiento o el abandono de la convertibilidad.</p>
+
+<p>El presidente De la Rtia renuncio en diciembre de 2001, cuando empezaba</p>
+
+<p>una profunda crisis econornica, politica y social, y Eduardo Duhalde fue</p>
+
+<p>elegido por el Congreso para compietar su mandato. Durante 2002, la cri-</p>
+
+<p>conseguido encarrilar los principales problemas. En mayo de ese ano, fue</p>
+
+<p>electo presidente Nestor Kirchner, quien en el inicio completo la tarea co-</p>
+
+<p>menzada por Duhalde, con la colaboracion del ministro de Ecoromia Ro-</p>
+
+<p>berto Lavagna. En 2oo5, ya con la economia en expansion y las cuentas</p>
+
+<p>fiscales saneadas, Kirchner despidio a Lavagna y se hizo cargo plenamente</p>
+
+<p>del gobierno. Se cerraba la transicion y se inauguraba el kirchnerismo, la</p>
+
+<p>nueva fase del segundo peronismo.</p>
+
+<p>ELGOBIERNODELAALIANZA</p>
+
+<p>Encabezada por Fernando de la Ruia, la Alianza por el Trabajo, la Justicia y</p>
+
+<p>la Educacion llego al gobierno con un amplio credito de confianza y varios</p>
+
+<p>problemas de solucion casi imposible. Su poder estaba limitado por la pre</p>
+
+<p>sencia diominante del peronismo ea el Senado y en la mayoria de las pro-</p>
+
+<p>vincias. En el interior de la coalicion; habia diagnosticos y propuestas dife-</p>
+
+<p>rentes y poco ensambiadas. La movilizacion social, latente desde 1998,</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 2 - img_02.jpg]</p>
+
+<p>340</p>
+
+<p>BREVE HISTORIA CONTEMPORANEADE LA ARGENTINA</p>
+
+<p>CRISISYRECONSTRUCCION,1999-2005</p>
+
+<p>341</p>
+
+<p>seguia presente y articulada. Sobre todo, la economia ponia un limite fe-</p>
+
+<p>afios noventa el gobierno no habia controlado los gastos, habia alimentado</p>
+
+<p>rreo a la accion del gobierno.</p>
+
+<p>El nuevo gobierno recibio una economia que estaba en recesion desde</p>
+
+<p>prebendados y depredadores de distinto tipo que sorbian sus recursos.</p>
+
+<p>1998, un deficit fiscal mucho mayor del previsto y un regimen de conver-</p>
+
+<p>En 2000, no se discutian tanto las causas profundas como las conse-</p>
+
+<p>tibilidad cuyo merito residia en limitar estrictamente la accion estatal en</p>
+
+<p>cuencias: quienes serian los afectados por la inevitable reduccion fiscal y</p>
+
+<p>como se equilibrarian las presiones de los afectados, mas impuestos, me-</p>
+
+<p>nos salarios, menos fondos para los gobiemos provinciales. Este era un pro-</p>
+
+<p>cia toda la fragilidad de la bonanza de los anios noventa. Asi lo entendio la</p>
+
+<p>blema particularmente complejo, en el que se cruzaban cuestiones politi-</p>
+
+<p>opinion publica: todo reposaba sobre la convertibilidad, y mantenerla fue</p>
+
+<p>cas y sociales; el gobierno nacional necesitaba reducir las transferencias a</p>
+
+<p>la nueva ilusion colectiva y tambien el principal respaldo del gobierno.</p>
+
+<p>las provincias; los afectados -en especial los empleados estatales provincia-</p>
+
+<p>Las politicas que contribuian a sostener la convertibilidad, con la es-</p>
+
+<p>les- reaccionaban de manera violenta y los gobernadores debian afrontar</p>
+
+<p>peranza de que se reiniciara el ciclo virtuoso, profundizaban la recesion</p>
+
+<p>esos conflictos y a la vez negociar con el gobierno nacional. :</p>
+
+<p>local. El estancamiento se manifestaba en la experiencia cotidiana: elevada</p>
+
+<p>La politica economica fue conducida de manera eclectica y razomable</p>
+
+<p>desocupacion, empleo "en negro' tasas de interes altisimas, retraccion co-</p>
+
+<p>por el ministro Jose Luis Machinea, combinando un poco de ajuste salarial,</p>
+
+<p>mercial, atraso en los pagos del Estado y desaliento a los inversores. Para</p>
+
+<p>un poco de elevacion de impuestos y un poco de reduccion de gastos. Por</p>
+
+<p>convencer a sus acreedores, el pais debia cumplir con sus compromisos, y</p>
+
+<p>otro lado, aposto a la. reactivacion y trato de atraer a los empresarios redu</p>
+
+<p>esto solo era posible con nuevos prestamos. El Fondo Monetario Interna-</p>
+
+<p>ciendo los costos salariales mediante la reforma de la ley laboral, Sobre</p>
+
+<p>cional (FMr) se mostro tolerante y benevolo con el pais mientras duro la</p>
+
+<p>todo, consiguio el apoyo del FMl, que a fines de 2000 acordo fondos para</p>
+
+<p>administracion Clinton en Estados Unidos. Pero la perspectiva de quienes</p>
+
+<p>el "blindaje" de la deuda externa.</p>
+
+<p>manejaban los grandes fondos de inversion privados era distinta: solo les</p>
+
+<p>sobretasa de interes que debia pagarse en los mercados financieros mun-</p>
+
+<p>bilidades de nuevos prestamos. En marzo de 2001, Machinea dejo su lugar</p>
+
+<p>diales, registraba la fragilidad de la solvencia, sostenida por hilos cada vez</p>
+
+<p>mas tenues.</p>
+
+<p>diante un drastico recorte de gastos. Hubo una reaccion social y politica</p>
+
+<p>La convertibilidad, sumada a diez afios de inflacion interna, tuvo como</p>
+
+<p>generalizada, y el ministro abandono su cargo de inmediato. Entonces De</p>
+
+<p>consecuencia un peso sobrevaluado, que hacia diffcil competir en los mer-</p>
+
+<p>la Rua convoco a Domingo Cavallo, el "padre de la convertibilidad', trans-</p>
+
+<p>cados mundiales; asi retrocedieron las exportaciones industriales, que ha-</p>
+
+<p>formado en la uinica esperanza de salvacion para la ya desesperada opinion</p>
+
+<p>bian sido uno de los pilares de la transformacion de los anios noventa. Pa-</p>
+
+<p>publica. Cavallo se convirtib de hecho en un "superministro', un papel ade-</p>
+
+<p>gar los vencimientos de la deuda requeria un enorme esfuerzo fiscal y una</p>
+
+<p>cuado a su personalidad.</p>
+
+<p>reduccion de los gastos del Estado: congelar salarios, suprimir partidas,</p>
+
+<p>En medio de una crisis social ya desbocada, Cavallo ensayo una solu-</p>
+
+<p>achicar la inversion. Todo ello profundizaba la recesion y ademas reducia</p>
+
+<p>cion no ortodoxa: cerrar las importaciones y reactivar las exportaciones</p>
+
+<p>los ingresos provenientes de los impuestos.</p>
+
+<p>industriales, mediante estimulos fiscales. Pero el elevado costo fiscal de</p>
+
+<p>Asi, los distintos problemas confluian en el "ajuste" fiscal. El Estado</p>
+
+<p>esta politica aumento la desconfianza de los inversores y la fuga de dola-</p>
+
+<p>gastaba mas de lo que percibia. En parte porque no recibia nuevos presta-</p>
+
+<p>res. Por entonces, se habia agregado otra dificultad: la nueva administra-</p>
+
+<p>mos, en parte por la recesion y en parte porque durante la bonanza de los</p>
+
+<p>cion estadounidense, encabezada por George W. Bush, retaced su apoyo al</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 3 - img_03.jpg]</p>
+
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+
+<p>BREVE HISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+
+<p>342</p>
+
+<p>343</p>
+
+<p>El "escandalo del Senado" desencadeno la ruptura. En abril de 2000, se</p>
+
+<p>se desentendio completamente de su suerte.</p>
+
+<p>aprobo la ley de reforma laboral, resistida por los sindicatos. Poco despues</p>
+
+<p>Al borde de la cesacion de pagos, Cavallo se concentrd en la deuda ex-</p>
+
+<p>trascendio que un grupo de senadores, peronistas y radicales, habia sido</p>
+
+<p>terma. Primero acord6 con los acreedores un "megacanje", permutando ven-</p>
+
+<p>sobornado para que la aprobaran. Al parecer, se trataba de una practica</p>
+
+<p>cimientos inmediatos por otros a mayor plazo y mayor interes. Intento fle-</p>
+
+<p>habitual durante el gobierno de Menem, a la que habria recurrido el mi-</p>
+
+<p>xibilizar la convertibilidad, combinando en la paridad dolares con euros,</p>
+
+<p>nistro de Trabajo Alberto Flamarique, encargado de la operacion. Chacho</p>
+
+<p>con resultado catastrofico: el Estado estaba admitiendo que la insolvencia</p>
+
+<p>Alvarez, en su calidad de presidente del Senado, impulso una investigacion</p>
+
+<p>estaba cercana. La iltima y desesperada medida para recuperar la confianza</p>
+
+<p>profunda, acorde con la propuesta del Frente Pais Solidario (Frepaso) sobre</p>
+
+<p>de los inversores fue anunciar en julio de 2001 un presupuesto de "deficit</p>
+
+<p>la reforma politica. Los senadores peronistas y radicales se unieron para</p>
+
+<p>obstaculizarla y defender al cuerpo, y Alvarez solo tuvo un tibio respaldo</p>
+
+<p>se advirtieron las consecuencias: recortes de sueldos y jubilaciones y sobre</p>
+
+<p>de De la Rtia. Al fin, apenas hubo algunas renuncias entre los senadores y</p>
+
+<p>todo reduccion de las transferencias a las provincias. Para pagar los sueldos,</p>
+
+<p>la investigacion se paralizo, pero Alvarez, visiblemente desautorizado por</p>
+
+<p>los gobiernos provinciales emitieron bonos y otras cuasi monedas que solo</p>
+
+<p>el presidente, renuncio a su cargo en octubre de 2000.</p>
+
+<p>Su renuncia desencadeno una crisis en el gobierno. Aunque Alvarez</p>
+
+<p>gaba a las mubes, nada cambio las expectativas de los inversores.</p>
+
+<p>sostuvo que el Frepaso seguia integrandolo, e incluso continuo aconse-</p>
+
+<p>jando a De la Rua -por ejemplo, sobre la incorporacion de Cavallo al gabi-</p>
+
+<p>Al implacable avance de la crisis fiscal se sumo una movilizacion social de</p>
+
+<p>nete-, los diputados de ese partido se desgranaron. A fin de 2000, varios</p>
+
+<p>creciente intensidad. Pese a ello, el gobierno de la Alianza tuvo inicial-</p>
+
+<p>grupos desprendidos de la uck, el Frepaso y el socialismo constituyeron</p>
+
+<p>mente un razonable margen de maniobra. El peronismo, muy desarticu-</p>
+
+<p>lado, no lo obstaculizo de manera sistematica: los gobernadores negocia-</p>
+
+<p>Las medidas de ajuste que en marzo propuso Lopez Murphy, aunque eff-</p>
+
+<p>ron los fondos de sus provincias y los senadores Io hicieron con sus votos</p>
+
+<p>para la aprobacion de las leyes. Por otra parte, a medida que se revelaba la</p>
+
+<p>el gobierno tenia en Diputados. La designacion de Cavallo, que funciond</p>
+
+<p>fragilidad de la convertibilidad, la opinion publica apoyo firmemente a un</p>
+
+<p>gobierno que parecia ser la tiltima garantia de su mantenimiento.</p>
+
+<p>explorar la alternativa de un gobierno de unidad nacional capaz. de iniciar</p>
+
+<p>Pero la Alianza, exitosa en lo electoral, no funciono como coalicion de</p>
+
+<p>el abandono de la convertibilidad.</p>
+
+<p>gobieino. Por razones profundas o mezquinas, la Union Civica Radical</p>
+
+<p>Aislado de sus aliados y encerrado en un circulo muy reducido, el go-</p>
+
+<p>(ucr) tuvo fricciones cada vez mas fuertes con el grupo que rodeaba a De</p>
+
+<p>bierno enfrento las elecciones legislativas de octubre de 2001. En ellas, el</p>
+
+<p>la Ria. Alfonsin fue tomando distancia de la defensa a ultranza de la con.</p>
+
+<p>desempefio de la Ucr fue malo; el peronismo, que tambien perdio muchos</p>
+
+<p>vertibilidad. El vicepresidente Carlos Alvarez, nexo entre ambos dirigentes</p>
+
+<p>votos, sin embargo avanzo comsiderablemente en el control de las Cama-</p>
+
+<p>radicales, procuro ampliar la Alianza dialogando con el espectro no pero-</p>
+
+<p>ras. Los partidos de izquierda y el ARI obtuvieron buenos resultados. Pero</p>
+
+<p>nista, mientras que el presidente aposto a la colaboracion de los senadores</p>
+
+<p>lo mas Notable fue lo que se llamo el "voto bronca" o "voto castigo": un</p>
+
+<p>y los gobernadores justicialistas. Combinar tendencias y puntos de vista</p>
+
+<p>22% de los sufragantes vot6 en blanco o anulo su voto. El 24% no fue a</p>
+
+<p>votar, un porcentaje un poco mayor que el normal. El voto bronca" fue</p>
+
+<p>decision y un talento politico de los que De la Ria carecia, de modo que</p>
+
+<p>los conflictos se agudizaron.</p>
+
+<p>extendida disconformidad de la ciudadania. Se culpaba al conjunto de los</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 4 - img_04.jpg]</p>
+
+<p>. BREVE HISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+
+<p>344</p>
+
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+
+<p>345</p>
+
+<p>politicos de las dificultades economicas, de no hacerse cargo de las deman-</p>
+
+<p>Pero los actores principales fueron las organizaciones "piqueteras" Su</p>
+
+<p>das de la sociedad y de preocuparse solo por defender sus privilegios.</p>
+
+<p>peso se incremento cuando el gobierno de la Alianza, que trataba de redu-</p>
+
+<p>cir la influencia de las redes politicas peronistas, decidio negociar con ellas</p>
+
+<p>y encargarles la distribucion de los planes de ayuda Esto confirmo la in-</p>
+
+<p>PROTESTA, CRISIS Y FINAL DE LA ALIANZA</p>
+
+<p>tuicion de los demandantes: como en los anos noventa, el gobierno renun-</p>
+
+<p>ciaba a aplicar politicas universales y se ocuparia de aquellos que presio-</p>
+
+<p>Las elecciones de octubre iniciaron la crisis final del gobierno. Los senado</p>
+
+<p>naran adecuadamente. Como los beneficios otorgados eran precarios, las</p>
+
+<p>res peronistas eligieron a uno de ellos -Ramon Puerta-- como presidente</p>
+
+<p>dernandas crecian y la competencia se hacia intensa, Ias organizaciones</p>
+
+<p>provisional del Senado, primero en la linea sucesoria luego de la renuncia</p>
+
+<p>debian permanecer activas, para defender lo recibido y ampliarlo. De ese</p>
+
+<p>de Alvarez. Anunciaban asi que se preparaban para retomar el gobierno:</p>
+
+<p>modo se cerraba el circtulo: en definitiva, el Estado subsidiaba y hacia cre-</p>
+
+<p>Los gobernadores peronistas se organizaron para defender su parte de</p>
+
+<p>cer a los grupos que se habian organizado para presionario. .</p>
+
+<p>unos recursos fiscales que se reducian aceleradamente. El gobierno, huer-</p>
+
+<p>Las organizaciones piqueteras eran complejas: al nticleo de desocupa-</p>
+
+<p>fano del respaldo del FMI -pese a los desesperados intentos de Cavallo-,</p>
+
+<p>dos se sumaban jubilados, acupantes de tierras y, en general, familias nece-</p>
+
+<p>comenzo a recortar todo tipo de gastos, lo que agudizo las reacciones.</p>
+
+<p>sitadas. Construir las organizaciones fue la tarea de veteranos militantes so-</p>
+
+<p>La crisis fiscal reactivo la protesta social, que renacio a mediados de</p>
+
+<p>ciales, antiguos dirigentes sindicales y tambien activistas politicos. Una</p>
+
+<p>2000 y creci6 de manera s0stenida, hasta culminar en diciembre de 2001.</p>
+
+<p>novedad fue la alta participacion de las mujeres, que articularon la dimen-</p>
+
+<p>La singularizo su dimension nacional, su heterogeneidad y la convergencia</p>
+
+<p>sion militante con las tareas comumitarias, de creciente importancia. Las or-</p>
+
+<p>practica. Prendio primero en algunas capitales provinciales lejanas de Bue-</p>
+
+<p>ganizaciones proliferaron, con diferencias de envergadura, perspectivas y</p>
+
+<p>nos Aires. En mayo de 2000, hubo un nuevo corte en General Mosconi, .</p>
+
+<p>estrategias, aunque coincidieron en la tactica -el corte de rutas y de calles-</p>
+
+<p>Salta, duramente reprimido, que concluyo con una pueblada victoriosa e</p>
+
+<p>y en la practica organizativa, basada en las asambleas, en las que se discutia</p>
+
+<p>queteras de La Matanza obtuvieron un exito simiar, en momentos en que</p>
+
+<p>algunas, el horizonte estaba en las puebladas y en la insurreccion popular.</p>
+
+<p>estallaba otro episodio vilolento en Mosconi. Las cosas fueron mas duras en</p>
+
+<p>Otras fueron pramovidas por partidos de izquierda, que las acomodaron a</p>
+
+<ol>
+
+<li>2001. El "deficit cero" establecido por Cavallo en julio y su secuela de re-</li>
+
+</ol>
+
+<p>sus respectivas lineas politicas. Un gruipo inportante apunto a lo que llama-</p>
+
+<p>cortes presupuestarios profundizaron el descontento, involucrando ciuda-</p>
+
+<p>ban la autoorganizacion popular. Un punto esencial eran los subsidios esta-</p>
+
+<p>des menores y pueblos. A fines de anio, como se vera, los vecinas de la ciu-</p>
+
+<p>tales, que solucionaban los problemas de los necesitados y ademas posibili-</p>
+
+<p>dad de Buenos Aires pasaron de espectadores a participantes activos de</p>
+
+<p>taban el furncionamienito y la expansion de las organizaciones. Las</p>
+
+<p>una protesta que en las grandes conurbaciones incluyo el saqueo, la vio-</p>
+
+<p>organizaciones piqueteras procuraron darle un significado diferente al que</p>
+
+<p>lencia, la represion y las muertes.</p>
+
+<p>era comin en el ambito de las redes del peronismo. Los subsidios no debian</p>
+
+<p>Los protagonistas se fueron ampliando y renovando. Las dos cGT y la</p>
+
+<p>ser considerados una dadiva, sino una conquista El Estado tenia la obliga</p>
+
+<p>Central de Trabajadores de la Argentina (cTa), unidas o separadas, convo-</p>
+
+<p>cion de garantizar los derechos basicos de los ciudadanos: la salud, la edu-</p>
+
+<p>caron a huelgas generales y organizaron marchas nutridas y turbulentas.</p>
+
+<p>cacion, la alimentacion, el trabajo y la vivienda. No hacerlo suponia una in-</p>
+
+<p>Muy activos fueron los trabajadores estatales de las capitales provinciales,</p>
+
+<p>justicia que debia ser reparada, y en ello residia el derecho y la dignidad.</p>
+
+<p>y sobre todo los docentes. En los municipios, la protesta se profundizo al</p>
+
+<p>En 2001, las organizaciones piqueteras pasaron a primer plano, avan-</p>
+
+<p>sumar a organizaciones vecinales y otras redes de base territorial.</p>
+
+<p>zanda en su integracion y coordinacion. A fines de julio, se reuni una</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 5 - img_05.jpg]</p>
+
+<p>346</p>
+
+<p>BREVE HISTORLA CONTEMPORANEA DE LA ARGENTINA</p>
+
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+
+<p>347</p>
+
+<p>Asamblea Piquetera Nacional y se acordo un plan de acciones en comun,</p>
+
+<p>nes callejeras y actos de violencia que se prolongaron en los dias siguien-</p>
+
+<p>que culmino el 7 de agosto con cortes de rutas en todo el pais. Sin en.</p>
+
+<p>tes. Las organizaciones piqueteras reunieron a su gente alrededor de los</p>
+
+<p>bargo, afloraron las diferencias estrategicas y hubo muchas escisiones. Las</p>
+
+<p>organizaciones mas antiguas, como la Federacion de Tierra y Vivienda</p>
+
+<p>nario piblico la entrega de bolsones de alimentos. Sin embargo, la acciom</p>
+
+<p>(FTv) y la Corriente Clasista y Combativa (ccc), impulsaban reformas socia</p>
+
+<p>se extendio por todo el pais, y esa semana fueron saqueados unos trescien-</p>
+
+<p>les -como el seguro universal- que mejoraran la situacion de los desocu-</p>
+
+<p>pados y no desdenaban negociar con las autoridades. Las que eran inpul.</p>
+
+<p>manos de los comerciantes-- y cientos de heridos.</p>
+
+<p>El 18 de diciembre, comenzaron los saqueos en el Gran Buenos Aires</p>
+
+<p>que existia en el pais una situacion prerrevolucionaria y orientaron sus</p>
+
+<p>y en otros grandes conurbanos. En los barrios populares, fueron asaltados</p>
+
+<p>acciones en ese sentido. A principios de diciembre, este grupo profundizo</p>
+
+<p>muchos supermercados pequenos, aprovechando la sospechosa pasividad</p>
+
+<p>la escision conformando el Bloque Piquetero.</p>
+
+<p>de las fuerzas policiales, que se linitaron a proteger los locales de las gran</p>
+
+<p>des cadenas. Hubo una parte importante de espontaneidad, pero esos epi-</p>
+
+<p>En los iltimos meses de 2001, el fantastico nivel alcanzado por el "riesgo</p>
+
+<p>sodios tambien fueron estimulados por muchos dirigentes peronistas loca-</p>
+
+<p>pais" descarto cualquier posibilidad de acceso al credito internacional. se</p>
+
+<p>les, con intencion de darle el iltimo empujon al gobierno. El 19, la protesta</p>
+
+<p>corporizo asi el fantasma del defaulto declaracion del cese de los pagos de</p>
+
+<p>estallo en la Capital Federal, movilizando a nuevos actores. Al son de los</p>
+
+<p>la deuda. Unos sacaron sus dolares del pais; otros retiraron sus depositos</p>
+
+<p>cacerolazos, salieron a la calle mtchos vecinos de Buenos Aires, afectados</p>
+
+<p>de los bancos. La corrida amenazaba con destruir todo el sistema bancario</p>
+
+<p>por la crisis o movilizados por la indignacion y la desilusion. Por la noche,</p>
+
+<p>Para frenarla, Cavallo tomo una medida excepcional, pronto conocida</p>
+
+<p>el presidente decreto el estado de sitio; no tuvo ningun efecto disuasivo,</p>
+
+<p>como "corralito": el 1° de diciembre redujo a una pequenia suma la extraccion</p>
+
+<p>pero en cambio avivo el conflicto y puso en movimiento a quienes atin se</p>
+
+<p>de efectivo de los bancos, aunque siguieron habilitadas las transferencias, los.</p>
+
+<p>mantenian apartados. En la Capital, se congregaron frente al Congreso o</p>
+
+<p>cheques y los pagos con tarjetas. Pocos dias despues, ante la falta de res?</p>
+
+<p>en la Plaza de Mayo muichedumbres de reclamantes, a las que se sumaron</p>
+
+<p>puesta del FMI, se anunciaron nuevos cortes presupuestarios.</p>
+
+<p>grupos del Gran Buenos Aires. El dia 2o, la Policia reprimi6 a los manifes-</p>
+
+<p>El "corralito" relanzo la protesta social. La desafeccion institucional, el</p>
+
+<p>tantes en la Plaza y hubo cinco muertos.</p>
+
+<p>cuestionamiento de todos los mecanismos de representacion y la bus-</p>
+
+<p>Ya habia renunciado el ministro Cavallo y el presidente, en un uiltimo</p>
+
+<p>queda de nuevos canales se pusieron de manifiesto en la adhesion al ple-</p>
+
+<p>intento, convoco a un gobierno de unidad nacional. Por entonces, los diri-</p>
+
+<p>gentes peronistas y buena parte de los radicales habian coincidido en que</p>
+
+<p>ganizado por la cra y otras agrupaciones sociales y politicas, que proponia</p>
+
+<p>con De la Rtia la crisis no tenia salida. Por la nochie, el presidente renuncid a</p>
+
+<p>establecer un ingreso ciudadano basico. Entre el 13 y el 17 de diciembre;</p>
+
+<p>su cargo y en un helicoptero abandon6 la Casa de Gobierno, sitiada por los</p>
+
+<p>votaron tres millones de personas. Los lugares de sufragio fueron organi-</p>
+
+<p>nanifestantes furiosos. En esos dias, habian muerto un total de 39 perso-</p>
+
+<p>zados por distintas instituciones: sindicatos, centros estudiantiles, parro-:</p>
+
+<p>nas. Curiosamente, De la Rua volvio al dia siguiente a la Casa de Gobierno</p>
+
+<p>quias, asociaciones profesionales, sociedades de fomento, hospitales, car-</p>
+
+<p>para esperar que su renuncia fuera aceptada.</p>
+
+<p>celes; su diversidad revela la extension del cuestionamiento.</p>
+
+<p>Por entonces, la protesta ya habia tomado otro rumbo. El 13 de diciem:.</p>
+
+<p>Asi termino el breve interludio de un gobierno no peronista en el ciclo del</p>
+
+<p>bre, las tres centrales obreras organizaron un paro nacional que tuvo una</p>
+
+<p>segundo peronismo. Surgida en un contexto de optimismo ciudadano que</p>
+
+<p>adhesion casi unanime; ese dia, en muchas ciudades hubo manifestacic-</p>
+
+<p>recordaba el de 1983, la Alianza entusiasmo al principio con su promesa</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 6 - img_06.jpg]</p>
+
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+
+<p>349</p>
+
+<p>348</p>
+
+<p>BREVE HISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+
+<p>Asamblea Legislativa, que designo presidente interino al gobernador de</p>
+
+<p>de trabajo, educacion y justicia, aunque termino concitando el apoyo de</p>
+
+<p>quienes, de manera mas modesta, querian salvar la convertibilidad. Ambas.</p>
+
+<p>San Luis, Adolfo Rodriguez Saa, quien debia lamar a elecciones de inme</p>
+
+<p>aspiraciones eran igualmente utopicas. Los datos duros de la economia ya.</p>
+
+<p>diato para completar el mandato de De la Rua. Pese a lo acotado de su</p>
+
+<p>indicaban en 1999 que, salvo alguin cambio importante en las condiciones</p>
+
+<p>mandato, el nuevo presidente anuncio que no se pagaria la deuda externa</p>
+
+<p>-decision aprobada por el Congreso entre aplausos y vitores antimperia-</p>
+
+<p>externas, el derrumbe fiscal era imposible de detener. En los dos anos de.</p>
+
+<p>gobierno de la Alianza, los datos solo cambiaron para peor, en particular</p>
+
+<p>distintos sectores sociales y politicos. Pero apenas una semana despues los</p>
+
+<p>con la nueva politica de Estados Unidos y el FMI.</p>
+
+<p>gobernadores justicialistas, que habian impulsado su designacion, le reti-</p>
+
+<p>Era inevitable que la crisis provocara un remezon social y politico.</p>
+
+<p>Pudo haber sido diferente su forma y su profundidad, y eso fue responsa-</p>
+
+<p>raron el apoyo, y opto por renunciar, en dias en que una multitud asaltaba</p>
+
+<p>bilidad del gobierno de De la Ria. Al menos hasta octubre de 2001, nadie</p>
+
+<p>el Congreso de la Nacion e incendiaba algunas oficinas.</p>
+
+<p>El primer dia de 2002, la Asamblea Legislativa designo como nuevo pre</p>
+
+<p>se propuso definidamente derribarlo o ponerle obstaculos imposibles de</p>
+
+<p>sidente -ahora para concluir el mandato de De la Riia- a Eduiardo Duhalde.</p>
+
+<p>exgobernador de Buenos Aires y candidato presidencial derrotado en 1999.</p>
+
+<p>y tratar de hacerlas coparticipes de un derrumbe que se avizoraba, y del</p>
+
+<p>Duhalde tenia una importante base en su provincia, contaba con el apoyo</p>
+
+<p>que tambien eran responsables. Tampoco fue capaz de rnantener la unidad</p>
+
+<p>de los gobernadores peronistas y de la ucr y un buen respaldo en el Con-</p>
+
+<p>-precaria por cierto- de la Alianza. Con mayor habilidad politica, quizas</p>
+
+<p>hubiera podido evitar, si no el estallido social, al menos las muertes. Quiza</p>
+
+<p>tambien hubiera podido morigerar el derrumbe institucional y politico,</p>
+
+<p>zados seguian reclamando con ira, de modo que la legitinidad del nuevo</p>
+
+<p>que a la larga fue la herencia mas dura dejada por una crisis que en di-</p>
+
+<p>presidente estaba lejos de ser solida.</p>
+
+<p>ciembre de 2001 recien comenzaba a manifestarse.</p>
+
+<p>El Congreso resulto el ancla mis consistente de un gobierno que debid</p>
+
+<p>dar respuesta a situaciones no imaginadas. Nadie habia previsto el abrupto</p>
+
+<p>EL ANO DE LA CRISIS</p>
+
+<p>fin de la convertibilidad. Na habia una salida que pudiera conformar a todos,</p>
+
+<p>y la cuestion fue como se repartirian las perdidas. Cada actor presiono por</p>
+
+<p>lo que consideraba suyo. Las primeras medidas, tomadas bajo presion, fue</p>
+
+<p>Desde entonces, y durante 2002, la crisis se desplego en todo su alcance.</p>
+
+<p>Se conjugaron la crisis economica que origino el derrumbe de la corverti-</p>
+
+<p>contundentes. Rodriguez Saa habia anunciado el default de la deuda ex-</p>
+
+<p>bilidad, la crisis politica derivada de la acefalia presidencial y profundizada</p>
+
+<p>terna privada, aunque se seguiria pagando la deuda con el FMI. El Con-</p>
+
+<p>por el cuestionamiento general a la legitimidad de los gobernantes, y la</p>
+
+<p>greso agrego el fin de la convertibilidad y confirio amplios poderes al pre</p>
+
+<p>crisis social, alimentada por la de la economia y motorizada por la expre-</p>
+
+<p>sidente. Duhalde dispuso una devaluacion del 40%, llevando el dolar a</p>
+
+<p>sion de distintas formas de protesta y reclamo. Como trasfondo, se desple-</p>
+
+<p>1,40 pesos, y transformo en pesos las deudas en dolares, mediante la lla-</p>
+
+<p>garon imagenes terrorificas, quizas exageradas, pero operantes: guerra ci-</p>
+
+<p>vil, saqueos, quiebras en cadena, anarquia. Todo formo parte del "afio de la</p>
+
+<p>convirtieran a razon de un peso por d6lar, mientras que los depositos ban-</p>
+
+<p>crisis" Curiosamente, a fines de ese ano, los fantasmas estaban desapare-</p>
+
+<p>carios se pesificaban a razon de 1,40 pesos por dolar. Sirnulitaneamente, se</p>
+
+<p>ciendo y los problemas parecian encaminarse a una solucion.</p>
+
+<p>extendio el "corralito" -que paso a llamarse "corralon"- a los depositos a</p>
+
+<p>La crisis politica transcurrio sobre un fondo de violentas manifestacio-</p>
+
+<p>plazo fijo.</p>
+
+<p>nes sociales. Con la presidencia vacante, el protagonismo se traslado a la</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 7 - img_07.jpg]</p>
+
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+
+<p>BREVE HISTORIA CONTEMPORANEADE LA ARGENTINA</p>
+
+<p>350</p>
+
+<p>351</p>
+
+<p>Esta masiva ruptura de los contratos dejaba una cantidad de cuestio-</p>
+
+<p>exhibido por los medios, expresaron su ira y sus reclamos, que nadie pudo</p>
+
+<p>nes por resolver y una gran discusion sobre cormo hacerlo. A los bancos se</p>
+
+<p>les prometi6 un bono, para compensar la diferencia entre acreencias y deu-</p>
+
+<p>cas, pero con una dosis de creatividad, para organizar de manera diferente</p>
+
+<p>das. Se reform6 la ley de quiebras, para proteger a la masa de afectados por</p>
+
+<p>la sociedad y la politica. Para nuchos, la crisis fue una oportunidad.</p>
+
+<p>los cambios. Muchos ahorristas recurrieron a la justicia y encontraron jue-</p>
+
+<p>El escenario mas visible dle la crisis, y tambien el punto de mayor con-</p>
+
+<p>ces que, a veces con llamativa rapidez, les permitian recuperar sus deposi-</p>
+
+<p>centracion de sus expresiones, fue la ciudad de Buenos Aires, sede del po-</p>
+
+<p>tos bancarios. La Corte Suprema, en guerra franca con el gobierno, ame-</p>
+
+<p>der que concentraba los reclamos. Cada dia se veian en la Plaza de Mayo,</p>
+
+<p>nazo con declarar inconstitucionales todas las medidas de excepcion.</p>
+
+<p>el Congreso o los Tribunales rnanifestaciones de vecinos indignados que</p>
+
+<p>Entre tantas medidas forzadas, contradictorias o inconducentes, Duhalde</p>
+
+<p>golpeaban sus cacerolas o de ahorristas que atacaban a martillazos las se-</p>
+
+<p>tomo una decision efectiva y de perdurables efectos: la creacion del Plan</p>
+
+<p>des de los bancos, rompiendo vidrieras o pintando frases condenatorias.</p>
+
+<p>Jefes y Jefas de Hogar, destinado a los desocupados, para el que obtuvo</p>
+
+<p>Los unia la consigna "que se vayan todos', referida en principio a los poli-</p>
+
+<p>fondos del Banco Mundial y del Banco Interanericano de Desarrollo (BIp).</p>
+
+<p>ticos, pero tambien a otros grupos dirigentes. Asimismo, cotidianamente</p>
+
+<p>El plan tenia una cobertura mucho mayor que los anteriores -apuntaba a</p>
+
+<p>aparecian columnas de piqueteros, que lucian amenazantes, con sus palos</p>
+
+<p>la universalidad- y su ejecucion se derivaba a los intendentes, aunque</p>
+
+<p>y las caras cubiertas con pasamontanas, reclamando subsidios y "planes"</p>
+
+<p>daba participacion a diversas organizaciones, entre ellas las piqueteras. La</p>
+
+<p>Por las tardes, los vecinos de los barrios se reunian en asambleas para de-</p>
+
+<p>suma entregada era modesta -150 pesos, es decir, unos 40 dolares -, pero</p>
+
+<p>liberar y organizarse. Al anochecer, aparecian los cartoneros: familias y</p>
+
+<p>significativa. En 2002, se habian otorgado mas de un mill6n de subsidios,</p>
+
+<p>grupos muy organizados que iban a buscar algo valiosa entre los residuos.</p>
+
+<p>y un ano despues llegaban a dos millones.</p>
+
+<p>Otros vecinos se juntaban en clubes de trueque, para sustituir la moneda</p>
+
+<p>Los efectos tardaron unos meses en hacerse sentir, y en el anio de la</p>
+
+<p>y mantener el mercado. Soluciones de emergencia, protestas sin futuro,</p>
+
+<p>crisis esto era una eternidad. A fines de abril, el gobierno habia perdido el.</p>
+
+<p>pero, a la vez, intentos de buscar un camino distinto.</p>
+
+<p>Las jornadas de diciembre, con su epica y sus martires, pusieron a los</p>
+
+<p>especialmente en el conurbano bonaerense. La mitad del pais se encon-</p>
+
+<p>vecinos de Buenos Aires y de otras grarndes ciudades en estado de movili-</p>
+
+<p>traba por debajo de la linea de pobreza, y una cuarta parte traspasaba la</p>
+
+<p>zacion. Continuaron marchando, golpeando sus cacerolas. Luego de derri-</p>
+
+<p>linea de indigencia El gobiermo debia encontrar como satisfacer simulta-</p>
+
+<p>bar a dos presidentes -pensaban-, su blanco era la Suprema Corte de Jus-</p>
+
+<p>neamente a ahorristas con depdsitos "acorralados", a bancos amenazados</p>
+
+<p>ticia, que para unos era el emblema de los aborrecidos anos noventa, y para</p>
+
+<p>por corridas, a acreedores sin la posibilidad de ejecutar a los deudores.</p>
+
+<p>otros, la esperanza de un fallo judicial que les devolviera sus ahorros. Los</p>
+
+<p>Ademas, el FMi le exigia "cambios profundos" que llevaran a un nuevo</p>
+
+<p>ahorristas constituian el nicleo mas violento de los manifestantes urbanos;</p>
+
+<p>equilibrio, como una hiperinflacion controlada": Tras este cruce de tantos</p>
+
+<p>era el grupo mas centrado en un objetivo especifico y tambien contradic-</p>
+
+<p>intereses contradictorios, se desenvolvia una crisis social profunda y una</p>
+
+<p>torio, pues la furia en contra de los bancos unia a deudores y a acreedores.</p>
+
+<p>crisis radical de legitimidad politica no menos aguda.</p>
+
+<p>La mayoria de los vecinos, devenidos ciudadanos, asumio la responsa-</p>
+
+<p>bilidad de construir el interes general. Lo hizo en las ya mencionadas</p>
+
+<p>El doble cuestionamiento de la autoridad politica y de la moneda impulso :</p>
+
+<p>asambleas barriales --funcionaron mas de cien en la Capital y otras tantas</p>
+
+<p>el despliegue de la crisis social y polftica. En el ano de la crisis, se agravo la</p>
+
+<p>o mas en el resto del pais-, caracterizadas por la aspiracion a la horizonta-</p>
+
+<p>situacion de los "perdedores" de la gran transformacion de las decadas an-</p>
+
+<p>lidad, al dialogo razonado y a una democracia directa que cerrara la bre-</p>
+
+<p>teriores y se les sumaron nuevos segmentos. En un escenario ampliamente</p>
+
+<p>cha dejada por el fracaso politico. En las asambleas, se debatieron grandes</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 8 - img_08.jpg]</p>
+
+<p>BREVE HISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+
+<p>352</p>
+
+<p>CRISIS Y RECONSTRUCCION, 1995-2005</p>
+
+<p>353</p>
+
+<p>cuestiones y otras mas especificas, de gestion barrial; se establecieron rela-</p>
+
+<p>todo par la creacion del Plan Jefes y Jefas de Hogar, que multiplico la ayuda</p>
+
+<p>ciones solidarias con otros grupos -especialmente los cartoneros del ba-</p>
+
+<p>social del Estado. La mayor parte fue repartida a traves de las redes vincu-</p>
+
+<p>ladas con el aparato politico justicialista, pero una porcion significativa se</p>
+
+<p>bino contra personajes odiados, como el exministro Cavallo o algunos</p>
+
+<p>destino a las organizaciones piqueteras. Les era facil obtenerla de tn go-</p>
+
+<p>represoresincognitos.</p>
+
+<p>bierno cuya prioridad era apagar el amenazante conflicto social. La distri-</p>
+
+<p>Los partidos de izquierda se sumaron a las asambleas y trataron de im-</p>
+
+<p>ponerles sus lineas politicas, dificilmente conciliables con la autogestion</p>
+
+<p>zaciones, pero tambien su division y reconfiguracion, en funcion de sus</p>
+
+<p>vecinal. La militancia asambleista alcanzo sus picos en la marcha del 24 de</p>
+
+<p>relaciones con el gobierno y la politica.</p>
+
+<p>marzo de 2002 y a fin de junio de ese afio, cuando la muerte de dos mili-</p>
+
+<p>Las organizaciones piqueteras fueron islotes singulares en el mundo</p>
+
+<p>tantes piqueteros -Maximiliano Kosteki y Dario Santillan- estimul6 un</p>
+
+<p>del conurbano, que convivieron en competencia com la red de base estatal.</p>
+
+<p>acercamiento entre esas organizaciones y los vecinos. Pero a fin de afio, las</p>
+
+<p>Los planes asistenciales y las contraprestaciones permitieron desarrollar la</p>
+
+<p>aguas se fueron separando y comenzo a predominar entre los vecinos el</p>
+
+<p>dimension asistencial: copas de leche, comedores, talleres y otras iniciati-</p>
+
+<p>anhelo de una salida ordenada para la crisis.</p>
+
+<p>vas de sentido autogestionario. Pero todas las conquistas eran precarias y</p>
+
+<p>Fue dificil dar una expresion politica al "que se vayan todos", del que</p>
+
+<p>solo se salvaban algunos politicos reconocidamente honestos. Muchos</p>
+
+<p>mente de las marchas, para defender lo conseguido, recuperarlo o acrecen-</p>
+
+<p>confiaron en regenerar la practica politica, y a mediados de afno se popula-</p>
+
+<p>tarlo, en una dinamica asimilable a la de la tradicion sindical. Los "planes"</p>
+
+<p>rizo la propuesta de una Asamblea Constituyente que refundara la repu-</p>
+
+<p>y otros subsidios fueron el centro de las organizaciones y el origen de sus</p>
+
+<p>blica, pero la iniciativa se diluyo.</p>
+
+<p>En ese ano admirable, hubo otros colectivos singulares. Los cartoneros</p>
+
+<p>vilegiarorn el acuerdo mas o menos estable con las autoridades peronistas.</p>
+
+<p>-esos grupos que ocupaban la ciudad por la noche y desaparecian al amane-</p>
+
+<p>cer- suscitaron tanto miradas horrorizadas como humanitarias. Entre ambas</p>
+
+<p>tante de lo que se le arancaba al gobierno. Un grupo mayoritario se reunid</p>
+
+<p>perspectivas, pudo descubrirse en ese fragmento de los "perdedores" de la</p>
+
+<p>en el Bloque Piquetero, arganizado por los partidos de izquierda, conven-</p>
+
+<p>nueva sociedad un orden propio: eran familias enteras, con su base en los</p>
+
+<p>barrios del conurbano. Tambien su ligazon con algun tentaculo del mercado,</p>
+
+<p>lo denominaba el Partido Obrero, trotskista.</p>
+
+<p>interesado en los metales, los papeles o el carton, y presto.a construir los cir-</p>
+
+<p>El gobierno, que en ge neral prefirio negociar con las organizaciones,</p>
+
+<p>cuitos articuladores de la recoleccion. Otro colectivo notable fue el de los</p>
+
+<p>trabajadores que se hicieron cargo de las fabricas abandonadas por sus pro-</p>
+
+<p>naerense intento detener una marcha en Avellarneda y, como se dijo, ase</p>
+
+<p>pietarios y las pusieron en funcionamiento, con la ambigua ayuda del Es-</p>
+
+<p>sino a dos militantes, Kosteki y Santillan. El hecho, que quedo documen-</p>
+
+<p>tado, que alternaba entre la asistencia social y el rigor judicial. Tambien esta-</p>
+
+<p>tado y tuvo otras repercusiones politicas, exacerbo la movilizacion</p>
+
+<p>ban los clubes de trueque, potenciados por la crisis monetaria. Ademas de su</p>
+
+<p>piquetera, de presencia diaria, cortando rutas y calles, y estrecho los</p>
+
+<p>capacidad de contencion para los mas golpeados por la crisis, apostaron a</p>
+
+<p>vinculos con los vecinos movilizados, como lo expres6 la consigna "pi-</p>
+
+<p>construir un sistema autogestionado, alternativo del mercado, pero cuando</p>
+
+<p>quetes, cacerolas, la lucha es una sola": Por entonces, no habia dfa en que</p>
+
+<p>la economia normal recupero su estabilidad declinaron rapidamente.</p>
+
+<p>una marcha, grande o chica, no se manifestara frente a una dependencia</p>
+
+<p>Las organizaciones piqueteras fueron las grandes protagonistas del</p>
+
+<p>gubernamental, generando un caos en el centro de la Capital y en otras</p>
+
+<p>ano de la crisis. Crecierom por el aumento de la desocupacion, pero sobre</p>
+
+<p>grandes ciudades. La tactica era efectiva, y la estrategia revelaba la con-</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 9 - img_09.jpg]</p>
+
+<p>CRISIS Y RECONSTRUCCION, 1999-2005</p>
+
+<p>355</p>
+
+<p>354</p>
+
+<p>BREVEHISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+
+<p>sos fiscales, mientras que los gastos debieron reducirse por el cese total del</p>
+
+<p>viccion de que nadie tenia derecho a ignorar los padecimientos de los</p>
+
+<p>financianierto externo. Todas estas mejoras, que eran la contracara de la</p>
+
+<p>perdedores.</p>
+
+<p>crisis, hubieran sido efimeras si en simultaneo, y de manera inesperada, no</p>
+
+<p>Quienes vivian en las ciudades solian tener sentimientos mezclados:</p>
+
+<p>solidaridad con quienes reclamaban y fastidio por los contratiempos. La</p>
+
+<p>nal de la soja, como consecuencia sobre todo de las compras realizadas por</p>
+
+<p>misma dualidad tenia el gobierno, que podia ignorar a los asambleistas y</p>
+
+<p>los paises asiaticos. Con ese estimulo, la produccion se recupero y, en 2003,</p>
+
+<p>trocadores, pero no a los piqueteros. Nadie dudaba de que el sistema de</p>
+
+<p>duplic6 la de 1998. El gobierno inpuso una retencion a las exportaciones</p>
+
+<p>planes sociales era imprescindible en lo inmediato. Sobre esa base, el go-</p>
+
+<p>del 23,5%, y esos ingresos tonificaron vigorosamente las cuentas fiscales.</p>
+
+<p>bierno procuro negociar con las organizaciones para acotar los efectos de</p>
+
+<p>Desde entonces, y por varios anios, el superavit fiscal primario y el su-</p>
+
+<p>las protestas y tambien para introducir divisiones. Pero a la vez debio en-</p>
+
+<p>peravit comercial fueron los pilares de la recuperacion economica. Sobre</p>
+
+<p>carar la cuestion del orden publico y tambien de la represion a quienes se</p>
+
+<p>esa base, Lavagna comenzo la tarea de desmontar todos los conflictos gene-</p>
+
+<p>aventuraban en la via insurreccional. Entre orden y represion habia una</p>
+
+<p>rados por la salida de la convertibilidad, que en conjunto constituian una</p>
+
+<p>zona gris, una frontera borosa, tanto en lo conceptual como en lo prictico,</p>
+
+<p>bomba de tiempo. Los problemas eran muchos, y ninguna solucion podia</p>
+
+<p>pues el gobierno no podia controlar completamente a la Policia o a la Gen-</p>
+
+<p>dejar satisfechos a todos. Muchos propusieron salidas drasticas, que ignora-</p>
+
+<p>darmeria, tal como se mostro el 26 de junio. De modo que hubo una asci-</p>
+
+<p>ban los costos asi como cualquier criterio de equidad -como la mencionada</p>
+
+<p>lacion entre aceptar el derecho a la protesta y el deber de mantener el or-</p>
+
+<p>"hiperinflacion controlada" sugerida por el FMI-, pero Lavagna opto por</p>
+
+<p>den, que hacia fines de 2002, y sobre todo en los meses siguientes, se fue</p>
+
+<p>buscar soluciones intermedias, regulando los tiempos y ayudando a resta</p>
+
+<p>inclinando mas hacia una represion solapada, practicada lejos de las cama-</p>
+
+<p>blecer una autoridad politica que se iba reconstituyendo gradualmente.</p>
+
+<p>ras de television.</p>
+
+<p>Lo mas urgente era restaurar la confianza en los bancos y encontrar</p>
+
+<p>soluciones aceptables para los ahorristas. Lavagna ofreci6 a los depositan</p>
+
+<p>A fines de abril de 2002, Duhalde se desprendio de su ministro de Econo-</p>
+
+<p>tes una serie de bonos optativos, que fueron aceptados de manera gradual,</p>
+
+<p>mia, Jorge Remes Lenicov, quien habia llevado a cabo la tarea mas dura</p>
+
+<p>a medida que mejoraba la credibilidad en el fisco. Con las provincias tam-</p>
+
+<p>-la devaluacion y la pesificacion-, y designo a Roberto Lavagna, quien la</p>
+
+<p>acompano hasta el final de su mandato, en mayo de 2003. Ambos confor-</p>
+
+<p>a ajustar su deficit-, pero absorbis todas las "cuasi monedas" y los bonos</p>
+
+<p>maron una dupla exitosa. Duhalde resolvio razonablemente bien la crisis</p>
+
+<p>emitidos desde 2001.</p>
+
+<p>politica y Lavagna dirigio el transito de la crisis a un crecimiento econo-</p>
+
+<p>Lo mas dificil fue la negociacion con el FMI, que era un acreedor privi-</p>
+
+<p>mico notable.</p>
+
+<p>legiado, no comprendido por el default. No cumplir con esos pagos -muy</p>
+
+<p>acrecidos por los cuantiosos prestamos de los anios previos al derrumbe de</p>
+
+<p>del contexto nacional e internacional La salida catastrofica de la converti-</p>
+
+<p>bilidad, ademas de dejar un tendal de damnificados y un pais sumido en la</p>
+
+<p>mas profunda que el default con los acreedores privados. El FMI se negaba</p>
+
+<p>miseria, creo las condiciones para la recuperacion fiscal y economica. Los</p>
+
+<p>a cualquier refinanciacion si el gobierno argentino no realizaba reformas</p>
+
+<p>salarios cayeron el 20%; y las jubilaciones, el 50%, lo que significo un alivio</p>
+
+<p>drasticas, inaceptables para la sociedad y letales para la inicial recuperacion</p>
+
+<p>para el Estado y para las empresas, que tambien fueron estimuladas por la</p>
+
+<p>economica. Lavagna negocio largamente, pago a veces y dejo de hacerlo en</p>
+
+<p>reduccion de las inportaciones -consecuencia directa de la fuerte devalua-</p>
+
+<p>otras, concedio algunas de las demandas e ignoro otras; hasta conto con el</p>
+
+<p>cion- y por el congelamiento de las tarifas de servicios, que el gobierno</p>
+
+<p>sorpresivo apoyo del gobierno estadounidense de George W. Bush. Por fin,</p>
+
+<div class="separador">• • •</div>
+
+<p>[Imagen 10 - img_10.jpg]</p>
+
+<p>CRISIS Y RECONSTRUCCI0N, 1999-2005</p>
+
+<p>BREVE HISTORIA CONTEMPORANEA DE LA ARGENTINA</p>
+
+<p>356</p>
+
+<p>3.57</p>
+
+<p>en enero de 2003, firmo un acuerdo transitorio para refinanciar los pagos.</p>
+
+<p>Jose Manuel de la Sota fracaso en las encuestas de opinion. Finalmente,</p>
+
+<p>vigente hasta septiembre.</p>
+
+<p>Duhalde decidio canbiar las reglas electorales. Suspendio las internas</p>
+
+<p>Llegar a enero fue dificil. Pero paulatinamente los indicadores de Ia:</p>
+
+<p>abiertas, para evitar el probable triunfo de Menem, habilitando la presen-</p>
+
+<p>crisis fueron mejorando: bajo la inflacion y el dolar se estabilizo en un ni-</p>
+
+<p>vel adecuado. En distintos momentos todo pudo derrumbarse, por la pre-</p>
+
+<p>de Santa Cruz. Nestor Kirchner. Este, que tenia escaso reconocimiento</p>
+
+<p>sion de los distintos grupos damnificados, como los ahorristas, respalda-</p>
+
+<p>fuera de las provincias del sur, acepto el padrinazgo de Duhalde y tambien</p>
+
+<p>dos por una Corte Suprema enfrentada con el Ejecutivo. Sin embargo, la:</p>
+
+<p>la continuidad de Lavagna, cuyo apoyo sumo probablemente muchos vo</p>
+
+<p>bonanza fiscal, la politica de subsidios y una cierta reactivacion econo-</p>
+
+<p>tos a una candidatura algo escualida.</p>
+
+<p>mica tranquilizaron los animos. En marzo de 2003, en visperas electorales,</p>
+
+<p>De modo que el Partido Justicialista (pj) concurrio con tres candidatos,</p>
+
+<p>se libero parte de los ahorros y se convirtio a los restantes en solidos bonos:</p>
+
+<p>que dirimirian sus diferencias en la eleccion naciomal. Por fuera del pj, sur</p>
+
+<p>en dolares.</p>
+
+<p>gieron dos candidaturas de exradicales: Ricardo Lopez Murphy. defensor</p>
+
+<p>La mejora en la economia facilito la salida politica, que tuvo sus com.</p>
+
+<p>de la rigurosidad fiscal, y Elisa Carrio, impugnadora de la corporacion po</p>
+
+<p>plicaciones. El presidente Duhalde carecia de legitimidad electoral y tam:</p>
+
+<p>litica, ambos coincidian en la valoracion de los principios republicanos. En</p>
+
+<p>la primera vuelta, realizada el 27 de abril de 2003, se impuso Menem, que</p>
+
+<p>cerse elegir presidente y le retaceaban su apoyo. En la sociedad movilizada,</p>
+
+<p>obtuvo algo mas del 24% de los sufragios; lo siguio Kirchner, con el 22%;</p>
+
+<p>predominaba un animo general contrario a los politicos y regeneracionista,</p>
+
+<p>Lopez Murphy, Rodriguez Saa y Carrio obtuvieron cada uno aproximada-</p>
+
+<p>que hacia dudar del exito de una convocatoria electoral. El episodio de las</p>
+
+<p>mente diez puntos menos que el ganador. El peronismo, en sus diversas</p>
+
+<p>muertes de Kosteki y Santillan lo decidio a acortar su mandato y a autoex-.</p>
+
+<p>variantes, mejoro notablemente su performance, pues los tres candidatos</p>
+
+<p>cluirse de la candidatura.</p>
+
+<p>justicialistas lograron el 60% de los sufragios; la ucR, que postulo a</p>
+
+<p>El sacrificio mejoro su situacion, sobre todo porque conservaba un.</p>
+
+<p>Leopoldo Moreau, solo obtuvo el 2%. Era el fin del bipartidismo.</p>
+
+<p>gran poder para incidir en la eleccion de su sucesor. Desde entonces, tuvo</p>
+
+<p>El apoyo a Menem fue llamativo, pero se sabia que la resistencia que</p>
+
+<p>el consistente apoyo de los gobernadores y del Congreso, incluyendo a la</p>
+
+<p>despertaba era suficiente para urir a buena parte del resto de los votantes.</p>
+
+<p>oposicion radical. La Corte Suprema, donde dominaban los simpatizantes</p>
+
+<p>Sorpresivamente, Menem renuncio a la competencia y privo a Kirchner de</p>
+
+<p>de Menem, siguio haciendole la guerra.</p>
+
+<p>una adecuada legitimaci6n electoral. Sin embargo, la eleccion habia sido</p>
+
+<p>La salida electoral estaba llena de incertidumbres. La ley electoral dis-</p>
+
+<p>exitosa y mostro uina renovada convalidacion del sistema representativo.</p>
+
+<p>ponia que en cada partido se realizaran elecciones internas abiertas -uno:</p>
+
+<p>Los partidos politicas habian quedado en el camino, pero el regimen demo</p>
+
+<p>de los pocos logros de la proclamada reforma politica-, pero Ios partidos</p>
+
+<p>cratico habia superado la crisis, al igual que la economia.</p>
+
+<p>mente, el candidato de Duhalde deberia competir con Carlos Menem, quien</p>
+
+<p>LA SALIDA DE LA CRISIS</p>
+
+<p>tiempos mejores- y tambien con el puntano Adoifo Rodriguez Saa. Duhalde</p>
+
+<p>contaba con un buen respaldo en el conurbano bonaerense, donde la po-</p>
+
+<p>Nestor Kirchner, nuevo presidente, recibio el gobierno cuando lo peor de</p>
+
+<p>litica de asistencia social le habia permitido construir una nueva maquina-</p>
+
+<p>la crisis habia pasado, aunque todavia quedaban muchas cuestiones por</p>
+
+<p>ria politica. Pero carecia de un candidato adecuado, pues Carlos Reute-</p>
+
+<p>resolver y muchas demandas por satisfacer. La mas importante era la</p>
+
+<p>mann, prestigioso gobernador de Santa Fe, declino competir, y el cordobes</p>
+
+<p>deuda en defauit pero can los superavits comercial y fiscal las perspectivas</p>
+
+<div class="separador">• • •</div>
+
+    </div>
+
+
+
+    <footer>
+
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictaduras: formas del poder no democrático — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .metadatos {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .metadatos .titulo-libro {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .metadatos .titulo-texto {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2em;
+      font-weight: 600;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .metadatos .autor {
+      font-size: 1.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .metadatos .info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .metadatos .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.35rem 1.2rem;
+      background: var(--heading);
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+    }
+
+    .contenido p {
+      text-indent: 1.5em;
+      margin-bottom: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .contenido p + p {
+      margin-top: 0.9em;
+    }
+
+    .contenido p:first-of-type {
+      text-indent: 0;
+    }
+
+    .contenido p.first-of-section {
+      text-indent: 0;
+    }
+
+    .contenido h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--heading);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contenido h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contenido blockquote {
+      margin: 2rem 0 2rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      font-size: 0.95em;
+    }
+
+    .contenido blockquote p {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    .contenido ul,
+    .contenido ol {
+      margin: 1.2rem 0 1.2rem 2rem;
+    }
+
+    .contenido li {
+      margin-bottom: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .contenido table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9em;
+    }
+
+    .contenido table th {
+      background: var(--surface);
+      color: var(--heading);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--accent); }
+
+    .contenido table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido table tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    .contenido .ilegible {
+      color: var(--red-soft);
+      font-weight: 600;
+      background: #3a2020;
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+    }
+
+    .contenido .nota-num {
+      font-size: 0.75em;
+      vertical-align: super;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .notas {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .notas h2 {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .notas p {
+      font-size: 0.85em;
+      text-indent: 0;
+      margin-bottom: 0.6em;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .separador {
+      text-align: center;
+      margin: 3rem 0;
+      color: var(--border);
+      font-size: 1.2em;
+      letter-spacing: 0.5em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .page { padding: 0; max-width: 100%; }
+      .metadatos { break-after: page; border: none; background: none; }
+      .contenido h2 { break-after: avoid; }
+      .contenido h3 { break-after: avoid; }
+      blockquote { break-inside: avoid; }
+      table { break-inside: avoid; }
+      footer { break-before: avoid; }
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 2rem 1.2rem 4rem; }
+      body { font-size: 16px; }
+      .metadatos .titulo-texto { font-size: 1.6em; }
+    }
+  </style>
+  <link rel="stylesheet" href="../../css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+</head>
+<body>
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+      <div class="titulo-texto">Dictaduras: formas del poder no democrático</div>
+      <div class="autor">Verónica Beyreuther</div>
+      <div class="info">Páginas originales: 141–147</div>
+      <div class="badge">Día 6 — Unidad 2</div>
+    </div>
+
+    <div class="contenido">
+      <h2>Capítulo 11. Dictaduras: formas del poder no democrático</h2>
+<p class="first-of-section">En capítulos anteriores, abordamos el estudio de los regímenes democráticos y sus transformaciones en América Latina. En este, desplazaremos el foco hacia las formas no democráticas de ejercicio del poder, y analizaremos el concepto de dictadura desde una perspectiva teórica y empírica contemporánea. Comenzaremos con una definición general y sus principales características, abordaremos luego la clasificación actual de subtipos de dictadura y, finalmente, discutiremos las formas que puede asumir la concentración autoritaria del poder, más allá de su expresión clásica.</p>
+
+<h3>¿Qué es una dictadura?</h3>
+<p>Una dictadura es un régimen político no democrático caracterizado por la concentración del poder en una persona o élite, la ausencia o distorsión de la competencia electoral, la supresión de libertades civiles y la falta de autonomía de los poderes del Estado. A diferencia de la democracia, en que el ejercicio del poder se encuentra limitado por deliberadamente la división de poderes y se sustituyen los derechos por mecanismos de obediencia.</p>
+<p>La ciencia política ha clasificado los regímenes dictatoriales en diversos subtipos, según el origen del poder, la estructura de mando y los mecanismos de control. Entre los más relevantes se encuentran los siguientes:</p>
+
+<h4>Dictaduras militares</h4>
+<p>El poder lo ejerce una cúpula militar o una junta de oficiales. Se caracterizan por el uso intensivo de la fuerza, el control de la competencia electoral. Ejemplos: China (PCCh), Cuba.</p>
+
+<h4>Dictaduras personalistas</h4>
+<p>El líder concentra el poder en su figura, fusionando el Estado con su persona. Son comunes los cultos a la personalidad. Ejemplos: Gadafi en Libia, Ortega en Nicaragua.</p>
+
+<h4>Autoritarismos competitivos o híbridos</h4>
+<p>Conservan elementos formales de la democracia (elecciones, Congreso, prensa), pero manipulan las reglas para neutralizar la competencia real. Ejemplos: Rusia, Venezuela, El Salvador.</p>
+
+<h4>Regímenes sultanistas</h4>
+<p>El poder es ejercido de forma patrimonial y arbitraria, sin normas estables ni ideología sistemática. Ejemplo: Haití bajo Duvalier.</p>
+
+<p>Como indica Gómez Talavera en el capítulo 2, los Estados modernos no pueden sostenerse solo por la represión: necesitan construir discursos que justifiquen su permanencia, ya sea a través del orden, la estabilidad o la protección frente a una amenaza. Las dictaduras no tienen una duración legal determinada. Su continuidad depende de su capacidad para ejercer el control y construir formas de legitimidad. Como señala Rouquié (1986), los regímenes autoritarios no subsista la causa —real o construida— que supuestamente le dio origen. La dictadura intentará prolongar su mandato, especialmente mientras los siguientes, la coacción pura puede servir inicialmente para mantener el dominio sobre una sociedad, pero con el paso del tiempo, resulta siempre requieren algún grado de legitimidad que complemente el uso de la fuerza.</p>
+
+<h3>La cuestión del tiempo y la legitimidad</h3>
+<p>Las dictaduras no tienen una duración legal determinada. Su continuidad depende de su capacidad para ejercer el control y construir formas de legitimidad. Como señala Rouquié (1986), los regímenes autoritarios no pueden sostenerse solo por la represión: necesitan construir discursos que justifiquen su permanencia, ya sea a través del orden, la estabilidad o la protección frente a una amenaza. La dictadura intentará prolongar su mandato, especialmente mientras subsista la causa —real o construida— que supuestamente le dio origen.</p>
+
+<h3>Dictadura, autoritarismo y totalitarismo</h3>
+<p>El concepto de dictadura se entrelaza con los de autoritarismo y totalitarismo. Los regímenes autoritarios tienden a limitar la participación política sin suprimir totalmente la sociedad civil. En cambio, el totalitarismo busca controlar todos los aspectos de la vida social, política y promoviendo una movilización permanente. Los casos del nazismo y el estalinismo representan expresiones extremas de esta forma.</p>
+
+<h3>Dictaduras en América Latina: del siglo XX al siglo XXI</h3>
+<p>En el siglo XX, las dictaduras de tipo militar fueron las más frecuentes en América Latina, justificadas en la lucha contra el comunismo o el restablecimiento del orden. Estas dictaduras ejercieron el poder mediante golpes de Estado, represión sistemática y censura. La Argentina de 1976, Brasil de 1964 y Chile de 1973 comparten este patrón.</p>
+<p>En el siglo XXI, emergieron nuevas formas autoritarias, bajo una apariencia democrática: Venezuela y Nicaragua combinan elementos personalistas con estructuras partidarias dominantes y control de las instituciones. En El Salvador, el gobierno de Nayib Bukele concentra el poder mediante reformas constitucionales para extender su mandato.</p>
+
+<h3>La tensión entre la legalidad democrática y las prácticas autoritarias</h3>
+<p>La región atraviesa una tensión creciente entre formas democráticas y las prácticas autoritarias. La actual muchas veces opera desde adentro de la democracia al manipular y desactivar a la oposición. La legalidad se convierte así en herramienta de dominación. Levitsky y Way (2010) advierten que el autoritarismo actual muchas veces opera desde adentro de la democracia al manipular las reglas sin necesidad de suprimirlas.</p>
+
+<h3>Las crisis estructurales como habilitadoras</h3>
+<p>Las crisis económicas, sanitarias y de seguridad son utilizadas por muchos gobiernos como justificación para acumular poder. La pandemia de COVID-19 fue un caso paradigmático: permitió la expansión de estados de excepción y la consolidación de poderes ejecutivos sin control. Esta dinámica de autoritarismo legal erosiona gradualmente las garantías de la democracia (elecciones, Congreso, prensa), pero manipulan las reglas para neutralizar la competencia real.</p>
+
+<h3>Dimensión informacional y control de la información en dictaduras</h3>
+<p>En las dictaduras contemporáneas, el control de la información y la manipulación mediática juegan un rol central en la consolidación y mantenimiento del poder. Más allá de la represión física o coercitiva, estos regímenes implementan estrategias sofisticadas para censurar medios independientes, difundir propaganda oficial, controlar el acceso a Internet y redes sociales e inducir la desinformación. Este mecanismo sirve para moldear la opinión pública, eliminar espacios de disidencia y legitimar discursos autoritarios bajo una fachada aparentemente democrática. Comprender este fenómeno es clave para analizar las nuevas formas que adopta la dictadura en el siglo XXI, en especial ante el auge de las tecnologías digitales y la capacidad estatal de llevar adelante una vigilancia masiva.</p>
+
+<h3>La dictadura del proletariado</h3>
+<p>Desde una perspectiva marxista, la "dictadura del proletariado" es un concepto diferente al de las dictaduras clásicas. No se trata de una dictadura en el sentido clásico del autoritarismo o el totalitarismo, sino de una etapa de transición hacia una sociedad sin clases y sin Estado. Para las visiones marxistas, este tipo de dictadura —que implica un cese del régimen democrático liberal— se justifica por su objetivo de construir una sociedad basada en la justicia social y la igualdad absoluta de las personas.</p>
+
+<h3>Conclusiones</h3>
+<p>La dictadura ya no es solo el gobierno de facto militar del siglo XX. Hoy, formas híbridas, legales y democráticamente electas pueden derivar en prácticas autoritarias profundas. El estudio de los subtipos de dictaduras, sus mecanismos de legitimación y su relación con la legalidad es fundamental para comprender las amenazas actuales a la democracia. La defensa del Estado de derecho exige reconocer cuando el autoritarismo se disfraza de legalidad.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Levitsky, S. y Way, L. (2010). <em>Competitive authoritarianism: hybrid regimes after the Cold War</em>. Cambridge University Press.</p>
+<p>Linz, J. (1975). <em>Totalitarian and authoritarian regimes</em>. Lynne Rienner Publishers.</p>
+<p>Marx, K. (1875). Crítica del Programa de Gotha. https://www.marxists.org/espanol/m-e/1870s/gotha.htm</p>
+<p>Rouquié, A. (1986). <em>Dictadores, militares y legitimidad en América Latina</em>. Siglo XXI.</p>
+    </div>
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+</body>
+</html>
+
+

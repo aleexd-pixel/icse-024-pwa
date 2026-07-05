@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>De populismos y democracias — ICSE 024</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+
+      font-size: 18px;
+
+      line-height: 1.75;
+
+      padding: 0;
+
+    }
+
+
+
+    .page {
+
+      max-width: 680px;
+
+      margin: 0 auto;
+
+      padding: 4rem 2rem 6rem;
+
+    }
+
+
+
+    .metadatos {
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      padding: 2.5rem 2rem;
+
+      margin-bottom: 4rem;
+
+      text-align: center;
+
+    }
+
+
+
+    .metadatos .titulo-libro {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.15em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1.5rem;
+
+    }
+
+
+
+    .metadatos .titulo-texto {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 2em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      line-height: 1.25;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .metadatos .autor {
+
+      font-size: 1.05em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 1rem;
+
+      font-style: italic;
+
+    }
+
+
+
+    .metadatos .info {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.78em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 0.3rem;
+
+    }
+
+
+
+    .metadatos .badge {
+
+      display: inline-block;
+
+      margin-top: 1.2rem;
+
+      padding: 0.35rem 1.2rem;
+
+      background: var(--heading);
+
+      color: #1a1a1a;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.72em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido p {
+
+      text-indent: 1.5em;
+
+      margin-bottom: 0;
+
+      text-align: justify;
+
+      hyphens: auto;
+
+    }
+
+
+
+    .contenido p + p {
+
+      margin-top: 0.9em;
+
+    }
+
+
+
+    .contenido p:first-of-type {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido p.first-of-section {
+
+      text-indent: 0;
+
+    }
+
+
+
+    .contenido h2 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.5em;
+
+      font-weight: 600;
+
+      color: var(--heading);
+
+      margin-top: 3rem;
+
+      margin-bottom: 1rem;
+
+      padding-bottom: 0.5rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido h3 {
+
+      font-family: 'Crimson Pro', Georgia, serif;
+
+      font-size: 1.2em;
+
+      font-weight: 600;
+
+      font-style: italic;
+
+      color: var(--heading);
+
+      margin-top: 2.5rem;
+
+      margin-bottom: 0.8rem;
+
+    }
+
+
+
+    .contenido h4 {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.95em;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+      color: var(--text-muted);
+
+      margin-top: 2rem;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+
+
+    .contenido blockquote {
+
+      margin: 2rem 0 2rem 1.5rem;
+
+      padding: 1rem 1.5rem;
+
+      border-left: 3px solid var(--accent);
+
+      font-style: italic;
+
+      color: var(--text-muted);
+
+      background: var(--surface);
+
+      font-size: 0.95em;
+
+    }
+
+
+
+    .contenido blockquote p {
+
+      text-indent: 0;
+
+      text-align: left;
+
+    }
+
+
+
+    .contenido ul,
+
+    .contenido ol {
+
+      margin: 1.2rem 0 1.2rem 2rem;
+
+    }
+
+
+
+    .contenido li {
+
+      margin-bottom: 0.5em;
+
+      padding-left: 0.3em;
+
+    }
+
+
+
+    .contenido table {
+
+      width: 100%;
+
+      border-collapse: collapse;
+
+      margin: 2rem 0;
+
+      font-size: 0.9em;
+
+    }
+
+
+
+    .contenido table th {
+
+      background: var(--surface);
+
+      color: var(--heading);
+
+      padding: 0.7rem 1rem;
+
+      text-align: left;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-weight: 500;
+
+      font-size: 0.85em;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.03em;
+
+    border-bottom: 2px solid var(--accent); }
+
+
+
+    .contenido table td {
+
+      padding: 0.6rem 1rem;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+
+    .contenido table tr:nth-child(even) {
+
+      background: var(--surface);
+
+    }
+
+
+
+    .contenido .ilegible {
+
+      color: var(--red-soft);
+
+      font-weight: 600;
+
+      background: #3a2020;
+
+      padding: 0.1em 0.3em;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    .contenido .nota-num {
+
+      font-size: 0.75em;
+
+      vertical-align: super;
+
+      color: var(--accent);
+
+      font-weight: 600;
+
+    }
+
+
+
+    .notas {
+
+      margin-top: 4rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+
+    .notas h2 {
+
+      font-size: 1.1em;
+
+      margin-bottom: 1rem;
+
+      border-bottom: none;
+
+      padding-bottom: 0;
+
+    }
+
+
+
+    .notas p {
+
+      font-size: 0.85em;
+
+      text-indent: 0;
+
+      margin-bottom: 0.6em;
+
+      color: var(--text-muted);
+
+      text-align: left;
+
+    }
+
+
+
+    .separador {
+
+      text-align: center;
+
+      margin: 3rem 0;
+
+      color: var(--border);
+
+      font-size: 1.2em;
+
+      letter-spacing: 0.5em;
+
+    }
+
+
+
+    footer {
+
+      margin-top: 5rem;
+
+      padding-top: 2rem;
+
+      border-top: 1px solid var(--border);
+
+      text-align: center;
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-size: 0.75em;
+
+      color: var(--text-muted);
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+    }
+
+
+
+    @media print {
+
+      body { background: #fff; font-size: 12pt; }
+
+      .page { padding: 0; max-width: 100%; }
+
+      .metadatos { break-after: page; border: none; background: none; }
+
+      .contenido h2 { break-after: avoid; }
+
+      .contenido h3 { break-after: avoid; }
+
+      blockquote { break-inside: avoid; }
+
+      table { break-inside: avoid; }
+
+      footer { break-before: avoid; }
+
+    }
+
+
+
+    @media (max-width: 700px) {
+
+      .page { padding: 2rem 1.2rem 4rem; }
+
+      body { font-size: 16px; }
+
+      .metadatos .titulo-texto { font-size: 1.6em; }
+
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="../../css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="metadatos">
+
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+
+      <div class="titulo-texto">De populismos y democracias</div>
+
+      <div class="autor">Laura Petrino</div>
+
+      <div class="info">Páginas originales: 91–103</div>
+
+      <div class="badge">Día 4 — Unidad 1</div>
+
+    </div>
+
+
+
+    <div class="contenido">
+
+      <h2>Capítulo 7. De populismos y democracias</h2>
+
+<p class="first-of-section">El populismo resulta ser una expresión política intrínsecamente ligada a la historia y el presente latinoamericano. Hijos de esta forma de entender el poder son figuras que han marcado nuestra geografía, como el brasileño Getúlio Vargas o Juan Domingo Perón. Incluso, se podría incluir a Carlos Menem como un neopopulista, o a Hipólito Yrigoyen como un caso de populismo temprano.</p>
+
+<p>Esta fuerte presencia del populismo en la política de América Latina dificultó su comprensión y estudio. Este desarrollo resulta complejo, ya que, a lo largo de la historia, una gran variedad de líderes y movimientos políticos fueron denominados populistas de manera peyorativa, sin explicar qué cuestiones lo justificaban, lo que produjo un estiramiento conceptual que a la postre ha dificultado su comprensión y estudio.</p>
+
+<p>En este trabajo intentaremos construir un concepto acabado de populismo y abordar las implicancias que su particular funcionamiento puede causar en los sistemas democráticos. Para ello, analizaremos las diferentes miradas que la literatura académica ha propuesto para su estudio.</p>
+
+
+
+<h3>Cómo surgen los populismos</h3>
+
+<p>A partir del ascenso global del populismo, se han multiplicado sus estudios y se han formulado definiciones que abordan la problemática desde diferentes y variados ángulos. En esta gran diversidad, al populismo se lo ha estudiado como: un estilo de liderazgo, un tipo de régimen político, una apelación discursiva, una cultura política, un tipo de política pública, una ideología, una forma de gobierno. Todas estas definiciones son aceptables y muchos autores y especialistas trabajaron sobre esta temática.</p>
+
+<p>La proliferación de populismos latinoamericanos llevó a que muchos teóricos explicaran la aparición de figuras carismáticas de corte populista solo a partir de las características económicas y sociales propias de la región. Esta mirada entró en crisis cuando, en los últimos años, el populismo se convirtió también en un fenómeno político poderoso en los países centrales con democracias altamente institucionalizadas. El caso más emblemático es el arribo de Donald Trump a la presidencia en Estados Unidos. El triunfo electoral del populismo en países desarrollados demostró que el discurso y los liderazgos populistas no son casos aislados, ni dependen solo de condiciones pauperizadas de sus sociedades, ni son exclusivos de una ideología particular.</p>
+
+
+
+<h3>La perspectiva economista</h3>
+
+<p>La sucesión interminable de profundas crisis económicas resulta el ámbito natural del cual emergen este tipo de líderes de características delegativas. Su componente principal es que utilizan la desesperanza general como medio para entronizar al Estado como principal ordenador de la economía, con la particularidad de que ese modelo estadual se encuentra mimetizado con la figura del líder. De esta manera, potencia y visibiliza otra actitud del Estado que, con la llegada del líder al poder, parece dar soluciones a los reclamos que antes ignoraba.</p>
+
+<p>Simultáneamente, también se multiplica el poder de penetración de la figura del líder en las distintas instituciones públicas, y aumentan la discrecionalidad y la falta de control con que este toma las decisiones. En este sentido, los populismos latinoamericanos presentan vínculos estrechos con la democracia delegativa presentada por O'Donnell (1992), ya que en ambos casos los ciudadanos encomiendan, entregan, confían el poder al ganador de la elección. El líder hablará y justificará todo en nombre de ellos.</p>
+
+<p>Los autores más relevantes que se ven inmersos en esta corriente son Alain Touraine (1999) y Carlos Vilas (1988).</p>
+
+
+
+<h3>La perspectiva carismática</h3>
+
+<p>La perspectiva carismática define el populismo como el resultado de una profunda crisis de representación de los partidos políticos tradicionales. Desde esta mirada, los líderes populistas aparecen como la opción que surge frente a esta crisis.</p>
+
+<p>Estos líderes son carismáticos, personalistas y paternalistas y no reconocen mediaciones institucionales. Los otros poderes del Estado deben ser obedientes al líder, ya que este sabe cómo resolver los problemas y, además, sobre todo, representa al pueblo. Por eso, el líder populista carismático mantiene relaciones ambiguas con el Poder Judicial y con el Poder Legislativo. Si estos se someten a sus políticas, entonces no habrá mayores problemas, pero si tratan de obstaculizarlas, serán acusados de ir contra la democracia y de ir contra el pueblo y la "verdadera" democracia.</p>
+
+<p>En este sentido también se plantea que, dado que la política supone una unión en clave identitaria, los líderes populistas tienen dificultades para integrar a quienes no están de acuerdo con su proyecto político. También ellos serán acusados de ir contra la democracia.</p>
+
+<p>El líder no le debe nada a nadie en términos políticos, salvo a sí mismo y a sus seguidores. A diferencia de los políticos tradicionales, no requieren consenso interno con otros actores (véase la noción de carisma en el capítulo 2). Son libres para desarrollar políticas públicas sin el corset que impone el sistema de partidos. Para que este fenómeno se produzca, los seguidores deben estar convencidos de las cualidades extraordinarias del líder y confiar en sus métodos redistributivos y en la relación clientelar que entablan con él, por medio de la cual —estiman— obtendrán mejoras o respuestas a las demandas que se les han prometido.</p>
+
+<p>Este tipo de vínculo necesita establecer y reafirmar constantemente la legitimidad de su autoridad. Para lograrlo, debe recurrir de manera directa y frecuente a un discurso dirigido a sus seguidores. No hay estructuras partidarias ni otros políticos que se interpongan: es el líder y su pueblo. No hay nadie que se interponga en esa relación. Se origina en un lazo directo establecido entre el líder y sus seguidores, por la relación directa entre el líder y sus seguidores, no por una fuente externa (como pueden ser la tradición o los procedimientos partidarios).</p>
+
+<p>La perspectiva carismática se centra en la figura del líder como representante colectiva, que permitiría superar la brecha entre la sociedad y sus representantes. Los máximos referentes de esta cosmovisión son Ernesto Laclau (1978) y Emilio de Ípola (1983).</p>
+
+
+
+<h3>La perspectiva ideológica</h3>
+
+<p>Lo que convierte a un discurso ideológico en populista es su apelación permanente al pueblo como referente básico y justificativo de toda decisión. El líder se convierte en un significant vacío —por sí mismo, no vale nada—, pero su valor está en que expresa y condensa todas las demandas que no han tenido respuesta ni solución por parte del Estado. Por esto, la lealtad de sus seguidores se expresa exclusivamente hacia su figura, en lugar de hacia una institución o un programa, como sucede en los partidos políticos tradicionales.</p>
+
+<p>El populismo se define como un discurso político que logra unir y dar voz a las demandas insatisfechas de la sociedad. Para ello, establece una relación de equivalencia entre distintas reivindicaciones, las que terminan encontrando su expresión y representación en la figura del lider, quien adquiere un papel central e independiente.</p>
+
+<p>Desde esta mirada, el poder se disputa entre dos grandes grupos bajo la división amigo-enemigo y se caracteriza por la descalificación y demonización constante de "los otros" a los fines de cohesionar a los que siguen al lider populista como miembros de un colectivo liberador.</p>
+
+<p>Por último, la perspectiva ideológica se centra en la característica discursiva del populismo, y sostiene que el liderazgo se constituye en un terreno ideológico y es el resultado de un complejo ciclo de producción, circulación y recepción de relatos. Los autores más relevantes que se ven inmersos en esta corriente son Freidenberg (2007 y 2011) y Weyland et al. (2010).</p>
+
+
+
+<h3>La experiencia argentina: Los populismos de Yrigoyen y Perón</h3>
+
+<p>Las características del populismo analizadas previamente se encuentran en la experiencia argentina. Los populismos de Yrigoyen y Perón. Desde sus inicios, tanto el radicalismo de Yrigoyen como el peronismo de Juan Domingo Perón. Ambos liderazgos lograron articular demandas democráticas y sociales de sectores previamente excluidos del sistema político y consolidaron movimientos de gran impacto en la historia del país.</p>
+
+<p>Desde sus inicios, tanto el radicalismo de Yrigoyen como el peronismo se construyeron sobre una lógica de confrontación. En el caso de Yrigoyen, el antagonismo se estableció entre el "pueblo" y el "régimen" oligarquía. Perón, el partido no era solo una estructura política, sino el canal para integrar diversas corrientes ideológicas dentro de un mismo movimiento. Sin embargo, este proceso se llevó a cabo en detrimento del pluralismo democrático. Se identificó al peronismo con el "pueblo" y a sus opositores como "vendepatrias", lo cual los excluía de la arena política legítima. Esta equiparación entre el movimiento y la nación misma llevó a que cualquier oposición fuera considerada una traición.</p>
+
+<p>El liderazgo de Yrigoyen transformó profundamente a la Unión Cívica Radical (UCR), a la que dotó de un fuerte componente personalista. Según Romero (2012, p. 81), "el partido se fundía con su figura [...] y empezó luego a estimular una suerte de culto a su persona [...] el país se llenó de sus retratos". De esta manera, la UCR dejó de ser solo una organización política para convertirse en un movimiento que, a través del carisma de su líder, aspiraba a representar al conjunto de la sociedad.</p>
+
+<p>Durante su primer mandato (1916-1922), el Comité Nacional del radicalismo reafirmó esta visión en un manifiesto donde se proclamaba que "la Unión Cívica Radical es la nación misma bregando desde hace veinticinco años por liberarse de gobiernos usurpadores y regresivos" (expresado en el Manifiesto UCR del 1 de mayo de 1916). En contraposición a un "régimen falaz y descreído" —corrupto, inmoral y fraudulento—, el radicalismo se autodefinía como "la causa" justa, dispuesta a sacrificarse, pero nunca a ceder moralmente.</p>
+
+<p>Sin embargo, tras el golpe de 1930 y la posterior muerte de Yrigoyen, el radicalismo regresó a su estructura original, y perdió el componente personalista que lo había caracterizado bajo su liderazgo.</p>
+
+<p>Con el declive del yrigoyenismo emergió otra figura que, a la vez, creó otro partido: Juan Domingo Perón, quien adoptó un liderazgo populista más consolidado. A diferencia de Yrigoyen, Perón construyó su movimiento desde el poder del Estado, y estableció el Partido Peronista (posteriormente Partido Justicialista) como el vehículo exclusivo de su liderazgo. De hecho, el nombre del partido lleva su propio apellido.</p>
+
+<p>Sin embargo, una diferencia crucial entre ambos radica en la relación con sus partidos. La UCR existía antes de Yrigoyen y nunca estuvo enteramente ligada a su persona. Para Perón, el partido no era solo una estructura política, sino el canal para integrar diversas corrientes ideológicas dentro de un mismo movimiento. Sin embargo, este proceso se llevó a cabo en detrimento del pluralismo democrático. Se identificó al peronismo con el "pueblo" y a sus opositores como "vendepatrias", lo cual los excluía de la arena política legítima.</p>
+
+<p>El impacto de esta diferencia se reflejó en la forma en que ambos líderes se relacionaron con la sociedad. Mientras que Yrigoyen construyó su figura a través de la prensa escrita y la fotografía —con un liderazgo más personal y cercano—, Perón aprovechó las posibilidades de la comunicación masiva para consolidar su imagen y llegar a grandes audiencias, especialmente a los trabajadores y obreros industriales, quienes en la época de Yrigoyen aún no constituían un movimiento de masas significativo.</p>
+
+<p>Otra diferencia fundamental es la cuestión de la sucesión. Los líderes populistas suelen perpetuarse en el poder, ya que se consideran insustituibles. Yrigoyen nunca intentó reformar la Constitución para lograr su reelección —pues la ley no lo permitía—, y además designó como sucesor a Marcelo T. de Alvear, un dirigente que no formaba parte de su círculo de confianza. Perón, en cambio, modificó la Constitución para ser reelegido y, en su tercer mandato (1974-1976), al elegirla como vicepresidenta, dejó como sucesora a su esposa, María Estela Martínez de Perón.</p>
+
+<p>Por otro lado, la relación entre Perón y los medios de comunicación fue particularmente conflictiva. Frente a la oposición de algunos medios, impulsó la compra y estatización de medios, lo que resultó en un control más férreo sobre la información difundida.</p>
+
+<p>De lo analizado se observa que el populismo en la Argentina ha tenido diversas manifestaciones a lo largo de nuestra historia, pero Yrigoyen y Perón representan dos de sus expresiones más significativas. Si bien ambos compartieron elementos esenciales del liderazgo populista —liderazgo carismático, discursos ambiguos y la identificación del líder con la misma—, marcan puntos de inflexión clave. Mientras Yrigoyen coexistió con un partido preexistente y no buscó perpetuarse en el poder, Perón construyó su liderazgo y modificó las reglas institucionales para consolidarse en el poder.</p>
+
+
+
+<h3>Nuevos populismos exportados al mundo</h3>
+
+<p>Pero antes de seguir profundizando en los nuevos populismos, es preciso reafirmar que aquellos ligados a la izquierda que inauguraron el siglo XXI aún forman parte de los sistemas políticos latinoamericanos. El compendio de políticas públicas redistributivas que pudieron emprender se basaron en el precio récord que tuvieron las materias primas y las derivadas de actividades extractivas en los primeros años del 2000, como el petróleo, la minería y los productos agrícolas y ganaderos. Una vez que estos valores volvieron a sus precios históricos, los líderes populistas se enfrentaron a profundas crisis (Casullo, 2019).</p>
+
+<p>Para mantener su poder, una vez acaecidas las crisis, buscaron engrandecer sus figuras con mitos del pasado (por ejemplo, con Bolívar o Eva Perón) y sobre todo, inventaron enemigos comunes: los medios de comunicación, los organismos de crédito y Estados Unidos. Todos ellos funcionaron como opuestos discursivos. Se buscaba así fragmentar a la sociedad entre quienes apoyaban al lider —y el supuesto cambio que traía— y quienes se oponían, que eran acusados de ser defensores de las oligarquías en sus diferentes formas.</p>
+
+<p>La radicalización del discurso amigo-enemigo fue uno de sus rasgos políticos centrales. A partir de allí, fundaron solidaridades y cimentaron estancamiento que sufre el país (Freidenberg, 2011).</p>
+
+<p>En esta ola no se puede dejar de mencionar el triunfo del Brexit en Gran Bretaña, con un discurso de claras connotaciones populistas; en Asia, Narendra Modi, en la India, que llegó al poder con un programa xenófobo y nacionalista hindu (Casullo, 2019). Posiblemente el caso más paradigmático es el del ascenso al poder de Donald Trump en los Estados Unidos, un outsider de la política, que reunió tres características: polarizó la sociedad entre el trabajo y el mundo financiero, despreció el sistema de partidos y se fortaleció discriminadores.</p>
+
+<p>Todas estas expresiones buscaron dividir a la sociedad entre un "ellos" causante de los problemas recientes —la inmigración, el mundo financiero y la tecnocracia multinacional— y un "nosotros" (los trabajadores y los vencidos y excluidos). Esto destruye la posibilidad de construir consensos, convierten en enfrentamientos irreconciliables (Levitsky y Ziblatt, 2018).</p>
+
+
+
+<h3>Los liderazgos populistas</h3>
+
+<p>En función de lo visto hasta ahora, en esta sección abordaremos las características comunes que poseen los liderazgos populistas. Las cinco particularidades que los definen y los diferencian de otros tipos de liderazgo son:</p>
+
+<ol>
+
+<li>Presentarse como líderes extraordinarios;</li>
+
+<li>tejer coaliciones entre sectores dispares;</li>
+
+<li>mantener una relación directa con los seguidores;</li>
+
+<li>polarizar las sociedades;</li>
+
+<li>mostrarse como alternativa al poder tradicional.</li>
+
+</ol>
+
+
+
+<p>Un líder populista siempre se presenta como outsider, es decir, como alguien que viene "de afuera", por lo que no se encuentra contaminado con los vicios de la política tradicional ni es rehén de los intereses del establishment. En su construcción discursiva, los líderes populistas son hombres y mujeres que se han visto forzados a participar en política debido a la indignación moral que les produce el comportamiento de las élites gobernantes y por su fuerte deseo de servir al pueblo, no por simple cálculo de conveniencia.</p>
+
+<p>La sucesión de fracasos del sistema de partidos tradicionales, que no han logrado dar respuesta al conjunto de la sociedad, es utilizado como disparador de políticas públicas audaces. Estas, a su vez, desmantelan los mecanismos institucionales de control y planificación, con una clara tendencia a centralizar las decisiones en un pequeño grupo leal al líder.</p>
+
+<p>La segunda característica gira en torno a un modo directo de diálogo. A través de este vínculo se construye una relación directa entre aquel y su pueblo, sin intermediarios (ni personales, ni partidarios, ni institucionales). Como consecuencia natural, los gobiernos populistas se caracterizan por una escasa intervención ciudadana, excepto en lo discursivo. Los ciudadanos deben ser espectadores pasivos y esperar durante un periodo constitucionalmente establecido para que el líder extraordinario los salve.</p>
+
+<p>La tercera característica: en tanto líderes con un discurso radical, los liderazgos populistas polarizan la sociedad a partir de la exclusión discursiva de quienes no opinan como ellos. Freidenberg (2007) plantea que estos liderazgos ofrecen "vínculos de suma cero: se está totalmente a favor o totalmente en contra", no hay términos medios. Este presidente-lider se fortalece su posición respecto a los restantes poderes del Estado (Legislativo, Judicial) y frente a cualquier sujeto privado que pueda presentarse como alternativa concreta que busca cambiar el sistema político, frente a otros actores tradicionales a los que acusa por el estancamiento que sufre el país.</p>
+
+<p>La cuarta característica: si bien su discurso es estricto y excluyente, la cual sustenta el desarrollo de sus proyectos de cambio y justifica sus acciones. El éxito electoral y político de estos lideres se sostiene mediante una coalición plural de sectores sociales. Estos diversos grupos encuentran en el liderazgo populista un lugar donde representar sus intereses. Por este motivo, el discurso del lider se basa en la legitimidad mayoritaria, que minimiza el rol de los partidos políticos y otras instituciones de intermediación.</p>
+
+<p>En quinto y último lugar, aparece la forma carismática, personalista y paternalista de ejercer el poder, legitimada por las supuestas cualidades extraordinarias del lider, que presenta un escenario con seguidores convencidos de sus características únicas. En este punto aparece el problema de la continuidad de los gobiernos populistas, dadas las dificultades para reemplazar características personales.</p>
+
+
+
+<div class="separador">• • •</div>
+
+
+
+<h3>El impacto del liderazgo populista en las democracias</h3>
+
+<p>Este fenómeno ha llevado a una erosión gradual y casi imperceptible de las normas y estructuras democráticas. Se trata de una transformación silenciosa en la que las instituciones pierden su capacidad de absorber, canalizar y gestionar los conflictos sociales y políticos (Przeworski, 2022). El impacto de esta dinámica es una creciente polarización, donde se convierten en enfrentamientos irreconciliables (Levitsky y Ziblatt, 2018).</p>
+
+<p>Para analizar este proceso, es necesario considerar dos dimensiones clave: la división de poderes, por un lado, y las elecciones y los partidos políticos, por otro.</p>
+
+<p>En cuanto a la primera dimensión, la separación de poderes (Ejecutivo, Legislativo y Judicial) fue concebida como un mecanismo de defensa contra el abuso de autoridad. Su propósito es impedir que una sola persona o institución avasalle las funciones de otra. También pone límites dentro del sistema.</p>
+
+<p>Sin embargo, cuando un líder populista llega al gobierno, su relación con las otras instituciones suele ser conflictiva. Tiende a verlas como obstáculos para la implementación de su agenda y, en consecuencia, busca debilitarlas o subordinarlas a su voluntad. La discrecionalidad en la toma de decisiones se vuelve una característica predominante, que desplaza los controles institucionales y disminuye los contrapesos que deben sortearse en nombre del "pueblo". El resultado es una creciente concentración del poder en el Ejecutivo, un debilitamiento del Estado de derecho y una reducción de las garantías democráticas.</p>
+
+<p>Desde esta lógica, las reglas democráticas pueden volverse secundarias frente a la necesidad de atender demandas económicas y sociales urgentes. En este contexto, las instituciones dejan de ser espacios de derecho y se convierten en una fachada donde el voto sigue existiendo, pero los contrapesos y las garantías fundamentales se debilitan.</p>
+
+<p>En cuanto a la segunda dimensión, el discurso populista se construye como los únicos representantes legítimos de la voluntad popular, lo que minimiza el rol de los partidos políticos y otras instituciones de intermediación. Cuando los líderes populistas buscan eliminar los controles institucionales y gobernar con discrecionalidad, la democracia se deteriora gradualmente. Sin necesidad de rupturas violentas o golpes de Estado, el sistema democrático puede vaciarse de contenido hasta convertirse en una fachada.</p>
+
+
+
+<div class="separador">• • •</div>
+
+
+
+<h3>Conclusiones</h3>
+
+<p>El gran reto es encontrar un equilibrio institucional que permita el desarrollo de estos liderazgos pero que a la vez proteja la democracia de estos procesos de degradación. Para ello, es fundamental fortalecer las instituciones que respeten la pluralidad, el diálogo y el Estado de derecho. Cuando los liderazgos populistas se ejercen de manera extrema, puede generar profundas tensiones dentro del sistema democrático.</p>
+
+
+
+<h3>Referencias bibliográficas</h3>
+
+<p>Casullo, M. E. (2019). <em>¿Por qué funciona el populismo?</em>. Siglo XXI.</p>
+
+<p>de Ípola, E. (1983). <em>Ideología y discurso populista</em>. Folios.</p>
+
+<p>—(1979). Populismo e ideología (A propósito de Ernesto Laclau: <em>Política e ideología en la teoría marxista</em>). <em>Revista Mexicana de Sociología</em>, 41(3), 925-960.</p>
+
+<p>Freidenberg, F. (2007). <em>La tentación populista: una vía de acceso al poder en América Latina</em>. Síntesis.</p>
+
+<p>—(2011). Los nuevos liderazgos populistas y la democracia en América Latina. <em>LASA Forum</em>, 42(3), 9-11.</p>
+
+<p>Laclau, E. (1978). Hacia una teoría del populismo. En E. Laclau, <em>Política e ideología en la teoría marxista: Capitalismo, fascismo, populismo</em>. Siglo XXI. (Trabajo original publicado en 1977).</p>
+
+<p>Levitsky, S. y Ziblatt, D. (2018). <em>Cómo mueren las democracias</em>. Ariel.</p>
+
+<p>O'Donnell, G. (1992). ¿Democracia delegativa? <em>Cuadernos del CLAEH</em>, 17(61), 5-20.</p>
+
+<p>O'Donnell, G., Schmitter, P. y Whitehead, L. (1988). <em>Transiciones desde un gobierno autoritario</em> (Vol. 1-4). Paidós.</p>
+
+<p>Przeworski, A. (2022). <em>Las crisis de la democracia</em>. Siglo XXI.</p>
+
+<p>Romero, L. A. (2012). <em>Breve historia contemporánea de la Argentina: 1916-2010</em>. Fondo de Cultura Económica.</p>
+
+<p>Touraine, A. (1990). Las políticas nacional-populares. En M. M. Mackinnon y M. Petrone (Comps.), <em>Populismo y neopopulismo en América Latina: el problema de la Cenicienta</em>. Eudeba.</p>
+
+<p>Vilas, C. (1988). El populismo latinoamericano: un enfoque estructural. <em>Desarrollo Económico</em>, 28(111), 323-352.</p>
+
+<p>Weyland, K., Madrid, R. y Hunter, W. (Eds.). (2010). <em>Leftist governments in Latin America: Successes and shortcomings</em>. Cambridge University Press.</p>
+
+    </div>
+
+
+    <footer>
+
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
+

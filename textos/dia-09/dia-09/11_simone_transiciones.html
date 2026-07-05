@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transiciones a la democracia en la Argentina (1973 y 1983) — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --bg: #1a1a1a;
+      --text: #d4d0c8;
+      --text-muted: #8a8580;
+      --heading: #e8e4dc;
+      --border: #3a3530;
+      --surface: #242220;
+      --accent: #c9854a;
+      --red-soft: #e06060;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .metadatos {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .metadatos .titulo-libro {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .metadatos .titulo-texto {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2em;
+      font-weight: 600;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .metadatos .autor {
+      font-size: 1.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .metadatos .info {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .metadatos .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.35rem 1.2rem;
+      background: var(--heading);
+      color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+    }
+
+    .contenido p {
+      text-indent: 1.5em;
+      margin-bottom: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .contenido p + p {
+      margin-top: 0.9em;
+    }
+
+    .contenido p:first-of-type {
+      text-indent: 0;
+    }
+
+    .contenido p.first-of-section {
+      text-indent: 0;
+    }
+
+    .contenido h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--heading);
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .contenido h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contenido blockquote {
+      margin: 2rem 0 2rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      font-size: 0.95em;
+    }
+
+    .contenido blockquote p {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    .contenido ul,
+    .contenido ol {
+      margin: 1.2rem 0 1.2rem 2rem;
+    }
+
+    .contenido li {
+      margin-bottom: 0.5em;
+      padding-left: 0.3em;
+    }
+
+    .contenido table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9em;
+    }
+
+    .contenido table th {
+      background: var(--surface);
+      color: var(--heading);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--accent); }
+
+    .contenido table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contenido table tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    .contenido .ilegible {
+      color: var(--red-soft);
+      font-weight: 600;
+      background: #3a2020;
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+    }
+
+    .contenido .nota-num {
+      font-size: 0.75em;
+      vertical-align: super;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .notas {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .notas h2 {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .notas p {
+      font-size: 0.85em;
+      text-indent: 0;
+      margin-bottom: 0.6em;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    .separador {
+      text-align: center;
+      margin: 3rem 0;
+      color: var(--border);
+      font-size: 1.2em;
+      letter-spacing: 0.5em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12pt; }
+      .page { padding: 0; max-width: 100%; }
+      .metadatos { break-after: page; border: none; background: none; }
+      .contenido h2 { break-after: avoid; }
+      .contenido h3 { break-after: avoid; }
+      blockquote { break-inside: avoid; }
+      table { break-inside: avoid; }
+      footer { break-before: avoid; }
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 2rem 1.2rem 4rem; }
+      body { font-size: 16px; }
+      .metadatos .titulo-texto { font-size: 1.6em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+      <div class="titulo-texto">Transiciones a la democracia en la Argentina (1973 y 1983)</div>
+      <div class="autor">Nicolás Simone</div>
+      <div class="info">Páginas originales: 129–140</div>
+      <div class="badge">Día 9 — Unidad 3</div>
+    </div>
+
+    <div class="contenido">
+      <h2>Capítulo 10. Transiciones a la democracia en la Argentina (1973 y 1983)</h2>
+<p class="first-of-section">En otros capítulos de este mismo libro abordamos los conceptos de golpe de Estado e interrupciones institucionales. En el primer caso, se trata de una acción que, si tiene éxito, produce un cambio de régimen político, de uno democrático a uno no democrático. Podemos preguntarnos ahora qué ocurre cuando se retiran los responsables de un régimen no democrático. ¿Cómo se transita el difícil camino que conduce a un régimen democrático? En este capítulo abordaremos, en primer lugar, el concepto de transición, que inició la transitología, una corriente académica dentro de la ciencia política que ha sido utilizado por las ciencias sociales para analizar estos procesos de cambio de régimen.</p>
+<p>En segundo lugar, describiremos los actores involucrados en las transiciones, para estudiar en detalle, en el tercer apartado, el papel de la élite política en estos procesos. Por último, analizaremos las transiciones de 1973 y 1983 en la Argentina.</p>
+
+<h3>Definiciones</h3>
+<p>Entendemos por transición al intervalo que se extiende entre un régimen político y otro [...] Las transiciones (a la democracia) están delimitadas por la disolución del régimen autoritario y por el establecimiento de un régimen democrático (O'Donnell, Schmitter y Whitehead, 1988, pp. 19-20).</p>
+<p>Esta primera definición refiere a la transición en sentido estricto: el periodo que comienza cuando un régimen no democrático de un país comienza a retirarse y termina cuando asume un gobierno elegido democráticamente. La transición en sentido estricto refiere al periodo que se abrió con la derrota en la guerra de Malvinas en 1982, y se alcanzó cuando asumió Raúl Alfonsín. Sin embargo, el hecho de que asuma un gobierno elegido democráticamente no garantiza que la democracia esté consolidada. Entonces, se abre una segunda etapa, la transición en sentido amplio, o consolidación, que se llega cuando no hay riesgo de otro golpe de Estado. Esta segunda etapa se alcanzó en la Argentina al inicio del gobierno de Carlos Menem, que logró derrotar a los militares "carapintada" en diciembre de 1990. Esa victoria se concretó porque el gobierno reprimió y apresó a los militares sublevados, aunque concedió indultos a todos los detenidos por responsabilidades en la dictadura. La democracia adquirió su impulso definitivo y, a partir de entonces, ya no hubo peligro de retroceso (Mazzei, 2011).</p>
+<p>La transición a un régimen democrático en sentido amplio, o consolidación de la democracia: una vez instalado el régimen democrático, surgen nuevos desafíos y hay dudas sobre el éxito o el fracaso a la frontalos.</p>
+<p>Las investigaciones sobre la transición a la democracia se desarrollaron en la década de 1980. Fueron impulsadas por un grupo de expertos en ciencias sociales que tenían un doble objetivo: por un lado, producir textos académicos que analizaran los procesos de los que eran testigos en la década del ochenta eran una oportunidad para la dirigencia política de cada país. Es decir, la élite política podía construir un orden nuevo, capaz de canalizar de manera armónica los conflictos políticos, económicos y sociales de los países que atravesaban procesos de democratización.</p>
+<p>Estos científicos sociales definieron la democracia como poliarquía. Este concepto es una versión mínima pero que, por esa misma razón, puede lograr más consenso y ser el denominador común sin el cual no es posible hablar de un régimen democrático (ver capítulo 6). Estos especialistas en el tema asumieron un compromiso militante con la democracia. Tenían la idea de que esos nuevos regímenes que surgían en la década de 1980 eran una oportunidad para la dirigencia política de cada país. Es decir, la élite política podía construir un orden nuevo, capaz de canalizar de manera armónica los conflictos políticos, económicos y sociales.</p>
+<p>Una democracia es un sistema de reglas en el que los ciudadanos se expresan libremente y eligen a sus gobernantes. Esas reglas incluyen como algunas de sus características principales la libertad política para la expresión de opiniones, la posibilidad de elegir y de ser elegidos en el ejercicio de elecciones limpias y competitivas.</p>
+<p>En suma, la democracia se alcanza cuando ya no hay miedo a una regresión autoritaria y las elecciones regulares se convierten en el único medio de acceso al poder. Se logra cuando ya no hay miedo a golpe de Estado y las elecciones se convierten en una rutina (O'Donnell, 1997, p. 330). Durante la consolidación, los partidos políticos deben, por un lado, apoyarse mutuamente para evitar un nuevo golpe de Estado, pero por el otro, competir por los cargos de gobierno. Estas nuevas instituciones, si la transición es exitosa, se mantendrán indefinidamente.</p>
+
+<h3>Los actores políticos en la transición</h3>
+<p>La transición es un periodo de tiempo muy complejo, durante el cual los actores políticos conviven y compiten a la vez. Un actor que tiene un papel clave en el inicio de la transición es la élite política de cada país, que está conformada por los dirigentes políticos que fueron expulsados del poder más o menos violentamente por los militares y por sus aliados en los golpes de Estado.</p>
+<p>La transición a un régimen democrático comienza cuando el gobierno autoritario está debilitado y cuando la élite política asume un liderazgo fuerte con la intención de recuperar el régimen democrático. Esto lo hace con algún tipo de acuerdo secreto sobre las reglas del juego.</p>
+<p>La élite política comienza a actuar cuando la dictadura ya no es tan fuerte y cuando los militares todavía están en el poder y, con sus diferencias, llegan a algunos acuerdos básicos aprovechando que el gobierno no democrático está débil. Son acuerdos generales, no programas de gobierno, que se limitan sobre todo a lograr el llamado a elecciones en las que los partidos se puedan presentar libremente.</p>
+
+<h3>La sociedad civil</h3>
+<p>El segundo actor es la sociedad civil, que cumple un papel clave en la transición a un régimen democrático. La participación de la sociedad civil es posible una vez comenzado el proceso de liberalización, es decir, con la dictadura gobernando, pero los militares todavía en el poder. La sociedad movilizada puede imponer temas en la agenda pública y, aunque los partidos no quieran incluirlos porque los obligaría a tomar posiciones arriesgadas electoralmente, se ven empujados, al menos, a tomar posición. Los sindicatos, las organizaciones de derechos humanos y los estudiantes universitarios son algunos de los actores que se incluyen en este grupo.</p>
+<p>La sociedad civil tiene dos funciones importantes: la primera es apoyar a la élite política para que logre la vuelta al régimen democrático y, al mismo tiempo, empujar fuera del sistema a los sectores nostálgicos; es decir, dejar aislados y sin apoyos a quienes desean continuar en dictadura. La segunda función es ampliar la agenda pública con temas que, luego, los partidos políticos deben canalizar. Se trata de los temas que se discuten en una sociedad, tanto en los medios de comunicacion como en la vida cotidiana de las personas. Por ejemplo, en la campaña de 1983, la cuestión del tratamiento a las violaciones a los derechos humanos fue un tema impuesto por los organismos de derechos humanos y la sociedad civil.</p>
+
+<h3>Los blandos y los duros del régimen autoritario</h3>
+<p>La clasificación de los actores de la transición incluye, en un tercer grupo, a los sectores blandos y duros de una dictadura. Entre los primeros se agrupan los dirigentes que la apoyaron, pero que piensan que esta está agotada y ven una salida democrática. Estos "blandos" empiezan a conspirar a favor del llamado a elecciones y actúan en forma conjunta con sectores de la élite política que quieren volver a un régimen democrático. En algunos casos, buscan mantener su influencia, más allá del régimen político; en otros, pretenden negociar la dictadura por medio de pactos y acuerdos de gobernabilidad.</p>
+<p>Los nostálgicos del régimen autoritario son un cuarto grupo que se opone a la llegada de un régimen democrático. Al existir un grupo que quiere mantener el régimen autoritario y evitar la llegada de un régimen democrático, la transición es un momento complejo. Por eso, los expertos afirman que es importante que los sectores prodemocráticos puedan aislar a los grupos que desean la vuelta de la dictadura y limitarles el margen de maniobra.</p>
+<p>En la Argentina, este fue el caso de los militares Aldo Rico y Mohamed Alí Seineldín durante el gobierno de Alfonsín y el inicio del de Carlos Menem, pero también de políticos, sindicalistas y grupos ligados a la Iglesia católica y la prensa (Romero, 2017).</p>
+
+<h3>Los actores internacionales</h3>
+<p>Los actores internacionales constituyen el quinto actor para tener en cuenta. Se trata de una serie de organismos que presionan desde afuera de las fronteras del país con el objetivo de lograr la efectiva instalación de la democracia: organizaciones internacionales de partidos, tales como la Internacional Socialista o la Democracia Cristiana, que apoyan a los políticos locales afines a sus ideas, con dinero o logística para las elecciones (Pedrosa, 2012). También componen este grupo los organismos supranacionales, es decir, los que están "por encima" de las naciones, como la Organización de las Naciones Unidas (ONU) o la Organización de los Estados Americanos (OEA). La presión internacional es clave para que el régimen democrático se consolide, porque puede denunciar y amplificar las cosas que suceden en una dictadura.</p>
+
+<h3>Elites políticas, incertidumbre y pactos</h3>
+<p>Los procesos de democratización suelen estar a cargo de una élite política compuesta por dirigentes que se reconocen por el poder. Esta élite es la encargada de conducir el proceso de instalación de la democracia. Ante los altos grados de incertidumbre de una transición, a veces sus integrantes recurren a pactos. Las élites toman decisiones, algunas veces pensando en el bien común y otras tratando de sacar el máximo beneficio para su partido o su persona.</p>
+<p>El cálculo del beneficio propio en una transición es complejo, debido a los grados de incertidumbre reinantes. En este periodo, es importante que los políticos distingan cuándo es momento de buscar beneficio personal y cuándo, de moderar ambiciones. En este frágil equilibrio se celebran los pactos, muchas veces condicionados por la activa acción de los nostálgicos del régimen anterior.</p>
+<p>Los pactos entre los dirigentes de la élite de distintos partidos son importantes porque generan garantías recíprocas para competir en igualdad de condiciones por el poder. Los miembros de una élite deben lograr pactos que den formas institucionales a los acuerdos. Estos pactos pueden ser secretos o públicos y tienen como fin generar garantías recíprocas para competir en igualdad de condiciones por el poder. Por ejemplo, los políticos pueden acordar que no habrá proscripciones (eso significa que ningún candidato o partido estará prohibido), que día serán las elecciones o cuál será el sistema electoral, entre otras muchas posibilidades.</p>
+
+<h3>La transición fallida de 1973</h3>
+<p>A lo largo del siglo XX en la Argentina hubo cinco golpes de Estado, en 1930, 1943, 1955, 1966 y 1976, y una interrupción institucional, en 1962, que luego de la interrupción de 1962 con el llamado a elecciones de 1963. Los tres primeros golpes fueron breves y se ensayaron rápidas restauraciones al orden democrático en 1932, 1946 y 1958, al igual que las dictaduras de 1966-73 y 1976-83 se extendieron más en el tiempo, fueron más represivas y derivaron en las transiciones de 1973 y 1983, que, una fracasada y la otra exitosa, signaron el actual régimen democrático.</p>
+<p>En marzo de 1971, el ejército designó al general Alejandro Agustín Lanusse como presidente. Los militares buscaban controlar el proceso y abrieron negociaciones con todos los partidos políticos, incluyendo al peronismo. La propuesta consistía en llamar a elecciones libres, pero dejar a Juan Domingo Perón fuera de ellas bajo el tecnicismo de que no residía en el país. Los partidos rechazaron formalmente la invitación, pero aprovecharon para tejer algunos acuerdos entre ellos, como "La Hora del Pueblo" o el abrazo Perón-Balbín (Romero, 2017).</p>
+<p>En 1972, esos acuerdos parciales se fueron plasmando en instrumentos actuales y otras leyes que fijaron la elección directa de presidente con doble vuelta, el tercer senador por minoría y los mínimos de diputados por provincia. Todos estos criterios siguen vigentes en la actualidad. El gobierno militar cumplía con su parte del acuerdo al fijar las reglas para las elecciones, aunque mantenía el veto a la candidatura de Perón.</p>
+<p>Esto no impidió que el general en el exilio regresara al país a fines de 1972 para cerrar acuerdos políticos. De hecho, se reunió con las dos facciones del radicalismo y con ambas tejió acuerdos. Una de estas facciones, la de los intransigentes de Frondizi, se sumó a las listas del peronismo en el Frente Justicialista de Liberación (FREJULI); y la otra, la de los populares de Balbín, Illia y Alfonsín, selló una especie de acuerdo de convivencia y mutuo reconocimiento, simbolizado en el abrazo que se dieron Perón y Balbín el 19 de noviembre de 1972. Las elecciones de marzo de 1973 consagraron al candidato de Perón, Héctor Cámpora, que a poco de asumir advirtió que su poder era nulo ante la inminencia de un regreso definitivo de Perón. Por eso renunció y llamó a nuevas elecciones, que consagraron a Perón presidente por tercera vez.</p>
+<p>El acuerdo con los militares se había roto, pero el de los partidos políticos se mantuvo y todos acompañaron las elecciones de septiembre de 1973 que consagraron a Perón presidente por tercera vez. Pero la situación política, económica y social empeoraba: Perón no lograba controlar a los actores que habían generado la inestabilidad de los años anteriores; de hecho, aumentaba la violencia política de derecha y de izquierda, y la economía explotaba en el marco de la crisis mundial del petróleo.</p>
+
+<h3>La transición definitiva de 1983</h3>
+<p>Entre 1976 y 1983, cuatro juntas militares ejercieron un gobierno autoritario y represor. Al principio se aplicó un plan criminal, pero con los años, el poder inicial se fue diluyendo entre los fracasos económicos y las denuncias por las violaciones a los derechos humanos que se desparramaban por el mundo. Como una especie de último recurso, la tercera junta de gobierno militar, encabezada por el general Leopoldo F. Galtieri, inició un conflicto bélico contra Gran Bretaña por las islas Malvinas. Si bien esta derrota certificó el final de la dictadura, su declive había comenzado antes.</p>
+<p>Además, la situación económica bajo el gobierno militar era cada vez peor. La crisis del petróleo a nivel mundial, la falta de un proyecto económico y la nula cohesión entre las cúpulas militares desgastaron rápidamente al régimen (Romero, 2017). A comienzos de 1976, el líder del radicalismo, Ricardo Balbín, hizo un llamado desesperado en los diarios tratando de evitar el golpe, para llamar a elecciones. Esto no alcanzó para evitar la intervención militar, que se concretó el 24 de marzo de 1976.</p>
+<p>En 1979, la Comisión Interamericana de Derechos Humanos de la Organización de Estados Americanos visitó el país y denunció que se habían cometido graves violaciones a los derechos humanos. Fue la primera vez que el gobierno militar, de alguna manera, reconoció la cuestión de los derechos humanos a la que hacía referencia el papa Juan Pablo II.</p>
+<p>La sociedad y la élite política, ahora sí más convencidas que en 1973, exigían el llamado a elecciones ante el derrumbe del poder militar. El presidente Galtieri renunció y fue reemplazado por el general Reynaldo Bignone, que convocó a los argentinos a votar para octubre de 1983. No tenía margen para hacer otra cosa.</p>
+<p>En 1983 se celebraron las primeras elecciones y ganó el radical Raúl Alfonsín, el candidato que más criticaba al régimen saliente: se había opuesto a la guerra de Malvinas y prometía juzgar a los militares culpables de violar los derechos humanos. Alfonsín cumplió con su palabra y enjuició a las cúpulas militares y a las de las organizaciones armadas al inicio de su gobierno. En 1985 se conoció el veredicto dictado por un tribunal ordinario, que indicó culpables de violar los derechos humanos (Pucciarelli, 2006).</p>
+<p>El efecto de esta ley fue el inverso, y en la Semana Santa de 1987, en protesta por la cantidad de juicios, se produjo el primer levantamiento militar. El gobierno intentó frenar la escalada con la Ley de Punto Final. Los levantamientos militares siguieron en 1988 y 1989 (Novaro, 2009). Recién en 1990, con el último levantamiento militar y a cambio del indulto a todos los civiles y militares todavía presos, se cerró el ciclo de la nueva etapa democrática. Desde entonces, existe una democracia consolidada (Mazzei, 2011).</p>
+<p>Entre 1973 y 1994, se moldeó el régimen democratico actual en lo relativo al funcionamiento institucional. Esto fue producto de un acuerdo que la élite política logró acordar reglas mínimas de competencia. Estos acuerdos, sin embargo, se limitaron a lo institucional y no abordaron otros temas, como por ejemplo, el tratamiento de las violaciones a los derechos humanos o las reformas económicas, laborales o previsionales.</p>
+
+<div class="separador">• • •</div>
+
+<h3>Conclusiones</h3>
+<p>Tanto en 1973 como en 1983 los militares salientes fijaron buena parte de las reglas de las elecciones y, una vez que se instalaron en el poder, los civiles no las cambiaron. Resulta evidente que la transición de 1973 fracasó, pero también que sentó las bases del éxito de la de 1983, en la que la élite política logró acordar reglas mínimas de procedimiento democrático (poliarquía) que aun hoy regulan el acceso al poder.</p>
+<p>En las páginas previas analizamos los conceptos de transición en sentido estricto, que se extiende desde que se aflojan los controles autoritarios y se instala el primer gobierno surgido de elecciones. La segunda etapa concluye cuando ya no existe miedo a una regresión autoritaria: es la transición en sentido amplio, o consolidación.</p>
+<p>Como vimos, hay dos tipos de transiciones. Una más corta, o en sentido estricto, y otra más larga, o en sentido amplio. En la Argentina, la primera se alcanzó con la asunción de Alfonsín en 1983, y la segunda con la derrota de los militares "carapintada" en 1990.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Mazzei, D. (2011). Reflexiones sobre la transición democrática argentina. <em>PolHis</em>, 4(7), 8-15.</p>
+<p>Novaro, M. (2009). <em>Argentina en el fin de siglo: democracia, mercado y nación (1983-2001)</em>. Paidós.</p>
+<p>O'Donnell, G. (1997). <em>Contrapuntos: ensayos escogidos sobre autoritarismo y democratización</em>. Paidós.</p>
+<p>O'Donnell, G., Schmitter, P. y Whitehead, L. (1988). <em>Transiciones desde un gobierno autoritario</em> (Vol. 1-4). Paidós.</p>
+<p>Pedrosa, F. (2012). <em>La otra izquierda: la socialdemocracia en América Latina</em>. Capital Intelectual.</p>
+<p>Pucciarelli, A. (Coord.). (2006). <em>Los años de Alfonsín: el poder de la democracia o la democracia del poder?</em>. Siglo XXI.</p>
+<p>Romero, L. A. (2017). <em>Breve historia contemporánea de la Argentina: 1916-2016</em>. Fondo de Cultura Económica.</p>
+    </div>
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+</body>
+</html>
+
