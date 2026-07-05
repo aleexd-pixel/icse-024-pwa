@@ -17657,51 +17657,58 @@ body {
   .tab-item.active { color: var(--accent); }
   .tab-item .tab-icon { font-size: 22px; line-height: 1; }
 
-  /* ── DAY CARDS COMPACT ── */
+  /* ── DAY CARDS COMPACT (real classes) ── */
   .day-card {
     background: var(--bg-card) !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
-    padding: 14px 16px !important;
     margin-bottom: 10px !important;
-    transition: all 0.2s !important;
+    overflow: hidden !important;
   }
-  .day-card .dc-header { display: flex; align-items: center; gap: 10px; }
-  .day-card .dc-num { font-size: 20px; font-weight: 800; min-width: 30px; color: var(--tx-primary); }
-  .day-card .dc-title { font-size: 14px; font-weight: 600; line-height: 1.3; flex: 1; color: var(--tx-primary); }
-  .day-card .dc-unit {
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    font-weight: 600;
+  .day-card .card-header {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+    align-items: center !important;
+  }
+  .day-card .card-n {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
     flex-shrink: 0;
   }
-  .day-card .dc-meta { font-size: 12px; color: var(--tx-muted); margin-top: 6px; }
-  .day-card .dc-check {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    border: 2px solid var(--border);
-    flex-shrink: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
+  .day-card .card-info { flex: 1 !important; min-width: 0 !important; }
+  .day-card .card-date { font-size: 10px !important; margin-bottom: 1px !important; }
+  .day-card .card-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    letter-spacing: normal !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
-  .day-card .dc-check.done { background: var(--ok); border-color: var(--ok); }
-  .day-card .dc-expand {
-    font-size: 18px;
-    color: var(--tx-muted);
-    cursor: pointer;
-    padding: 4px;
-    transition: transform 0.2s;
+  .day-card .card-right { gap: 6px !important; flex-shrink: 0 !important; align-items: center !important; }
+  .day-card .card-badge { display: none !important; }
+  .day-card .card-pages { display: none !important; }
+  .day-card .custom-checkbox { width: 22px !important; height: 22px !important; }
+  .day-card .card-arrow { font-size: 14px !important; color: var(--tx-muted); }
+  .day-card.open .card-arrow { transform: rotate(90deg); }
+  .day-card .card-expanded-content { display: none; padding: 0 14px 12px 14px !important; }
+  .day-card.open .card-expanded-content { display: block; }
+  .day-card .expanded-readings { border-top: 1px solid var(--border); padding-top: 8px; }
+  .day-card .expanded-reading-item { font-size: 13px; padding: 6px 0; color: var(--tx-secondary); line-height: 1.4; }
+  .day-card .eri-author { color: var(--tx-primary); font-weight: 700; }
+  .day-card .btn-leer {
+    display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 6px;
+    background: var(--accent); color: #fff; text-decoration: none; margin-left: 6px; font-weight: 600;
   }
-  .day-card .dc-expand.open { transform: rotate(180deg); }
-  .day-card .dc-details { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
-  .day-card .dc-details.show { display: block; }
-  .day-card .dc-reading { font-size: 13px; padding: 6px 0; color: var(--tx-secondary); line-height: 1.4; }
-  .day-card .dc-reading b { color: var(--tx-primary); font-weight: 600; }
+  .day-card .btn-enter-focus { display: none !important; }
+  .day-card .expanded-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 8px; border-top: 1px solid var(--border); margin-top: 8px;
+  }
 
   /* ── BOTTOM SHEET ── */
   .bottom-sheet {
