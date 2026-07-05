@@ -1,21 +1,12 @@
-var CACHE_NAME = 'icse-v1';
+var CACHE_NAME = 'icse-v2';
 
 self.addEventListener('install', function(event) {
   self.skipWaiting();
   var urlsToCache = [
     './',
     './index.html',
-    './fonts/inter-300.woff2',
-    './fonts/inter-400.woff2',
-    './fonts/inter-500.woff2',
-    './fonts/inter-600.woff2',
-    './fonts/inter-700.woff2',
-    './fonts/inter-800.woff2',
-    './fonts/jetbrains-mono-400.woff2',
-    './fonts/jetbrains-mono-500.woff2',
-    './fonts/jetbrains-mono-700.woff2',
-    './fonts/noto-sans-400.woff2',
-    './fonts/noto-sans-700.woff2'
+    './textos/textos.css',
+    './textos/reader.js'
   ];
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
@@ -40,6 +31,27 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+  var url = new URL(event.request.url);
+
+  // Network-first for HTML files (always get fresh version)
+  if (event.request.destination === 'document' || url.pathname.endsWith('.html')) {
+    event.respondWith(
+      fetch(event.request).then(function(fetchResponse) {
+        if (fetchResponse && fetchResponse.status === 200) {
+          var responseClone = fetchResponse.clone();
+          caches.open(CACHE_NAME).then(function(cache) {
+            cache.put(event.request, responseClone);
+          });
+        }
+        return fetchResponse;
+      }).catch(function() {
+        return caches.match(event.request);
+      })
+    );
+    return;
+  }
+
+  // Cache-first for CSS, JS, fonts, images
   event.respondWith(
     caches.match(event.request).then(function(response) {
       return response || fetch(event.request).then(function(fetchResponse) {
