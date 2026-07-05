@@ -169,40 +169,34 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   READING CONTAINER (scroll-snap)
+   READING CONTAINER (smooth scroll)
    ═══════════════════════════════════════ */
 .reading-container {
   height: calc(100dvh - var(--header-height));
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
 /* ═══════════════════════════════════════
-   READING CHUNKS (one screen = one chunk)
+   READING CHUNKS (content-sized, no cutoff)
    ═══════════════════════════════════════ */
 .reading-chunk {
-  scroll-snap-align: start;
-  min-height: calc(100dvh - var(--header-height));
-  padding: 1.5rem 1.25rem 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  padding: 1.5rem 1.25rem 2rem;
   position: relative;
+  border-bottom: 1px solid var(--border);
 }
+.reading-chunk:last-child { border-bottom: none; }
 .reading-chunk > *:last-child { margin-bottom: 0; }
 
 /* ═══════════════════════════════════════
    RESUME BANNER
    ═══════════════════════════════════════ */
 .resume-banner {
-  scroll-snap-align: start;
   padding: 2rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  min-height: 50vh;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -256,8 +250,6 @@ body {
    ═══════════════════════════════════════ */
 .chapter-overview {
   padding: 1.5rem 1.25rem;
-  scroll-snap-align: start;
-  min-height: calc(100dvh - var(--header-height));
   display: flex;
   flex-direction: column;
 }
@@ -355,11 +347,7 @@ body {
   margin: 0 auto;
 }
 .metadatos {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem 1.5rem;
-  text-align: center;
+  display: none;
 }
 .metadatos .titulo-libro {
   font-family: var(--font-ui);
@@ -897,8 +885,8 @@ body.bionic-mode .contenido blockquote p {
   body { background: #fff; font-size: 12pt; padding-top: 0; overflow: visible; height: auto; }
   .reader-nav, .progress-bar-track, .scroll-top-btn, .section-dots,
   .reading-toast, .sprint-bar, .milestone-overlay, .milestone-toast { display: none !important; }
-  .reading-container { overflow: visible; height: auto; scroll-snap-type: none; }
-  .reading-chunk { min-height: auto; scroll-snap-align: none; padding: 0; }
+  .reading-container { overflow: visible; height: auto; }
+  .reading-chunk { padding: 0; }
   .page { padding: 0; max-width: 100%; }
   .metadatos { break-after: page; border: none; background: none; }
   .contenido h2, h3 { break-after: avoid; }
@@ -919,7 +907,7 @@ body.bionic-mode .contenido blockquote p {
   .nav-timer { font-size: 10px; padding: 2px 6px; }
   .nav-sound-toggle { font-size: 14px; }
   .nav-bionic-toggle { font-size: 8px; padding: 2px 5px; }
-  .reading-chunk { padding: 1.2rem 1rem 3.5rem; }
+  .reading-chunk { padding: 1.2rem 1rem 2rem; }
   .chapter-overview { padding: 1.2rem 1rem; }
   .metadatos { padding: 1.5rem 1.2rem; border-radius: 10px; }
   .metadatos .titulo-texto { font-size: 1.4em; }
