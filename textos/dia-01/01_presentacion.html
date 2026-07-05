@@ -17,7 +17,14 @@
       --border: rgba(255,255,255,0.06);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+      overflow: hidden; 
+      height: 100%; 
+      position: fixed; 
+      width: 100%; 
+    }
     body { background: var(--bg); color: var(--text-primary); font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 
     .reading-header {
@@ -59,20 +66,34 @@
     }
 
     .reading-scroll {
-      height: calc(100dvh - 44px); overflow-y: scroll;
-      scroll-snap-type: y mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+      position: fixed;
+      top: 44px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: contain;
     }
     .reading-chunk {
-      scroll-snap-align: start; min-height: calc(100dvh - 44px);
-      padding: 1.25rem 1.25rem 3rem; display: flex; flex-direction: column;
-      justify-content: flex-start; overflow: hidden; position: relative;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      width: 100%;
+      padding: 1.25rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow: hidden;
+      position: relative;
     }
-    .reading-chunk p { font-size: 1.05rem; line-height: 1.75; color: var(--text-primary); margin-bottom: 1rem; word-break: break-word; }
-    .reading-chunk h2 { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.75rem; margin-top: 0; }
-    .reading-chunk h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; margin-top: 0; }
-    .reading-chunk ul, .reading-chunk ol { padding-left: 1.25rem; margin-bottom: 1rem; }
-    .reading-chunk li { font-size: 1rem; line-height: 1.7; margin-bottom: 0.4rem; }
-    .reading-chunk blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1rem 0; font-style: italic; color: var(--text-muted); }
+    .reading-chunk p { font-size: 1rem; line-height: 1.75; color: var(--text-primary); margin: 0 0 1rem 0; word-break: break-word; overflow-wrap: break-word; }
+    .reading-chunk h2 { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin: 0 0 0.75rem 0; }
+    .reading-chunk h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin: 0 0 0.5rem 0; }
+    .reading-chunk ul, .reading-chunk ol { padding-left: 1.25rem; margin: 0 0 1rem 0; }
+    .reading-chunk li { font-size: 0.95rem; line-height: 1.65; margin-bottom: 0.35rem; }
+    .reading-chunk blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; margin: 0.75rem 0; font-style: italic; color: var(--text-muted); }
 
     .chapter-overview { justify-content: center !important; gap: 0.5rem; }
     .chapter-overview .overview-header { margin-bottom: 1.5rem; text-align: center; }
@@ -88,6 +109,33 @@
     .chapter-info { display: flex; flex-direction: column; gap: 0.25rem; }
     .chapter-title { font-size: 0.9rem; font-weight: 600; }
     .chapter-preview { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; }
+
+    .swipe-hint-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 1rem;
+      text-align: center;
+    }
+    .swipe-emoji {
+      font-size: 2.5rem;
+      animation: swipeBounce 1.5s ease-in-out infinite;
+    }
+    .swipe-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .swipe-subtext {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    @keyframes swipeBounce {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(12px); opacity: 0.5; }
+    }
 
     .swipe-hint {
       position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
@@ -110,21 +158,6 @@
       z-index: 200; white-space: nowrap; box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
     .milestone-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-    .resume-banner {
-      scroll-snap-align: start; min-height: calc(100dvh - 44px);
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      gap: 1rem; padding: 2rem; text-align: center;
-    }
-    .resume-text { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
-    .resume-continue {
-      background: var(--accent); color: #0a0a12; border: none; padding: 0.75rem 2rem;
-      border-radius: 0.5rem; font-weight: 600; font-size: 0.95rem; cursor: pointer; width: 100%; max-width: 280px;
-    }
-    .resume-restart {
-      background: transparent; color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1);
-      padding: 0.5rem 1.5rem; border-radius: 0.5rem; font-size: 0.8rem; cursor: pointer;
-    }
 
     .bionic-bold { font-weight: 700; color: var(--text-primary); }
     .user-highlight { background: rgba(232,197,71,0.2); border-bottom: 2px solid rgba(232,197,71,0.5); }
@@ -238,197 +271,170 @@
   (function() {
     var articleId = 'dia01_presentacion';
 
-    // ── CHUNKING ──
-    function buildChunks(container) {
-      var elements = Array.from(container.children);
-      var headerH = 44;
-      var navH = 0;
-      var viewportH = window.innerHeight - headerH - navH;
+    // ── CHUNKING BY ACTUAL HEIGHT ──
+    function buildReadingView() {
+      var article = document.getElementById('readingContent');
+      if (!article) return 0;
 
+      var originalChildren = Array.from(article.children);
       var scrollContainer = document.createElement('div');
       scrollContainer.className = 'reading-scroll';
       scrollContainer.id = 'readingScroll';
 
-      var currentChunk = document.createElement('div');
-      currentChunk.className = 'reading-chunk';
+      var headerH = document.querySelector('.reading-header')?.offsetHeight || 44;
+      var navH = 56;
+      var availableHeight = window.innerHeight - headerH - navH;
+
+      var currentChunk = null;
       var currentHeight = 0;
-      var chunks = [];
+      var chunkIndex = 0;
 
-      elements.forEach(function(el) {
-        var cloned = el.cloneNode(true);
-        var measure = cloned.cloneNode(true);
-        measure.style.visibility = 'hidden';
-        measure.style.position = 'absolute';
-        measure.style.width = '100%';
-        currentChunk.appendChild(measure);
-        var elHeight = measure.offsetHeight;
-        currentChunk.removeChild(measure);
+      function newChunk() {
+        var chunk = document.createElement('div');
+        chunk.className = 'reading-chunk';
+        chunk.dataset.chunkIndex = chunkIndex;
+        chunk.style.minHeight = availableHeight + 'px';
+        chunk.style.maxHeight = availableHeight + 'px';
+        chunk.style.overflow = 'hidden';
+        return chunk;
+      }
 
-        if (el.tagName && el.tagName.match(/^H[2-4]$/) && currentChunk.children.length > 0 && currentHeight > 50) {
-          chunks.push(currentChunk);
-          currentChunk = document.createElement('div');
-          currentChunk.className = 'reading-chunk';
+      function measureElement(el) {
+        var tmp = document.createElement('div');
+        tmp.style.cssText = 'position:absolute;visibility:hidden;width:' +
+          (window.innerWidth - 32) + 'px;padding:0 1.25rem;';
+        tmp.appendChild(el.cloneNode(true));
+        document.body.appendChild(tmp);
+        var h = tmp.offsetHeight;
+        document.body.removeChild(tmp);
+        return h;
+      }
+
+      // First chunk empty for swipe hint
+      currentChunk = newChunk();
+      scrollContainer.appendChild(currentChunk);
+      chunkIndex++;
+
+      for (var i = 0; i < originalChildren.length; i++) {
+        var el = originalChildren[i];
+        var clone = el.cloneNode(true);
+        var elHeight = measureElement(el);
+
+        // Force new chunk on headings if there's significant content
+        if (el.tagName.match(/^H[1-4]$/) && currentHeight > availableHeight * 0.15) {
+          currentChunk = newChunk();
+          scrollContainer.appendChild(currentChunk);
           currentHeight = 0;
+          chunkIndex++;
         }
 
-        if (currentHeight + elHeight > viewportH - 30 && currentChunk.children.length > 0) {
-          chunks.push(currentChunk);
-          currentChunk = document.createElement('div');
-          currentChunk.className = 'reading-chunk';
-          currentHeight = 0;
+        // If element doesn't fit
+        if (currentHeight + elHeight > availableHeight - 20) {
+          if (currentHeight > 0) {
+            currentChunk = newChunk();
+            scrollContainer.appendChild(currentChunk);
+            currentHeight = 0;
+            chunkIndex++;
+          }
         }
 
-        currentChunk.appendChild(cloned);
+        currentChunk.appendChild(clone);
         currentHeight += elHeight;
+      }
+
+      article.parentNode.replaceChild(scrollContainer, article);
+
+      // Re-index chunks
+      scrollContainer.querySelectorAll('.reading-chunk').forEach(function(c, i) {
+        c.dataset.chunkIndex = i;
       });
 
-      if (currentChunk.children.length > 0) chunks.push(currentChunk);
-
-      chunks.forEach(function(chunk, i) {
-        chunk.dataset.chunkIndex = i;
-        scrollContainer.appendChild(chunk);
-      });
-
-      container.parentNode.replaceChild(scrollContainer, container);
-      return chunks.length;
+      return scrollContainer.querySelectorAll('.reading-chunk').length;
     }
 
-    // ── CHAPTER OVERVIEW ──
+    // ── SWIPE HINT AS FIRST CHUNK ──
+    function addSwipeHint(scrollContainer) {
+      var firstChunk = scrollContainer.querySelector('.reading-chunk');
+      if (!firstChunk) return;
+
+      firstChunk.innerHTML = '<div class="swipe-hint-screen">' +
+        '<div class="swipe-emoji">↓</div>' +
+        '<div class="swipe-text">Deslizá para leer</div>' +
+        '<div class="swipe-subtext">Cada pantalla es una sección</div>' +
+        '</div>';
+    }
+    // ── CHAPTER OVERVIEW AS SECOND CHUNK ──
     function buildChapterOverview(scrollContainer) {
-      var headings = scrollContainer.querySelectorAll('h2');
+      var allChunks = scrollContainer.querySelectorAll('.reading-chunk');
+      var headings = [];
+
+      for (var i = 2; i < allChunks.length; i++) {
+        var h = allChunks[i].querySelector('h2, h3');
+        if (h) {
+          headings.push({ text: h.textContent, chunkIndex: i });
+        }
+      }
+
       if (headings.length < 2) return;
 
-      var overview = document.createElement('div');
-      overview.className = 'reading-chunk chapter-overview';
-      overview.dataset.chunkIndex = '0';
+      var overviewChunk = allChunks[1];
+      if (!overviewChunk) return;
 
-      var countEl = document.createElement('div');
-      countEl.className = 'overview-header';
-      countEl.innerHTML = '<span class="overview-count">' + headings.length + ' secciones</span>';
-      overview.appendChild(countEl);
+      overviewChunk.innerHTML = '<div class="overview-header">' +
+        '<span class="overview-count">' + headings.length + ' secciones</span></div>';
 
-      headings.forEach(function(h2, i) {
-        var nextP = h2.nextElementSibling;
-        var preview = '';
-        if (nextP && nextP.tagName === 'P') preview = nextP.textContent.slice(0, 80) + '...';
-
+      headings.forEach(function(h) {
         var card = document.createElement('button');
         card.className = 'chapter-card';
-        card.innerHTML = '<span class="chapter-num">' + String(i + 1).padStart(2, '0') + '</span>' +
-          '<div class="chapter-info"><span class="chapter-title">' + h2.textContent + '</span>' +
-          '<span class="chapter-preview">' + preview + '</span></div>';
-
+        card.innerHTML = '<span class="chapter-num">→</span>' +
+          '<span class="chapter-title">' + h.text + '</span>';
         card.onclick = function() {
-          var allChunks = scrollContainer.querySelectorAll('.reading-chunk');
-          allChunks.forEach(function(chunk) {
-            var h = chunk.querySelector('h2');
-            if (h && h.textContent === h2.textContent) chunk.scrollIntoView({ behavior: 'smooth' });
-          });
+          var targetChunk = allChunks[h.chunkIndex];
+          if (targetChunk) targetChunk.scrollIntoView({ behavior: 'smooth' });
         };
-        overview.appendChild(card);
+        overviewChunk.appendChild(card);
       });
-
-      var firstChunk = scrollContainer.querySelector('.reading-chunk');
-      if (firstChunk) scrollContainer.insertBefore(overview, firstChunk);
-
-      // re-index
-      var all = scrollContainer.querySelectorAll('.reading-chunk');
-      all.forEach(function(c, i) { c.dataset.chunkIndex = i; });
     }
 
-    // ── RESUME BANNER ──
-    function showResumeBanner(scrollContainer) {
-      var saved = null;
-      try { saved = JSON.parse(localStorage.getItem('reading_pos_' + articleId)); } catch(e) {}
-      if (!saved || saved.pct < 5) return;
-
-      var minutesAgo = Math.round((Date.now() - saved.timestamp) / 60000);
-      var timeText = minutesAgo < 60 ? 'hace ' + minutesAgo + 'm' : 'hace ' + Math.round(minutesAgo / 60) + 'h';
-
-      var banner = document.createElement('div');
-      banner.className = 'reading-chunk resume-banner';
-      banner.dataset.chunkIndex = '-1';
-      banner.innerHTML = '<div class="resume-text">' + saved.pct + '% leído ' + timeText + '</div>' +
-        '<button class="resume-continue">Continuar desde sección ' + (saved.chunk + 1) + '</button>' +
-        '<button class="resume-restart">Empezar de nuevo</button>';
-
-      scrollContainer.insertBefore(banner, scrollContainer.firstChild);
-
-      banner.querySelector('.resume-continue').onclick = function() {
-        var chunks = scrollContainer.querySelectorAll('.reading-chunk');
-        if (chunks[saved.chunk]) chunks[saved.chunk].scrollIntoView({ behavior: 'smooth' });
-        banner.remove();
-        reindex();
-      };
-      banner.querySelector('.resume-restart').onclick = function() {
-        scrollContainer.scrollTop = 0;
-        banner.remove();
-        reindex();
-      };
-
-      function reindex() {
-        scrollContainer.querySelectorAll('.reading-chunk').forEach(function(c, i) { c.dataset.chunkIndex = i; });
-      }
-    }
-
-    // ── PROGRESS ──
-    function updateReadingProgress(scrollContainer) {
+    // ── PROGRESS TRACKING WITH INTERSECTION OBSERVER ──
+    function setupScrollTracking(scrollContainer) {
       var chunks = scrollContainer.querySelectorAll('.reading-chunk');
-      var total = chunks.length;
-      var progressEl = document.getElementById('progressIndicator');
+      var totalContentChunks = chunks.length - 2;
+      var progressFill = document.getElementById('progressFill');
+      var progressIndicator = document.getElementById('progressIndicator');
 
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            var idx = parseInt(entry.target.dataset.chunkIndex) + 1;
-            if (idx > 0) progressEl.textContent = idx + '/' + total;
+          if (!entry.isIntersecting) return;
+
+          var idx = parseInt(entry.target.dataset.chunkIndex);
+          var total = chunks.length;
+
+          if (progressIndicator) {
+            progressIndicator.textContent = (idx + 1) + '/' + total;
           }
+
+          if (progressFill) {
+            var pct = Math.round((idx / (total - 1)) * 100);
+            progressFill.style.width = Math.min(100, pct) + '%';
+          }
+
+          if (navigator.vibrate) navigator.vibrate(5);
+
+          var effectivePct = Math.round(((idx - 1) / Math.max(1, totalContentChunks)) * 100);
+          if ([25, 50, 75, 100].includes(effectivePct)) {
+            showMilestoneToast(effectivePct + '%');
+          }
+
+          try {
+            localStorage.setItem('reading_pos_' + articleId, JSON.stringify({
+              chunk: idx, pct: effectivePct, timestamp: Date.now()
+            }));
+          } catch(e) {}
         });
-      }, { threshold: 0.5 });
+      }, { threshold: 0.5, root: scrollContainer });
 
       chunks.forEach(function(chunk) { observer.observe(chunk); });
-    }
-
-    function updateProgressBar(scrollContainer) {
-      var fillEl = document.getElementById('progressFill');
-      scrollContainer.addEventListener('scroll', function() {
-        var scrollTop = scrollContainer.scrollTop;
-        var scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-        var pct = scrollHeight > 0 ? Math.round((scrollTop / scrollHeight) * 100) : 0;
-        fillEl.style.width = pct + '%';
-      });
-    }
-
-    // ── CHUNK OBSERVER (haptics + milestones) ──
-    function setupChunkObserver(scrollContainer) {
-      var milestones = { 25: 'Un cuarto leído', 50: 'Mitad recorrida', 75: 'Ya falta poco' };
-
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            if (navigator.vibrate) navigator.vibrate(8);
-
-            var idx = parseInt(entry.target.dataset.chunkIndex);
-            var total = scrollContainer.querySelectorAll('.reading-chunk').length;
-            if (idx < 0) return;
-            var pct = Math.round(((idx + 1) / total) * 100);
-
-            if (milestones[pct]) {
-              showMilestoneToast(milestones[pct]);
-              if (navigator.vibrate) navigator.vibrate([30, 20, 30]);
-            }
-
-            // save position
-            try {
-              localStorage.setItem('reading_pos_' + articleId, JSON.stringify({
-                chunk: idx, pct: pct, timestamp: Date.now()
-              }));
-            } catch(e) {}
-          }
-        });
-      }, { threshold: 0.6 });
-
-      scrollContainer.querySelectorAll('.reading-chunk').forEach(function(chunk) { observer.observe(chunk); });
     }
 
     function showMilestoneToast(text) {
@@ -474,7 +480,7 @@
     function applyBionicReading(container) {
       var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
         acceptNode: function(node) {
-          if (node.parentElement.closest('h2, h3, .bionic-bold, .chapter-card, .resume-banner, .overview-header')) return NodeFilter.FILTER_REJECT;
+          if (node.parentElement.closest('h2, h3, .bionic-bold, .chapter-card, .overview-header')) return NodeFilter.FILTER_REJECT;
           return NodeFilter.FILTER_ACCEPT;
         }
       });
@@ -496,21 +502,6 @@
         });
         node.parentNode.replaceChild(fragment, node);
       });
-    }
-
-    // ── SWIPE HINT ──
-    function addSwipeHint(scrollContainer) {
-      var firstChunk = scrollContainer.querySelector('.reading-chunk');
-      if (!firstChunk) return;
-      var hint = document.createElement('div');
-      hint.className = 'swipe-hint';
-      hint.innerHTML = '<span>Deslizá para leer</span><div class="arrow"></div>';
-      firstChunk.appendChild(hint);
-
-      scrollContainer.addEventListener('scroll', function hideHint() {
-        hint.classList.add('hidden');
-        scrollContainer.removeEventListener('scroll', hideHint);
-      }, { once: true });
     }
 
     // ── HIGHLIGHTS ──
@@ -542,17 +533,13 @@
 
     // ── INIT ──
     document.addEventListener('DOMContentLoaded', function() {
-      var container = document.getElementById('readingContent');
-      var totalChunks = buildChunks(container);
+      var totalChunks = buildReadingView();
       var scrollContainer = document.getElementById('readingScroll');
 
-      buildChapterOverview(scrollContainer);
-      showResumeBanner(scrollContainer);
-      updateReadingProgress(scrollContainer);
-      updateProgressBar(scrollContainer);
-      setupChunkObserver(scrollContainer);
-      startSessionTimer();
       addSwipeHint(scrollContainer);
+      buildChapterOverview(scrollContainer);
+      setupScrollTracking(scrollContainer);
+      startSessionTimer();
       enableHighlights(scrollContainer);
 
       var bionicActive = false;

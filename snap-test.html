@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { margin: 0; overflow: hidden; position: fixed; width: 100%; height: 100%; }
+.snap-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+.snap-item:nth-child(1) { background: #1a1a2e; }
+.snap-item:nth-child(2) { background: #16213e; }
+.snap-item:nth-child(3) { background: #0f3460; }
+.snap-item:nth-child(4) { background: #533483; }
+</style>
+</head>
+<body>
+<div class="snap-container">
+  <div class="snap-item">Pantalla 1</div>
+  <div class="snap-item">Pantalla 2</div>
+  <div class="snap-item">Pantalla 3</div>
+  <div class="snap-item">Pantalla 4</div>
+</div>
+</body>
+</html>
