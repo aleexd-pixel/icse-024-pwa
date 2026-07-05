@@ -2,363 +2,131 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Golpes de Estado y otras formas de interrupción — ICSE 024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-        :root {
-      --bg: #1a1a1a;
-      --text: #d4d0c8;
-      --text-muted: #8a8580;
-      --heading: #e8e4dc;
-      --border: #3a3530;
-      --surface: #242220;
-      --accent: #c9854a;
-      --red-soft: #e06060;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      font-size: 18px;
-      line-height: 1.75;
-      padding: 0;
-    }
-
-    .page {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 4rem 2rem 6rem;
-    }
-
-    .metadatos {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
-    .metadatos .titulo-libro {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .metadatos .titulo-texto {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 2em;
-      font-weight: 600;
-      color: var(--heading);
-      line-height: 1.25;
-      margin-bottom: 0.6rem;
-    }
-
-    .metadatos .autor {
-      font-size: 1.05em;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-
-    .metadatos .info {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78em;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .metadatos .badge {
-      display: inline-block;
-      margin-top: 1.2rem;
-      padding: 0.35rem 1.2rem;
-      background: var(--heading);
-      color: #1a1a1a;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72em;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border-radius: 2px;
-    }
-
-    .contenido p {
-      text-indent: 1.5em;
-      margin-bottom: 0;
-      text-align: justify;
-      hyphens: auto;
-    }
-
-    .contenido p + p {
-      margin-top: 0.9em;
-    }
-
-    .contenido p:first-of-type {
-      text-indent: 0;
-    }
-
-    .contenido p.first-of-section {
-      text-indent: 0;
-    }
-
-    .contenido h2 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 600;
-      color: var(--heading);
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido h3 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.2em;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--heading);
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .contenido h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contenido blockquote {
-      margin: 2rem 0 2rem 1.5rem;
-      padding: 1rem 1.5rem;
-      border-left: 3px solid var(--accent);
-      font-style: italic;
-      color: var(--text-muted);
-      background: var(--surface);
-      font-size: 0.95em;
-    }
-
-    .contenido blockquote p {
-      text-indent: 0;
-      text-align: left;
-    }
-
-    .contenido ul,
-    .contenido ol {
-      margin: 1.2rem 0 1.2rem 2rem;
-    }
-
-    .contenido li {
-      margin-bottom: 0.5em;
-      padding-left: 0.3em;
-    }
-
-    .contenido table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.9em;
-    }
-
-    .contenido table th {
-      background: var(--surface);
-      color: var(--heading);
-      padding: 0.7rem 1rem;
-      text-align: left;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 0.85em;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    border-bottom: 2px solid var(--accent); }
-
-    .contenido table td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido table tr:nth-child(even) {
-      background: var(--surface);
-    }
-
-    .contenido .ilegible {
-      color: var(--red-soft);
-      font-weight: 600;
-      background: #3a2020;
-      padding: 0.1em 0.3em;
-      border-radius: 2px;
-    }
-
-    .contenido .nota-num {
-      font-size: 0.75em;
-      vertical-align: super;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .notas {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .notas h2 {
-      font-size: 1.1em;
-      margin-bottom: 1rem;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .notas p {
-      font-size: 0.85em;
-      text-indent: 0;
-      margin-bottom: 0.6em;
-      color: var(--text-muted);
-      text-align: left;
-    }
-
-    .separador {
-      text-align: center;
-      margin: 3rem 0;
-      color: var(--border);
-      font-size: 1.2em;
-      letter-spacing: 0.5em;
-    }
-
-    footer {
-      margin-top: 5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    @media print {
-      body { background: #fff; font-size: 12pt; }
-      .page { padding: 0; max-width: 100%; }
-      .metadatos { break-after: page; border: none; background: none; }
-      .contenido h2 { break-after: avoid; }
-      .contenido h3 { break-after: avoid; }
-      blockquote { break-inside: avoid; }
-      table { break-inside: avoid; }
-      footer { break-before: avoid; }
-    }
-
-    @media (max-width: 700px) {
-      .page { padding: 2rem 1.2rem 4rem; }
-      body { font-size: 16px; }
-      .metadatos .titulo-texto { font-size: 1.6em; }
-    }
-  </style>
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="../textos.css">
 </head>
 <body>
+
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">Golpes de Estado y otras formas de interrupción</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
   <div class="page">
     <div class="metadatos">
-      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
-      <div class="titulo-texto">Golpes de Estado y otras formas de interrupción</div>
-      <div class="autor">Florencia Deich</div>
-      <div class="info">Páginas originales: 117–128</div>
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+      <div class="titulo-texto">Golpes de Estado y otras formas de interrupción</div>
+      <div class="autor">Florencia Deich</div>
+      <div class="info">Páginas originales: 117–128</div>
       <div class="badge">Día 7 — Unidad 2</div>
     </div>
 
     <div class="contenido">
-      <h2>Capítulo 9. Golpes de Estado y otras formas de interrupción del régimen democrático</h2>
-<p class="first-of-section">Este texto presenta una serie de elementos que permiten comprender las características propias y las diferencias entre los conceptos golpe de Estado e interrupción institucional y su importancia a la hora de entender la historia argentina del siglo XX.</p>
-<p>Los momentos en que se produce un golpe de Estado u otro tipo de interrupción del régimen político democrático en una sociedad determinada son, en general, muy problemáticos. Por eso, requieren de un análisis detallado. Los vínculos entre la sociedad y el Estado son siempre difíciles de entender, ya que involucran actores sociales y grupos con estrategias, representaciones e intereses contradictorios e incluso, internacionales.</p>
-<p>Para poder abordar esta complejidad, en las primeras tres secciones analizaremos los conceptos que vamos a utilizar posteriormente. Luego, realizaremos un análisis de los golpes de Estado e interrupciones institucionales que se sucedieron en la historia de la Argentina. Prestaremos especial atención al final del gobierno de Arturo Frondizi, por las características particulares que supuso.</p>
-
-<h3>¿Qué es un golpe de Estado?</h3>
-<p>Un golpe de Estado es una acción que no está prevista en la ley. Ninguna constitución prescribe que el golpe de Estado es la salida permitida para algún tipo de crisis. Por eso, el que intenta tomar el poder de un modo no democrático, se impone por la utilización ilegal de la fuerza. En el caso de la Argentina, en todos los golpes de Estado, desde 1930 a 1976, se produjo la caída del régimen democrático y se instauraron regímenes no democráticos militares. Por esto es importante resaltar que, cuando un golpe de Estado triunfa, siempre produce un cambio de régimen político. Generalmente, una parte importante de las regulaciones de dicho régimen está establecida en las constituciones nacionales, y estas incluyen las formas previstas de acceso al poder y las regulaciones de dicho régimen.</p>
-<p>La Constitución argentina hace referencia a esto en su artículo 36, incorporado en la reforma de 1994:</p>
-<blockquote>
-<p>Art. 36.- Esta Constitución mantendrá su imperio aun cuando se interrumpiere su observancia por actos de fuerza contra el orden institucional y el sistema democrático. Estos actos serán insanusceptibles de apelación. Sus autores serán pasibles de la sanción prevista en el artículo 29, inhabilitados a perpetuidad para ocupar cargos públicos y excluidos de los beneficios del indulto y la conmutación de penas. Tendrán las mismas sanciones quienes, como consecuencia de estos actos, usurparen funciones previstas para las autoridades de esta Constitución o las de las provincias, los que responderán civil y penalmente de sus actos. Las acciones respectivas serán imprescriptibles. Todos los ciudadanos tienen el derecho de resistencia contra quienes ejecutaren los actos de fuerza enunciados en este artículo. El Congreso sancionará una ley sobre ética pública para el ejercicio de la función.</p>
-</blockquote>
-
-<p>En este sentido, el concepto de cambio de régimen político es clave para el análisis de los golpes de Estado, ya que el golpe es el instrumento que permite conducir y producir ese cambio. Se entiende por régimen político el conjunto de instituciones que establecen las reglas del juego político (cómo se eligen las autoridades, cuánto duran en sus cargos, quiénes las eligen, cuáles son sus límites, etcétera). Al cambiar esas instituciones y sus reglas, se produce, por definición, una transformación en el régimen.</p>
-<p>Un golpe de Estado es un hecho en el que participan diversos sectores y grupos sociales que en general solo coinciden en terminar con el régimen democrático vigente. En general, los golpes son liderados y planificados por los militares, pero también son impulsados por distintos actores civiles. Además, en muchas ocasiones, cuentan con fuerte apoyo de sectores políticos, sociales, religiosos, gremiales e incluso, internacionales. Un golpe de Estado siempre es un hecho violento, aunque varíe el grado y la forma en que se aplica dicha violencia.</p>
-<p>Un golpe de Estado involucra, necesariamente, algún tipo de violencia por parte de quienes lo ejecutan. Aunque con diferentes grados, las fuerzas militares salen de los cuarteles donde están destinadas normalmente y aplican la fuerza contra el gobierno democrático con el fin de expulsarlo del poder. Las diferencias respecto del grado de violencia aplicada al derrocar a un gobierno también se pueden relacionar con la intensidad de la oposición social percibida por los líderes del golpe y con la fortaleza del gobierno que se busca derrocar.</p>
-<p>Un golpe de Estado, sin importar la causa que invoque, es siempre un acto ilegal.</p>
-
-<h3>Clasificación de los golpes de Estado</h3>
-<p>Los golpes de Estado pueden clasificarse según sus características. Pueden ser liderados por los militares, por sectores civiles o por el propio gobierno en lo que se conoce como autogolpe (Romero, 2017).</p>
-<p>Los golpes de Estado en los que las Fuerzas Armadas toman el poder y son liderados por los militares son los más comunes en la historia argentina. En estos casos, todas las instituciones quedan bajo la órbita militar: los jefes de dichas fuerzas suprimen el parlamento y eligen al presidente, los gobernadores, los intendentes y los embajadores. Todas las decisiones se toman en el seno de la institución militar, que es el verdadero poder. Este tipo de golpe de Estado fue el más común en la historia argentina. Un ejemplo paradigmático fue el golpe de 1976, cuando los militares, además de tener el poder real, ocuparon numerosas posiciones en la administración pública. Muchas veces, quienes ocupan esos cargos son también hombres de armas.</p>
-<p>En la Argentina, los golpes de Estado en que el grupo dominante no fueron las Fuerzas Armadas no han sido comunes, pero pueden encontrarse ejemplos en otros países, como, por ejemplo, en Honduras en el año 2009.</p>
-<p>Un tercer tipo de golpe ocurre cuando un gobierno originalmente democrático se perpetúa en el poder más allá de lo legalmente permitido. Esto puede suceder porque visualiza perder en las siguientes elecciones, porque carece del poder necesario para llevar a cabo su proyecto o porque la reelección es limitada. En estos casos, se trata de autogolpes de Estado: un presidente que había sido elegido por la vía democrática se perpetúa en el poder con apoyo de grupos económicos, religiosos o sociales particulares.</p>
-<p>Los golpes de Estado no son exclusivos de las Fuerzas Armadas. Otros actores pueden organizar un golpe con el objetivo de cambiar el rumbo político de un país. En la historia hay golpes que estuvieron dirigidos por cualquier ámbito.</p>
-<p>Mas allá de los elementos en común definidos hasta aquí, cada golpe de Estado es un hecho que tiene características propias y, por lo tanto, diferentes de las de otros golpes de Estado. Los aspectos que se deben considerar para identificar un golpe de Estado y distinguirlo de otros son: las causas que lo conducen; los actores que lo llevan a cabo y quienes ejercen su liderazgo; sus intereses y discursos; la forma en que se desarrolla; las consecuencias sobre el sistema político y la vida social.</p>
-<p>Por lo general, los argumentos esgrimidos por quienes llevan adelante un golpe de Estado se emparentan con la existencia de una profunda crisis política, institucional o económica en una nación. A veces, esa crisis es inventada, no es real; es solo una excusa de los golpistas para legitimar su accionar. Pero en otras, el gobierno democrático de turno ha perdido la legitimidad ante parte de la ciudadanía, que no quiere esperar a nuevas elecciones o que piensa que esas elecciones no cambiarán nada. La población, entonces, no cree que el gobierno democrático pueda solucionar los problemas a los que hay que hacer frente y esta situación abre las puertas a una posible acción golpista.</p>
-<p>En el marco de una crisis de esta índole, el gobierno democrático también suele perder el control de las instituciones que monopolizan la fuerza, como el ejército y la policía, y no cuenta con el sosten de sectores poderosos que podrían evitar el golpe (empresarios, Iglesia, prensa, sindicatos, otros partidos y liderazgos, etcétera). En síntesis, para tomar el poder, los golpistas se aprovechan de ambos factores: una situación de crisis (social o económica) que parece no poder ser solucionada y la falta de apoyo al gobierno.</p>
-
-<h3>Interrupciones institucionales sin cambio de régimen</h3>
-<p>Como ya señalamos, cuando es exitoso, un golpe de Estado siempre produce un cambio de régimen. Pero esta no es la única forma de inestabilidad. A veces también hay turbulencias y conflictos que, aunque pueden generar un cambio de gobierno, no cambian el régimen político. En estos casos, se habla de interrupciones institucionales. Una interrupción institucional del régimen democrático se produce cuando ante un conflicto social y político, la intervención militar o de otro grupo logra derrocar al gobierno, pero sin cambiar el régimen político.</p>
-<p>En América Latina, y especialmente en la Argentina, gran parte del siglo XX se caracterizó por la sucesión de golpes de Estado militares. Esto estuvo ligado a un momento muy particular del mundo, relacionado con la lucha contra el comunismo y la llamada Guerra Fría.</p>
-<p>Sin embargo, la ausencia de golpes de Estado no significa que los regímenes democráticos hayan pasado a ser estables y que los presidentes democráticos ya no hayan tenido desafíos a su propia continuidad. De hecho, las democracias latinoamericanas enfrentan todavía una gran cantidad de conflictos institucionales, pero que no tuvieron las formas y los resultados clásicos de los golpes militares.</p>
-<p>Desde la década de 1990, en América Latina, los golpes de Estado militares ya no fueron tan habituales, debido al cambio de contexto global con el fin de la Guerra Fría y la caída de la Unión Soviética. Los golpes de Estado también dejaron de ser herramientas comunes porque los militares ya no gozaban del prestigio y el poder que tuvieron en el pasado, y las derrotas militares y las crisis económicas que dejaron al gobierno que los reemplazó terminaron con la idea de que los militares podían servir para algo más allá de gestionar la vida en los cuarteles.</p>
-<p>Otras posibilidades de inestabilidad incluyen: una movilización popular genera una situación de desborde que obliga al gobierno a renunciar anticipadamente. El accionar del congreso, a través de distintas formas legales del juicio político, logra expulsar a un presidente o también bloquear sus políticas y forzar una renuncia. Sectores poderosos, externos o internos, pasan de ser aliados del presidente a la oposición, y lo dejan sin apoyo. La justicia toma iniciativas ante diversas acusaciones. Se generan campañas de la prensa, bloqueos sindicales o acciones que muestran el poder del mercado, entre muchas otras posibilidades.</p>
-<p>De diferentes formas e intensidades, estos nuevos modos de inestabilidad han logrado terminar con varias presidencias en América Latina. En ocasiones es el congreso el que, por diversos motivos, decide poner fin anticipadamente al mandato de un presidente democrático y nombra a un reemplazante, como fue el caso —entre varios más— del brasileño Fernando Collor de Mello en 1992, del paraguayo Fernando Lugo en 2012, de la brasileña Dilma Rousseff en 2016 y de los peruanos Pedro Pablo Kuczynski y Martín Vizcarra en 2018 y 2020, respectivamente.</p>
-<p>La combinación de descontrol económico y desorden social produce la sensación de que es necesario un cambio y eso posibilita un cambio. El intento de desestabilizar a un gobierno de este modo no solo se observa en variables económicas, sino también en la calle. Por eso, incluye los llamados "saqueos" y movilizaciones informales de sectores marginados bajo la batuta de grupos políticos. Mediante estos actos, dichos grupos buscan crear una sensación de descontrol y pérdida de orden para debilitar o terminar con un gobierno y asumir en su reemplazo.</p>
-<p>También se puede mencionar como fuente de inestabilidad el accionar de grandes grupos económicos que, en vez de tropas y aviones, utilizan el mercado financiero y la economía para provocar la desestabilización del gobierno en ejercicio. A través de ataques especulativos contra la moneda nacional o mediante subidas del dólar, se hace manifiesto su poder y en ocasiones pueden lograr la caída del gobierno vigente.</p>
-<p>La existencia de un cambio presidencial sin un cambio de régimen fue la que aceleró el fin del gobierno de Raúl Alfonsín en 1989 y, en gran medida, la que terminó con el de Fernando de la Rúa (Romero, 2017).</p>
-
-<h3>Golpes de Estado en la Argentina</h3>
-<p>Durante el siglo XX se sucedieron cinco golpes de Estado militares: en 1930, 1943, 1955, 1966 y 1976. También hubo varias interrupciones institucionales del régimen democrático. En la Argentina hubo golpes e interrupciones de gobiernos constitucionales, aunque, como dijimos, no todos estos hechos tuvieron rasgos similares. Cada uno de esos golpes adoptó diferentes características en relación con los objetivos y actores que los llevaron a cabo.</p>
-<p>Los tres primeros golpes en la Argentina (1930, 1943 y 1955) establecieron dictaduras que, transcurrido cierto tiempo, llamaron a elecciones. Esto cambió con los últimos dos golpes de Estado (1966 y 1976), ya que en esos casos las dictaduras triunfantes intentaron, infructuosamente, establecer gobiernos de largo plazo. Esto se argumentaba en nombre del tiempo que se requería para concretar las reformas profundas que, según los golpistas, necesitaba el país (Romero, 2017).</p>
-<p>El primer golpe militar de la historia argentina tuvo lugar el 6 de septiembre del año 1930 y fue liderado por el general José Félix Uriburu. Este golpe derrocó al presidente Hipólito Yrigoyen, de la Unión Cívica Radical, que había sido elegido por el voto popular para ejercer su segundo mandato en 1928. El golpe de 1930 no tuvo el apoyo activo de numerosos sectores de las Fuerzas Armadas, aunque sí de gran parte de la prensa, de la Iglesia y de los partidos opositores. El mismo Juan Domingo Perón fue una pieza importante en ese proceso. Este golpe no se originó por causas económicas, sino que surgió como respuesta a la intención del gobierno del presidente derrocado, Ramón Castillo, de romper la neutralidad argentina frente a la Segunda Guerra Mundial, para volcarse al bando aliado liderado por Estados Unidos. Fue el único golpe que tuvo solo intervención militar, ya que la participación civil fue prácticamente nula.</p>
-<p>La dictadura del general Uriburu y sus continuadores utilizaron la proscripción (prohibición de presentarse a elecciones) del radicalismo y el control absoluto de los resultados electorales a través del fraude. Este hecho dio inicio a lo que algunos denominaron la década infame, un gobierno falsamente democrático y restringido.</p>
-<p>El siguiente golpe de Estado, realizado en junio de 1943, tuvo varias particularidades que lo destacan de los otros. Fue un golpe importante en la historia del país, más allá de la brevedad e inestabilidad de los gobiernos que inauguró (Romero, 2017). Lo primero que se debe destacar del golpe de 1943 es que derrocó al régimen de la llamada "década infame". Los responsables del golpe admiraban el modelo italiano liderado por el fascista Benito Mussolini; sobre todo, por el orden social que había logrado implantar. El golpe de 1943 tuvo varias particularidades: como consecuencia de la falta de acuerdo entre quienes formaban parte de la coalición golpista, tres militares se autoproclamaron presidentes sucesivamente: Arturo Rawson, Pedro Pablo Ramírez y Edelmiro Farrell.</p>
-<p>El siguiente golpe (1955) se caracterizó por su antiperonismo y por la violencia ejercida contra los seguidores del general Perón, quien había sido elegido como presidente en 1945 y reelegido en 1951. Otra particularidad que presentó este golpe se relaciona con la falta de acuerdo entre quienes formaban parte de la coalición golpista, lo que trajo conflictos internos con respecto a la gobernabilidad.</p>
-<p>En el caso del gobierno de Arturo Frondizi (1958-1962), se mantuvo la fachada constitucional, ya que al haber renunciado el vicepresidente que lo acompañó en la fórmula, Alejandro Gómez, asumió la primera magistratura del país José María Guido (1962-1963), quien era presidente provisional de la Cámara de Senadores. Así se mantuvieron las formas constitucionales (Romero, 2017). Es decir, no hubo un cambio de régimen: lo definimos como una interrupción institucional.</p>
-<p>En el caso del golpe de Estado que derrocó al presidente Arturo Illia (1963-1966), sucesor del de Guido, lo llamativo fue que el país no vivía ninguna crisis económica ni algún desorden social de magnitud. Por el contrario, se trató de un momento de estabilidad y de relativo crecimiento. Vale decir que fue un golpe de Estado ocasionado por diferencias políticas y por las ambiciones de distintos actores que no estaban dispuestos a esperar el final del mandato del radical. El golpe contra Illia contó con el activo apoyo del peronismo a través de la participación sindical y las señales enviadas por el mismo Perón desde España, donde se encontraba exiliado.</p>
-<p>El golpe de Estado liderado por el general Juan Carlos Onganía (1966) se propuso conformar un gobierno de largo plazo y buscaba imponer un cambio estructural en la economía y la sociedad argentinas. No lo logró y, además, debió renunciar como consecuencia de un movimiento social y la derrota militar en la guerra por las Malvinas. Tanto la guerra como la quiebra económica del país ocasionaron un desastre de tal magnitud que terminaron con la idea de que los militares podían servir para algo más allá de gestionar la vida en los cuarteles.</p>
-<p>El último golpe de Estado (1976) se caracterizó por haber sido el más sangriento de la historia argentina. Se impuso el terrorismo de Estado y se violaron sistemáticamente los derechos humanos, con miles de desaparecidos, muertos, secuestros y exilios. Además, la crisis económica que dejaron al gobierno que los reemplazó fue una de las peores que había vivido el país hasta entonces. La derrota en la guerra de Malvinas (1982) fue el punto final de esa experiencia dictatorial.</p>
-<p>De hecho, hasta el día de hoy no se ha registrado ningún otro gobierno militar. Tampoco los militares han vuelto a aparecer ante la opinión pública como posibles líderes para solucionar coyunturas de crisis, lo que era muy habitual en los años previos a 1983.</p>
-
-<h3>Las interrupciones institucionales en la Argentina</h3>
-<p>En cuanto a las interrupciones institucionales del régimen democrático, en la Argentina, tres más: con el fin de los gobiernos de Héctor Cámpora (1974), Fernando de la Rúa (2001) y Eduardo Duhalde en 2003 (por una cuestión de tiempos históricos, esta última no se abordará en este trabajo). Estos casos tienen en común que el presidente constitucional debió abandonar el cargo, pero sin producirse por eso un cambio de régimen.</p>
-<p>La primera interrupción sucedió en 1973, cuando el presidente Cámpora y el vicepresidente Vicente Solano Lima renunciaron y fueron reemplazados por el tercero en la línea constitucional, el entonces presidente de la Cámara de Diputados, Raúl Lastiri. Esto ocurrió por movimientos dentro del peronismo para convocar a nuevas elecciones y garantizar el retorno de Perón a la presidencia.</p>
-<p>En el caso de De la Rúa, en el año 2001, el Congreso, siguiendo las reglas previstas por la Constitución, nombró al reemplazante debido a que el presidente había renunciado en medio de una grave crisis política y económica (Romero, 2017).</p>
-
-<h3>El (fracasado) golpe de Estado contra Frondizi: un caso particular</h3>
-<p>El reemplazo del presidente Arturo Frondizi en 1963 es complejo de conceptualizar. Los militares eran el principal grupo de poder del país. En esa condición, y sabiéndose poderosos y dueños de las armas, presionaban y buscaban debilitar a Frondizi desde su misma asunción. A esto deben sumarse los propios errores cometidos por el presidente y su grupo, que le habían quitado parte del apoyo popular que tuvo al asumir.</p>
-<p>Los militares decidieron quitarlo del poder. Y en este sentido su accionar fue exitoso. Sin embargo, no lograron cumplir con todos sus objetivos, ya que no colocaron a una persona de las Fuerzas Armadas en la presidencia. Las divisiones internas les impedían designar un presidente de consenso, al menos en forma rápida. En los golpes militares, suele ser más fácil lograr acuerdos para derrocar un gobierno que para instaurar uno nuevo. Pero a la vez, si no asumían, dejaban el poder en manos de José María Guido.</p>
-<p>Frondizi puso a los militares ante un dilema. Si asumían ellos mismos la presidencia, pagarían un alto costo por interrumpir el orden constitucional una vez más, cuando el objetivo de quitar a Frondizi ya estaba cumplido. De hecho, las divisiones internas les impedían designar un presidente de consenso. Poco antes de finalizar el mandato de Frondizi, los militares decidieron quitarlo del poder. La rápida reacción del presidente provisional de la Cámara de Senadores al asumir la presidencia ante la acefalia por el derrocamiento del gobierno garantizó alguna forma de continuidad institucional.</p>
-<p>De esta forma, las reglas de sucesión previstas en la Constitución Nacional se mantuvieron, y se resolvió según lo previsto en la Constitución nacional vigente. El golpe de Estado triunfó a medias, porque quitó al presidente de su cargo pero fracasó en la capacidad de imponerse sobre el poder civil, que pudo garantizar alguna forma de continuidad institucional y no produjo un cambio de régimen político. Es decir, lo que se inició como un golpe de Estado terminó como una interrupción institucional porque no logró cambiar el régimen político.</p>
-
-<div class="separador">• • •</div>
-
-<h3>Conclusiones</h3>
-<p>En las páginas previas analizamos los conceptos de golpe de Estado e interrupción institucional. Una vez que estos conceptos son comprendidos en su especificidad, puede plantearse un estudio más profundo e incluso compararlos con otros fenómenos similares. De este modo se podrán entender mejor y entender por qué ocurrieron, cómo transcurrieron y finalizaron.</p>
-<p>Por lo expuesto, el golpe de Estado ha sido un protagonista ineludible en la historia argentina. Sin embargo, como método habitual de influencia política, no es el único culpable ni el responsable de los desencuentros o de la decadencia de la sociedad argentina. La caída de un régimen democrático por la fuerza es el síntoma y la muestra de profundos desacuerdos y de la imposibilidad de una sociedad (con sus grupos antagónicos) de construir, entre las élites de los distintos sectores sociales, rumbos consensuados, de un orden político basado en el consenso y en algunos acuerdos que permitieran que el país recorriera un camino para la construcción de determinados liderazgos o para quitárselo a otros.</p>
-<p>Como se ha visto en páginas anteriores, hay sociedades que no han tenido la experiencia de pasar por golpes de Estado y otras que han tenido pocos golpes, o estos fueron de muy breve duración. No es el caso de la Argentina, donde aparece una apelación constante al golpe de Estado y a las interrupciones institucionales como salidas a crisis económicas o políticas. También como una vía rápida para acceder al poder para determinados liderazgos o para quitárselo a otros.</p>
-
-<h3>Referencias bibliográficas</h3>
+      <h2>Capítulo 9. Golpes de Estado y otras formas de interrupción del régimen democrático</h2>
+<p class="first-of-section">Este texto presenta una serie de elementos que permiten comprender las características propias y las diferencias entre los conceptos golpe de Estado e interrupción institucional y su importancia a la hora de entender la historia argentina del siglo XX.</p>
+<p>Los momentos en que se produce un golpe de Estado u otro tipo de interrupción del régimen político democrático en una sociedad determinada son, en general, muy problemáticos. Por eso, requieren de un análisis detallado. Los vínculos entre la sociedad y el Estado son siempre difíciles de entender, ya que involucran actores sociales y grupos con estrategias, representaciones e intereses contradictorios e incluso, internacionales.</p>
+<p>Para poder abordar esta complejidad, en las primeras tres secciones analizaremos los conceptos que vamos a utilizar posteriormente. Luego, realizaremos un análisis de los golpes de Estado e interrupciones institucionales que se sucedieron en la historia de la Argentina. Prestaremos especial atención al final del gobierno de Arturo Frondizi, por las características particulares que supuso.</p>
+
+<h3>¿Qué es un golpe de Estado?</h3>
+<p>Un golpe de Estado es una acción que no está prevista en la ley. Ninguna constitución prescribe que el golpe de Estado es la salida permitida para algún tipo de crisis. Por eso, el que intenta tomar el poder de un modo no democrático, se impone por la utilización ilegal de la fuerza. En el caso de la Argentina, en todos los golpes de Estado, desde 1930 a 1976, se produjo la caída del régimen democrático y se instauraron regímenes no democráticos militares. Por esto es importante resaltar que, cuando un golpe de Estado triunfa, siempre produce un cambio de régimen político. Generalmente, una parte importante de las regulaciones de dicho régimen está establecida en las constituciones nacionales, y estas incluyen las formas previstas de acceso al poder y las regulaciones de dicho régimen.</p>
+<p>La Constitución argentina hace referencia a esto en su artículo 36, incorporado en la reforma de 1994:</p>
+<blockquote>
+<p>Art. 36.- Esta Constitución mantendrá su imperio aun cuando se interrumpiere su observancia por actos de fuerza contra el orden institucional y el sistema democrático. Estos actos serán insanusceptibles de apelación. Sus autores serán pasibles de la sanción prevista en el artículo 29, inhabilitados a perpetuidad para ocupar cargos públicos y excluidos de los beneficios del indulto y la conmutación de penas. Tendrán las mismas sanciones quienes, como consecuencia de estos actos, usurparen funciones previstas para las autoridades de esta Constitución o las de las provincias, los que responderán civil y penalmente de sus actos. Las acciones respectivas serán imprescriptibles. Todos los ciudadanos tienen el derecho de resistencia contra quienes ejecutaren los actos de fuerza enunciados en este artículo. El Congreso sancionará una ley sobre ética pública para el ejercicio de la función.</p>
+</blockquote>
+
+<p>En este sentido, el concepto de cambio de régimen político es clave para el análisis de los golpes de Estado, ya que el golpe es el instrumento que permite conducir y producir ese cambio. Se entiende por régimen político el conjunto de instituciones que establecen las reglas del juego político (cómo se eligen las autoridades, cuánto duran en sus cargos, quiénes las eligen, cuáles son sus límites, etcétera). Al cambiar esas instituciones y sus reglas, se produce, por definición, una transformación en el régimen.</p>
+<p>Un golpe de Estado es un hecho en el que participan diversos sectores y grupos sociales que en general solo coinciden en terminar con el régimen democrático vigente. En general, los golpes son liderados y planificados por los militares, pero también son impulsados por distintos actores civiles. Además, en muchas ocasiones, cuentan con fuerte apoyo de sectores políticos, sociales, religiosos, gremiales e incluso, internacionales. Un golpe de Estado siempre es un hecho violento, aunque varíe el grado y la forma en que se aplica dicha violencia.</p>
+<p>Un golpe de Estado involucra, necesariamente, algún tipo de violencia por parte de quienes lo ejecutan. Aunque con diferentes grados, las fuerzas militares salen de los cuarteles donde están destinadas normalmente y aplican la fuerza contra el gobierno democrático con el fin de expulsarlo del poder. Las diferencias respecto del grado de violencia aplicada al derrocar a un gobierno también se pueden relacionar con la intensidad de la oposición social percibida por los líderes del golpe y con la fortaleza del gobierno que se busca derrocar.</p>
+<p>Un golpe de Estado, sin importar la causa que invoque, es siempre un acto ilegal.</p>
+
+<h3>Clasificación de los golpes de Estado</h3>
+<p>Los golpes de Estado pueden clasificarse según sus características. Pueden ser liderados por los militares, por sectores civiles o por el propio gobierno en lo que se conoce como autogolpe (Romero, 2017).</p>
+<p>Los golpes de Estado en los que las Fuerzas Armadas toman el poder y son liderados por los militares son los más comunes en la historia argentina. En estos casos, todas las instituciones quedan bajo la órbita militar: los jefes de dichas fuerzas suprimen el parlamento y eligen al presidente, los gobernadores, los intendentes y los embajadores. Todas las decisiones se toman en el seno de la institución militar, que es el verdadero poder. Este tipo de golpe de Estado fue el más común en la historia argentina. Un ejemplo paradigmático fue el golpe de 1976, cuando los militares, además de tener el poder real, ocuparon numerosas posiciones en la administración pública. Muchas veces, quienes ocupan esos cargos son también hombres de armas.</p>
+<p>En la Argentina, los golpes de Estado en que el grupo dominante no fueron las Fuerzas Armadas no han sido comunes, pero pueden encontrarse ejemplos en otros países, como, por ejemplo, en Honduras en el año 2009.</p>
+<p>Un tercer tipo de golpe ocurre cuando un gobierno originalmente democrático se perpetúa en el poder más allá de lo legalmente permitido. Esto puede suceder porque visualiza perder en las siguientes elecciones, porque carece del poder necesario para llevar a cabo su proyecto o porque la reelección es limitada. En estos casos, se trata de autogolpes de Estado: un presidente que había sido elegido por la vía democrática se perpetúa en el poder con apoyo de grupos económicos, religiosos o sociales particulares.</p>
+<p>Los golpes de Estado no son exclusivos de las Fuerzas Armadas. Otros actores pueden organizar un golpe con el objetivo de cambiar el rumbo político de un país. En la historia hay golpes que estuvieron dirigidos por cualquier ámbito.</p>
+<p>Mas allá de los elementos en común definidos hasta aquí, cada golpe de Estado es un hecho que tiene características propias y, por lo tanto, diferentes de las de otros golpes de Estado. Los aspectos que se deben considerar para identificar un golpe de Estado y distinguirlo de otros son: las causas que lo conducen; los actores que lo llevan a cabo y quienes ejercen su liderazgo; sus intereses y discursos; la forma en que se desarrolla; las consecuencias sobre el sistema político y la vida social.</p>
+<p>Por lo general, los argumentos esgrimidos por quienes llevan adelante un golpe de Estado se emparentan con la existencia de una profunda crisis política, institucional o económica en una nación. A veces, esa crisis es inventada, no es real; es solo una excusa de los golpistas para legitimar su accionar. Pero en otras, el gobierno democrático de turno ha perdido la legitimidad ante parte de la ciudadanía, que no quiere esperar a nuevas elecciones o que piensa que esas elecciones no cambiarán nada. La población, entonces, no cree que el gobierno democrático pueda solucionar los problemas a los que hay que hacer frente y esta situación abre las puertas a una posible acción golpista.</p>
+<p>En el marco de una crisis de esta índole, el gobierno democrático también suele perder el control de las instituciones que monopolizan la fuerza, como el ejército y la policía, y no cuenta con el sosten de sectores poderosos que podrían evitar el golpe (empresarios, Iglesia, prensa, sindicatos, otros partidos y liderazgos, etcétera). En síntesis, para tomar el poder, los golpistas se aprovechan de ambos factores: una situación de crisis (social o económica) que parece no poder ser solucionada y la falta de apoyo al gobierno.</p>
+
+<h3>Interrupciones institucionales sin cambio de régimen</h3>
+<p>Como ya señalamos, cuando es exitoso, un golpe de Estado siempre produce un cambio de régimen. Pero esta no es la única forma de inestabilidad. A veces también hay turbulencias y conflictos que, aunque pueden generar un cambio de gobierno, no cambian el régimen político. En estos casos, se habla de interrupciones institucionales. Una interrupción institucional del régimen democrático se produce cuando ante un conflicto social y político, la intervención militar o de otro grupo logra derrocar al gobierno, pero sin cambiar el régimen político.</p>
+<p>En América Latina, y especialmente en la Argentina, gran parte del siglo XX se caracterizó por la sucesión de golpes de Estado militares. Esto estuvo ligado a un momento muy particular del mundo, relacionado con la lucha contra el comunismo y la llamada Guerra Fría.</p>
+<p>Sin embargo, la ausencia de golpes de Estado no significa que los regímenes democráticos hayan pasado a ser estables y que los presidentes democráticos ya no hayan tenido desafíos a su propia continuidad. De hecho, las democracias latinoamericanas enfrentan todavía una gran cantidad de conflictos institucionales, pero que no tuvieron las formas y los resultados clásicos de los golpes militares.</p>
+<p>Desde la década de 1990, en América Latina, los golpes de Estado militares ya no fueron tan habituales, debido al cambio de contexto global con el fin de la Guerra Fría y la caída de la Unión Soviética. Los golpes de Estado también dejaron de ser herramientas comunes porque los militares ya no gozaban del prestigio y el poder que tuvieron en el pasado, y las derrotas militares y las crisis económicas que dejaron al gobierno que los reemplazó terminaron con la idea de que los militares podían servir para algo más allá de gestionar la vida en los cuarteles.</p>
+<p>Otras posibilidades de inestabilidad incluyen: una movilización popular genera una situación de desborde que obliga al gobierno a renunciar anticipadamente. El accionar del congreso, a través de distintas formas legales del juicio político, logra expulsar a un presidente o también bloquear sus políticas y forzar una renuncia. Sectores poderosos, externos o internos, pasan de ser aliados del presidente a la oposición, y lo dejan sin apoyo. La justicia toma iniciativas ante diversas acusaciones. Se generan campañas de la prensa, bloqueos sindicales o acciones que muestran el poder del mercado, entre muchas otras posibilidades.</p>
+<p>De diferentes formas e intensidades, estos nuevos modos de inestabilidad han logrado terminar con varias presidencias en América Latina. En ocasiones es el congreso el que, por diversos motivos, decide poner fin anticipadamente al mandato de un presidente democrático y nombra a un reemplazante, como fue el caso —entre varios más— del brasileño Fernando Collor de Mello en 1992, del paraguayo Fernando Lugo en 2012, de la brasileña Dilma Rousseff en 2016 y de los peruanos Pedro Pablo Kuczynski y Martín Vizcarra en 2018 y 2020, respectivamente.</p>
+<p>La combinación de descontrol económico y desorden social produce la sensación de que es necesario un cambio y eso posibilita un cambio. El intento de desestabilizar a un gobierno de este modo no solo se observa en variables económicas, sino también en la calle. Por eso, incluye los llamados "saqueos" y movilizaciones informales de sectores marginados bajo la batuta de grupos políticos. Mediante estos actos, dichos grupos buscan crear una sensación de descontrol y pérdida de orden para debilitar o terminar con un gobierno y asumir en su reemplazo.</p>
+<p>También se puede mencionar como fuente de inestabilidad el accionar de grandes grupos económicos que, en vez de tropas y aviones, utilizan el mercado financiero y la economía para provocar la desestabilización del gobierno en ejercicio. A través de ataques especulativos contra la moneda nacional o mediante subidas del dólar, se hace manifiesto su poder y en ocasiones pueden lograr la caída del gobierno vigente.</p>
+<p>La existencia de un cambio presidencial sin un cambio de régimen fue la que aceleró el fin del gobierno de Raúl Alfonsín en 1989 y, en gran medida, la que terminó con el de Fernando de la Rúa (Romero, 2017).</p>
+
+<h3>Golpes de Estado en la Argentina</h3>
+<p>Durante el siglo XX se sucedieron cinco golpes de Estado militares: en 1930, 1943, 1955, 1966 y 1976. También hubo varias interrupciones institucionales del régimen democrático. En la Argentina hubo golpes e interrupciones de gobiernos constitucionales, aunque, como dijimos, no todos estos hechos tuvieron rasgos similares. Cada uno de esos golpes adoptó diferentes características en relación con los objetivos y actores que los llevaron a cabo.</p>
+<p>Los tres primeros golpes en la Argentina (1930, 1943 y 1955) establecieron dictaduras que, transcurrido cierto tiempo, llamaron a elecciones. Esto cambió con los últimos dos golpes de Estado (1966 y 1976), ya que en esos casos las dictaduras triunfantes intentaron, infructuosamente, establecer gobiernos de largo plazo. Esto se argumentaba en nombre del tiempo que se requería para concretar las reformas profundas que, según los golpistas, necesitaba el país (Romero, 2017).</p>
+<p>El primer golpe militar de la historia argentina tuvo lugar el 6 de septiembre del año 1930 y fue liderado por el general José Félix Uriburu. Este golpe derrocó al presidente Hipólito Yrigoyen, de la Unión Cívica Radical, que había sido elegido por el voto popular para ejercer su segundo mandato en 1928. El golpe de 1930 no tuvo el apoyo activo de numerosos sectores de las Fuerzas Armadas, aunque sí de gran parte de la prensa, de la Iglesia y de los partidos opositores. El mismo Juan Domingo Perón fue una pieza importante en ese proceso. Este golpe no se originó por causas económicas, sino que surgió como respuesta a la intención del gobierno del presidente derrocado, Ramón Castillo, de romper la neutralidad argentina frente a la Segunda Guerra Mundial, para volcarse al bando aliado liderado por Estados Unidos. Fue el único golpe que tuvo solo intervención militar, ya que la participación civil fue prácticamente nula.</p>
+<p>La dictadura del general Uriburu y sus continuadores utilizaron la proscripción (prohibición de presentarse a elecciones) del radicalismo y el control absoluto de los resultados electorales a través del fraude. Este hecho dio inicio a lo que algunos denominaron la década infame, un gobierno falsamente democrático y restringido.</p>
+<p>El siguiente golpe de Estado, realizado en junio de 1943, tuvo varias particularidades que lo destacan de los otros. Fue un golpe importante en la historia del país, más allá de la brevedad e inestabilidad de los gobiernos que inauguró (Romero, 2017). Lo primero que se debe destacar del golpe de 1943 es que derrocó al régimen de la llamada "década infame". Los responsables del golpe admiraban el modelo italiano liderado por el fascista Benito Mussolini; sobre todo, por el orden social que había logrado implantar. El golpe de 1943 tuvo varias particularidades: como consecuencia de la falta de acuerdo entre quienes formaban parte de la coalición golpista, tres militares se autoproclamaron presidentes sucesivamente: Arturo Rawson, Pedro Pablo Ramírez y Edelmiro Farrell.</p>
+<p>El siguiente golpe (1955) se caracterizó por su antiperonismo y por la violencia ejercida contra los seguidores del general Perón, quien había sido elegido como presidente en 1945 y reelegido en 1951. Otra particularidad que presentó este golpe se relaciona con la falta de acuerdo entre quienes formaban parte de la coalición golpista, lo que trajo conflictos internos con respecto a la gobernabilidad.</p>
+<p>En el caso del gobierno de Arturo Frondizi (1958-1962), se mantuvo la fachada constitucional, ya que al haber renunciado el vicepresidente que lo acompañó en la fórmula, Alejandro Gómez, asumió la primera magistratura del país José María Guido (1962-1963), quien era presidente provisional de la Cámara de Senadores. Así se mantuvieron las formas constitucionales (Romero, 2017). Es decir, no hubo un cambio de régimen: lo definimos como una interrupción institucional.</p>
+<p>En el caso del golpe de Estado que derrocó al presidente Arturo Illia (1963-1966), sucesor del de Guido, lo llamativo fue que el país no vivía ninguna crisis económica ni algún desorden social de magnitud. Por el contrario, se trató de un momento de estabilidad y de relativo crecimiento. Vale decir que fue un golpe de Estado ocasionado por diferencias políticas y por las ambiciones de distintos actores que no estaban dispuestos a esperar el final del mandato del radical. El golpe contra Illia contó con el activo apoyo del peronismo a través de la participación sindical y las señales enviadas por el mismo Perón desde España, donde se encontraba exiliado.</p>
+<p>El golpe de Estado liderado por el general Juan Carlos Onganía (1966) se propuso conformar un gobierno de largo plazo y buscaba imponer un cambio estructural en la economía y la sociedad argentinas. No lo logró y, además, debió renunciar como consecuencia de un movimiento social y la derrota militar en la guerra por las Malvinas. Tanto la guerra como la quiebra económica del país ocasionaron un desastre de tal magnitud que terminaron con la idea de que los militares podían servir para algo más allá de gestionar la vida en los cuarteles.</p>
+<p>El último golpe de Estado (1976) se caracterizó por haber sido el más sangriento de la historia argentina. Se impuso el terrorismo de Estado y se violaron sistemáticamente los derechos humanos, con miles de desaparecidos, muertos, secuestros y exilios. Además, la crisis económica que dejaron al gobierno que los reemplazó fue una de las peores que había vivido el país hasta entonces. La derrota en la guerra de Malvinas (1982) fue el punto final de esa experiencia dictatorial.</p>
+<p>De hecho, hasta el día de hoy no se ha registrado ningún otro gobierno militar. Tampoco los militares han vuelto a aparecer ante la opinión pública como posibles líderes para solucionar coyunturas de crisis, lo que era muy habitual en los años previos a 1983.</p>
+
+<h3>Las interrupciones institucionales en la Argentina</h3>
+<p>En cuanto a las interrupciones institucionales del régimen democrático, en la Argentina, tres más: con el fin de los gobiernos de Héctor Cámpora (1974), Fernando de la Rúa (2001) y Eduardo Duhalde en 2003 (por una cuestión de tiempos históricos, esta última no se abordará en este trabajo). Estos casos tienen en común que el presidente constitucional debió abandonar el cargo, pero sin producirse por eso un cambio de régimen.</p>
+<p>La primera interrupción sucedió en 1973, cuando el presidente Cámpora y el vicepresidente Vicente Solano Lima renunciaron y fueron reemplazados por el tercero en la línea constitucional, el entonces presidente de la Cámara de Diputados, Raúl Lastiri. Esto ocurrió por movimientos dentro del peronismo para convocar a nuevas elecciones y garantizar el retorno de Perón a la presidencia.</p>
+<p>En el caso de De la Rúa, en el año 2001, el Congreso, siguiendo las reglas previstas por la Constitución, nombró al reemplazante debido a que el presidente había renunciado en medio de una grave crisis política y económica (Romero, 2017).</p>
+
+<h3>El (fracasado) golpe de Estado contra Frondizi: un caso particular</h3>
+<p>El reemplazo del presidente Arturo Frondizi en 1963 es complejo de conceptualizar. Los militares eran el principal grupo de poder del país. En esa condición, y sabiéndose poderosos y dueños de las armas, presionaban y buscaban debilitar a Frondizi desde su misma asunción. A esto deben sumarse los propios errores cometidos por el presidente y su grupo, que le habían quitado parte del apoyo popular que tuvo al asumir.</p>
+<p>Los militares decidieron quitarlo del poder. Y en este sentido su accionar fue exitoso. Sin embargo, no lograron cumplir con todos sus objetivos, ya que no colocaron a una persona de las Fuerzas Armadas en la presidencia. Las divisiones internas les impedían designar un presidente de consenso, al menos en forma rápida. En los golpes militares, suele ser más fácil lograr acuerdos para derrocar un gobierno que para instaurar uno nuevo. Pero a la vez, si no asumían, dejaban el poder en manos de José María Guido.</p>
+<p>Frondizi puso a los militares ante un dilema. Si asumían ellos mismos la presidencia, pagarían un alto costo por interrumpir el orden constitucional una vez más, cuando el objetivo de quitar a Frondizi ya estaba cumplido. De hecho, las divisiones internas les impedían designar un presidente de consenso. Poco antes de finalizar el mandato de Frondizi, los militares decidieron quitarlo del poder. La rápida reacción del presidente provisional de la Cámara de Senadores al asumir la presidencia ante la acefalia por el derrocamiento del gobierno garantizó alguna forma de continuidad institucional.</p>
+<p>De esta forma, las reglas de sucesión previstas en la Constitución Nacional se mantuvieron, y se resolvió según lo previsto en la Constitución nacional vigente. El golpe de Estado triunfó a medias, porque quitó al presidente de su cargo pero fracasó en la capacidad de imponerse sobre el poder civil, que pudo garantizar alguna forma de continuidad institucional y no produjo un cambio de régimen político. Es decir, lo que se inició como un golpe de Estado terminó como una interrupción institucional porque no logró cambiar el régimen político.</p>
+
+<div class="separador">• • •</div>
+
+<h3>Conclusiones</h3>
+<p>En las páginas previas analizamos los conceptos de golpe de Estado e interrupción institucional. Una vez que estos conceptos son comprendidos en su especificidad, puede plantearse un estudio más profundo e incluso compararlos con otros fenómenos similares. De este modo se podrán entender mejor y entender por qué ocurrieron, cómo transcurrieron y finalizaron.</p>
+<p>Por lo expuesto, el golpe de Estado ha sido un protagonista ineludible en la historia argentina. Sin embargo, como método habitual de influencia política, no es el único culpable ni el responsable de los desencuentros o de la decadencia de la sociedad argentina. La caída de un régimen democrático por la fuerza es el síntoma y la muestra de profundos desacuerdos y de la imposibilidad de una sociedad (con sus grupos antagónicos) de construir, entre las élites de los distintos sectores sociales, rumbos consensuados, de un orden político basado en el consenso y en algunos acuerdos que permitieran que el país recorriera un camino para la construcción de determinados liderazgos o para quitárselo a otros.</p>
+<p>Como se ha visto en páginas anteriores, hay sociedades que no han tenido la experiencia de pasar por golpes de Estado y otras que han tenido pocos golpes, o estos fueron de muy breve duración. No es el caso de la Argentina, donde aparece una apelación constante al golpe de Estado y a las interrupciones institucionales como salidas a crisis económicas o políticas. También como una vía rápida para acceder al poder para determinados liderazgos o para quitárselo a otros.</p>
+
+<h3>Referencias bibliográficas</h3>
 <p>Romero, L. A. (2017). <em>Breve historia contemporánea de la Argentina: 1916-2016</em>. Fondo de Cultura Económica.</p>
     </div>
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
   </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
 </html>
-
-

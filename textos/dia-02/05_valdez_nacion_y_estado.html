@@ -1,693 +1,188 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Nación y Estado, asuntos separados — ICSE 024</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <style>
-
-        :root {
-      --bg: #1a1a1a;
-      --text: #d4d0c8;
-      --text-muted: #8a8580;
-      --heading: #e8e4dc;
-      --border: #3a3530;
-      --surface: #242220;
-      --accent: #c9854a;
-      --red-soft: #e06060;
-    }
-
-
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-
-
-    body {
-
-      background: var(--bg);
-
-      color: var(--text);
-
-      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-
-      font-size: 18px;
-
-      line-height: 1.75;
-
-      padding: 0;
-
-    }
-
-
-
-    .page {
-
-      max-width: 680px;
-
-      margin: 0 auto;
-
-      padding: 4rem 2rem 6rem;
-
-    }
-
-
-
-    .metadatos {
-
-      background: var(--surface);
-
-      border: 1px solid var(--border);
-
-      padding: 2.5rem 2rem;
-
-      margin-bottom: 4rem;
-
-      text-align: center;
-
-    }
-
-
-
-    .metadatos .titulo-libro {
-
-      font-family: 'DM Sans', sans-serif;
-
-      font-size: 0.75em;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.15em;
-
-      color: var(--text-muted);
-
-      margin-bottom: 1.5rem;
-
-    }
-
-
-
-    .metadatos .titulo-texto {
-
-      font-family: 'Crimson Pro', Georgia, serif;
-
-      font-size: 2em;
-
-      font-weight: 600;
-
-      color: var(--heading);
-
-      line-height: 1.25;
-
-      margin-bottom: 0.6rem;
-
-    }
-
-
-
-    .metadatos .autor {
-
-      font-size: 1.05em;
-
-      color: var(--text-muted);
-
-      margin-bottom: 1rem;
-
-      font-style: italic;
-
-    }
-
-
-
-    .metadatos .info {
-
-      font-family: 'DM Sans', sans-serif;
-
-      font-size: 0.78em;
-
-      color: var(--text-muted);
-
-      margin-bottom: 0.3rem;
-
-    }
-
-
-
-    .metadatos .badge {
-
-      display: inline-block;
-
-      margin-top: 1.2rem;
-
-      padding: 0.35rem 1.2rem;
-
-      background: var(--heading);
-
-      color: #1a1a1a;
-
-      font-family: 'DM Sans', sans-serif;
-
-      font-size: 0.72em;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.1em;
-
-      border-radius: 2px;
-
-    }
-
-
-
-    .contenido p {
-
-      text-indent: 1.5em;
-
-      margin-bottom: 0;
-
-      text-align: justify;
-
-      hyphens: auto;
-
-    }
-
-
-
-    .contenido p + p {
-
-      margin-top: 0.9em;
-
-    }
-
-
-
-    .contenido p:first-of-type {
-
-      text-indent: 0;
-
-    }
-
-
-
-    .contenido p.first-of-section {
-
-      text-indent: 0;
-
-    }
-
-
-
-    .contenido h2 {
-
-      font-family: 'Crimson Pro', Georgia, serif;
-
-      font-size: 1.5em;
-
-      font-weight: 600;
-
-      color: var(--heading);
-
-      margin-top: 3rem;
-
-      margin-bottom: 1rem;
-
-      padding-bottom: 0.5rem;
-
-      border-bottom: 1px solid var(--border);
-
-    }
-
-
-
-    .contenido h3 {
-
-      font-family: 'Crimson Pro', Georgia, serif;
-
-      font-size: 1.2em;
-
-      font-weight: 600;
-
-      font-style: italic;
-
-      color: var(--heading);
-
-      margin-top: 2.5rem;
-
-      margin-bottom: 0.8rem;
-
-    }
-
-
-
-    .contenido h4 {
-
-      font-family: 'DM Sans', sans-serif;
-
-      font-size: 0.95em;
-
-      font-weight: 700;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.05em;
-
-      color: var(--text-muted);
-
-      margin-top: 2rem;
-
-      margin-bottom: 0.6rem;
-
-    }
-
-
-
-    .contenido blockquote {
-
-      margin: 2rem 0 2rem 1.5rem;
-
-      padding: 1rem 1.5rem;
-
-      border-left: 3px solid var(--accent);
-
-      font-style: italic;
-
-      color: var(--text-muted);
-
-      background: var(--surface);
-
-      font-size: 0.95em;
-
-    }
-
-
-
-    .contenido blockquote p {
-
-      text-indent: 0;
-
-      text-align: left;
-
-    }
-
-
-
-    .contenido ul,
-
-    .contenido ol {
-
-      margin: 1.2rem 0 1.2rem 2rem;
-
-    }
-
-
-
-    .contenido li {
-
-      margin-bottom: 0.5em;
-
-      padding-left: 0.3em;
-
-    }
-
-
-
-    .contenido table {
-
-      width: 100%;
-
-      border-collapse: collapse;
-
-      margin: 2rem 0;
-
-      font-size: 0.9em;
-
-    }
-
-
-
-    .contenido table th {
-
-      background: var(--surface);
-
-      color: var(--heading);
-
-      padding: 0.7rem 1rem;
-
-      text-align: left;
-
-      font-family: 'DM Sans', sans-serif;
-
-      font-weight: 500;
-
-      font-size: 0.85em;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.03em;
-
-    border-bottom: 2px solid var(--accent); }
-
-
-
-    .contenido table td {
-
-      padding: 0.6rem 1rem;
-
-      border-bottom: 1px solid var(--border);
-
-    }
-
-
-
-    .contenido table tr:nth-child(even) {
-
-      background: var(--surface);
-
-    }
-
-
-
-    .contenido .ilegible {
-
-      color: var(--red-soft);
-
-      font-weight: 600;
-
-      background: #3a2020;
-
-      padding: 0.1em 0.3em;
-
-      border-radius: 2px;
-
-    }
-
-
-
-    .contenido .nota-num {
-
-      font-size: 0.75em;
-
-      vertical-align: super;
-
-      color: var(--accent);
-
-      font-weight: 600;
-
-    }
-
-
-
-    .notas {
-
-      margin-top: 4rem;
-
-      padding-top: 2rem;
-
-      border-top: 1px solid var(--border);
-
-    }
-
-
-
-    .notas h2 {
-
-      font-size: 1.1em;
-
-      margin-bottom: 1rem;
-
-      border-bottom: none;
-
-      padding-bottom: 0;
-
-    }
-
-
-
-    .notas p {
-
-      font-size: 0.85em;
-
-      text-indent: 0;
-
-      margin-bottom: 0.6em;
-
-      color: var(--text-muted);
-
-      text-align: left;
-
-    }
-
-
-
-    .separador {
-
-      text-align: center;
-
-      margin: 3rem 0;
-
-      color: var(--border);
-
-      font-size: 1.2em;
-
-      letter-spacing: 0.5em;
-
-    }
-
-
-
-    footer {
-
-      margin-top: 5rem;
-
-      padding-top: 2rem;
-
-      border-top: 1px solid var(--border);
-
-      text-align: center;
-
-      font-family: 'DM Sans', sans-serif;
-
-      font-size: 0.75em;
-
-      color: var(--text-muted);
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.1em;
-
-    }
-
-
-
-    @media print {
-
-      body { background: #fff; font-size: 12pt; }
-
-      .page { padding: 0; max-width: 100%; }
-
-      .metadatos { break-after: page; border: none; background: none; }
-
-      .contenido h2 { break-after: avoid; }
-
-      .contenido h3 { break-after: avoid; }
-
-      blockquote { break-inside: avoid; }
-
-      table { break-inside: avoid; }
-
-      footer { break-before: avoid; }
-
-    }
-
-
-
-    @media (max-width: 700px) {
-
-      .page { padding: 2rem 1.2rem 4rem; }
-
-      body { font-size: 16px; }
-
-      .metadatos .titulo-texto { font-size: 1.6em; }
-
-    }
-
-  </style>
-
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Nación y Estado, asuntos separados — ICSE 024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../textos.css">
 </head>
-
 <body>
 
-  <div class="page">
-
-    <div class="metadatos">
-
-      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
-
-      <div class="titulo-texto">Nación y Estado, asuntos separados</div>
-
-      <div class="autor">María José Valdés</div>
-
-      <div class="info">Páginas originales: 53–63</div>
-
-      <div class="badge">Día 2 — Unidad 1</div>
-
-    </div>
-
-
-
-    <div class="contenido">
-
-      <h2>Nación y Estado, asuntos separados</h2>
-
-<p>María José Valdés</p>
-
-
-
-<p>Desde los primeros años de escolarización, un término aparece de manera constante y recurrente: nación. Aparece en los actos escolares, en las fechas patrias e incluso en las transmisiones de los partidos de fútbol. También se usa el término argentinidad como sinónimo de nacionalidad. Pero, ¿qué significa realmente nación? Cómo se define? Qué cosas incluye y cuáles no? Y además, conceptos como nacionalismo y nacionalidad, ¿siempre tuvieron el mismo significado o este cambió con el tiempo? Y la Nación Argentina, ¿existe desde siempre o es el resultado de un proceso histórico? ¿Es algo natural o fue construida? Por último, ¿hasta qué punto nación y Estado son lo mismo?, ¿son cosas diferentes? Estas son algunas de las preguntas que abordaremos en las próximas páginas.</p>
-
-<p>Hablar de Estado implica centrarse en las instituciones políticas, pero cuando nos referimos a la nación, el enfoque cambia. Se trata de la sociedad, la ciudadanía y el pueblo, entendidos tanto como el origen de la identidad y pertenencia.</p>
-
-
-
-<h3>El concepto de nación</h3>
-
-<p>A lo largo del tiempo, distintos estudios han intentado responder estas preguntas y han dado lugar a dos grandes maneras de entender el concepto: la nación como una comunidad de individuos que comparten ciertos rasgos, y la nación como un fenómeno histórico.</p>
-
-
-
-<h3>La nación como una comunidad de individuos</h3>
-
-<p>Se define a la nación como una comunidad de individuos que comparten ciertos rasgos étnicos, culturales, lingüísticos o territoriales, lo que les permite identificarse con una nacionalidad en particular. Esta visión parte de la idea de que estos criterios son objetivos, es decir, que pueden identificarse de manera clara y precisa. Sin embargo, esta forma de definir la nación tiene sus límites. Por ejemplo, lo mismo ocurre con el criterio lingüístico. Todas las personas que hablan un mismo idioma ¿forman parte de una misma nación? Este tipo de definiciones no siempre considera que la nación es una construcción. Un caso concreto es el de los antiguos imperios plurinacionales, como el austrohúngaro o el otomano, donde convivían múltiples identidades nacionales. También está el caso de la región de Alsacia: sus habitantes son franceses o alemanes? En Europa, esta idea no coincidía del todo con la realidad.</p>
-
-
-
-<h3>La nación como un fenómeno histórico</h3>
-
-<p>Otra forma de entender la nación es como un fenómeno histórico, es decir, como algo que no es permanente o anterior a la historia. Desde esta perspectiva, tres autores clave han trabajado el concepto: Ernest Gellner, Benedict Anderson y Eric Hobsbawm. Los tres coinciden en que la nación es un producto de la Modernidad, por lo que su existencia es relativamente reciente. Gellner (1988) sostiene que la nación surge de la combinación entre voluntad y cultura. Para que las personas se sientan parte de una misma identidad, debe existir un elemento cultural que las una. En otras palabras, las naciones no son algo dado, sino que se construyen y, a partir de esa construcción, influyen en las creencias, lealtades y vínculos de quienes las integran. Gellner relaciona el surgimiento de la nación con los cambios económicos que marcaron el paso de las sociedades agrarias a las industriales.</p>
-
-<p>Anderson (1993) plantea que la nación es una "comunidad imaginada", es decir, un grupo de personas que se perciben como parte de una misma nación es una comunidad política que se imagina como limitada y soberana. ¿Por qué se la considera "imaginada"? Porque nadie puede conocer personalmente a todos los miembros de su nación, pero aun así, se siente parte de ella gracias a los elementos culturales compartidos. Anderson destaca la importancia de las transformaciones ideológicas y materiales de la Modernidad para explicar la nación como una "comunidad imaginada". Hobsbawm considera que no puede entenderse sin el proceso abierto por la Revolución Francesa de 1789.</p>
-
-<p>Por último, Hobsbawm (1991) sostiene que la nación es un fenómeno reciente en la historia de la humanidad y que está ligada a una unidad territorial: el Estado nación. Además, plantea que su existencia no es natural, sino que intervinieron distintos mecanismos de invención y organización. Según Hobsbawm, el siglo XIX fue clave en la "fabricación de naciones". Durante este periodo se consolidó la idea de que cada nación debía tener su propio Estado nación, mediante su apoyo. Este proceso fue determinante para la creación de lo que hoy se conoce como Estado moderno.</p>
-
-<p>A pesar de sus diferencias, las ideas de Gellner, Anderson y Hobsbawm comparten varios puntos en común. Los tres coinciden en que la nación es un producto de la Modernidad, por lo que su existencia es relativamente reciente. Otro punto en común es la relación entre nación y territorio, es decir, la conexión entre nación y Estado. Finalmente, los tres autores rechazan la idea de que la nacion sea algo natural o anterior a cualquier unidad política. En definitiva, todos concluyen que la nación se construye históricamente.</p>
-
-
-
-<h3>La construcción de naciones</h3>
-
-<p>¿Cómo se construyeron las naciones? ¿Cuándo ocurrió este proceso? ¿Qué elementos se usaron para lograrlo? Basándonos en las definiciones de nación previamente analizadas, se puede asociar el surgimiento de la idea moderna de nación en el mundo occidental con los cambios que comenzaron a fines del siglo XVII, cuando se gestaron en Europa entre los siglos XV y XVIII, y que se consolidaron con la Ilustración, la Revolución Industrial y la expansión del capitalismo, entre ellos, el predominio del pensamiento racional y del método científico como base del conocimiento, la disminución del poder de la religión en la vida pública y el surgimiento de Estados organizados bajo principios de soberanía política.</p>
-
-<p>En América, la disolución de los imperios coloniales —como el inglés, el francés, el portugués y, especialmente, el español— llevó a la formación de nuevas unidades territoriales. En muchos casos, la construcción de estos nuevos Estados estuvo acompañada por la creación de naciones. Estos procesos muestran cómo la nación no era algo natural o dado desde siempre, sino una construcción histórica basada en elementos culturales, políticos y sociales. Este proceso no ocurrió solo en Europa.</p>
-
-<p>Los más importantes en Europa fueron las unificaciones de Italia y Alemania. Por un lado, existían imperios multinacionales como el otomano o el ruso, donde convivían múltiples identidades nacionales y sus habitantes se sentían parte de un Estado imperial más amplio. Por otro lado, habían pueblos que compartían una identidad cultural y lingüística, pero que no tenían un Estado propio, como los italianos y los alemanes, cuyos territorios estaban divididos en varias entidades políticas diferentes. Incluso en monarquías consolidadas, como España o Gran Bretaña, existían minorías internas con lenguas y tradiciones propias, como los catalanes y vascos en España, o los irlandeses y galeses en el Reino Unido. Para justificar esta idea, se apeló a los siguientes elementos:</p>
-
-<ul>
-
-<li>un pasado compartido, como la identificación de Italia con el antiguo Imperio romano;</li>
-
-<li>instituciones preexistentes, como la referencia al Sacro Imperio Romano Germánico en el caso alemán;</li>
-
-<li>tradiciones y cultura popular, como los cuentos recopilados por los hermanos Grimm, que reforzaban la identidad alemana;</li>
-
-<li>una lengua común, aunque en Italia, por ejemplo, solo el 2,5% de la población hablaba el italiano unificado.</li>
-
-</ul>
-
-
-
-<h3>Una nación y un Estado: la Argentina</h3>
-
-<p>En la región rioplatense, el siglo XIX comenzó con dos hechos clave: la Revolución de 1810 y la Independencia de 1816, que marcaron el fin del Virreinato del Río de la Plata. A partir de ese momento, el territorio que luego se convertiría en la República Argentina estuvo atravesado por guerras civiles y conflictos políticos tanto entre las provincias como dentro de cada una. Estas disputas tuvieron importantes consecuencias en la política, la sociedad y la economía de la época.</p>
-
-<p>Luego de 1862, la creación de un flamante Estado nacional supuso el inicio de una nueva etapa, caracterizada por la trabajosa tarea de subordinación de todos aquellos que desafiaran su poder y autoridad, así como de construcción material de su autoridad a través de su presencia en todo el territorio que reclamaba como propio. Este proceso, con marchas y contramarchas, culminó en 1880 con el triunfo del Estado nacional sobre la provincia de Buenos Aires, que debió aceptar definitivamente la transformación de su capital provincial en capital de la república.</p>
-
-<p>Un año antes, ese mismo Estado nacional había culminado su dominio en la región sur; en el nordeste, este proceso recién se completaría a comienzos del siglo siguiente. Por ende, hacia la década de 1880, un nuevo escenario institucional se encontraba configurado: existía un Estado, cuyas fronteras y límites se encontraban medianamente definidos (al menos formalmente con Chile, cosa que sucedería en años posteriores); se habían creado instituciones como el Ejército nacional, los órganos de justicia, ministerios, etcétera, o al menos se encontraban delineados.</p>
-
-<p>Pero fue en esta etapa cuando en la Argentina la preocupación por la formación de la identidad nacional cobró relevancia. Esto no significa que anteriormente no existiera. En todo caso, a fines del siglo XIX, su importancia fue mucho mayor. Esto se debió a que, en las últimas décadas de ese siglo, se produjo una fuerte inmigración ultramarina que remodeló a la sociedad argentina, sobre todo en la región del Litoral. Para evaluar su impacto hay que considerar que, según el censo nacional de 1895, dos de cada tres habitantes de la Capital Federal eran extranjeros. Italianos y españoles eran mayoría, pero también había inmigrantes del imperio turco. Su presencia coincidía con un proceso inacabado de construcción de una nación, entendido también —según Bertoni (2001)— como de formación de una sociedad nacional.</p>
-
-<p>Pero también este proceso tenía lugar en un contexto en el cual se producía la constitución de naciones en Europa (de donde provenían estos inmigrantes), donde se discutían los criterios a partir de los cuales se definía qué era una nación, o qué naciones debían considerarse como tales. Por ende, el debate en torno a la cuestion nacional, la identidad nacional —en definitiva, la construcción de la nación— se dio en un contexto cruel. Los grupos dirigentes argentinos de la época mostraban su preocupación en torno a la cuestión de la nacionalidad. Si para 1880 la construcción del Estado y de sus instituciones parecía estar finalizada, el temor a la disolución de la sociedad y de la nacionalidad cobró inusitada importancia. Por lo tanto, consideraban que quien tenía la principal responsabilidad en el fortalecimiento de los aspectos culturales de la identidad nacional era el Estado. Es decir que el Estado, a través de un conjunto de instituciones y de intervenciones directas, debía intervenir claramente para inculcar la identidad nacional y fortalecerla.</p>
-
-<p>Obviamente, el mecanismo privilegiado para ello fue la escuela. En 1884, el Congreso nacional sancionó la ley 1420, que estableció la obligatoriedad de la enseñanza primaria, además de su carácter laico y gratuito. Además, reforzó la orientación nacional de su enseñanza, al establecer en la instrucción obligatoria —además de lectura, escritura, aritmética básica— contenidos de geografía, historia e idioma nacional, así como el conocimiento de la Constitución nacional. En paralelo, el Consejo Nacional de Educación (CNE, creado en 1880 y reorganizado en 1887), con injerencia en las escuelas de la Capital Federal y de los territorios nacionales, estableció nuevos planes y programas para mejorar los contenidos y los métodos de enseñanza. Además, se hizo especial hincapié en el cumplimiento de la obligatoriedad de la educación para evitar la deserción mediante campañas para retener y ampliar el número de niños y niñas escolarizados. Ante las epidemias de cólera, difteria y viruela (ocurridas entre 1886 y 1887), el CNE actuó con rapidez: al tiempo que promovía la vacunación y se desarrollaron planes de seguimiento y control de salud de los niños y de sus familias.</p>
-
-
-
-<h3>La escuela y los escolares</h3>
-
-<p>Junto con la importancia otorgada a la institución escolar como formadora de la identidad nacional a través de los contenidos enseñados, otro de los aspectos a partir de los cuales la dirigencia consideró necesario construir la nación fue por medio de la liturgia patria, es decir, las fiestas patrias.</p>
-
-<p>Este proceso se llevó a cabo por medio de distintos mecanismos. Primero, el ceremonial oficial pasó a ocupar el centro de las celebraciones patrias, con el tedeum. El tedeum es una ceremonia religiosa. Su nombre proviene del himno en latín Te Deum laudamus ("A ti, Dios, te alabamos"), que se entona durante la ceremonia. En la Argentina, el tedeum del 25 de Mayo es una tradición histórica que se realiza cada año en la Catedral Metropolitana de Buenos Aires con la presencia de autoridades nacionales, incluido el presidente de la Nación. Se lleva a cabo como parte de las celebraciones del día de la Revolución de Mayo, en conmemoración del primer gobierno patrio de 1810. Durante el evento, el arzobispo ofrece un mensaje con reflexiones sobre el país y su situación social y política. En otras ocasiones, también se celebran tedeums en fechas patrias importantes, como el 9 de Julio, día de la Independencia.</p>
-
-<p>Segundo, se promovió la participación de los escolares en los actos oficiales como una forma de movilización política. Los niños, organizados en batallones militares, eran presentados como un vínculo entre el pasado heroico de la independencia y el futuro del país. La idea era que, al identificarse con quienes habían protagonizado la "gesta de Mayo", desarrollaran un sentido de pertenencia a la patria a través de sus representaciones materiales. De esta manera, lo que primaba era la diversión y el entretenimiento. Los juegos y entretenimientos, aunque continuaron en los barrios y en los pueblos del interior, quedaron relegados a un segundo plano.</p>
-
-<p>Tercero, se promovió la ritualización de las celebraciones mediante el uso de símbolos patrios, el izamiento de la bandera y el canto del himno nacional. La escuela y los escolares jugaron un papel clave en la afirmación de la identidad nacional. Este proceso también llevó a una reglamentación de los símbolos patrios. Se establecieron normas precisas sobre su tamaño, colores y uso tanto en espacios públicos como privados. Por ejemplo, la bandera con el sol se permitió para el uso oficial, mientras que la versión sin el sol se permitió para el uso privado. Durante las décadas de 1880 y 1890 hubo una proliferación en todo el país de monumentos, como los que se erigieron en homenaje al general Lavalle y al general Paz, este último en la provincia de Córdoba. Por último, la construcción material de espacios en los cuales se honrara el pasado dio lugar a toda una serie de monumentos que se erigieron en diferentes lugares del territorio. Se podría agregar un elemento más: en 1901 se estableció el servicio militar obligatorio, que, más allá de su creación en el marco de una hipótesis de conflicto armado con Chile, operó exitosamente para consolidar la construcción de la identidad nacional.</p>
-
-
-
-<h3>Culto a la patria</h3>
-
-<p>Un cuarto mecanismo para la construcción de la nación, en el que se involucraron las clases dirigentes y asociaciones civiles de distinto tipo preocupadas por lo "nacional" fue el culto a la patria a través de sus representaciones materiales. De esta manera, se legisló para la construcción del complejo en homenaje al Ejército de los Andes (Mendoza), y se promulgó una ley para la restauración histórica de la Casa de Tucumán. En paralelo, el Congreso sancionó leyes que autorizaban al Poder Ejecutivo a repatriar los restos de los héroes de la independencia (donde reposarían sus restos) en el cementerio de la Chacarita, aunque finalmente se edificó el monumento a los héroes de la independencia en el de la Recoleta. También se legislaron leyes para la construcción del monumento a los héroes de la independencia. También se legisló para la construcción del complejo en homenaje al Ejército de los Andes (Mendoza), y se promulgó una ley para la restauración histórica de la Casa de Tucumán.</p>
-
-
-
-<h3>Elaboración de una historia nacional</h3>
-
-<p>La construcción de la nación implicaba, indefectiblemente, un aspecto central: elaborar una historia nacional. En un sentido amplio, Bertoni (2001) ha señalado que la historia, una disciplina científica en expansión en esa etapa, se convirtió en instrumento privilegiado para la construcción de la memoria nacional. Durante este periodo se publicaron diferentes historias nacionales, historias provinciales; se recopilaron tradiciones regionales, historias de batallas, guerras, conquistas y poblamiento, de grandes hombres, de instituciones, etcétera.</p>
-
-<p>En esta elaboración, una serie de intelectuales se convirtieron en claves, en particular, Bartolomé Mitre y Vicente Fidel López. Desde perspectivas diferentes, ambos entendieron el oficio del historiador y elaboraron una visión sobre el pasado. La historia nacional elaborada por Mitre se convirtió, finalmente, en la historia nacional sacralizada en los textos escolares.</p>
-
-<p>Si, como dijimos al comienzo, la nación y la manera en que esta es construida es el resultado de un proceso histórico, es lógico entender que en su propia historia ocurran transformaciones. En un contexto marcado —como ya señalamos— por el furibundo impacto de la inmigración, fue lógico que desde algunos sectores se revalorizaran las raíces hispanicas. Esto supuso, por ejemplo, la reconversión de la mirada sobre España: de metrópoli tiránica se transformó en "Madre patria", aunque este proceso no estuvo libre ni de tensiones ni de conflictos. Ejemplo de ello fue el establecimiento del 12 de octubre como fiesta permanente, de celebración entre argentinos y españoles, y —luego de arduas disputas— el decreto promulgado en 1898 que definió las partes del himno nacional que podrían cantarse públicamente para no herir la susceptibilidad de la colectividad española.</p>
-
-
-
-<h3>Conclusiones</p>
-
-<p>Como vimos en las páginas precedentes, la preocupación por la nación surgió en nuestro país a fines del siglo XIX en un contexto marcado por fuertes transformaciones sociales, políticas, económicas y culturales. En ese marco, cobró relevancia el imperativo por concluir aquello que se consideraba inconcluso: la nación, por lo tanto, la nacionalidad. Para ello se pusieron en acción una serie de mecanismos: la escuela y la enseñanza de la lengua y del pasado, fundamentalmente. Al mismo tiempo, las fiestas escolares y las celebraciones patrias (dentro y fuera del espacio educativo) fueron otro de los elementos centrales en esta tarea.</p>
-
-<p>El siglo XX y lo que va del XXI no han estado libres de nuevos debates sobre qué significa la nación y la identidad nacional, cómo esta se construye, qué elementos contiene y cuáles deja por fuera. De hecho, se puede ver cómo han variado las miradas sobre la nación y sobre el pasado en periodos muy concretos, como durante el peronismo clásico (1946-1955) o en la última dictadura militar (1976-1983). En tiempos más recientes, el debate en torno al Bicentenario de la Revolución de Mayo y de la Independencia, así como las discusiones sobre la incorporación de nuevos feriados nacionales —como el Día de la Soberanía Nacional o el de Martín Güemes—, son ejemplos de cómo persisten las disputas sobre la nación y su historia. En sus discursos, muchos políticos reflejan su propia visión de la nación según la manera en que explican su pasado y su presente.</p>
-
-<p>Más allá de las diferencias y los debates sobre qué es la nación y quiénes la conforman, estos intercambios ponen en evidencia su carácter artificial y cambiante. Como señaló Eric Hobsbawm (1991), la nación es, en última instancia, el resultado de un proceso de ingeniería social, moldeado por el contexto histórico y las decisiones políticas.</p>
-
-
-
-<h2>Referencias bibliográficas</h2>
-
-<p>Anderson, B. (1993). Comunidades imaginadas: reflexiones sobre el origen y la difusión del nacionalismo. Fondo de Cultura Económica. [trabajo original publicado en 1983].</p>
-
-<p>Bertoni, L. A. (2001). Patriotas, cosmopolitas y nacionalistas. En La construcción de una nación. Fondo de Cultura Económica.</p>
-
-<p>Gellner, E. (1988). Naciones y nacionalismo. Alianza Editorial. [trabajo original publicado en 1983].</p>
-
-<p>Hobsbawm, E. J. (1991). Naciones y nacionalismo desde 1780. Crítica. [trabajo original publicado en 1983].</p>
-
-<p>Hobsbawm, E. J. y Ranger, T. (2012). La invención de la tradición. Crítica. [trabajo original publicado en 1990].</p>
-
-    </div>
-
-
-    <footer>
-
-      ICSE 024 — Cátedra Pedrosa — UBA XXI
-
-    </footer>
-
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">Nación y Estado, asuntos separados</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
   </div>
 
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
+  <div class="page">
+    <div class="metadatos">
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+
+      <div class="titulo-texto">Nación y Estado, asuntos separados</div>
+
+      <div class="autor">María José Valdés</div>
+
+      <div class="info">Páginas originales: 53–63</div>
+
+      <div class="badge">Día 2 — Unidad 1</div>
+    </div>
+
+    <div class="contenido">
+      <h2>Nación y Estado, asuntos separados</h2>
+
+<p>María José Valdés</p>
+
+
+
+<p>Desde los primeros años de escolarización, un término aparece de manera constante y recurrente: nación. Aparece en los actos escolares, en las fechas patrias e incluso en las transmisiones de los partidos de fútbol. También se usa el término argentinidad como sinónimo de nacionalidad. Pero, ¿qué significa realmente nación? Cómo se define? Qué cosas incluye y cuáles no? Y además, conceptos como nacionalismo y nacionalidad, ¿siempre tuvieron el mismo significado o este cambió con el tiempo? Y la Nación Argentina, ¿existe desde siempre o es el resultado de un proceso histórico? ¿Es algo natural o fue construida? Por último, ¿hasta qué punto nación y Estado son lo mismo?, ¿son cosas diferentes? Estas son algunas de las preguntas que abordaremos en las próximas páginas.</p>
+
+<p>Hablar de Estado implica centrarse en las instituciones políticas, pero cuando nos referimos a la nación, el enfoque cambia. Se trata de la sociedad, la ciudadanía y el pueblo, entendidos tanto como el origen de la identidad y pertenencia.</p>
+
+
+
+<h3>El concepto de nación</h3>
+
+<p>A lo largo del tiempo, distintos estudios han intentado responder estas preguntas y han dado lugar a dos grandes maneras de entender el concepto: la nación como una comunidad de individuos que comparten ciertos rasgos, y la nación como un fenómeno histórico.</p>
+
+
+
+<h3>La nación como una comunidad de individuos</h3>
+
+<p>Se define a la nación como una comunidad de individuos que comparten ciertos rasgos étnicos, culturales, lingüísticos o territoriales, lo que les permite identificarse con una nacionalidad en particular. Esta visión parte de la idea de que estos criterios son objetivos, es decir, que pueden identificarse de manera clara y precisa. Sin embargo, esta forma de definir la nación tiene sus límites. Por ejemplo, lo mismo ocurre con el criterio lingüístico. Todas las personas que hablan un mismo idioma ¿forman parte de una misma nación? Este tipo de definiciones no siempre considera que la nación es una construcción. Un caso concreto es el de los antiguos imperios plurinacionales, como el austrohúngaro o el otomano, donde convivían múltiples identidades nacionales. También está el caso de la región de Alsacia: sus habitantes son franceses o alemanes? En Europa, esta idea no coincidía del todo con la realidad.</p>
+
+
+
+<h3>La nación como un fenómeno histórico</h3>
+
+<p>Otra forma de entender la nación es como un fenómeno histórico, es decir, como algo que no es permanente o anterior a la historia. Desde esta perspectiva, tres autores clave han trabajado el concepto: Ernest Gellner, Benedict Anderson y Eric Hobsbawm. Los tres coinciden en que la nación es un producto de la Modernidad, por lo que su existencia es relativamente reciente. Gellner (1988) sostiene que la nación surge de la combinación entre voluntad y cultura. Para que las personas se sientan parte de una misma identidad, debe existir un elemento cultural que las una. En otras palabras, las naciones no son algo dado, sino que se construyen y, a partir de esa construcción, influyen en las creencias, lealtades y vínculos de quienes las integran. Gellner relaciona el surgimiento de la nación con los cambios económicos que marcaron el paso de las sociedades agrarias a las industriales.</p>
+
+<p>Anderson (1993) plantea que la nación es una "comunidad imaginada", es decir, un grupo de personas que se perciben como parte de una misma nación es una comunidad política que se imagina como limitada y soberana. ¿Por qué se la considera "imaginada"? Porque nadie puede conocer personalmente a todos los miembros de su nación, pero aun así, se siente parte de ella gracias a los elementos culturales compartidos. Anderson destaca la importancia de las transformaciones ideológicas y materiales de la Modernidad para explicar la nación como una "comunidad imaginada". Hobsbawm considera que no puede entenderse sin el proceso abierto por la Revolución Francesa de 1789.</p>
+
+<p>Por último, Hobsbawm (1991) sostiene que la nación es un fenómeno reciente en la historia de la humanidad y que está ligada a una unidad territorial: el Estado nación. Además, plantea que su existencia no es natural, sino que intervinieron distintos mecanismos de invención y organización. Según Hobsbawm, el siglo XIX fue clave en la "fabricación de naciones". Durante este periodo se consolidó la idea de que cada nación debía tener su propio Estado nación, mediante su apoyo. Este proceso fue determinante para la creación de lo que hoy se conoce como Estado moderno.</p>
+
+<p>A pesar de sus diferencias, las ideas de Gellner, Anderson y Hobsbawm comparten varios puntos en común. Los tres coinciden en que la nación es un producto de la Modernidad, por lo que su existencia es relativamente reciente. Otro punto en común es la relación entre nación y territorio, es decir, la conexión entre nación y Estado. Finalmente, los tres autores rechazan la idea de que la nacion sea algo natural o anterior a cualquier unidad política. En definitiva, todos concluyen que la nación se construye históricamente.</p>
+
+
+
+<h3>La construcción de naciones</h3>
+
+<p>¿Cómo se construyeron las naciones? ¿Cuándo ocurrió este proceso? ¿Qué elementos se usaron para lograrlo? Basándonos en las definiciones de nación previamente analizadas, se puede asociar el surgimiento de la idea moderna de nación en el mundo occidental con los cambios que comenzaron a fines del siglo XVII, cuando se gestaron en Europa entre los siglos XV y XVIII, y que se consolidaron con la Ilustración, la Revolución Industrial y la expansión del capitalismo, entre ellos, el predominio del pensamiento racional y del método científico como base del conocimiento, la disminución del poder de la religión en la vida pública y el surgimiento de Estados organizados bajo principios de soberanía política.</p>
+
+<p>En América, la disolución de los imperios coloniales —como el inglés, el francés, el portugués y, especialmente, el español— llevó a la formación de nuevas unidades territoriales. En muchos casos, la construcción de estos nuevos Estados estuvo acompañada por la creación de naciones. Estos procesos muestran cómo la nación no era algo natural o dado desde siempre, sino una construcción histórica basada en elementos culturales, políticos y sociales. Este proceso no ocurrió solo en Europa.</p>
+
+<p>Los más importantes en Europa fueron las unificaciones de Italia y Alemania. Por un lado, existían imperios multinacionales como el otomano o el ruso, donde convivían múltiples identidades nacionales y sus habitantes se sentían parte de un Estado imperial más amplio. Por otro lado, habían pueblos que compartían una identidad cultural y lingüística, pero que no tenían un Estado propio, como los italianos y los alemanes, cuyos territorios estaban divididos en varias entidades políticas diferentes. Incluso en monarquías consolidadas, como España o Gran Bretaña, existían minorías internas con lenguas y tradiciones propias, como los catalanes y vascos en España, o los irlandeses y galeses en el Reino Unido. Para justificar esta idea, se apeló a los siguientes elementos:</p>
+
+<ul>
+
+<li>un pasado compartido, como la identificación de Italia con el antiguo Imperio romano;</li>
+
+<li>instituciones preexistentes, como la referencia al Sacro Imperio Romano Germánico en el caso alemán;</li>
+
+<li>tradiciones y cultura popular, como los cuentos recopilados por los hermanos Grimm, que reforzaban la identidad alemana;</li>
+
+<li>una lengua común, aunque en Italia, por ejemplo, solo el 2,5% de la población hablaba el italiano unificado.</li>
+
+</ul>
+
+
+
+<h3>Una nación y un Estado: la Argentina</h3>
+
+<p>En la región rioplatense, el siglo XIX comenzó con dos hechos clave: la Revolución de 1810 y la Independencia de 1816, que marcaron el fin del Virreinato del Río de la Plata. A partir de ese momento, el territorio que luego se convertiría en la República Argentina estuvo atravesado por guerras civiles y conflictos políticos tanto entre las provincias como dentro de cada una. Estas disputas tuvieron importantes consecuencias en la política, la sociedad y la economía de la época.</p>
+
+<p>Luego de 1862, la creación de un flamante Estado nacional supuso el inicio de una nueva etapa, caracterizada por la trabajosa tarea de subordinación de todos aquellos que desafiaran su poder y autoridad, así como de construcción material de su autoridad a través de su presencia en todo el territorio que reclamaba como propio. Este proceso, con marchas y contramarchas, culminó en 1880 con el triunfo del Estado nacional sobre la provincia de Buenos Aires, que debió aceptar definitivamente la transformación de su capital provincial en capital de la república.</p>
+
+<p>Un año antes, ese mismo Estado nacional había culminado su dominio en la región sur; en el nordeste, este proceso recién se completaría a comienzos del siglo siguiente. Por ende, hacia la década de 1880, un nuevo escenario institucional se encontraba configurado: existía un Estado, cuyas fronteras y límites se encontraban medianamente definidos (al menos formalmente con Chile, cosa que sucedería en años posteriores); se habían creado instituciones como el Ejército nacional, los órganos de justicia, ministerios, etcétera, o al menos se encontraban delineados.</p>
+
+<p>Pero fue en esta etapa cuando en la Argentina la preocupación por la formación de la identidad nacional cobró relevancia. Esto no significa que anteriormente no existiera. En todo caso, a fines del siglo XIX, su importancia fue mucho mayor. Esto se debió a que, en las últimas décadas de ese siglo, se produjo una fuerte inmigración ultramarina que remodeló a la sociedad argentina, sobre todo en la región del Litoral. Para evaluar su impacto hay que considerar que, según el censo nacional de 1895, dos de cada tres habitantes de la Capital Federal eran extranjeros. Italianos y españoles eran mayoría, pero también había inmigrantes del imperio turco. Su presencia coincidía con un proceso inacabado de construcción de una nación, entendido también —según Bertoni (2001)— como de formación de una sociedad nacional.</p>
+
+<p>Pero también este proceso tenía lugar en un contexto en el cual se producía la constitución de naciones en Europa (de donde provenían estos inmigrantes), donde se discutían los criterios a partir de los cuales se definía qué era una nación, o qué naciones debían considerarse como tales. Por ende, el debate en torno a la cuestion nacional, la identidad nacional —en definitiva, la construcción de la nación— se dio en un contexto cruel. Los grupos dirigentes argentinos de la época mostraban su preocupación en torno a la cuestión de la nacionalidad. Si para 1880 la construcción del Estado y de sus instituciones parecía estar finalizada, el temor a la disolución de la sociedad y de la nacionalidad cobró inusitada importancia. Por lo tanto, consideraban que quien tenía la principal responsabilidad en el fortalecimiento de los aspectos culturales de la identidad nacional era el Estado. Es decir que el Estado, a través de un conjunto de instituciones y de intervenciones directas, debía intervenir claramente para inculcar la identidad nacional y fortalecerla.</p>
+
+<p>Obviamente, el mecanismo privilegiado para ello fue la escuela. En 1884, el Congreso nacional sancionó la ley 1420, que estableció la obligatoriedad de la enseñanza primaria, además de su carácter laico y gratuito. Además, reforzó la orientación nacional de su enseñanza, al establecer en la instrucción obligatoria —además de lectura, escritura, aritmética básica— contenidos de geografía, historia e idioma nacional, así como el conocimiento de la Constitución nacional. En paralelo, el Consejo Nacional de Educación (CNE, creado en 1880 y reorganizado en 1887), con injerencia en las escuelas de la Capital Federal y de los territorios nacionales, estableció nuevos planes y programas para mejorar los contenidos y los métodos de enseñanza. Además, se hizo especial hincapié en el cumplimiento de la obligatoriedad de la educación para evitar la deserción mediante campañas para retener y ampliar el número de niños y niñas escolarizados. Ante las epidemias de cólera, difteria y viruela (ocurridas entre 1886 y 1887), el CNE actuó con rapidez: al tiempo que promovía la vacunación y se desarrollaron planes de seguimiento y control de salud de los niños y de sus familias.</p>
+
+
+
+<h3>La escuela y los escolares</h3>
+
+<p>Junto con la importancia otorgada a la institución escolar como formadora de la identidad nacional a través de los contenidos enseñados, otro de los aspectos a partir de los cuales la dirigencia consideró necesario construir la nación fue por medio de la liturgia patria, es decir, las fiestas patrias.</p>
+
+<p>Este proceso se llevó a cabo por medio de distintos mecanismos. Primero, el ceremonial oficial pasó a ocupar el centro de las celebraciones patrias, con el tedeum. El tedeum es una ceremonia religiosa. Su nombre proviene del himno en latín Te Deum laudamus ("A ti, Dios, te alabamos"), que se entona durante la ceremonia. En la Argentina, el tedeum del 25 de Mayo es una tradición histórica que se realiza cada año en la Catedral Metropolitana de Buenos Aires con la presencia de autoridades nacionales, incluido el presidente de la Nación. Se lleva a cabo como parte de las celebraciones del día de la Revolución de Mayo, en conmemoración del primer gobierno patrio de 1810. Durante el evento, el arzobispo ofrece un mensaje con reflexiones sobre el país y su situación social y política. En otras ocasiones, también se celebran tedeums en fechas patrias importantes, como el 9 de Julio, día de la Independencia.</p>
+
+<p>Segundo, se promovió la participación de los escolares en los actos oficiales como una forma de movilización política. Los niños, organizados en batallones militares, eran presentados como un vínculo entre el pasado heroico de la independencia y el futuro del país. La idea era que, al identificarse con quienes habían protagonizado la "gesta de Mayo", desarrollaran un sentido de pertenencia a la patria a través de sus representaciones materiales. De esta manera, lo que primaba era la diversión y el entretenimiento. Los juegos y entretenimientos, aunque continuaron en los barrios y en los pueblos del interior, quedaron relegados a un segundo plano.</p>
+
+<p>Tercero, se promovió la ritualización de las celebraciones mediante el uso de símbolos patrios, el izamiento de la bandera y el canto del himno nacional. La escuela y los escolares jugaron un papel clave en la afirmación de la identidad nacional. Este proceso también llevó a una reglamentación de los símbolos patrios. Se establecieron normas precisas sobre su tamaño, colores y uso tanto en espacios públicos como privados. Por ejemplo, la bandera con el sol se permitió para el uso oficial, mientras que la versión sin el sol se permitió para el uso privado. Durante las décadas de 1880 y 1890 hubo una proliferación en todo el país de monumentos, como los que se erigieron en homenaje al general Lavalle y al general Paz, este último en la provincia de Córdoba. Por último, la construcción material de espacios en los cuales se honrara el pasado dio lugar a toda una serie de monumentos que se erigieron en diferentes lugares del territorio. Se podría agregar un elemento más: en 1901 se estableció el servicio militar obligatorio, que, más allá de su creación en el marco de una hipótesis de conflicto armado con Chile, operó exitosamente para consolidar la construcción de la identidad nacional.</p>
+
+
+
+<h3>Culto a la patria</h3>
+
+<p>Un cuarto mecanismo para la construcción de la nación, en el que se involucraron las clases dirigentes y asociaciones civiles de distinto tipo preocupadas por lo "nacional" fue el culto a la patria a través de sus representaciones materiales. De esta manera, se legisló para la construcción del complejo en homenaje al Ejército de los Andes (Mendoza), y se promulgó una ley para la restauración histórica de la Casa de Tucumán. En paralelo, el Congreso sancionó leyes que autorizaban al Poder Ejecutivo a repatriar los restos de los héroes de la independencia (donde reposarían sus restos) en el cementerio de la Chacarita, aunque finalmente se edificó el monumento a los héroes de la independencia en el de la Recoleta. También se legislaron leyes para la construcción del monumento a los héroes de la independencia. También se legisló para la construcción del complejo en homenaje al Ejército de los Andes (Mendoza), y se promulgó una ley para la restauración histórica de la Casa de Tucumán.</p>
+
+
+
+<h3>Elaboración de una historia nacional</h3>
+
+<p>La construcción de la nación implicaba, indefectiblemente, un aspecto central: elaborar una historia nacional. En un sentido amplio, Bertoni (2001) ha señalado que la historia, una disciplina científica en expansión en esa etapa, se convirtió en instrumento privilegiado para la construcción de la memoria nacional. Durante este periodo se publicaron diferentes historias nacionales, historias provinciales; se recopilaron tradiciones regionales, historias de batallas, guerras, conquistas y poblamiento, de grandes hombres, de instituciones, etcétera.</p>
+
+<p>En esta elaboración, una serie de intelectuales se convirtieron en claves, en particular, Bartolomé Mitre y Vicente Fidel López. Desde perspectivas diferentes, ambos entendieron el oficio del historiador y elaboraron una visión sobre el pasado. La historia nacional elaborada por Mitre se convirtió, finalmente, en la historia nacional sacralizada en los textos escolares.</p>
+
+<p>Si, como dijimos al comienzo, la nación y la manera en que esta es construida es el resultado de un proceso histórico, es lógico entender que en su propia historia ocurran transformaciones. En un contexto marcado —como ya señalamos— por el furibundo impacto de la inmigración, fue lógico que desde algunos sectores se revalorizaran las raíces hispanicas. Esto supuso, por ejemplo, la reconversión de la mirada sobre España: de metrópoli tiránica se transformó en "Madre patria", aunque este proceso no estuvo libre ni de tensiones ni de conflictos. Ejemplo de ello fue el establecimiento del 12 de octubre como fiesta permanente, de celebración entre argentinos y españoles, y —luego de arduas disputas— el decreto promulgado en 1898 que definió las partes del himno nacional que podrían cantarse públicamente para no herir la susceptibilidad de la colectividad española.</p>
+
+
+
+<h3>Conclusiones</p>
+
+<p>Como vimos en las páginas precedentes, la preocupación por la nación surgió en nuestro país a fines del siglo XIX en un contexto marcado por fuertes transformaciones sociales, políticas, económicas y culturales. En ese marco, cobró relevancia el imperativo por concluir aquello que se consideraba inconcluso: la nación, por lo tanto, la nacionalidad. Para ello se pusieron en acción una serie de mecanismos: la escuela y la enseñanza de la lengua y del pasado, fundamentalmente. Al mismo tiempo, las fiestas escolares y las celebraciones patrias (dentro y fuera del espacio educativo) fueron otro de los elementos centrales en esta tarea.</p>
+
+<p>El siglo XX y lo que va del XXI no han estado libres de nuevos debates sobre qué significa la nación y la identidad nacional, cómo esta se construye, qué elementos contiene y cuáles deja por fuera. De hecho, se puede ver cómo han variado las miradas sobre la nación y sobre el pasado en periodos muy concretos, como durante el peronismo clásico (1946-1955) o en la última dictadura militar (1976-1983). En tiempos más recientes, el debate en torno al Bicentenario de la Revolución de Mayo y de la Independencia, así como las discusiones sobre la incorporación de nuevos feriados nacionales —como el Día de la Soberanía Nacional o el de Martín Güemes—, son ejemplos de cómo persisten las disputas sobre la nación y su historia. En sus discursos, muchos políticos reflejan su propia visión de la nación según la manera en que explican su pasado y su presente.</p>
+
+<p>Más allá de las diferencias y los debates sobre qué es la nación y quiénes la conforman, estos intercambios ponen en evidencia su carácter artificial y cambiante. Como señaló Eric Hobsbawm (1991), la nación es, en última instancia, el resultado de un proceso de ingeniería social, moldeado por el contexto histórico y las decisiones políticas.</p>
+
+
+
+<h2>Referencias bibliográficas</h2>
+
+<p>Anderson, B. (1993). Comunidades imaginadas: reflexiones sobre el origen y la difusión del nacionalismo. Fondo de Cultura Económica. [trabajo original publicado en 1983].</p>
+
+<p>Bertoni, L. A. (2001). Patriotas, cosmopolitas y nacionalistas. En La construcción de una nación. Fondo de Cultura Económica.</p>
+
+<p>Gellner, E. (1988). Naciones y nacionalismo. Alianza Editorial. [trabajo original publicado en 1983].</p>
+
+<p>Hobsbawm, E. J. (1991). Naciones y nacionalismo desde 1780. Crítica. [trabajo original publicado en 1983].</p>
+
+<p>Hobsbawm, E. J. y Ranger, T. (2012). La invención de la tradición. Crítica. [trabajo original publicado en 1990].</p>
+    </div>
+    
+
+    <footer>
+      ICSE 024 — Cátedra Pedrosa — UBA XXI
+    </footer>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
-
 </html>
-

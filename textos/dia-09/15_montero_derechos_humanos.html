@@ -2,348 +2,116 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Nuevos derechos, viejos problemas — ICSE 024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-        :root {
-      --bg: #1a1a1a;
-      --text: #d4d0c8;
-      --text-muted: #8a8580;
-      --heading: #e8e4dc;
-      --border: #3a3530;
-      --surface: #242220;
-      --accent: #c9854a;
-      --red-soft: #e06060;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      font-size: 18px;
-      line-height: 1.75;
-      padding: 0;
-    }
-
-    .page {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 4rem 2rem 6rem;
-    }
-
-    .metadatos {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
-    .metadatos .titulo-libro {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .metadatos .titulo-texto {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 2em;
-      font-weight: 600;
-      color: var(--heading);
-      line-height: 1.25;
-      margin-bottom: 0.6rem;
-    }
-
-    .metadatos .autor {
-      font-size: 1.05em;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-
-    .metadatos .info {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78em;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .metadatos .badge {
-      display: inline-block;
-      margin-top: 1.2rem;
-      padding: 0.35rem 1.2rem;
-      background: var(--heading);
-      color: #1a1a1a;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72em;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border-radius: 2px;
-    }
-
-    .contenido p {
-      text-indent: 1.5em;
-      margin-bottom: 0;
-      text-align: justify;
-      hyphens: auto;
-    }
-
-    .contenido p + p {
-      margin-top: 0.9em;
-    }
-
-    .contenido p:first-of-type {
-      text-indent: 0;
-    }
-
-    .contenido p.first-of-section {
-      text-indent: 0;
-    }
-
-    .contenido h2 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 600;
-      color: var(--heading);
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido h3 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.2em;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--heading);
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .contenido h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contenido blockquote {
-      margin: 2rem 0 2rem 1.5rem;
-      padding: 1rem 1.5rem;
-      border-left: 3px solid var(--accent);
-      font-style: italic;
-      color: var(--text-muted);
-      background: var(--surface);
-      font-size: 0.95em;
-    }
-
-    .contenido blockquote p {
-      text-indent: 0;
-      text-align: left;
-    }
-
-    .contenido ul,
-    .contenido ol {
-      margin: 1.2rem 0 1.2rem 2rem;
-    }
-
-    .contenido li {
-      margin-bottom: 0.5em;
-      padding-left: 0.3em;
-    }
-
-    .contenido table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.9em;
-    }
-
-    .contenido table th {
-      background: var(--surface);
-      color: var(--heading);
-      padding: 0.7rem 1rem;
-      text-align: left;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 0.85em;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    border-bottom: 2px solid var(--accent); }
-
-    .contenido table td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido table tr:nth-child(even) {
-      background: var(--surface);
-    }
-
-    .contenido .ilegible {
-      color: var(--red-soft);
-      font-weight: 600;
-      background: #3a2020;
-      padding: 0.1em 0.3em;
-      border-radius: 2px;
-    }
-
-    .contenido .nota-num {
-      font-size: 0.75em;
-      vertical-align: super;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .notas {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .notas h2 {
-      font-size: 1.1em;
-      margin-bottom: 1rem;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .notas p {
-      font-size: 0.85em;
-      text-indent: 0;
-      margin-bottom: 0.6em;
-      color: var(--text-muted);
-      text-align: left;
-    }
-
-    .separador {
-      text-align: center;
-      margin: 3rem 0;
-      color: var(--border);
-      font-size: 1.2em;
-      letter-spacing: 0.5em;
-    }
-
-    footer {
-      margin-top: 5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    @media print {
-      body { background: #fff; font-size: 12pt; }
-      .page { padding: 0; max-width: 100%; }
-      .metadatos { break-after: page; border: none; background: none; }
-      .contenido h2 { break-after: avoid; }
-      .contenido h3 { break-after: avoid; }
-      blockquote { break-inside: avoid; }
-      table { break-inside: avoid; }
-      footer { break-before: avoid; }
-    }
-
-    @media (max-width: 700px) {
-      .page { padding: 2rem 1.2rem 4rem; }
-      body { font-size: 16px; }
-      .metadatos .titulo-texto { font-size: 1.6em; }
-    }
-  </style>
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="../textos.css">
 </head>
 <body>
+
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">Nuevos derechos, viejos problemas</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
   <div class="page">
     <div class="metadatos">
-      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
-      <div class="titulo-texto">Nuevos derechos, viejos problemas</div>
-      <div class="autor">Julio Montero</div>
-      <div class="info">Páginas originales: 175–189</div>
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+      <div class="titulo-texto">Nuevos derechos, viejos problemas</div>
+      <div class="autor">Julio Montero</div>
+      <div class="info">Páginas originales: 175–189</div>
       <div class="badge">Día 9 — Unidad 3</div>
     </div>
 
     <div class="contenido">
-      <h2>Capítulo 14. Nuevos derechos, viejos problemas</h2>
-<p class="first-of-section">La práctica de los derechos humanos internacionales comenzó el 10 de diciembre de 1948. Ese día, tras varias jornadas de debates y negociaciones, la Asamblea General de las Naciones Unidas adoptó la Declaración Universal de los Derechos Humanos con el voto positivo de la mayoría de sus miembros, la abstención del bloque socialista liderado por la Unión Soviética y el voto negativo de Sudáfrica y Arabia Saudita.</p>
-<p>Mediante este crucial documento, los Estados firmantes se comprometían por primera vez en la historia a respetar los derechos más fundamentales de sus residentes, al margen de las ideologías, las tradiciones culturales y los deseos de las mayorías. Nunca más los gobiernos volverían a tener un derecho de vida y muerte sobre los seres humanos.</p>
-<p>Según la Declaración Universal, los derechos humanos son derechos que todas las personas tenemos, independientemente de cuál sea nuestra nacionalidad, nuestra religión, nuestro género, nuestra clase social, nuestras ideas o nuestro origen étnico. Por eso, todas las sociedades deben respetarlos siempre y en todas partes. Es en este sentido que decimos que los derechos humanos son derechos universales. La dignidad humana estaba por encima de cualquier causa colectiva o nacional.</p>
-<p>Pero además de universales, los derechos humanos también son inderogables: no pueden ser derogados mediante procesos previstos en la Constitución, como las enmiendas o las asambleas constitucionales. Por el contrario, los derechos humanos son los mismos en todas partes y no pueden ser cambiados ni siquiera mediante el consenso unánime de todos los ciudadanos. Esto significa que estos se sitúan más allá de la órbita de lo políticamente decidible: están incluso por encima de la Constitución.</p>
-
-<h3>Recorrido histórico</h3>
-<p>Conceptualmente, la idea de los derechos humanos fue una invención de los filósofos liberales asociados con el Humanismo y la Ilustración. Ya en el siglo XVI, una época dominada por déspotas y monarcas absolutos, el pensador inglés John Locke argumentó que todos los individuos gozamos de una serie de derechos "naturales" por el mero hecho de ser personas humanas. Entre ellos incluyó los derechos a la vida, a la salud, a la libertad y a la propiedad.</p>
-<p>De acuerdo con Locke, estos derechos naturales no dependían de su reconocimiento legal por parte de los Estados, sino que podían ser descubiertos mediante la mera reflexión racional, y eran tan importantes que nadie podía violarlos, ni siquiera los gobiernos. Esta tesis, novedosa al principio, se volvió común en la obra de otros autores a lo largo de la Modernidad, y alcanzó su máxima expresión en los tratados y varias constituciones occidentales de los siglos XVII y XIX.</p>
-<p>Una de las grandes contribuciones de Kant a la filosofía moral y política fue darle forma al principio de dignidad de la persona sobre el que se asientan todas las sociedades libres. En un importante ensayo publicado en 1785, Kant sostuvo que cada ser humano posee un valor intrínseco y debe ser tratado siempre como un fin en sí mismo y nunca como un mero medio al servicio de los demás. Y en un texto posterior, argumentó que cada individuo goza de un derecho innato a la libertad, entendido como el de no ser sometido a la voluntad arbitraria de terceros. En la filosofía de Kant, los Estados y sus gobiernos existen precisamente para que todos podamos gozar de estos derechos intrínsecamente ligados a nuestra dignidad como personas.</p>
-<p>La noción de derechos humanos recién alcanzó aceptación internacional plena durante la Segunda Guerra Mundial. Hasta ese momento, había predominado la idea de que lo que los gobiernos hacían dentro de su territorio era un asunto de cada día o confinados en guetos y campos de trabajo forzado, la comunidad internacional tomó conciencia de que el respeto de los derechos más fundamentales de las personas no podía quedar sujeto a la buena voluntad de sus gobiernos. Las aberraciones de los nazis no podían repetirse, ni en Alemania ni en ninguna parte.</p>
-<p>Por esa razón, una vez finalizada la guerra, los Aliados sometieron a los altos mandos nazis a una serie de juicios sin precedentes que se desarrollaron en la ciudad de Núremberg y decidieron avanzar en la redacción de un documento internacional que regulara el trato que los Estados podían dar a sus habitantes en cualquier lugar del mundo. Ese documento, elaborado por un comité de académicos e intelectuales de distintos países liderados por Eleanor Roosevelt, se convertiría en la Declaración Universal de los Derechos Humanos.</p>
-<p>La adopción de la Declaración Universal fue un evento de gran valor político y cultural que fijó nuevas pautas para el orden mundial y transformó la vida de millones de personas de manera muy significativa. Sin embargo, fue solo el primer paso de un largo proceso, que siguió con la sanción del Pacto Internacional de Derechos Civiles y Políticos y el Pacto Internacional de Derechos Económicos, Sociales y Culturales. Estos dos documentos entraron en vigor en 1976, y son especialmente importantes porque tienen fuerza legal para los Estados firmantes y porque establecen mecanismos concretos de monitoreo y supervisión.</p>
-<p>En general, al menos al momento de su adopción, la Declaración Universal fue vista como un documento meramente aspiracional, cuya violación no tenía consecuencias legales para los gobiernos infractores. Por el contrario, a través de las fronteras, la doctrina de los derechos humanos está expresada en un gran abanico de documentos que se mantiene en constante expansión.</p>
-
-<h3>La doctrina internacional</h3>
-<p>En términos de su contenido, los documentos internacionales protegen una serie de derechos bastante diversos, que podemos dividir en seis grandes grupos:</p>
-<ul>
-<li><strong>Derechos a la seguridad personal</strong>, como el derecho a la vida, a la integridad física, a no ser esclavizado y a no padecer tortura.</li>
-<li><strong>Derechos civiles</strong>, como las libertades de conciencia, expresión y movimiento, la libertad de residencia, el derecho de salida y retorno al propio país, el derecho a la privacidad, el derecho al matrimonio consentido y el derecho a la propiedad privada.</li>
-<li><strong>Derechos a la igualdad</strong>, como el derecho a gozar de igual protección de la ley y a no padecer discriminación por razones étnicas, religiosas o de género.</li>
-<li><strong>Derechos políticos</strong>, como las libertades de asamblea y asociación, el derecho a formar partidos políticos, el derecho a participar del gobierno, el derecho a manifestarse y el derecho a participar de las elecciones bajo el sistema de sufragio universal.</li>
-<li><strong>Derechos de bienestar</strong>, como el derecho al alimento, al vestido, a la vivienda, a la atención médica, a la educación y a la seguridad social. En este rubro también podemos incluir el derecho a condiciones dignas de trabajo y a una jornada laboral limitada, y los derechos de sindicalización.</li>
-<li><strong>Derechos grupales</strong>, como el derecho a la autodeterminación y el desarrollo de los pueblos.</li>
-</ul>
-<p>Según los documentos internacionales, todos los derechos que acabamos de mencionar derivan de la dignidad intrínseca de la persona humana. Lamentablemente, esta idea está poco desarrollada en la doctrina, quizá porque los redactores de la Declaración Universal prefirieron evitar controversias morales o ideológicas entre los representantes de los distintos países. La doctrina delos derechos humanos afirma que todos los derechos humanos son indivisibles, lo que significa que no hay derecho que tenga prioridad sobre los demás. Mientras que países occidentales tales como Estados Unidos y el Reino Unido sostenían que las libertades individuales y la democracia eran más importantes que los derechos de bienestar, los países del bloque socialista sostenían lo contrario. No obstante, ambas posiciones carecen de sustento legal.</p>
-<p>En la práctica internacional actual, los derechos humanos cumplen dos funciones relacionadas pero distintas. La primera es interna, y consiste en generar deberes que los gobiernos deben satisfacer respecto de sus habitantes: los deberes de respetar, los deberes de proteger y los deberes de promover. Los deberes de respetar son obligaciones de no interferir activamente con el goce de los derechos humanos; los deberes de proteger son obligaciones de impedir que el ejercicio de los derechos humanos sea menoscabado por la acción de terceros; y los deberes de promover son obligaciones de brindar asistencia a quienes se vean privados del goce de sus derechos.</p>
-
-<h3>La función interna de los derechos humanos</h3>
-<p>En el plano interno, los derechos humanos generan tres clases de deberes que los gobiernos deben satisfacer respecto de sus habitantes. Cuando los Estados incumplen alguno de estos tres deberes genéricos, violan los derechos humanos de las personas, ya sea por acción, por omisión intencional o por conducta negligente. Y si las violaciones son graves, sistemáticas o generalizadas, pueden comprometer la legitimidad del gobierno tanto a nivel interno como externo, lo cual justifica interferencias foráneas en su autonomía.</p>
-<p>Como derechos que regulan el uso de la autoridad política soberana, los derechos humanos se asemejan a los derechos constitucionales. Pero hay una diferencia importante entre estas dos familias de derechos. Los derechos constitucionales son derechos que las comunidades políticas se dan a sí mismas para limitar el rango de acción de las mayorías de turno y evitar el uso arbitrario del poder. Por eso, su contenido depende de las tradiciones y los acuerdos fundacionales de cada sociedad y pueden ser derogados mediante procesos previstos en la Constitución.</p>
-<p>En cambio, los derechos humanos son los mismos en todas partes y no pueden ser cambiados ni siquiera mediante el consenso unánime de todos los ciudadanos. Esto significa que estos se sitúan más allá de la órbita de lo políticamente decidible: están incluso por encima de la Constitución como las enmiendas o las asambleas constitucionales.</p>
-
-<h3>La función externa de los derechos humanos</h3>
-<p>La segunda función de los derechos humanos es externa y consiste en regular la conducta de los Estados más allá de sus fronteras. Los derechos humanos también generan tres deberes generales que podemos resumir así: el deber de cada Estado de no violar ni menoscabar los derechos humanos en todas partes y no solamente en su propia jurisdicción; el deber de cada Estado de velar por el reconocimiento de los derechos humanos a escala global y de brindar asistencia a quienes sean oprimidos o tiranizados por sus gobiernos; y el deber de la comunidad internacional de tomar medidas proactivas para mejorar la situación de los derechos humanos a escala global.</p>
-<p>Los derechos humanos suelen asociarse a los crímenes de lesa humanidad. Esta es una figura legal, tipificada en el Estatuto de Roma de 1998, que incluye abusos como el asesinato, la esclavitud, el apartheid, el genocidio, la tortura y la desaparición forzada de personas, cuando son perpetrados "como parte de un ataque generalizado o sistemático contra una población civil". Esto significa que los crímenes de lesa humanidad involucran la existencia de un plan deliberado por parte del gobierno y la utilización de la maquinaria estatal con fines delictivos. La característica más distintiva de los crímenes de lesa humanidad es que son imprescriptibles y que los individuos implicados en ellos pueden ser juzgados bajo jurisdicción universal y no solamente bajo la jurisdicción y las leyes del Estado en el que ocurrieron los abusos.</p>
-
-<h3>Los derechos humanos y sus críticos</h3>
-<p>Así como los derechos humanos tienen muchos defensores, también tienen críticos feroces. La objeción que más comúnmente se ha formulado contra ellos es que aspiran a globalizar valores occidentales que no todos los pueblos comparten. Estos críticos alegan que las distintas sociedades humanas tienen diversas tradiciones éticas y que todas ellas deberían ser libres de vivir de acuerdo con sus costumbres.</p>
-<p>Por ejemplo, algunos pueblos consideran que ciertos individuos o grupos son más importantes que el resto y que tienen más derecho a ejercer el poder por razones religiosas o de linaje. Del mismo modo, en parte del mundo musulmán, las mujeres no pueden estudiar ni salir de sus casas sin la compañía de un varón y se las obliga a cubrirse el cuerpo con un burka negro cuando están en público. A los ciudadanos de las democracias occidentales estas conductas nos parecen aberrantes y discriminatorias, pero no podemos olvidar que otros pueblos las ven como parte de una tradición sagrada, ancestral y constitutiva de su identidad.</p>
-<p>Para evaluar esta objeción, debemos tener en cuenta que los derechos humanos han mostrado ser una herramienta muy eficaz para proteger a las minorías culturales, religiosas y de otro tipo en contextos hostiles y desventajosos. Los derechos humanos no impiden que las personas vivan sus vidas según las convenciones fijadas por su cultura o su religión, si así lo deciden. Lo único que los derechos humanos prohíben es que algunos individuos sean forzados a vivir según las creencias que otros les imponen mediante sanciones, intimidaciones y amenazas en nombre de un supuesto pasado común. Lejos de conspirar contra el pluralismo, los derechos humanos ofrecen un marco para que las diferencias puedan expresarse y florecer.</p>
-<p>Otra objeción que a menudo se escucha, y que está relacionada con la anterior, es que los derechos humanos son un producto del capitalismo. Estos intelectuales nos dicen que vivimos engañados por una falsa sensación de libertad que encubre las relaciones de poder y dominación, y que la emancipación humana solo será posible cuando derrotemos a los "poderes fácticos" que nos gobiernan desde las sombras en su propio beneficio. Desde la perspectiva de estos críticos, los derechos humanos son parte de un orden social individualista y perverso que debemos dejar atras a cualquier precio. En cambio, en la utopía socialista, esos derechos no serán necesarios porque las personas serán realmente libres e iguales y estarán dispuestas a sacrificarse voluntariamente por el bienestar de los demás.</p>
-<p>Sin embargo, los regímenes socialistas raramente cumplieron con sus promesas. Los socialismos reales asesinaron a millones de seres humanos. Las ideas de Karl Marx tienen gran atractivo y resultan muy seductoras para quienes las estudian. Muchos nos identificamos con su ocupación por los que menos tienen y quisieramos que los recursos y las oportunidades estuvieran distribuidos de una manera más justa.</p>
-<p>Paradójicamente, estas dictaduras tampoco lograron mejorar la calidad de vida de los trabajadores ni erradicar la explotación. Más bien al contrario, todos los experimentos socialistas conocidos hasta ahora culminaron en graves penurias económicas que tarde o temprano precipitaron su caída, y dejaron millones de pobres y exiliados.</p>
-<p>La última objeción que debiéramos considerar es mucho menos elaborada, pero mucho más familiar en el debate público. Esa objeción afirma que los derechos humanos son derechos que defienden los intereses de los "delincuentes" y que impiden que el Estado haga cumplir las leyes y las reglas de convivencia. Es cierto que en muchos países los derechos humanos son usados de una manera parcial y sesgada para promover ciertas causas ideológicas o desprestigiar a los gobiernos. Sin embargo, cuando el uso de la fuerza es proporcionado y se orienta a evitar abusos y atropellos, es constitutivo de la libertad misma. Impedir que algunos individuos violen los derechos de otros no es autoritario ni represivo, sino todo lo contrario.</p>
-<p>En primer lugar, los derechos humanos no son contrarios a la autoridad, sino que la presuponen y dependen de ella. La única manera de garantizar que todos podamos gozar de nuestros derechos es mediante fuerzas de seguridad que los protejan cuando sea necesario. En Cuba, los artistas y los blogueros son perseguidos, y el Estado ejerce un estricto control sobre las redes sociales, la música y el acceso a Internet. En Camboya, los Jemeres Rojos suprimieron las escuelas y la televisión, y aniquilaron a un tercio de la población, regando el país de fosas comunes humanas y enviaron a muchos otros a campos de concentración donde se esperaba "reeducarlos". Durante la Revolución Cultural China, miles de intelectuales, estudiantes y profesionales fueron masacrados o trasladados desde los centros urbanos al campo por medios violentos.</p>
-<p>En segundo lugar, es bueno no olvidar que los derechos humanos van mucho más allá de la tortura, los asesinatos políticos y la desaparición forzada de personas. Son derechos que todas las personas tenemos y que protegen nuestra libertad de pensar, de disentir, de circular, de publicar nuestras ideas, de transitar el espacio público sin miedo y de no ser privados de lo que es nuestro. La vida de todos nosotros sería muy distinta sin ellos.</p>
-
-<h3>Referencias bibliográficas</h3>
-<p>Asamblea General de las Naciones Unidas. (1948). <em>Declaración Universal de los Derechos Humanos</em>.</p>
-<p>Asamblea General de las Naciones Unidas. (1966/1976). <em>Pacto Internacional de Derechos Civiles y Políticos</em>.</p>
-<p>Asamblea General de las Naciones Unidas. (1966/1976). <em>Pacto Internacional de Derechos Económicos, Sociales y Culturales</em>. https://www.ohchr.org/sp/professionalinterest/pages/cescr.aspx</p>
-<p>Dworkin, R. (2014). <em>Justicia para erizos</em>. Fondo de Cultura Económica.</p>
-<p>Griffin, J. (2008). <em>On human rights</em>. Oxford University Press.</p>
-<p>Kant, I. (1785). <em>Fundamentación de la metafísica de las costumbres</em>. Ediciones varias.</p>
+      <h2>Capítulo 14. Nuevos derechos, viejos problemas</h2>
+<p class="first-of-section">La práctica de los derechos humanos internacionales comenzó el 10 de diciembre de 1948. Ese día, tras varias jornadas de debates y negociaciones, la Asamblea General de las Naciones Unidas adoptó la Declaración Universal de los Derechos Humanos con el voto positivo de la mayoría de sus miembros, la abstención del bloque socialista liderado por la Unión Soviética y el voto negativo de Sudáfrica y Arabia Saudita.</p>
+<p>Mediante este crucial documento, los Estados firmantes se comprometían por primera vez en la historia a respetar los derechos más fundamentales de sus residentes, al margen de las ideologías, las tradiciones culturales y los deseos de las mayorías. Nunca más los gobiernos volverían a tener un derecho de vida y muerte sobre los seres humanos.</p>
+<p>Según la Declaración Universal, los derechos humanos son derechos que todas las personas tenemos, independientemente de cuál sea nuestra nacionalidad, nuestra religión, nuestro género, nuestra clase social, nuestras ideas o nuestro origen étnico. Por eso, todas las sociedades deben respetarlos siempre y en todas partes. Es en este sentido que decimos que los derechos humanos son derechos universales. La dignidad humana estaba por encima de cualquier causa colectiva o nacional.</p>
+<p>Pero además de universales, los derechos humanos también son inderogables: no pueden ser derogados mediante procesos previstos en la Constitución, como las enmiendas o las asambleas constitucionales. Por el contrario, los derechos humanos son los mismos en todas partes y no pueden ser cambiados ni siquiera mediante el consenso unánime de todos los ciudadanos. Esto significa que estos se sitúan más allá de la órbita de lo políticamente decidible: están incluso por encima de la Constitución.</p>
+
+<h3>Recorrido histórico</h3>
+<p>Conceptualmente, la idea de los derechos humanos fue una invención de los filósofos liberales asociados con el Humanismo y la Ilustración. Ya en el siglo XVI, una época dominada por déspotas y monarcas absolutos, el pensador inglés John Locke argumentó que todos los individuos gozamos de una serie de derechos "naturales" por el mero hecho de ser personas humanas. Entre ellos incluyó los derechos a la vida, a la salud, a la libertad y a la propiedad.</p>
+<p>De acuerdo con Locke, estos derechos naturales no dependían de su reconocimiento legal por parte de los Estados, sino que podían ser descubiertos mediante la mera reflexión racional, y eran tan importantes que nadie podía violarlos, ni siquiera los gobiernos. Esta tesis, novedosa al principio, se volvió común en la obra de otros autores a lo largo de la Modernidad, y alcanzó su máxima expresión en los tratados y varias constituciones occidentales de los siglos XVII y XIX.</p>
+<p>Una de las grandes contribuciones de Kant a la filosofía moral y política fue darle forma al principio de dignidad de la persona sobre el que se asientan todas las sociedades libres. En un importante ensayo publicado en 1785, Kant sostuvo que cada ser humano posee un valor intrínseco y debe ser tratado siempre como un fin en sí mismo y nunca como un mero medio al servicio de los demás. Y en un texto posterior, argumentó que cada individuo goza de un derecho innato a la libertad, entendido como el de no ser sometido a la voluntad arbitraria de terceros. En la filosofía de Kant, los Estados y sus gobiernos existen precisamente para que todos podamos gozar de estos derechos intrínsecamente ligados a nuestra dignidad como personas.</p>
+<p>La noción de derechos humanos recién alcanzó aceptación internacional plena durante la Segunda Guerra Mundial. Hasta ese momento, había predominado la idea de que lo que los gobiernos hacían dentro de su territorio era un asunto de cada día o confinados en guetos y campos de trabajo forzado, la comunidad internacional tomó conciencia de que el respeto de los derechos más fundamentales de las personas no podía quedar sujeto a la buena voluntad de sus gobiernos. Las aberraciones de los nazis no podían repetirse, ni en Alemania ni en ninguna parte.</p>
+<p>Por esa razón, una vez finalizada la guerra, los Aliados sometieron a los altos mandos nazis a una serie de juicios sin precedentes que se desarrollaron en la ciudad de Núremberg y decidieron avanzar en la redacción de un documento internacional que regulara el trato que los Estados podían dar a sus habitantes en cualquier lugar del mundo. Ese documento, elaborado por un comité de académicos e intelectuales de distintos países liderados por Eleanor Roosevelt, se convertiría en la Declaración Universal de los Derechos Humanos.</p>
+<p>La adopción de la Declaración Universal fue un evento de gran valor político y cultural que fijó nuevas pautas para el orden mundial y transformó la vida de millones de personas de manera muy significativa. Sin embargo, fue solo el primer paso de un largo proceso, que siguió con la sanción del Pacto Internacional de Derechos Civiles y Políticos y el Pacto Internacional de Derechos Económicos, Sociales y Culturales. Estos dos documentos entraron en vigor en 1976, y son especialmente importantes porque tienen fuerza legal para los Estados firmantes y porque establecen mecanismos concretos de monitoreo y supervisión.</p>
+<p>En general, al menos al momento de su adopción, la Declaración Universal fue vista como un documento meramente aspiracional, cuya violación no tenía consecuencias legales para los gobiernos infractores. Por el contrario, a través de las fronteras, la doctrina de los derechos humanos está expresada en un gran abanico de documentos que se mantiene en constante expansión.</p>
+
+<h3>La doctrina internacional</h3>
+<p>En términos de su contenido, los documentos internacionales protegen una serie de derechos bastante diversos, que podemos dividir en seis grandes grupos:</p>
+<ul>
+<li><strong>Derechos a la seguridad personal</strong>, como el derecho a la vida, a la integridad física, a no ser esclavizado y a no padecer tortura.</li>
+<li><strong>Derechos civiles</strong>, como las libertades de conciencia, expresión y movimiento, la libertad de residencia, el derecho de salida y retorno al propio país, el derecho a la privacidad, el derecho al matrimonio consentido y el derecho a la propiedad privada.</li>
+<li><strong>Derechos a la igualdad</strong>, como el derecho a gozar de igual protección de la ley y a no padecer discriminación por razones étnicas, religiosas o de género.</li>
+<li><strong>Derechos políticos</strong>, como las libertades de asamblea y asociación, el derecho a formar partidos políticos, el derecho a participar del gobierno, el derecho a manifestarse y el derecho a participar de las elecciones bajo el sistema de sufragio universal.</li>
+<li><strong>Derechos de bienestar</strong>, como el derecho al alimento, al vestido, a la vivienda, a la atención médica, a la educación y a la seguridad social. En este rubro también podemos incluir el derecho a condiciones dignas de trabajo y a una jornada laboral limitada, y los derechos de sindicalización.</li>
+<li><strong>Derechos grupales</strong>, como el derecho a la autodeterminación y el desarrollo de los pueblos.</li>
+</ul>
+<p>Según los documentos internacionales, todos los derechos que acabamos de mencionar derivan de la dignidad intrínseca de la persona humana. Lamentablemente, esta idea está poco desarrollada en la doctrina, quizá porque los redactores de la Declaración Universal prefirieron evitar controversias morales o ideológicas entre los representantes de los distintos países. La doctrina delos derechos humanos afirma que todos los derechos humanos son indivisibles, lo que significa que no hay derecho que tenga prioridad sobre los demás. Mientras que países occidentales tales como Estados Unidos y el Reino Unido sostenían que las libertades individuales y la democracia eran más importantes que los derechos de bienestar, los países del bloque socialista sostenían lo contrario. No obstante, ambas posiciones carecen de sustento legal.</p>
+<p>En la práctica internacional actual, los derechos humanos cumplen dos funciones relacionadas pero distintas. La primera es interna, y consiste en generar deberes que los gobiernos deben satisfacer respecto de sus habitantes: los deberes de respetar, los deberes de proteger y los deberes de promover. Los deberes de respetar son obligaciones de no interferir activamente con el goce de los derechos humanos; los deberes de proteger son obligaciones de impedir que el ejercicio de los derechos humanos sea menoscabado por la acción de terceros; y los deberes de promover son obligaciones de brindar asistencia a quienes se vean privados del goce de sus derechos.</p>
+
+<h3>La función interna de los derechos humanos</h3>
+<p>En el plano interno, los derechos humanos generan tres clases de deberes que los gobiernos deben satisfacer respecto de sus habitantes. Cuando los Estados incumplen alguno de estos tres deberes genéricos, violan los derechos humanos de las personas, ya sea por acción, por omisión intencional o por conducta negligente. Y si las violaciones son graves, sistemáticas o generalizadas, pueden comprometer la legitimidad del gobierno tanto a nivel interno como externo, lo cual justifica interferencias foráneas en su autonomía.</p>
+<p>Como derechos que regulan el uso de la autoridad política soberana, los derechos humanos se asemejan a los derechos constitucionales. Pero hay una diferencia importante entre estas dos familias de derechos. Los derechos constitucionales son derechos que las comunidades políticas se dan a sí mismas para limitar el rango de acción de las mayorías de turno y evitar el uso arbitrario del poder. Por eso, su contenido depende de las tradiciones y los acuerdos fundacionales de cada sociedad y pueden ser derogados mediante procesos previstos en la Constitución.</p>
+<p>En cambio, los derechos humanos son los mismos en todas partes y no pueden ser cambiados ni siquiera mediante el consenso unánime de todos los ciudadanos. Esto significa que estos se sitúan más allá de la órbita de lo políticamente decidible: están incluso por encima de la Constitución como las enmiendas o las asambleas constitucionales.</p>
+
+<h3>La función externa de los derechos humanos</h3>
+<p>La segunda función de los derechos humanos es externa y consiste en regular la conducta de los Estados más allá de sus fronteras. Los derechos humanos también generan tres deberes generales que podemos resumir así: el deber de cada Estado de no violar ni menoscabar los derechos humanos en todas partes y no solamente en su propia jurisdicción; el deber de cada Estado de velar por el reconocimiento de los derechos humanos a escala global y de brindar asistencia a quienes sean oprimidos o tiranizados por sus gobiernos; y el deber de la comunidad internacional de tomar medidas proactivas para mejorar la situación de los derechos humanos a escala global.</p>
+<p>Los derechos humanos suelen asociarse a los crímenes de lesa humanidad. Esta es una figura legal, tipificada en el Estatuto de Roma de 1998, que incluye abusos como el asesinato, la esclavitud, el apartheid, el genocidio, la tortura y la desaparición forzada de personas, cuando son perpetrados "como parte de un ataque generalizado o sistemático contra una población civil". Esto significa que los crímenes de lesa humanidad involucran la existencia de un plan deliberado por parte del gobierno y la utilización de la maquinaria estatal con fines delictivos. La característica más distintiva de los crímenes de lesa humanidad es que son imprescriptibles y que los individuos implicados en ellos pueden ser juzgados bajo jurisdicción universal y no solamente bajo la jurisdicción y las leyes del Estado en el que ocurrieron los abusos.</p>
+
+<h3>Los derechos humanos y sus críticos</h3>
+<p>Así como los derechos humanos tienen muchos defensores, también tienen críticos feroces. La objeción que más comúnmente se ha formulado contra ellos es que aspiran a globalizar valores occidentales que no todos los pueblos comparten. Estos críticos alegan que las distintas sociedades humanas tienen diversas tradiciones éticas y que todas ellas deberían ser libres de vivir de acuerdo con sus costumbres.</p>
+<p>Por ejemplo, algunos pueblos consideran que ciertos individuos o grupos son más importantes que el resto y que tienen más derecho a ejercer el poder por razones religiosas o de linaje. Del mismo modo, en parte del mundo musulmán, las mujeres no pueden estudiar ni salir de sus casas sin la compañía de un varón y se las obliga a cubrirse el cuerpo con un burka negro cuando están en público. A los ciudadanos de las democracias occidentales estas conductas nos parecen aberrantes y discriminatorias, pero no podemos olvidar que otros pueblos las ven como parte de una tradición sagrada, ancestral y constitutiva de su identidad.</p>
+<p>Para evaluar esta objeción, debemos tener en cuenta que los derechos humanos han mostrado ser una herramienta muy eficaz para proteger a las minorías culturales, religiosas y de otro tipo en contextos hostiles y desventajosos. Los derechos humanos no impiden que las personas vivan sus vidas según las convenciones fijadas por su cultura o su religión, si así lo deciden. Lo único que los derechos humanos prohíben es que algunos individuos sean forzados a vivir según las creencias que otros les imponen mediante sanciones, intimidaciones y amenazas en nombre de un supuesto pasado común. Lejos de conspirar contra el pluralismo, los derechos humanos ofrecen un marco para que las diferencias puedan expresarse y florecer.</p>
+<p>Otra objeción que a menudo se escucha, y que está relacionada con la anterior, es que los derechos humanos son un producto del capitalismo. Estos intelectuales nos dicen que vivimos engañados por una falsa sensación de libertad que encubre las relaciones de poder y dominación, y que la emancipación humana solo será posible cuando derrotemos a los "poderes fácticos" que nos gobiernan desde las sombras en su propio beneficio. Desde la perspectiva de estos críticos, los derechos humanos son parte de un orden social individualista y perverso que debemos dejar atras a cualquier precio. En cambio, en la utopía socialista, esos derechos no serán necesarios porque las personas serán realmente libres e iguales y estarán dispuestas a sacrificarse voluntariamente por el bienestar de los demás.</p>
+<p>Sin embargo, los regímenes socialistas raramente cumplieron con sus promesas. Los socialismos reales asesinaron a millones de seres humanos. Las ideas de Karl Marx tienen gran atractivo y resultan muy seductoras para quienes las estudian. Muchos nos identificamos con su ocupación por los que menos tienen y quisieramos que los recursos y las oportunidades estuvieran distribuidos de una manera más justa.</p>
+<p>Paradójicamente, estas dictaduras tampoco lograron mejorar la calidad de vida de los trabajadores ni erradicar la explotación. Más bien al contrario, todos los experimentos socialistas conocidos hasta ahora culminaron en graves penurias económicas que tarde o temprano precipitaron su caída, y dejaron millones de pobres y exiliados.</p>
+<p>La última objeción que debiéramos considerar es mucho menos elaborada, pero mucho más familiar en el debate público. Esa objeción afirma que los derechos humanos son derechos que defienden los intereses de los "delincuentes" y que impiden que el Estado haga cumplir las leyes y las reglas de convivencia. Es cierto que en muchos países los derechos humanos son usados de una manera parcial y sesgada para promover ciertas causas ideológicas o desprestigiar a los gobiernos. Sin embargo, cuando el uso de la fuerza es proporcionado y se orienta a evitar abusos y atropellos, es constitutivo de la libertad misma. Impedir que algunos individuos violen los derechos de otros no es autoritario ni represivo, sino todo lo contrario.</p>
+<p>En primer lugar, los derechos humanos no son contrarios a la autoridad, sino que la presuponen y dependen de ella. La única manera de garantizar que todos podamos gozar de nuestros derechos es mediante fuerzas de seguridad que los protejan cuando sea necesario. En Cuba, los artistas y los blogueros son perseguidos, y el Estado ejerce un estricto control sobre las redes sociales, la música y el acceso a Internet. En Camboya, los Jemeres Rojos suprimieron las escuelas y la televisión, y aniquilaron a un tercio de la población, regando el país de fosas comunes humanas y enviaron a muchos otros a campos de concentración donde se esperaba "reeducarlos". Durante la Revolución Cultural China, miles de intelectuales, estudiantes y profesionales fueron masacrados o trasladados desde los centros urbanos al campo por medios violentos.</p>
+<p>En segundo lugar, es bueno no olvidar que los derechos humanos van mucho más allá de la tortura, los asesinatos políticos y la desaparición forzada de personas. Son derechos que todas las personas tenemos y que protegen nuestra libertad de pensar, de disentir, de circular, de publicar nuestras ideas, de transitar el espacio público sin miedo y de no ser privados de lo que es nuestro. La vida de todos nosotros sería muy distinta sin ellos.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Asamblea General de las Naciones Unidas. (1948). <em>Declaración Universal de los Derechos Humanos</em>.</p>
+<p>Asamblea General de las Naciones Unidas. (1966/1976). <em>Pacto Internacional de Derechos Civiles y Políticos</em>.</p>
+<p>Asamblea General de las Naciones Unidas. (1966/1976). <em>Pacto Internacional de Derechos Económicos, Sociales y Culturales</em>. https://www.ohchr.org/sp/professionalinterest/pages/cescr.aspx</p>
+<p>Dworkin, R. (2014). <em>Justicia para erizos</em>. Fondo de Cultura Económica.</p>
+<p>Griffin, J. (2008). <em>On human rights</em>. Oxford University Press.</p>
+<p>Kant, I. (1785). <em>Fundamentación de la metafísica de las costumbres</em>. Ediciones varias.</p>
 <p>Locke, J. J. (1689). <em>Segundo tratado sobre el gobierno civil</em>. Ediciones varias.</p>
     </div>
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
   </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
 </html>
-
-

@@ -2,363 +2,131 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Venezuela, de la democracia al totalitarismo — ICSE 024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-        :root {
-      --bg: #1a1a1a;
-      --text: #d4d0c8;
-      --text-muted: #8a8580;
-      --heading: #e8e4dc;
-      --border: #3a3530;
-      --surface: #242220;
-      --accent: #c9854a;
-      --red-soft: #e06060;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      font-size: 18px;
-      line-height: 1.75;
-      padding: 0;
-    }
-
-    .page {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 4rem 2rem 6rem;
-    }
-
-    .metadatos {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
-    .metadatos .titulo-libro {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .metadatos .titulo-texto {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 2em;
-      font-weight: 600;
-      color: var(--heading);
-      line-height: 1.25;
-      margin-bottom: 0.6rem;
-    }
-
-    .metadatos .autor {
-      font-size: 1.05em;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-
-    .metadatos .info {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78em;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .metadatos .badge {
-      display: inline-block;
-      margin-top: 1.2rem;
-      padding: 0.35rem 1.2rem;
-      background: var(--heading);
-      color: #1a1a1a;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72em;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border-radius: 2px;
-    }
-
-    .contenido p {
-      text-indent: 1.5em;
-      margin-bottom: 0;
-      text-align: justify;
-      hyphens: auto;
-    }
-
-    .contenido p + p {
-      margin-top: 0.9em;
-    }
-
-    .contenido p:first-of-type {
-      text-indent: 0;
-    }
-
-    .contenido p.first-of-section {
-      text-indent: 0;
-    }
-
-    .contenido h2 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 600;
-      color: var(--heading);
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido h3 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.2em;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--heading);
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .contenido h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contenido blockquote {
-      margin: 2rem 0 2rem 1.5rem;
-      padding: 1rem 1.5rem;
-      border-left: 3px solid var(--accent);
-      font-style: italic;
-      color: var(--text-muted);
-      background: var(--surface);
-      font-size: 0.95em;
-    }
-
-    .contenido blockquote p {
-      text-indent: 0;
-      text-align: left;
-    }
-
-    .contenido ul,
-    .contenido ol {
-      margin: 1.2rem 0 1.2rem 2rem;
-    }
-
-    .contenido li {
-      margin-bottom: 0.5em;
-      padding-left: 0.3em;
-    }
-
-    .contenido table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.9em;
-    }
-
-    .contenido table th {
-      background: var(--surface);
-      color: var(--heading);
-      padding: 0.7rem 1rem;
-      text-align: left;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 0.85em;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    border-bottom: 2px solid var(--accent); }
-
-    .contenido table td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido table tr:nth-child(even) {
-      background: var(--surface);
-    }
-
-    .contenido .ilegible {
-      color: var(--red-soft);
-      font-weight: 600;
-      background: #3a2020;
-      padding: 0.1em 0.3em;
-      border-radius: 2px;
-    }
-
-    .contenido .nota-num {
-      font-size: 0.75em;
-      vertical-align: super;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .notas {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .notas h2 {
-      font-size: 1.1em;
-      margin-bottom: 1rem;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .notas p {
-      font-size: 0.85em;
-      text-indent: 0;
-      margin-bottom: 0.6em;
-      color: var(--text-muted);
-      text-align: left;
-    }
-
-    .separador {
-      text-align: center;
-      margin: 3rem 0;
-      color: var(--border);
-      font-size: 1.2em;
-      letter-spacing: 0.5em;
-    }
-
-    footer {
-      margin-top: 5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    @media print {
-      body { background: #fff; font-size: 12pt; }
-      .page { padding: 0; max-width: 100%; }
-      .metadatos { break-after: page; border: none; background: none; }
-      .contenido h2 { break-after: avoid; }
-      .contenido h3 { break-after: avoid; }
-      blockquote { break-inside: avoid; }
-      table { break-inside: avoid; }
-      footer { break-before: avoid; }
-    }
-
-    @media (max-width: 700px) {
-      .page { padding: 2rem 1.2rem 4rem; }
-      body { font-size: 16px; }
-      .metadatos .titulo-texto { font-size: 1.6em; }
-    }
-  </style>
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="../textos.css">
 </head>
 <body>
+
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">Venezuela, de la democracia al totalitarismo</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
   <div class="page">
     <div class="metadatos">
-      <div class="titulo-libro">Debates para un mundo en transformación</div>
-      <div class="titulo-texto">Venezuela, de la democracia al totalitarismo</div>
-      <div class="autor">Santiago Leiras</div>
-      <div class="info">Páginas originales: 121–131</div>
+      <div class="titulo-libro">Debates para un mundo en transformación</div>
+      <div class="titulo-texto">Venezuela, de la democracia al totalitarismo</div>
+      <div class="autor">Santiago Leiras</div>
+      <div class="info">Páginas originales: 121–131</div>
       <div class="badge">Día 15 — Unidad 5</div>
     </div>
 
     <div class="contenido">
-      <h2>Capítulo 7. Venezuela, de la democracia al autoritarismo</h2>
-<p class="first-of-section">El derrocamiento del dictador Marcos Pérez Jiménez el 31 de enero de 1958 dio lugar a la más larga experiencia democrática en la historia política de Venezuela, que se extendió hasta finales de la década de 1990. Esa experiencia fue denominada "el sistema político de Punto Fijo", en alusión a la localidad en la que se encontraba la residencia de Rafael Caldera, líder del partido Comité de Organización Política Electoral Independiente (COPEI), en donde los principales líderes de los partidos Acción Democrática (AD), el mencionado COPEI y la Unión Revolucionaria Democrática (URD) suscribieron un pacto de garantías y gobernabilidad democrática.</p>
-<p>¿Cuáles han sido los factores que permitieron la consolidación democrática del experimento político resultante del Pacto de Punto Fijo? Tres han sido los principales: disponibilidad de ingresos fiscales derivados de los excedentes petroleros, la participación de organizaciones de la sociedad civil como la Iglesia Católica, y la disciplina y fortaleza de las organizaciones partidarias.</p>
-<p>En efecto, si bien estos mecanismos garantizaron la consolidación del régimen democrático, constituyeron al mismo tiempo un serio obstáculo para su mayor democratización. Ello se debió al hecho de que fueron excluidas de la agenda pública algunas cuestiones políticamente relevantes, como la creación de una industria más eficiente y competitiva, o la redistribución mediante tasas impositivas de los excedentes derivados de la renta petrolera. Por otra parte, distintos actores fueron sistemáticamente excluidos de la arena pública, como por ejemplo las asociaciones vecinales. También los nuevos partidos tenían serias dificultades para acceder a los cargos e instancias gubernamentales de la lista conocida y con fórmula de representación mixta que garantizaba el control de los partidos tradicionales.</p>
-<p>De esta manera el régimen de Punto Fijo, a través de esta compleja ingeniería institucional, resolvió los problemas atinentes a la gobernabilidad democrática, pero al precio de una paulatina y creciente erosión de su legitimidad política. Efectivamente, las sucesivas crisis de los años 80 y comienzos de la década de 1990 —la crisis financiera y la devaluación del bolívar en 1983, la crisis social derivada del Caracazo en 1989 y los intentos de ruptura institucional de febrero y noviembre de 1992— mostraron las limitaciones de la democracia venezolana construida a partir del pacto de 1958, como así también pusieron en tela de juicio la capacidad y la eficacia de sus instituciones democráticas.</p>
-<p>El cuestionamiento a las fallas de la democracia se reflejó en una fuerte demanda de cambio. Primero, con el triunfo de Rafael Caldera, uno de los principales dirigentes históricos, artífice del Pacto de Punto Fijo y fundador del COPEI, quien en las elecciones presidenciales de 1993 encabezó una coalición de partidos por fuera de las estructuras partidarias tradicionales. Después, fue el turno de Hugo Chávez Frías, un jefe militar que anteriormente había liderado dos intentos de golpe de Estado (en febrero y noviembre de 1992). Luego de una temporada en la cárcel y del indulto presidencial de Rafael Caldera, Chávez inició el camino que lo llevó a triunfar en las elecciones presidenciales de diciembre de 1998.</p>
-
-<h3>Las diferentes etapas de un régimen no democrático (1999-2020)</h3>
-<p>Este capítulo invita a recorrer las diferentes etapas que ha atravesado Venezuela durante la V República desde su instauración en 1999 hasta la actualidad, como parte de un proceso de transición de la democracia a un régimen no democrático. En primer lugar, se llevará a cabo un pequeño recorrido por el proceso acontecido entre 1999 y 2020, seguido de un breve examen de las negociaciones que tuvieron lugar entre 2021 y 2023, y sus desafíos. Le seguirá el análisis de algunos aspectos del proceso electoral de 2024, donde se introduce un modelo explicativo sobre diferentes desenlaces institucionales. Finalmente, se proponen algunas conclusiones a modo de síntesis.</p>
-<p>Se pueden distinguir cinco etapas principales.</p>
-
-<h3>La etapa constituyente (1999-2001)</h3>
-<p>En esta etapa se produce la transformación total del sistema político venezolano, que tiene su expresión en la nueva constitución de 1999 y la reducción a un papel casi testimonial de actores estratégicos como Acción Democrática y COPEI que durante el ciclo democrático precedente de cuatro décadas. Es la etapa de la dictadura, entendida en la acepción clásica del término, como un tipo de régimen de excepción caracterizado por la transitoriedad política y jurídica (Schmitt, 1985).</p>
-<p>En un referéndum realizado el 15 de diciembre de 1999, con el 71,37 % de los votos a favor y el 28,63 % en contra, y con un porcentaje de abstención del 54,74 %, fue aprobada la nueva constitución bolivariana de Venezuela. Ese mismo día, quedaron disueltos el Congreso y la Corte Suprema de Justicia. Las funciones legislativas fueron asumidas por la Asamblea Nacional Constituyente (ANC). Finalmente, la Corte Suprema terminó definiendo el carácter supraconstitucional —es decir, por encima de la Constitución— de la Asamblea Constituyente.</p>
-<p>La Asamblea Nacional Constituyente fue el órgano encargado de la redacción de la nueva constitución, compuesta por 131 integrantes, 128 de ellos electos por sufragio ciudadano y tres de ellos como parte de un cupo asignado para las comunidades indígenas.</p>
-
-<h3>La crisis (2002-2005)</h3>
-<p>Merece destacarse que, aun reconociendo la existencia de un conflicto de partes, la responsabilidad del gobierno, dada su condición de responsable principal del poder estatal, fue mayor que la de la oposición; la mayor radicalización del gobierno de Hugo Chávez a partir de abril de 2002 terminó siendo la parte principal del problema y no de la solución.</p>
-<p>Algunos ejemplos de esto fueron:</p>
-<ul>
-<li>El breve golpe de Estado contra Chávez en abril de 2002, que duró solo unos días.</li>
-<li>El lockout empresarial de 2002/2003, cuando empresarios cerraron sus negocios como forma de protesta.</li>
-<li>La intensa disputa política que llevó al Referéndum Revocatorio (RR) de 2004, en el que la población votó si Chávez debía seguir en el poder, y en el que este obtuvo un resultado favorable a su permanencia.</li>
-</ul>
-<p>Desde 2005 hasta 2010, la oposición se negó a participar en elecciones porque no reconoció los resultados del referéndum.</p>
-
-<h3>El chavismo-madurismo (entre 2006 y 2016)</h3>
-<p>El referéndum constitucional de 2009, llamado Referéndum Aprobatorio de la Enmienda Constitucional, se llevó a cabo el domingo 15 de febrero de 2009 y tuvo como propósito aprobar o rechazar la enmienda de los artículos 160, 162, 174, 192 y 230 de la Constitución de la República Bolivariana de Venezuela. Esas modificaciones iban a permitir la postulación a cualquier cargo de elección popular de manera continua. La propuesta fue aceptada con el 54,85 % de los votos frente al 45,14 % que obtuvo la negativa. La participación en los comicios alcanzó al 70,32 % de los electores. Quedaba abierto de esta manera el camino para una nueva presentación de Hugo Chávez como candidato a presidente de Venezuela en los comicios presidenciales llevados a cabo el 7 de octubre de 2012. En esta oportunidad derrotó, con el 55,07 % de los votos, al candidato de la Mesa de la Unidad Democrática (MUD) Henrique Capriles Radonski, que obtuvo el 44,31 %. La participación alcanzó al 80,49 % del padrón electoral.</p>
-<p>La inesperada muerte de Hugo Chávez el 5 de marzo de 2013 y la asunción de Nicolás Maduro marcaron el inicio de una etapa de mayor profundización y radicalización política del régimen. Hubo un proceso electoral controversial ese mismo año que culminó con un ajustado triunfo de Maduro, seguido de intentos fallidos de diálogo político con mediación internacional en 2014 y 2016.</p>
-
-<h3>La fase autoritaria (2017-2021)</h3>
-<p>A comienzos del mes de febrero del año 2017, el Tribunal Superior de Justicia procedió a la declaración de rebeldía de la Asamblea Nacional (AN), electa en diciembre de 2015, lo que dio inicio a la fase autoritaria del régimen.</p>
-<p>Este proceso se profundizó a partir de la convocatoria a unas cuestionadas elecciones presidenciales en 2018 y un más abierto conflicto con la Asamblea Nacional a partir de la decisión de su presidente, Juan Guaidó, en 2019, con el reconocimiento internacional de la presidencia de la República de Venezuela. Entre los años 2019 y 2020 ocurrieron varios eventos clave: una intervención humanitaria que fracasó en su cometido, una sublevación militar que fue sofocada, un proceso de negociación auspiciado por el gobierno de Noruega, que terminó sin éxito. Durante este periodo, el gobierno de Nicolás Maduro endureció el control político mediante acciones como la conformación de una asamblea constituyente paralela a la Asamblea Nacional, la designación de un opositor domesticado (Luis Parra) como presidente de una Asamblea Nacional "blue" (paralela) y el descabezamiento e intervención de los principales partidos de oposición.</p>
-<p>También se registraron violaciones sistemáticas a los derechos humanos y la irregular designación de un nuevo Consejo Nacional Electoral encargado de monitorear las elecciones legislativas convocadas para diciembre de 2019.</p>
-<p>Todo ello ocurrió en medio de un conflicto internacionalizado, donde al menos cuatro grandes actores externos presentaron intereses enfrentados: Estados Unidos, que procuró mantener su alicaída influencia geopolítica en la región; China, que ofreció financiación externa, y Rusia, que proveyó armamentos a las fuerzas armadas venezolanas, una estructura politizada y cooptada a través de su participación en negocios públicos y privados, tanto legales como ilegales. Cuba, por su parte, se enfocó en conservar el control de la estructura de inteligencia de las fuerzas armadas venezolanas y el cambio de acceso a recursos básicos (petróleo y oro, entre otros).</p>
-<p>En medio de estas y otras dificultades se llegó a un acuerdo para organizar elecciones generales durante el año 2024, con supervisión de la comunidad internacional y su monitoreo por parte de actores estatales y no estatales internacionales.</p>
-
-<h3>Un nuevo proceso de negociación (2021-2023)</h3>
-<p>Una nueva oportunidad de negociación se abrió en la ciudad de México, de acuerdo con la tesitura planteada por el escritor venezolano Alberto Barrera Tyszka (2021) en un artículo publicado en The New York Times bajo el título de que para poder cambiar el régimen autoritario se veían obligados a negociar, de fracasado en obtener legitimidad internacional, como también en levantar las sanciones internacionales.</p>
-<p>Frente a esta nueva oportunidad, merecían ser destacados algunos de los principales problemas a encarar en esta etapa. El primero era el restablecimiento de la confianza política entre los protagonistas, ante el fracaso de otras mesas de negociación: recordemos al respecto el naufragio de aquellas iniciativas de mediación llevadas a cabo en 2014, 2016 y 2019 con la intervención de actores con fuerte influencia moral, como el caso de Noruega; espiritual, como el Vaticano, o política, como la del expresidente del gobierno español José Luis Rodríguez Zapatero, quien terminó transformándose en un "involuntario" vocero del régimen venezolano.</p>
-<p>El segundo problema era limitar el proceso de negociación definiéndolo como un conflicto exclusivo entre actores internos representados por el oficialismo y la oposición (más monolítico, y con base en un partido-Estado, las Fuerzas Armadas y otras organizaciones sociales con funciones de control social) y no un conflicto a todas luces internacionalizado.</p>
-<p>El tercer problema era el rol que tendrían las Fuerzas Armadas venezolanas, que había asegurado, y asegura, una sólida base de sustentación al régimen encabezado por Nicolás Maduro. Las Fuerzas Armadas son la expresión misma del gobierno, el Estado y el régimen político.</p>
-<p>Por último, estaba el contenido de la agenda de negociación: dado que esta podía involucrar compromisos en torno de las reglas e instituciones políticas, ¿qué tipo de compromisos podían alcanzarse y sobre qué procedimientos e instituciones? ¿Sistema electoral?, composición del Consejo Nacional Electoral y los organismos de control institucional?, condiciones del proceso electoral y su monitoreo por parte de actores estatales y no estatales internacionales?, ¿la cuestión militar?</p>
-
-<h3>Las elecciones presidenciales de 2024</h3>
-<p>En medio de una represión generalizada, y la profundización de un régimen de terror, Nicolás Maduro asumió la presidencia de la República de Venezuela el 10 de enero de 2025 sin haber presentado la documentación respaldatoria de su "triunfo electoral".</p>
-<p>Finalmente, las elecciones presidenciales se llevaron a cabo el 28 de julio de 2024. El Consejo Nacional Electoral consagró a Nicolás Maduro ganador con 5.303.480 votos, el 51,20 % de los votos en medio de fuertes sospechas de fraude y sin que se pudiera acceder a información oficial que avalara el resultado electoral. Mientras tanto, la oposición, en un trabajo que consistió en la recolección de 25.073 actas digitalizadas y un 83,50 % del total de las actas electorales, informó sobre el triunfo del candidato opositor Edmundo González Urrutia, con 7.303.480 votos, el 67 % del total, sobre Nicolás Maduro, quien obtuvo 3.316.142 votos, el 30 % del total. Había votado el 60,08 % de los ciudadanos habilitados para ejercer su derecho de sufragio. La oposición informó asimismo del voto de parte de los numerosos ciudadanos venezolanos residentes en el exterior.</p>
-<p>Venezuela representa un verdadero desafío para los expertos en transiciones de régimen político como también para aquellos ciudadanos y organizaciones sociales comprometidos con la democracia. La vieja bibliografía que enfrentan los regímenes políticos en las primeras décadas del siglo XXI enfrenta problemas nuevos. Los viejos parámetros de acción y movilización ciudadana enfrentan un mundo cada vez más hostil con soluciones democráticas a los problemas de la realidad de sociedades en guerra civil ante la impotencia de las instituciones.</p>
-<p>Una situación similar ya tuvo lugar durante la denominada "Primavera árabe" de 2011, que generó un entusiasmo prematuro sobre las posibilidades de democratización en esos países. De aquella esperanza solo ha quedado una realidad de sociedades en guerra civil ante la impotencia de las instituciones.</p>
-
-<h3>Un desenlace previsible: se caía de Maduro</h3>
-<p>El escenario 1, anarquía, no tiene, al menos hasta el momento en que se escriben estas líneas, ningún referente empírico de relevancia.</p>
-<p>El escenario 2, de equilibrio inestable, tuvo lugar en Chile durante el ciclo de protestas sociales de 2019. Una sociedad estable y previsible, paradigma de la modernización "neoliberal" en la región, se vio sacudida por una rebelión social originada en un proceso de crecimiento sostenido de su economía y un cúmulo de expectativas insatisfechas asociadas a ese mismo proceso de crecimiento. La conjunción de un líder con su autoridad política debilitada (Sebastián Piñera), una protesta social extendida, aunque sin liderazgos definidos, y un agente estatal encargado del control de la calle con dificultades para garantizar el control territorial de esa protesta extendida, aunque subordinado al poder político, definieron este contexto de equilibrio inestable que llevó a la puesta en marcha de un proceso constituyente.</p>
-<p>El escenario 3 es el caso de la destitución de Evo Morales: aquí nos encontramos frente a una situación híbrida, por un lado, una protesta social extendida a lo largo de todo el país y, por otro, un agente estatal encargado del control pero subordinado al poder político.</p>
-<p>El escenario 4, de mantenimiento del statu quo, hace referencia a la permanencia en el poder de la coalición dominante encabezada por Nicolás Maduro.</p>
-<p>La tipología permite realizar algunas reflexiones muy preliminares sobre el posible desenlace en Venezuela. Por el rol que juegan las Fuerzas Armadas, se hace difícil pensar en escenarios alternativos al mantenimiento del statu quo, como una transición pactada o un cambio de régimen por ruptura. Los principales actores de la coalición dominante no parecen prever otros escenarios posibles que el de la permanencia en el poder, la cárcel o la muerte.</p>
-<p>Así, la lealtad organizacional de las Fuerzas Armadas se constituye, entonces, no ya en un valor en sí mismo, sino en una estrategia de supervivencia. Hasta la oportunidad de un golpe de Estado clásico, un autogolpe o una revolución social.</p>
-
-<h3>Conclusiones</h3>
-<p>Para concluir, se puede afirmar que, dado que el oficialismo controla la totalidad de los poderes del Estado y de las fuerzas coercitivas, era difícil prever que Maduro fuera a reconocer un resultado electoral adverso ese domingo 28 de julio.</p>
-<p>Este capítulo se propuso repasar las diferentes etapas que ha atravesado Venezuela durante la V República, desde 1999 hasta mediados de 2025, en un proceso de transición de la democracia a un régimen no democrático en 2017. Luego de breves recorridos por el proceso acontecido entre 1999 y 2020 y por las negociaciones que tuvieron lugar entre 2021 y 2023, en un tercer momento se revisaron algunos aspectos del proceso electoral de 2024 con la introducción de un modelo explicativo sobre diferentes desenlaces institucionales.</p>
-
-<h3>Referencias bibliográficas</h3>
-<p>Barrera Tyszka, A. (30 de mayo de 2021). Venezuela: el largo retorno a la negociación. The New York Times.</p>
-<p>Botana, N. (1988). La tradición política en la Argentina moderna. En J. Pinto (Comp.), Ensayos sobre la crisis política argentina. Centro Editor de América Latina.</p>
-<p>Coppedge, M. (2002). Venezuela: popular sovereignty versus liberal democracy. Helen Kellogg Working Paper No. 294. Helen Kellogg Institute of Democracy, 31(1), 51-65. Johns Hopkins University Press.</p>
-<p>Leiras, S. (2015). La presidencia de Hugo Chávez Frías (1999-2012): la dinámica de cambio en un régimen en cambio. En S. Leiras (comp.), América del Sur en los comienzos del nuevo milenio: entre la continuidad y el cambio. Eudeba.</p>
-<p>Leiras, S. (2020). Democracia y estado de excepción: Argentina 1983-2008.</p>
-<p>Levitsky, S. y Way, L. (2020). The new competitive authoritarianism. Journal of Democracy, 31(1), 51-65. Johns Hopkins University Press.</p>
-<p>Resultados Elecciones Presidenciales. (2025). Resultados con Vzla. https://resultadosconvzla.com/</p>
+      <h2>Capítulo 7. Venezuela, de la democracia al autoritarismo</h2>
+<p class="first-of-section">El derrocamiento del dictador Marcos Pérez Jiménez el 31 de enero de 1958 dio lugar a la más larga experiencia democrática en la historia política de Venezuela, que se extendió hasta finales de la década de 1990. Esa experiencia fue denominada "el sistema político de Punto Fijo", en alusión a la localidad en la que se encontraba la residencia de Rafael Caldera, líder del partido Comité de Organización Política Electoral Independiente (COPEI), en donde los principales líderes de los partidos Acción Democrática (AD), el mencionado COPEI y la Unión Revolucionaria Democrática (URD) suscribieron un pacto de garantías y gobernabilidad democrática.</p>
+<p>¿Cuáles han sido los factores que permitieron la consolidación democrática del experimento político resultante del Pacto de Punto Fijo? Tres han sido los principales: disponibilidad de ingresos fiscales derivados de los excedentes petroleros, la participación de organizaciones de la sociedad civil como la Iglesia Católica, y la disciplina y fortaleza de las organizaciones partidarias.</p>
+<p>En efecto, si bien estos mecanismos garantizaron la consolidación del régimen democrático, constituyeron al mismo tiempo un serio obstáculo para su mayor democratización. Ello se debió al hecho de que fueron excluidas de la agenda pública algunas cuestiones políticamente relevantes, como la creación de una industria más eficiente y competitiva, o la redistribución mediante tasas impositivas de los excedentes derivados de la renta petrolera. Por otra parte, distintos actores fueron sistemáticamente excluidos de la arena pública, como por ejemplo las asociaciones vecinales. También los nuevos partidos tenían serias dificultades para acceder a los cargos e instancias gubernamentales de la lista conocida y con fórmula de representación mixta que garantizaba el control de los partidos tradicionales.</p>
+<p>De esta manera el régimen de Punto Fijo, a través de esta compleja ingeniería institucional, resolvió los problemas atinentes a la gobernabilidad democrática, pero al precio de una paulatina y creciente erosión de su legitimidad política. Efectivamente, las sucesivas crisis de los años 80 y comienzos de la década de 1990 —la crisis financiera y la devaluación del bolívar en 1983, la crisis social derivada del Caracazo en 1989 y los intentos de ruptura institucional de febrero y noviembre de 1992— mostraron las limitaciones de la democracia venezolana construida a partir del pacto de 1958, como así también pusieron en tela de juicio la capacidad y la eficacia de sus instituciones democráticas.</p>
+<p>El cuestionamiento a las fallas de la democracia se reflejó en una fuerte demanda de cambio. Primero, con el triunfo de Rafael Caldera, uno de los principales dirigentes históricos, artífice del Pacto de Punto Fijo y fundador del COPEI, quien en las elecciones presidenciales de 1993 encabezó una coalición de partidos por fuera de las estructuras partidarias tradicionales. Después, fue el turno de Hugo Chávez Frías, un jefe militar que anteriormente había liderado dos intentos de golpe de Estado (en febrero y noviembre de 1992). Luego de una temporada en la cárcel y del indulto presidencial de Rafael Caldera, Chávez inició el camino que lo llevó a triunfar en las elecciones presidenciales de diciembre de 1998.</p>
+
+<h3>Las diferentes etapas de un régimen no democrático (1999-2020)</h3>
+<p>Este capítulo invita a recorrer las diferentes etapas que ha atravesado Venezuela durante la V República desde su instauración en 1999 hasta la actualidad, como parte de un proceso de transición de la democracia a un régimen no democrático. En primer lugar, se llevará a cabo un pequeño recorrido por el proceso acontecido entre 1999 y 2020, seguido de un breve examen de las negociaciones que tuvieron lugar entre 2021 y 2023, y sus desafíos. Le seguirá el análisis de algunos aspectos del proceso electoral de 2024, donde se introduce un modelo explicativo sobre diferentes desenlaces institucionales. Finalmente, se proponen algunas conclusiones a modo de síntesis.</p>
+<p>Se pueden distinguir cinco etapas principales.</p>
+
+<h3>La etapa constituyente (1999-2001)</h3>
+<p>En esta etapa se produce la transformación total del sistema político venezolano, que tiene su expresión en la nueva constitución de 1999 y la reducción a un papel casi testimonial de actores estratégicos como Acción Democrática y COPEI que durante el ciclo democrático precedente de cuatro décadas. Es la etapa de la dictadura, entendida en la acepción clásica del término, como un tipo de régimen de excepción caracterizado por la transitoriedad política y jurídica (Schmitt, 1985).</p>
+<p>En un referéndum realizado el 15 de diciembre de 1999, con el 71,37 % de los votos a favor y el 28,63 % en contra, y con un porcentaje de abstención del 54,74 %, fue aprobada la nueva constitución bolivariana de Venezuela. Ese mismo día, quedaron disueltos el Congreso y la Corte Suprema de Justicia. Las funciones legislativas fueron asumidas por la Asamblea Nacional Constituyente (ANC). Finalmente, la Corte Suprema terminó definiendo el carácter supraconstitucional —es decir, por encima de la Constitución— de la Asamblea Constituyente.</p>
+<p>La Asamblea Nacional Constituyente fue el órgano encargado de la redacción de la nueva constitución, compuesta por 131 integrantes, 128 de ellos electos por sufragio ciudadano y tres de ellos como parte de un cupo asignado para las comunidades indígenas.</p>
+
+<h3>La crisis (2002-2005)</h3>
+<p>Merece destacarse que, aun reconociendo la existencia de un conflicto de partes, la responsabilidad del gobierno, dada su condición de responsable principal del poder estatal, fue mayor que la de la oposición; la mayor radicalización del gobierno de Hugo Chávez a partir de abril de 2002 terminó siendo la parte principal del problema y no de la solución.</p>
+<p>Algunos ejemplos de esto fueron:</p>
+<ul>
+<li>El breve golpe de Estado contra Chávez en abril de 2002, que duró solo unos días.</li>
+<li>El lockout empresarial de 2002/2003, cuando empresarios cerraron sus negocios como forma de protesta.</li>
+<li>La intensa disputa política que llevó al Referéndum Revocatorio (RR) de 2004, en el que la población votó si Chávez debía seguir en el poder, y en el que este obtuvo un resultado favorable a su permanencia.</li>
+</ul>
+<p>Desde 2005 hasta 2010, la oposición se negó a participar en elecciones porque no reconoció los resultados del referéndum.</p>
+
+<h3>El chavismo-madurismo (entre 2006 y 2016)</h3>
+<p>El referéndum constitucional de 2009, llamado Referéndum Aprobatorio de la Enmienda Constitucional, se llevó a cabo el domingo 15 de febrero de 2009 y tuvo como propósito aprobar o rechazar la enmienda de los artículos 160, 162, 174, 192 y 230 de la Constitución de la República Bolivariana de Venezuela. Esas modificaciones iban a permitir la postulación a cualquier cargo de elección popular de manera continua. La propuesta fue aceptada con el 54,85 % de los votos frente al 45,14 % que obtuvo la negativa. La participación en los comicios alcanzó al 70,32 % de los electores. Quedaba abierto de esta manera el camino para una nueva presentación de Hugo Chávez como candidato a presidente de Venezuela en los comicios presidenciales llevados a cabo el 7 de octubre de 2012. En esta oportunidad derrotó, con el 55,07 % de los votos, al candidato de la Mesa de la Unidad Democrática (MUD) Henrique Capriles Radonski, que obtuvo el 44,31 %. La participación alcanzó al 80,49 % del padrón electoral.</p>
+<p>La inesperada muerte de Hugo Chávez el 5 de marzo de 2013 y la asunción de Nicolás Maduro marcaron el inicio de una etapa de mayor profundización y radicalización política del régimen. Hubo un proceso electoral controversial ese mismo año que culminó con un ajustado triunfo de Maduro, seguido de intentos fallidos de diálogo político con mediación internacional en 2014 y 2016.</p>
+
+<h3>La fase autoritaria (2017-2021)</h3>
+<p>A comienzos del mes de febrero del año 2017, el Tribunal Superior de Justicia procedió a la declaración de rebeldía de la Asamblea Nacional (AN), electa en diciembre de 2015, lo que dio inicio a la fase autoritaria del régimen.</p>
+<p>Este proceso se profundizó a partir de la convocatoria a unas cuestionadas elecciones presidenciales en 2018 y un más abierto conflicto con la Asamblea Nacional a partir de la decisión de su presidente, Juan Guaidó, en 2019, con el reconocimiento internacional de la presidencia de la República de Venezuela. Entre los años 2019 y 2020 ocurrieron varios eventos clave: una intervención humanitaria que fracasó en su cometido, una sublevación militar que fue sofocada, un proceso de negociación auspiciado por el gobierno de Noruega, que terminó sin éxito. Durante este periodo, el gobierno de Nicolás Maduro endureció el control político mediante acciones como la conformación de una asamblea constituyente paralela a la Asamblea Nacional, la designación de un opositor domesticado (Luis Parra) como presidente de una Asamblea Nacional "blue" (paralela) y el descabezamiento e intervención de los principales partidos de oposición.</p>
+<p>También se registraron violaciones sistemáticas a los derechos humanos y la irregular designación de un nuevo Consejo Nacional Electoral encargado de monitorear las elecciones legislativas convocadas para diciembre de 2019.</p>
+<p>Todo ello ocurrió en medio de un conflicto internacionalizado, donde al menos cuatro grandes actores externos presentaron intereses enfrentados: Estados Unidos, que procuró mantener su alicaída influencia geopolítica en la región; China, que ofreció financiación externa, y Rusia, que proveyó armamentos a las fuerzas armadas venezolanas, una estructura politizada y cooptada a través de su participación en negocios públicos y privados, tanto legales como ilegales. Cuba, por su parte, se enfocó en conservar el control de la estructura de inteligencia de las fuerzas armadas venezolanas y el cambio de acceso a recursos básicos (petróleo y oro, entre otros).</p>
+<p>En medio de estas y otras dificultades se llegó a un acuerdo para organizar elecciones generales durante el año 2024, con supervisión de la comunidad internacional y su monitoreo por parte de actores estatales y no estatales internacionales.</p>
+
+<h3>Un nuevo proceso de negociación (2021-2023)</h3>
+<p>Una nueva oportunidad de negociación se abrió en la ciudad de México, de acuerdo con la tesitura planteada por el escritor venezolano Alberto Barrera Tyszka (2021) en un artículo publicado en The New York Times bajo el título de que para poder cambiar el régimen autoritario se veían obligados a negociar, de fracasado en obtener legitimidad internacional, como también en levantar las sanciones internacionales.</p>
+<p>Frente a esta nueva oportunidad, merecían ser destacados algunos de los principales problemas a encarar en esta etapa. El primero era el restablecimiento de la confianza política entre los protagonistas, ante el fracaso de otras mesas de negociación: recordemos al respecto el naufragio de aquellas iniciativas de mediación llevadas a cabo en 2014, 2016 y 2019 con la intervención de actores con fuerte influencia moral, como el caso de Noruega; espiritual, como el Vaticano, o política, como la del expresidente del gobierno español José Luis Rodríguez Zapatero, quien terminó transformándose en un "involuntario" vocero del régimen venezolano.</p>
+<p>El segundo problema era limitar el proceso de negociación definiéndolo como un conflicto exclusivo entre actores internos representados por el oficialismo y la oposición (más monolítico, y con base en un partido-Estado, las Fuerzas Armadas y otras organizaciones sociales con funciones de control social) y no un conflicto a todas luces internacionalizado.</p>
+<p>El tercer problema era el rol que tendrían las Fuerzas Armadas venezolanas, que había asegurado, y asegura, una sólida base de sustentación al régimen encabezado por Nicolás Maduro. Las Fuerzas Armadas son la expresión misma del gobierno, el Estado y el régimen político.</p>
+<p>Por último, estaba el contenido de la agenda de negociación: dado que esta podía involucrar compromisos en torno de las reglas e instituciones políticas, ¿qué tipo de compromisos podían alcanzarse y sobre qué procedimientos e instituciones? ¿Sistema electoral?, composición del Consejo Nacional Electoral y los organismos de control institucional?, condiciones del proceso electoral y su monitoreo por parte de actores estatales y no estatales internacionales?, ¿la cuestión militar?</p>
+
+<h3>Las elecciones presidenciales de 2024</h3>
+<p>En medio de una represión generalizada, y la profundización de un régimen de terror, Nicolás Maduro asumió la presidencia de la República de Venezuela el 10 de enero de 2025 sin haber presentado la documentación respaldatoria de su "triunfo electoral".</p>
+<p>Finalmente, las elecciones presidenciales se llevaron a cabo el 28 de julio de 2024. El Consejo Nacional Electoral consagró a Nicolás Maduro ganador con 5.303.480 votos, el 51,20 % de los votos en medio de fuertes sospechas de fraude y sin que se pudiera acceder a información oficial que avalara el resultado electoral. Mientras tanto, la oposición, en un trabajo que consistió en la recolección de 25.073 actas digitalizadas y un 83,50 % del total de las actas electorales, informó sobre el triunfo del candidato opositor Edmundo González Urrutia, con 7.303.480 votos, el 67 % del total, sobre Nicolás Maduro, quien obtuvo 3.316.142 votos, el 30 % del total. Había votado el 60,08 % de los ciudadanos habilitados para ejercer su derecho de sufragio. La oposición informó asimismo del voto de parte de los numerosos ciudadanos venezolanos residentes en el exterior.</p>
+<p>Venezuela representa un verdadero desafío para los expertos en transiciones de régimen político como también para aquellos ciudadanos y organizaciones sociales comprometidos con la democracia. La vieja bibliografía que enfrentan los regímenes políticos en las primeras décadas del siglo XXI enfrenta problemas nuevos. Los viejos parámetros de acción y movilización ciudadana enfrentan un mundo cada vez más hostil con soluciones democráticas a los problemas de la realidad de sociedades en guerra civil ante la impotencia de las instituciones.</p>
+<p>Una situación similar ya tuvo lugar durante la denominada "Primavera árabe" de 2011, que generó un entusiasmo prematuro sobre las posibilidades de democratización en esos países. De aquella esperanza solo ha quedado una realidad de sociedades en guerra civil ante la impotencia de las instituciones.</p>
+
+<h3>Un desenlace previsible: se caía de Maduro</h3>
+<p>El escenario 1, anarquía, no tiene, al menos hasta el momento en que se escriben estas líneas, ningún referente empírico de relevancia.</p>
+<p>El escenario 2, de equilibrio inestable, tuvo lugar en Chile durante el ciclo de protestas sociales de 2019. Una sociedad estable y previsible, paradigma de la modernización "neoliberal" en la región, se vio sacudida por una rebelión social originada en un proceso de crecimiento sostenido de su economía y un cúmulo de expectativas insatisfechas asociadas a ese mismo proceso de crecimiento. La conjunción de un líder con su autoridad política debilitada (Sebastián Piñera), una protesta social extendida, aunque sin liderazgos definidos, y un agente estatal encargado del control de la calle con dificultades para garantizar el control territorial de esa protesta extendida, aunque subordinado al poder político, definieron este contexto de equilibrio inestable que llevó a la puesta en marcha de un proceso constituyente.</p>
+<p>El escenario 3 es el caso de la destitución de Evo Morales: aquí nos encontramos frente a una situación híbrida, por un lado, una protesta social extendida a lo largo de todo el país y, por otro, un agente estatal encargado del control pero subordinado al poder político.</p>
+<p>El escenario 4, de mantenimiento del statu quo, hace referencia a la permanencia en el poder de la coalición dominante encabezada por Nicolás Maduro.</p>
+<p>La tipología permite realizar algunas reflexiones muy preliminares sobre el posible desenlace en Venezuela. Por el rol que juegan las Fuerzas Armadas, se hace difícil pensar en escenarios alternativos al mantenimiento del statu quo, como una transición pactada o un cambio de régimen por ruptura. Los principales actores de la coalición dominante no parecen prever otros escenarios posibles que el de la permanencia en el poder, la cárcel o la muerte.</p>
+<p>Así, la lealtad organizacional de las Fuerzas Armadas se constituye, entonces, no ya en un valor en sí mismo, sino en una estrategia de supervivencia. Hasta la oportunidad de un golpe de Estado clásico, un autogolpe o una revolución social.</p>
+
+<h3>Conclusiones</h3>
+<p>Para concluir, se puede afirmar que, dado que el oficialismo controla la totalidad de los poderes del Estado y de las fuerzas coercitivas, era difícil prever que Maduro fuera a reconocer un resultado electoral adverso ese domingo 28 de julio.</p>
+<p>Este capítulo se propuso repasar las diferentes etapas que ha atravesado Venezuela durante la V República, desde 1999 hasta mediados de 2025, en un proceso de transición de la democracia a un régimen no democrático en 2017. Luego de breves recorridos por el proceso acontecido entre 1999 y 2020 y por las negociaciones que tuvieron lugar entre 2021 y 2023, en un tercer momento se revisaron algunos aspectos del proceso electoral de 2024 con la introducción de un modelo explicativo sobre diferentes desenlaces institucionales.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Barrera Tyszka, A. (30 de mayo de 2021). Venezuela: el largo retorno a la negociación. The New York Times.</p>
+<p>Botana, N. (1988). La tradición política en la Argentina moderna. En J. Pinto (Comp.), Ensayos sobre la crisis política argentina. Centro Editor de América Latina.</p>
+<p>Coppedge, M. (2002). Venezuela: popular sovereignty versus liberal democracy. Helen Kellogg Working Paper No. 294. Helen Kellogg Institute of Democracy, 31(1), 51-65. Johns Hopkins University Press.</p>
+<p>Leiras, S. (2015). La presidencia de Hugo Chávez Frías (1999-2012): la dinámica de cambio en un régimen en cambio. En S. Leiras (comp.), América del Sur en los comienzos del nuevo milenio: entre la continuidad y el cambio. Eudeba.</p>
+<p>Leiras, S. (2020). Democracia y estado de excepción: Argentina 1983-2008.</p>
+<p>Levitsky, S. y Way, L. (2020). The new competitive authoritarianism. Journal of Democracy, 31(1), 51-65. Johns Hopkins University Press.</p>
+<p>Resultados Elecciones Presidenciales. (2025). Resultados con Vzla. https://resultadosconvzla.com/</p>
 <p>Schmitt, C. (1985). Teología política.</p>
     </div>
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
   </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
 </html>
-
-

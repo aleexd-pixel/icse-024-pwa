@@ -16,9 +16,12 @@
 
   <!-- Sticky reader header -->
   <nav class="reader-nav">
-    <a class="nav-back" onclick="history.back()">← Volver</a>
+    <a class="nav-back" onclick="history.back()">←</a>
     <span class="nav-title">Palabras, conceptos y vida pública: una invitación al análisis</span>
-    <span class="nav-reading-time">10 min</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
   </nav>
 
   <!-- Progress bar -->
@@ -31,184 +34,113 @@
 
   <div class="page">
     <div class="metadatos">
-
-      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
-
-      <div class="titulo-texto">Palabras, conceptos y vida pública: una invitación al análisis</div>
-
-      <div class="autor">Fernando Pedrosa, Florencia Deich, Nadia Yannuzzi</div>
-
-      <div class="info">Páginas originales: 13–18</div>
-
+      <div class="titulo-libro">Herramientas para el análisis de la sociedad y el Estado</div>
+
+      <div class="titulo-texto">Palabras, conceptos y vida pública: una invitación al análisis</div>
+
+      <div class="autor">Fernando Pedrosa, Florencia Deich, Nadia Yannuzzi</div>
+
+      <div class="info">Páginas originales: 13–18</div>
+
       <div class="badge">Día 1 — Unidad 1</div>
-
     </div>
 
     <div class="contenido">
-<h2 class="reveal">Palabras, conceptos y vida pública: una invitación al análisis</h2>
-
-<p>Fernando Pedrosa, Florencia Deich, Nadia Yannuzzi</p>
-
-<p>Este libro fue pensado y escrito con la intención de recuperar el valor de las palabras como conceptos que permiten profundizar en el estudio de diferentes hechos sociales y de construcciones políticas o ideológicas.</p>
-
-<p>La palabra es una herramienta que utilizamos para representar el mundo y para comunicarnos con los demás y por ello es fundamental en el trabajo académico y científico. Nadie construye conocimiento en soledad: la ciencia avanza gracias al intercambio de ideas, al diálogo con colegas y a la apertura a la crítica, sea especializada o no.</p>
-
-<p>En el mundo actual, atravesado por la transformación de los medios de comunicación y por las redes sociales, asistimos a una proliferación constante de discursos, relatos, debates y formas de expresión que irrumpen de manera cotidiana.</p>
-
-<p>Hasta hace poco, la posibilidad de hablar a grandes audiencias estaba limitada a unos pocos canales de los viejos medios tradicionales. Rara vez existía la oportunidad de responder y de ser escuchado. Mucho menos de planificar y desarrollar una carrera sistemática hablando desde la propia habitación y que eso llegue a personas de todo el mundo, que también podrían hacer lo mismo.</p>
-
-<p>Lejos estamos de considerar que esto sea algo negativo; por el contrario, representa una auténtica democratización de la palabra. Hoy, más personas que nunca antes pueden expresarse, opinar, construir relatos propios y participar en conversaciones colectivas.</p>
-
-<p>Pero no todo son bondades. El uso del lenguaje también fue cambiando mientras esa revolución de la comunicación ocurría. En este nuevo escenario, han surgido dos extremos que han ganado mucha popularidad y que hay que pensar con mayor cautela.</p>
-
-<h3 class="reveal">A las palabras se las lleva el viento</h3>
-
-<p>Una de las coyunturas que enfrentamos hoy es el desgaste de los sig-nificantes por su uso mecánico, superficial o descontextualizado. Un ejemplo clásico es el de la palabra *populismo*. Se ha repetido tantas veces, en contextos tan diversos y con sentidos tan contradictorios, que ha llegado al punto de que ya nadie sabe con claridad a qué se refiere, ha perdido capacidad explicativa y se ha transformado, en muchos casos, en una etiqueta vacía.</p>
-
-<p>El renovado intento de las personas por ser escuchadas en un mundo saturado de palabras ha llevado a un uso cada vez más superficial del lenguaje. Hablar no cuesta nada, y muchas veces las palabras se vuelven descartables, livianas, efímeras, repetidas una y otra vez hasta vaciarse de sentido. Habitualmente vemos que ya no se emplean para debatir ideas o estrategias, sino como lo que los españoles llaman un "arma arrojadiza": un recurso destinado no a argumentar, sino a desacreditar al otro, a fijarle un rótulo negativo que acierre la discusión antes de que esta ocurra.</p>
-
-<p>Es cierto que cada uno puede usar las palabras como quiera, y que estas están influidas por el contexto, la ocasión y el público. No es lo mismo hablar de sociedad, régimen político o Estado en una sobremesa familiar académico. En los primeros casos, las palabras funcionan más como disparadores afectivos o marcas identitarias que como herramientas de análisis. Se busca reafirmar una postura, no discutirla. Y está bien: nadie medianamente ubicado querría dar una clase de filosofía política teórica en el almuerzo del domingo o en un programa en vivo.</p>
-
-<p>Sin caer en un uso barroco de cualquier expresión hablada, tampoco debemos renunciar a ser más precisos con el lenguaje con el que pensamos y nos comunicamos.</p>
-
-<h3 class="reveal">¿Las palabras son realidades?</h3>
-
-<p>La situación opuesta a la anterior, y más compleja aún, es que entre actores políticos e intelectuales se pretende que el uso de las palabras reemplace a la realidad, incluido, que la cree. En algunos discursos que pueden ser escuchados, el mismo que decir es lo mismo que hacer. Sobre todo, entre aquellos que buscan censurar, cancelar y eliminar espacios de debates y discusiones solo porque allí se dicen cosas que quizás no encajan en los moldes de la corrección política del momento.</p>
-
-<p>Parece que ya no se puede hacer bromas sobre determinados temas, porque todo podría resultar ofensivo para alguien. Se pretende modi-ficar incluso el lenguaje cotidiano -y sobre todo ese lenguaje, con el argumento de prevenir cualquier posibilidad de incomodidad o ma-lestar. Recursos como la ironía pueden ser interpretados como armas, cada enunciación reclama ser aclarada para evitar ofender a alguien.</p>
-
-<p>Esa lógica, que a primera vista parece bien intencionada, esconde una forma de paternalismo autoritario: una voluntad de homogeneizar el lenguaje y controlar a quienes lo utilizan, como si los hablantes fueran incapaces de hacerse cargo de sus propias expresiones. Y, al mismo tiempo, persigue la ingenio -y a esta altura desgastada- idea de "proteger" a los otros como si fuéramos frágiles y estuviéramos en peligro en ellos su capacidad para interpretar, responder y, sobre todo, disentir.</p>
-
-<p>Lo cierto es que el decir tiene a veces efectos reales y que muchas veces decir y hacer hasta se vinculan directamente, pero ambas son acciones notablemente diferentes. Nombrar algo no lo hace real ni lo modifica por sí solo.</p>
-
-<p>La idea de controlar y castigar a quienes escriben en las redes sociales es una de las derivaciones de esta idea que confunde relatos y acciones. Por supuesto que si se trata de una amenaza personal, violenta y creíble de ser llevada adelante puede ser investigada y sancionada si cabe, pero acá nos referimos a otra cosa.</p>
-
-<p>En este escenario, defender el valor de las palabras no significa darles un poder mágico ni creer que todo puede resolverse apenas con decirlas. Tampoco implica negarse a revisar nuestros modos de hablar, ni ignorar los efectos que el lenguaje puede tener en la vida social ni su propio devenir (porque el lenguaje es estático, también va cambiando, aunque no se pueda direccional su cambio como muchos intentan).</p>
-
-<p>Pensar en ámbitos educativos formales reclama resistir tanto a la censura simplificadora como a la repetición vacía. Exige, ante todo, sostener el derecho a hablar, a disentir y a pensar en común sin perder la precisión ni el coraje.</p>
-
-<h3 class="reveal">Las palabras importan</h3>
-
-<p>El mundo universitario, el mundo académico y el científico necesitan defender la posibilidad de ejercer esos derechos. No se trata simplemente de convencer o vencer en una discusión, sino de poder intercambiar ideas con honestidad intelectual, para contrastar argumentos, revisar hipótesis y así afinar nuestras investigaciones. Esto es lo que permite complejizar nuestros análisis y visiones del mundo.</p>
-
-<p>Por eso, si en el espacio académico no cuidamos el uso de las palabras -dichas o escritas, corremos el riesgo de perder nuestra herramienta más poderosa: el lenguaje como medio de reflexión, crítica y construc-ción del conocimiento. Esto es especialmente crucial en el marco de las ciencias sociales y las humanidades.</p>
-
-<p>Esto no implica, por supuesto, caer en un mecanismo de consenso ingenuo donde hay que estar de acuerdo en todo lo que se dice. El desacuerdo es constitutivo del pensamiento académico. No hay produc-ción de saber sin conflicto de interpretaciones, sin tensiones teóricas, sin diferencias ideológicas. Pero cuando esas diferencias se trabajan y se procesan con respeto por el lenguaje y por el otro, dejan de ser un obstáculo y se convierten en el verdadero motor de la tarea intelectual.</p>
-
-<h3 class="reveal">Los conceptos</h3>
-
-<p>En este libro, por otra parte, vamos a utilizar palabras especiales: las que designan y forman conceptos. Un concepto es una construcción abstracta, una forma condensada de una idea compleja, que puede expresarse con distintas palabras. Un concepto no es simplemente una palabra: encierra una definición, un enfoque, una perspectiva desde la cual miramos e interpretamos una realidad determinada.</p>
-
-<p>Los conceptos -como dijimos anteriormente para las palabras- también pueden desnaturalizarse, especialmente cuando su uso repetido y poco riguroso los vacía de su sentido originario.</p>
-
-<p>En el mundo académico -y en particular en el ámbito de las ciencias sociales y humanísticas- los conceptos tienen una función clave: permiten trabajar con ideas complejas que requieren definición, precisión y capacidad de ser operacionalizadas, es decir, de convertirse en herramientas útiles para el análisis, la comparación y la argumentación.</p>
-
-<p>Sin embargo, en el debate público actual, muchos de estos conceptos han perdido su potencia explicativa. Términos como *socialista*, *liberal*, *neoliberal* o *comunista* son utilizados cada vez más como adjetivos descalificativos, vaciados de contenido, sin referencia a sus tradiciones teóricas ni a sus implicancias académicas concretas. En cambio, en el espacio académico a los conceptos se los define, se los ubica históricamente, se los tensiona y se los discute.</p>
-
-<p>Cuando utilizamos determinados conceptos para trabajar -como los que elegimos para este libro-, no significa que todos deban coincidir necesariamente con todo lo que esos términos conllevan ni con todo lo que los autores afirman.</p>
-
-<p>Trabajamos con conceptos como herramientas compartidas. Si cada per-sona tuviera su propia definición particular de cada término, estaríamos, sin duda, frente a una sociedad intelectualmente muy sofisticada, pero sería imposible sostener un debate académico en tiempos acotados y den-tro de una actividad educativa formal. Incluso, sería difícil simplemente dialogar: estaríamos en una especie de nueva Babel, donde todos hablan pero nadie se entiende. Si al discurrir con un colega cada uno se guira solo por su versión individual del concepto que defiende -y se negara a desplazarse un milímetro de ahí-, la comunicación se volvería inviable. No habría terreno común para el aprendizaje. Mucho menos para la construcción colectiva de conocimiento. Menos para el intercambio ni para la construcción de conocimiento.</p>
-
-<p>Usamos los conceptos como espacios compartidos de trabajo, como puntos de partida para analizar, debatir y pensar colectivamente. No se trata de repetir lo que cada autor dice, sino de entender su punto de vista, poner sus ideas en discusión, confrontarlas, extenderlas y, cuando lo consideremos necesario, apropiarnos de ellas.</p>
-
-<h3 class="reveal">Herramientas</h3>
-
-<p>Este libro está compuesto por catorce artículos académicos, y cada uno de ellos se organiza en torno a un concepto específico, abordado por un autor o autora diferente. En todos los casos, se trabaja con herramientas conceptuales y categorías de uso habitual en las ciencias sociales, pero también con expresiones y categorías que circulan en espacios menos sistemáticos: el debate público, la vida cotidiana, la divulgación. Cada uno de los artículos es el resultado de una discusión sostenida durante años, en un proceso de renovación constante en los debates y en la actualización de contenidos.</p>
-
-<p>Han sido escritos por especialistas, investigadores y docentes que no solo dominan los temas que abordan, sino que también buscan hacer accesibles los conceptos fundamentales de las ciencias sociales sin perder profundidad ni rigor.</p>
-
-<p>Cada artículo se centra en un concepto clave y propone una lectura capaz de dialogar tanto con la teoría como con los debates contemporáneos, sin quedar encerrado en un lenguaje críptico ni desentendido del mundo que habitamos.</p>
-
-<p>Este libro es, al mismo tiempo, una tradición en movimiento, que se ha nutrido de todas sus ediciones anteriores y del aprendizaje colectivo que significó empezar a escribirlo y mejorarlo con el paso del tiempo.</p>
-
-<p>Su objetivo es tender puentes entre el saber académico y los lenguajes del mundo social, sosteniendo la exigencia conceptual sin renunciar a la posibilidad de ser comprendido fuera de la academia. Queremos dedicarlo a la memoria de Fernando Giménez, colega de la cátedra de Introducción al Conocimiento de la Sociedad y el Estado del Programa UBA XXI de la Universidad de Buenos Aires, fallecido en el año 2024.</p>
-
-<p>Fernando se destacó por su compromiso con la educación pública y también por su buen humor: siempre presente y dispuesto, incluso cuando las tareas eran difíciles o excesivas. Compartió con nosotros muchos años de trabajo en uno de los espacios más complejos de la universidad, la frontera de la masividad: el ingreso. Seguramente es un lugar menos visible, con poco glamour, pero sin duda uno imprescindible, donde se juega buena parte del sentido profundo de una universidad pública.</p>
-
+      <h2>Palabras, conceptos y vida pública: una invitación al análisis</h2>
+
+<p>Fernando Pedrosa, Florencia Deich, Nadia Yannuzzi</p>
+
+<p>Este libro fue pensado y escrito con la intención de recuperar el valor de las palabras como conceptos que permiten profundizar en el estudio de diferentes hechos sociales y de construcciones políticas o ideológicas.</p>
+
+<p>La palabra es una herramienta que utilizamos para representar el mundo y para comunicarnos con los demás y por ello es fundamental en el trabajo académico y científico. Nadie construye conocimiento en soledad: la ciencia avanza gracias al intercambio de ideas, al diálogo con colegas y a la apertura a la crítica, sea especializada o no.</p>
+
+<p>En el mundo actual, atravesado por la transformación de los medios de comunicación y por las redes sociales, asistimos a una proliferación constante de discursos, relatos, debates y formas de expresión que irrumpen de manera cotidiana.</p>
+
+<p>Hasta hace poco, la posibilidad de hablar a grandes audiencias estaba limitada a unos pocos canales de los viejos medios tradicionales. Rara vez existía la oportunidad de responder y de ser escuchado. Mucho menos de planificar y desarrollar una carrera sistemática hablando desde la propia habitación y que eso llegue a personas de todo el mundo, que también podrían hacer lo mismo.</p>
+
+<p>Lejos estamos de considerar que esto sea algo negativo; por el contrario, representa una auténtica democratización de la palabra. Hoy, más personas que nunca antes pueden expresarse, opinar, construir relatos propios y participar en conversaciones colectivas.</p>
+
+<p>Pero no todo son bondades. El uso del lenguaje también fue cambiando mientras esa revolución de la comunicación ocurría. En este nuevo escenario, han surgido dos extremos que han ganado mucha popularidad y que hay que pensar con mayor cautela.</p>
+
+<h3>A las palabras se las lleva el viento</h3>
+
+<p>Una de las coyunturas que enfrentamos hoy es el desgaste de los sig-nificantes por su uso mecánico, superficial o descontextualizado. Un ejemplo clásico es el de la palabra *populismo*. Se ha repetido tantas veces, en contextos tan diversos y con sentidos tan contradictorios, que ha llegado al punto de que ya nadie sabe con claridad a qué se refiere, ha perdido capacidad explicativa y se ha transformado, en muchos casos, en una etiqueta vacía.</p>
+
+<p>El renovado intento de las personas por ser escuchadas en un mundo saturado de palabras ha llevado a un uso cada vez más superficial del lenguaje. Hablar no cuesta nada, y muchas veces las palabras se vuelven descartables, livianas, efímeras, repetidas una y otra vez hasta vaciarse de sentido. Habitualmente vemos que ya no se emplean para debatir ideas o estrategias, sino como lo que los españoles llaman un "arma arrojadiza": un recurso destinado no a argumentar, sino a desacreditar al otro, a fijarle un rótulo negativo que acierre la discusión antes de que esta ocurra.</p>
+
+<p>Es cierto que cada uno puede usar las palabras como quiera, y que estas están influidas por el contexto, la ocasión y el público. No es lo mismo hablar de sociedad, régimen político o Estado en una sobremesa familiar académico. En los primeros casos, las palabras funcionan más como disparadores afectivos o marcas identitarias que como herramientas de análisis. Se busca reafirmar una postura, no discutirla. Y está bien: nadie medianamente ubicado querría dar una clase de filosofía política teórica en el almuerzo del domingo o en un programa en vivo.</p>
+
+<p>Sin caer en un uso barroco de cualquier expresión hablada, tampoco debemos renunciar a ser más precisos con el lenguaje con el que pensamos y nos comunicamos.</p>
+
+<h3>¿Las palabras son realidades?</h3>
+
+<p>La situación opuesta a la anterior, y más compleja aún, es que entre actores políticos e intelectuales se pretende que el uso de las palabras reemplace a la realidad, incluido, que la cree. En algunos discursos que pueden ser escuchados, el mismo que decir es lo mismo que hacer. Sobre todo, entre aquellos que buscan censurar, cancelar y eliminar espacios de debates y discusiones solo porque allí se dicen cosas que quizás no encajan en los moldes de la corrección política del momento.</p>
+
+<p>Parece que ya no se puede hacer bromas sobre determinados temas, porque todo podría resultar ofensivo para alguien. Se pretende modi-ficar incluso el lenguaje cotidiano -y sobre todo ese lenguaje, con el argumento de prevenir cualquier posibilidad de incomodidad o ma-lestar. Recursos como la ironía pueden ser interpretados como armas, cada enunciación reclama ser aclarada para evitar ofender a alguien.</p>
+
+<p>Esa lógica, que a primera vista parece bien intencionada, esconde una forma de paternalismo autoritario: una voluntad de homogeneizar el lenguaje y controlar a quienes lo utilizan, como si los hablantes fueran incapaces de hacerse cargo de sus propias expresiones. Y, al mismo tiempo, persigue la ingenio -y a esta altura desgastada- idea de "proteger" a los otros como si fuéramos frágiles y estuviéramos en peligro en ellos su capacidad para interpretar, responder y, sobre todo, disentir.</p>
+
+<p>Lo cierto es que el decir tiene a veces efectos reales y que muchas veces decir y hacer hasta se vinculan directamente, pero ambas son acciones notablemente diferentes. Nombrar algo no lo hace real ni lo modifica por sí solo.</p>
+
+<p>La idea de controlar y castigar a quienes escriben en las redes sociales es una de las derivaciones de esta idea que confunde relatos y acciones. Por supuesto que si se trata de una amenaza personal, violenta y creíble de ser llevada adelante puede ser investigada y sancionada si cabe, pero acá nos referimos a otra cosa.</p>
+
+<p>En este escenario, defender el valor de las palabras no significa darles un poder mágico ni creer que todo puede resolverse apenas con decirlas. Tampoco implica negarse a revisar nuestros modos de hablar, ni ignorar los efectos que el lenguaje puede tener en la vida social ni su propio devenir (porque el lenguaje es estático, también va cambiando, aunque no se pueda direccional su cambio como muchos intentan).</p>
+
+<p>Pensar en ámbitos educativos formales reclama resistir tanto a la censura simplificadora como a la repetición vacía. Exige, ante todo, sostener el derecho a hablar, a disentir y a pensar en común sin perder la precisión ni el coraje.</p>
+
+<h3>Las palabras importan</h3>
+
+<p>El mundo universitario, el mundo académico y el científico necesitan defender la posibilidad de ejercer esos derechos. No se trata simplemente de convencer o vencer en una discusión, sino de poder intercambiar ideas con honestidad intelectual, para contrastar argumentos, revisar hipótesis y así afinar nuestras investigaciones. Esto es lo que permite complejizar nuestros análisis y visiones del mundo.</p>
+
+<p>Por eso, si en el espacio académico no cuidamos el uso de las palabras -dichas o escritas, corremos el riesgo de perder nuestra herramienta más poderosa: el lenguaje como medio de reflexión, crítica y construc-ción del conocimiento. Esto es especialmente crucial en el marco de las ciencias sociales y las humanidades.</p>
+
+<p>Esto no implica, por supuesto, caer en un mecanismo de consenso ingenuo donde hay que estar de acuerdo en todo lo que se dice. El desacuerdo es constitutivo del pensamiento académico. No hay produc-ción de saber sin conflicto de interpretaciones, sin tensiones teóricas, sin diferencias ideológicas. Pero cuando esas diferencias se trabajan y se procesan con respeto por el lenguaje y por el otro, dejan de ser un obstáculo y se convierten en el verdadero motor de la tarea intelectual.</p>
+
+<h3>Los conceptos</h3>
+
+<p>En este libro, por otra parte, vamos a utilizar palabras especiales: las que designan y forman conceptos. Un concepto es una construcción abstracta, una forma condensada de una idea compleja, que puede expresarse con distintas palabras. Un concepto no es simplemente una palabra: encierra una definición, un enfoque, una perspectiva desde la cual miramos e interpretamos una realidad determinada.</p>
+
+<p>Los conceptos -como dijimos anteriormente para las palabras- también pueden desnaturalizarse, especialmente cuando su uso repetido y poco riguroso los vacía de su sentido originario.</p>
+
+<p>En el mundo académico -y en particular en el ámbito de las ciencias sociales y humanísticas- los conceptos tienen una función clave: permiten trabajar con ideas complejas que requieren definición, precisión y capacidad de ser operacionalizadas, es decir, de convertirse en herramientas útiles para el análisis, la comparación y la argumentación.</p>
+
+<p>Sin embargo, en el debate público actual, muchos de estos conceptos han perdido su potencia explicativa. Términos como *socialista*, *liberal*, *neoliberal* o *comunista* son utilizados cada vez más como adjetivos descalificativos, vaciados de contenido, sin referencia a sus tradiciones teóricas ni a sus implicancias académicas concretas. En cambio, en el espacio académico a los conceptos se los define, se los ubica históricamente, se los tensiona y se los discute.</p>
+
+<p>Cuando utilizamos determinados conceptos para trabajar -como los que elegimos para este libro-, no significa que todos deban coincidir necesariamente con todo lo que esos términos conllevan ni con todo lo que los autores afirman.</p>
+
+<p>Trabajamos con conceptos como herramientas compartidas. Si cada per-sona tuviera su propia definición particular de cada término, estaríamos, sin duda, frente a una sociedad intelectualmente muy sofisticada, pero sería imposible sostener un debate académico en tiempos acotados y den-tro de una actividad educativa formal. Incluso, sería difícil simplemente dialogar: estaríamos en una especie de nueva Babel, donde todos hablan pero nadie se entiende. Si al discurrir con un colega cada uno se guira solo por su versión individual del concepto que defiende -y se negara a desplazarse un milímetro de ahí-, la comunicación se volvería inviable. No habría terreno común para el aprendizaje. Mucho menos para la construcción colectiva de conocimiento. Menos para el intercambio ni para la construcción de conocimiento.</p>
+
+<p>Usamos los conceptos como espacios compartidos de trabajo, como puntos de partida para analizar, debatir y pensar colectivamente. No se trata de repetir lo que cada autor dice, sino de entender su punto de vista, poner sus ideas en discusión, confrontarlas, extenderlas y, cuando lo consideremos necesario, apropiarnos de ellas.</p>
+
+<h3>Herramientas</h3>
+
+<p>Este libro está compuesto por catorce artículos académicos, y cada uno de ellos se organiza en torno a un concepto específico, abordado por un autor o autora diferente. En todos los casos, se trabaja con herramientas conceptuales y categorías de uso habitual en las ciencias sociales, pero también con expresiones y categorías que circulan en espacios menos sistemáticos: el debate público, la vida cotidiana, la divulgación. Cada uno de los artículos es el resultado de una discusión sostenida durante años, en un proceso de renovación constante en los debates y en la actualización de contenidos.</p>
+
+<p>Han sido escritos por especialistas, investigadores y docentes que no solo dominan los temas que abordan, sino que también buscan hacer accesibles los conceptos fundamentales de las ciencias sociales sin perder profundidad ni rigor.</p>
+
+<p>Cada artículo se centra en un concepto clave y propone una lectura capaz de dialogar tanto con la teoría como con los debates contemporáneos, sin quedar encerrado en un lenguaje críptico ni desentendido del mundo que habitamos.</p>
+
+<p>Este libro es, al mismo tiempo, una tradición en movimiento, que se ha nutrido de todas sus ediciones anteriores y del aprendizaje colectivo que significó empezar a escribirlo y mejorarlo con el paso del tiempo.</p>
+
+<p>Su objetivo es tender puentes entre el saber académico y los lenguajes del mundo social, sosteniendo la exigencia conceptual sin renunciar a la posibilidad de ser comprendido fuera de la academia. Queremos dedicarlo a la memoria de Fernando Giménez, colega de la cátedra de Introducción al Conocimiento de la Sociedad y el Estado del Programa UBA XXI de la Universidad de Buenos Aires, fallecido en el año 2024.</p>
+
+<p>Fernando se destacó por su compromiso con la educación pública y también por su buen humor: siempre presente y dispuesto, incluso cuando las tareas eran difíciles o excesivas. Compartió con nosotros muchos años de trabajo en uno de los espacios más complejos de la universidad, la frontera de la masividad: el ingreso. Seguramente es un lugar menos visible, con poco glamour, pero sin duda uno imprescindible, donde se juega buena parte del sentido profundo de una universidad pública.</p>
+
 <div class="separador">• • •</div>
     </div>
-
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
-
   </div>
 
   <!-- Scroll to top -->
-  <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
 
   <!-- Reading complete toast -->
   <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
 
-  <script>
-  (function() {
-    // Progress bar
-    var bar = document.getElementById("progressBar");
-    window.addEventListener("scroll", function() {
-      var h = document.documentElement.scrollHeight - window.innerHeight;
-      var pct = h > 0 ? (window.scrollY / h) * 100 : 0;
-      bar.style.width = pct + "%";
-    });
-
-    // Scroll to top button
-    var btn = document.getElementById("scrollTopBtn");
-    window.addEventListener("scroll", function() {
-      btn.classList.toggle("visible", window.scrollY > 300);
-    });
-
-    // Section dots
-    var dots = document.getElementById("sectionDots");
-    var h2s = document.querySelectorAll(".contenido h2");
-    if (h2s.length > 1) {
-      dots.classList.add("visible");
-      for (var i = 0; i < h2s.length; i++) {
-        var dot = document.createElement("div");
-        dot.className = "section-dot";
-        dot.setAttribute("data-idx", i);
-        dot.addEventListener("click", function() {
-          h2s[parseInt(this.getAttribute("data-idx"))].scrollIntoView({behavior:"smooth"});
-        });
-        dots.appendChild(dot);
-      }
-      var allDots = dots.querySelectorAll(".section-dot");
-      window.addEventListener("scroll", function() {
-        var scrollY = window.scrollY + 120;
-        var active = 0;
-        for (var i = 0; i < h2s.length; i++) {
-          if (h2s[i].offsetTop <= scrollY) active = i;
-        }
-        allDots.forEach(function(d, idx) {
-          d.classList.toggle("active", idx === active);
-        });
-      });
-    }
-
-    // Reveal on scroll
-    var reveals = document.querySelectorAll(".reveal");
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          e.target.classList.add("visible");
-          observer.unobserve(e.target);
-        }
-      });
-    }, {threshold: 0.1});
-    reveals.forEach(function(el) { observer.observe(el); });
-
-    // Reading complete toast at 95%
-    var toast = document.getElementById("readingToast");
-    var shown = false;
-    window.addEventListener("scroll", function() {
-      if (shown) return;
-      var h = document.documentElement.scrollHeight - window.innerHeight;
-      if (h > 0 && (window.scrollY / h) > 0.95) {
-        shown = true;
-        toast.classList.add("show");
-        setTimeout(function() { toast.classList.remove("show"); }, 3000);
-      }
-    });
-  })();
-  </script>
+  <script src="../reader.js"></script>
 </body>
 </html>

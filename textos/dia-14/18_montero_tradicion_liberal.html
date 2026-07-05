@@ -2,356 +2,124 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>La tradición liberal — ICSE 024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-        :root {
-      --bg: #1a1a1a;
-      --text: #d4d0c8;
-      --text-muted: #8a8580;
-      --heading: #e8e4dc;
-      --border: #3a3530;
-      --surface: #242220;
-      --accent: #c9854a;
-      --red-soft: #e06060;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      font-size: 18px;
-      line-height: 1.75;
-      padding: 0;
-    }
-
-    .page {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 4rem 2rem 6rem;
-    }
-
-    .metadatos {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
-    .metadatos .titulo-libro {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .metadatos .titulo-texto {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 2em;
-      font-weight: 600;
-      color: var(--heading);
-      line-height: 1.25;
-      margin-bottom: 0.6rem;
-    }
-
-    .metadatos .autor {
-      font-size: 1.05em;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-
-    .metadatos .info {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78em;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .metadatos .badge {
-      display: inline-block;
-      margin-top: 1.2rem;
-      padding: 0.35rem 1.2rem;
-      background: var(--heading);
-      color: #1a1a1a;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72em;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border-radius: 2px;
-    }
-
-    .contenido p {
-      text-indent: 1.5em;
-      margin-bottom: 0;
-      text-align: justify;
-      hyphens: auto;
-    }
-
-    .contenido p + p {
-      margin-top: 0.9em;
-    }
-
-    .contenido p:first-of-type {
-      text-indent: 0;
-    }
-
-    .contenido p.first-of-section {
-      text-indent: 0;
-    }
-
-    .contenido h2 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 600;
-      color: var(--heading);
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido h3 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.2em;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--heading);
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .contenido h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contenido blockquote {
-      margin: 2rem 0 2rem 1.5rem;
-      padding: 1rem 1.5rem;
-      border-left: 3px solid var(--accent);
-      font-style: italic;
-      color: var(--text-muted);
-      background: var(--surface);
-      font-size: 0.95em;
-    }
-
-    .contenido blockquote p {
-      text-indent: 0;
-      text-align: left;
-    }
-
-    .contenido ul,
-    .contenido ol {
-      margin: 1.2rem 0 1.2rem 2rem;
-    }
-
-    .contenido li {
-      margin-bottom: 0.5em;
-      padding-left: 0.3em;
-    }
-
-    .contenido table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.9em;
-    }
-
-    .contenido table th {
-      background: var(--surface);
-      color: var(--heading);
-      padding: 0.7rem 1rem;
-      text-align: left;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 0.85em;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    border-bottom: 2px solid var(--accent); }
-
-    .contenido table td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido table tr:nth-child(even) {
-      background: var(--surface);
-    }
-
-    .contenido .ilegible {
-      color: var(--red-soft);
-      font-weight: 600;
-      background: #3a2020;
-      padding: 0.1em 0.3em;
-      border-radius: 2px;
-    }
-
-    .contenido .nota-num {
-      font-size: 0.75em;
-      vertical-align: super;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .notas {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .notas h2 {
-      font-size: 1.1em;
-      margin-bottom: 1rem;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .notas p {
-      font-size: 0.85em;
-      text-indent: 0;
-      margin-bottom: 0.6em;
-      color: var(--text-muted);
-      text-align: left;
-    }
-
-    .separador {
-      text-align: center;
-      margin: 3rem 0;
-      color: var(--border);
-      font-size: 1.2em;
-      letter-spacing: 0.5em;
-    }
-
-    footer {
-      margin-top: 5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    @media print {
-      body { background: #fff; font-size: 12pt; }
-      .page { padding: 0; max-width: 100%; }
-      .metadatos { break-after: page; border: none; background: none; }
-      .contenido h2 { break-after: avoid; }
-      .contenido h3 { break-after: avoid; }
-      blockquote { break-inside: avoid; }
-      table { break-inside: avoid; }
-      footer { break-before: avoid; }
-    }
-
-    @media (max-width: 700px) {
-      .page { padding: 2rem 1.2rem 4rem; }
-      body { font-size: 16px; }
-      .metadatos .titulo-texto { font-size: 1.6em; }
-    }
-  </style>
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="../textos.css">
 </head>
 <body>
+
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">La tradición liberal</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
   <div class="page">
     <div class="metadatos">
-      <div class="titulo-libro">Debates para un mundo en transformación</div>
-      <div class="titulo-texto">La tradición liberal</div>
-      <div class="autor">Julio Montero</div>
-      <div class="info">Páginas originales: 37–51</div>
+      <div class="titulo-libro">Debates para un mundo en transformación</div>
+      <div class="titulo-texto">La tradición liberal</div>
+      <div class="autor">Julio Montero</div>
+      <div class="info">Páginas originales: 37–51</div>
       <div class="badge">Día 14 — Unidad 5</div>
     </div>
 
     <div class="contenido">
-      <h2>Capítulo 2. La tradición liberal</h2>
-<p class="first-of-section">La tradición liberal es una de las más importantes de la política moderna. Está vinculada a valores tan fundamentales como la libertad, los derechos individuales, la propiedad privada y la igualdad ante la ley. Dentro de esta rica tradición existen múltiples corrientes que interpretan y ordenan estos valores de maneras distintas. Los liberales-libertarios, los liberales clásicos y los neoliberales les dan prioridad a la propiedad privada y la libertad de intercambiar bienes y servicios con los demás. Por eso abogan por un Estado mínimo: cuanto menos Estado haya, más libres serán las personas.</p>
-<p>Pero existe también una vertiente conocida como "liberalismo igualitario" que quiere que el Estado brinde servicios públicos de acceso universal, como educación, salud y seguridad social. Para ellos las interferencias estatales enfatizan la necesidad de garantizar igualdad real de oportunidades y una distribución justa del ingreso. Estos liberales, más cercanos a la socialdemocracia, quieren que el Estado brinde servicios públicos de acceso universal.</p>
-
-<h3>El núcleo conceptual</h3>
-<p>La idea de que las personas deben ser libres para gobernar sus vidas es muy familiar para los que viven en una democracia constitucional; sin embargo, desde una perspectiva histórica se trata de un enfoque más bien novedoso. En el mundo antiguo y medieval, los individuos se definían por su pertenencia a un grupo, ya fuera una unidad política como las ciudades-Estado, una religión o una nacionalidad. Dado que el bienestar del grupo era lo más importante, las personas debían servir a su comunidad y acatar sus decisiones.</p>
-<p>En el mundo antiguo y medieval, la sociedad estaba organizada en estamentos determinados por el nacimiento (nobles, clérigos o campesinos), lo que significaba que no era posible cambiar de posición social a lo largo de la vida. Los únicos derechos que las personas tenían eran aquellos que el grupo decidía reconocerles, sin que existiera ningún límite a lo que la comunidad podía hacer con sus miembros. En el caso de los campesinos, esta dependencia era aún mayor, ya que su destino estaba supeditado a la voluntad de la nobleza.</p>
-<p>Esta visión del mundo empezó a resquebrajarse en la era moderna con el surgimiento de nuevos actores sociales que vivían del comercio y los oficios independientes —Karl Marx los denominó "burguesía" y hoy se los llama "clases medias"—. En contra de los monarcas absolutos, que podían decidir arbitrariamente sobre la vida, la libertad y la propiedad de sus súbditos, los liberales asumieron la representación de estos sectores y sostuvieron que los individuos son libres e iguales por naturaleza.</p>
-<p>Entre los muchos autores que le dieron carnadura a esta nueva ideología destaca especialmente el filósofo inglés John Locke. En su <em>Segundo tratado sobre el gobierno civil</em>, Locke argumentó que, siendo todos los individuos iguales en cuanto a sus facultades, no puede existir subordinación de uno sobre otro y que todos tienen por tanto la misma libertad de actuar como lo consideren conveniente. Partiendo de este axioma general, Locke derivó cuatro derechos muy concretos, a los que llamó "naturales":</p>
-<ul>
-<li>El derecho a la vida</li>
-<li>El derecho a la integridad corporal</li>
-<li>El derecho a decidir libremente sobre nuestra conducta</li>
-<li>El derecho a la propiedad</li>
-</ul>
-<p>Para Locke, la obligación de respetar estos derechos es una "ley de la razón" cuya existencia no depende de las normas sancionadas por ningún gobierno en particular. De hecho, Locke estaba convencido de que la única motivación para que quienes nacen libres e iguales acepten formar un gobierno es proteger sus derechos naturales. En el lenguaje filosófico suele denominarse "autonomía", es lo que los liberales asumieron la representación de estos sectores y sostuvieron que los individuos son libres e iguales por naturaleza.</p>
-<p>Para la mayoría de los liberales, esta capacidad de adoptar objetivos propios, proteger la autonomía es lo mismo que proteger la humanidad. Así, a diferencia de otros animales, los seres humanos pueden reflexionar sobre lo que es bueno o malo para ellos y construir planes y proyectos a la luz de esas evaluaciones. Este modo de pensar la relación de los individuos con los grupos y el gobierno subyace una concepción particular del ser humano, que lo presenta como un agente "propositivo" o "intencional". Esto quiere decir que, a diferencia de otros animales, los seres humanos pueden reflexionar sobre lo que es bueno o malo para ellos.</p>
-<p>Esos planes y proyectos de los que hablan los liberales pueden ser simples, como practicar un deporte, tocar un instrumento musical, ir a la iglesia, abrir un canal de YouTube o tener una pareja. Pero también pueden ser más complejos y de largo plazo, como estudiar una carrera, fundar una empresa o formar una familia. En cualquiera de estos casos, lo importante para los liberales es que las personas puedan decidir por sí mismas qué hacer con su vida y buscar la felicidad a su manera sin que nadie les imponga metas o ideales que ellos no comparten o no quieren promover.</p>
-<p>Más allá de sus diferencias, todos los liberales comparten un mismo núcleo conceptual que puede resumirse así: cada persona debe gozar de un amplio ámbito de libertad, protegido por una serie de derechos fundamentales que los demás deben respetar en cualquier contexto imaginable. En consecuencia, nadie puede matar, herir o robar, ni impedir la expresión de ideas, la asociación o la participaciones en interacciones comerciales con otras personas.</p>
-<p>Abriéndose camino a través de los siglos XVIII y XIX, esta nueva filosofía impulsó la adopción de textos constitucionales que protegían la libertad individual y el gobierno limitado. La posibilidad de planificar el propio camino y de progresar mediante el uso libre de las capacidades, al amparo de la seguridad jurídica, creó el marco de las ideas liberales explica en gran medida los impresionantes niveles de bienestar, prosperidad y desarrollo que alcanzaron.</p>
-<p>Si bien la vida de las democracias occidentales está atravesada por una enorme variedad de tradiciones de pensamiento político que van desde el liberalismo y el republicanismo hasta el conservadurismo y el socialismo, la primacia de las ideas liberales se refleja en el hecho de que incluso las corrientes más conservadoras o progresistas aceptan hoy los principios básicos de los derechos individuales, el gobierno limitado y la igualdad ante la ley.</p>
-<p>La tolerancia recíproca es una de las virtudes cardinales del pensamiento liberal. Mientras cada persona respete los derechos de sus semejantes, puede dedicarse a satisfacer sus propias preferencias sin que nadie se meta en su vida. Esta postura queda muy bien plasmada en el famoso "principio del daño", que desde John Stuart Mill (1974) en adelante los liberales invocan en las discusiones sobre legislación y políticas públicas. El principio del daño se formula así: si una acción X, realizada por un individuo I, no genera daños a otras personas, entonces I puede realizar esa acción libremente, sin interferencia de ninguna otra persona ni del Estado.</p>
-<p>En este sentido, para el liberalismo no es relevante si las decisiones que se toman son buenas o malas; lo único relevante es que cada persona decida por sí misma. Si una persona adulta decide de manera informada hacer uso de ellas y toma recaudos para que esto no perjudique a nadie más, el Estado no puede sancionarla, mucho menos con penas de cárcel. Un buen ejemplo es el consumo de sustancias potencialmente nocivas, como el alcohol o la marihuana.</p>
-<p>El compromiso con este principio explica por qué las personas liberales se oponen al paternalismo del gobierno, es decir, interferencias que impiden realizar alguna acción inocua para terceros invocando el propio bienestar. Desde el punto de vista liberal, ser libre implica poder equivocarse y asumir la responsabilidad por los propios errores.</p>
-
-<h3>El núcleo conceptual del liberalismo</h3>
-<p>A partir de este análisis, es posible descomponer el núcleo conceptual del liberalismo en tres grandes principios interrelacionados:</p>
-<p><strong>Derechos individuales.</strong> Como libres e iguales, todos los individuos deben gozar de un amplio ámbito de libertad, protegido por una serie de derechos fundamentales que los demás deben respetar en cualquier contexto imaginable.</p>
-<p><strong>Gobierno limitado.</strong> El Estado existe para servir al individuo y proteger sus derechos, pero pierde su autoridad cuando se excede en sus funciones.</p>
-<p><strong>Igualdad.</strong> Todos los seres humanos son libres e iguales por naturaleza. Nadie goza de privilegios respecto de los demás ni puede tratarlos como sus subordinados.</p>
-<p>Todos los liberales comparten estos tres grandes principios, pero no todos los interpretan del mismo modo. Esto da lugar a la existencia de distintas corrientes liberales que reivindican paquetes de políticas públicas diversos y a menudo opuestos.</p>
-
-<h3>El anarco-capitalismo</h3>
-<p>El primer grupo de autores para examinar son los anarco-capitalistas como Murray Rothbard (2020), frecuentemente asociados al libertarismo. Partiendo de la tesis lockeana de que las personas son libres por naturaleza, estos autores llegan a la conclusión de que la existencia del Estado, entendido como un poder que ejerce autoridad sobre los individuos, no importa si ese Estado es una democracia constitucional o una dictadura, es inviable. Si una persona es libre, sostienen, entonces nadie puede tener autoridad sobre ella a menos que acepte esa autoridad de manera voluntaria.</p>
-<p>Esto implica que el Estado no puede imponer órdenes ni obligar al cumplimiento de sus decisiones sin el consentimiento previo para ello. Así, cuando los gobiernos imponen el pago de impuestos obligatorios o dictan leyes que deben obedecerse, están vulnerando los derechos individuales. Por esta razón, los anarco-capitalistas no pueden sostener que las leyes no son opuestas a la libertad sino constitutivas de ellas.</p>
-
-<h3>El libertarismo, el liberalismo clásico y el neoliberalismo</h3>
-<p>A diferencia de los anarco-capitalistas, los libertarios como Robert Nozick (2011) y los neoliberales como Milton Friedman (2020) no se oponen a la existencia del Estado, pero consideran que este debe ser muy reducido. Esencialmente, el Estado debe limitarse a proteger la vida y la seguridad de la persona, la libertad de acción, la propiedad privada y el cumplimiento de los contratos firmados por los ciudadanos. Esto implica que no puede asumir funciones que excedan ese cometido básico.</p>
-<p>A lo largo de la historia moderna, la necesidad de que el Estado se mantuviera pequeño fue uno de los principios que más influencia tuvo en las políticas públicas de los países occidentales. Los liberales clásicos y los neoliberales sostienen que las economías de mercado son más eficientes a la hora de producir riqueza y que cualquier atajo hacia la prosperidad es una receta condenada al fracaso. La creencia de que las economías de mercado son más eficientes a la hora de producir riqueza cuenta con un amplio respaldo empírico, no solo porque todas las experiencias socialistas acabaron sumiendo a sus ciudadanos en el atraso y la miseria, sino además porque los países con mayor libertad económica son en promedio mucho más ricos que los países económicamente oprimidos y tienen tasas de pobreza significativamente menores.</p>
-<p>Consciente de este problema, Nozick propuso una cláusula alternativa. La cláusula nozickeana establece lo siguiente: un individuo puede apropiarse de recursos naturales si mejora la situación de los demás en comparación con la que tenían antes. En el supuesto de que esto suceda habrá que compensar a esa persona mediante una redistribución de los recursos.</p>
-<p>Los libertarios sostienen que la redistribución del ingreso por parte del Estado es profundamente injusta, ya que supone una forma parcial de esclavitud. Para comprender este argumento, imaginemos a una persona que obtiene un ingreso de $1.000.000 trabajando 100 horas al mes. Esto implica que su ganancia es de $10.000 por hora. En consecuencia, si el Estado le cobrara un impuesto del 30%, esa persona estaría trabajando 30 horas solo para el Estado, como un esclavo temporal.</p>
-<p>La propiedad privada permite desigualdades de riqueza que exceden los límites de lo tolerable. Si esas desigualdades son resultado del esfuerzo y la capacidad de cada uno, bien podrían no ser injustas. Pero a menudo un individuo tiene menos que otros por razones que no dependen de su elección: la suerte, las circunstancias familiares, el lugar de nacimiento.</p>
-
-<h3>El liberalismo igualitario</h3>
-<p>El mayor exponente del liberalismo igualitario es el filósofo estadounidense John Rawls. Igual que Locke, Rawls (1979) supone que las personas son libres e iguales, y que deciden cooperar socialmente con otros para producir bienes públicos como seguridad, oportunidades y riqueza. El gran interrogante, entonces, es cómo distribuir esos bienes de manera que todos reciban una porción justa por su cooperación.</p>
-<p>Para responder a este interrogante Rawls recurre a una situación imaginaria conocida como la "posición original", una suerte de asamblea constituyente donde los ciudadanos discuten sobre los principios más generales que gobernarán su sociedad. Para evitar que los participantes en esta asamblea traten de obtener ventajas para su propio grupo a expensas del resto, Rawls sitúa a los asambleistas tras un "velo de ignorancia" que les impide conocer cierta información sobre sí mismos: su posición social, su religión y sus objetivos existenciales.</p>
-<p>Los liberales igualitarios sostienen que la riqueza no es resultado exclusivo del trabajo individual, sino que depende también de la existencia de un sistema de normas sociales que brinda a las personas un marco adecuado para dedicarse a tareas productivas con mayor eficiencia. Esto incluye la protección del individuo y la propiedad privada, así como la administración de justicia y la defensa exterior. Si estas normas no existieran, los individuos vivirían en un contexto de inseguridad e incertidumbre y su productividad sería seguramente más baja. En consecuencia, dado que la riqueza que los individuos producen con su actividad se ve potenciada por la cooperación social, los liberales igualitarios concluyen que la sociedad puede disponer de parte de ese excedente para compensar a los que quedan en una peor situación a cambio de que respeten las normas comunes de cooperación.</p>
-<p>Mientras que los libertarios, los liberales clásicos y los neoliberales en general se oponen a cualquier interferencia del Estado con el funcionamiento de los mercados y la propiedad privada de las personas, los liberales igualitarios defienden la distribución del ingreso y un Estado que brinde servicios como salud, educación y seguro de desempleo. Para ellos, esto no es una cuestión de caridad, sino de justicia en el reparto de bienes socialmente producidos.</p>
-<p>Sin embargo, incluso los liberales igualitarios reconocen que las regulaciones sobre los mercados y la propiedad privada deben mantenerse a niveles razonables, ya que las regulaciones excesivas repercuten negativamente sobre la generación de riqueza y esto atenta de manera directa contra los derechos individuales.</p>
-
-<h3>Conclusiones</h3>
-<p>A lo largo de este capítulo se analizaron las similitudes y diferencias entre las distintas corrientes que componen la tradición liberal. Todas ellas comparten la idea de que las personas son libres e iguales y gozan de un derecho fundamental a gobernar el curso de sus vidas. Por eso les otorgan alta prioridad a las libertades individuales e insisten en que la razón de ser de los gobiernos es proteger los derechos de sus gobernados sin avanzar sobre sus decisiones privadas en nombre de grandes causas colectivas, del bienestar general o de sus propios intereses.</p>
-<p>Mientras se respeten los derechos de los demás, cada uno puede conducir su vida como quiera. En este sentido, "liberalismo" es sinónimo de diversidad, pluralismo y tolerancia. Los mayores desacuerdos entre los liberales se relacionan con la distribución del ingreso, la intervención del Estado en la economía y el valor de la propiedad privada.</p>
-<p>En todo caso, la discusión entre una perspectiva más igualitaria y otra más conservadora en el plano económico está abierta a la discusión y marca la frontera entre las distintas corrientes que componen la tradición liberal democrática.</p>
-
-<h3>Referencias bibliográficas</h3>
-<p>Friedman, M. (2020). <em>Capitalism and freedom</em>. University of Chicago Press.</p>
-<p>Hayek, F. A. (2011). <em>The constitution of liberty</em>. University of Chicago Press.</p>
-<p>Locke, J. (1999). <em>Segundo tratado sobre el gobierno civil</em>. Alianza.</p>
-<p>Mill, J. S. (1974). <em>On liberty</em>. Pelican Classics.</p>
-<p>Nozick, R. (1974). <em>Anarchy, state, and utopia</em>. Basic Books.</p>
-<p>Rawls, J. (1979). <em>Teoría de la justicia</em>. Fondo de Cultura Económica.</p>
-<p>Rothbard, M. (2020). <em>For a new liberty: the libertarian manifesto</em>. Mises Institute.</p>
+      <h2>Capítulo 2. La tradición liberal</h2>
+<p class="first-of-section">La tradición liberal es una de las más importantes de la política moderna. Está vinculada a valores tan fundamentales como la libertad, los derechos individuales, la propiedad privada y la igualdad ante la ley. Dentro de esta rica tradición existen múltiples corrientes que interpretan y ordenan estos valores de maneras distintas. Los liberales-libertarios, los liberales clásicos y los neoliberales les dan prioridad a la propiedad privada y la libertad de intercambiar bienes y servicios con los demás. Por eso abogan por un Estado mínimo: cuanto menos Estado haya, más libres serán las personas.</p>
+<p>Pero existe también una vertiente conocida como "liberalismo igualitario" que quiere que el Estado brinde servicios públicos de acceso universal, como educación, salud y seguridad social. Para ellos las interferencias estatales enfatizan la necesidad de garantizar igualdad real de oportunidades y una distribución justa del ingreso. Estos liberales, más cercanos a la socialdemocracia, quieren que el Estado brinde servicios públicos de acceso universal.</p>
+
+<h3>El núcleo conceptual</h3>
+<p>La idea de que las personas deben ser libres para gobernar sus vidas es muy familiar para los que viven en una democracia constitucional; sin embargo, desde una perspectiva histórica se trata de un enfoque más bien novedoso. En el mundo antiguo y medieval, los individuos se definían por su pertenencia a un grupo, ya fuera una unidad política como las ciudades-Estado, una religión o una nacionalidad. Dado que el bienestar del grupo era lo más importante, las personas debían servir a su comunidad y acatar sus decisiones.</p>
+<p>En el mundo antiguo y medieval, la sociedad estaba organizada en estamentos determinados por el nacimiento (nobles, clérigos o campesinos), lo que significaba que no era posible cambiar de posición social a lo largo de la vida. Los únicos derechos que las personas tenían eran aquellos que el grupo decidía reconocerles, sin que existiera ningún límite a lo que la comunidad podía hacer con sus miembros. En el caso de los campesinos, esta dependencia era aún mayor, ya que su destino estaba supeditado a la voluntad de la nobleza.</p>
+<p>Esta visión del mundo empezó a resquebrajarse en la era moderna con el surgimiento de nuevos actores sociales que vivían del comercio y los oficios independientes —Karl Marx los denominó "burguesía" y hoy se los llama "clases medias"—. En contra de los monarcas absolutos, que podían decidir arbitrariamente sobre la vida, la libertad y la propiedad de sus súbditos, los liberales asumieron la representación de estos sectores y sostuvieron que los individuos son libres e iguales por naturaleza.</p>
+<p>Entre los muchos autores que le dieron carnadura a esta nueva ideología destaca especialmente el filósofo inglés John Locke. En su <em>Segundo tratado sobre el gobierno civil</em>, Locke argumentó que, siendo todos los individuos iguales en cuanto a sus facultades, no puede existir subordinación de uno sobre otro y que todos tienen por tanto la misma libertad de actuar como lo consideren conveniente. Partiendo de este axioma general, Locke derivó cuatro derechos muy concretos, a los que llamó "naturales":</p>
+<ul>
+<li>El derecho a la vida</li>
+<li>El derecho a la integridad corporal</li>
+<li>El derecho a decidir libremente sobre nuestra conducta</li>
+<li>El derecho a la propiedad</li>
+</ul>
+<p>Para Locke, la obligación de respetar estos derechos es una "ley de la razón" cuya existencia no depende de las normas sancionadas por ningún gobierno en particular. De hecho, Locke estaba convencido de que la única motivación para que quienes nacen libres e iguales acepten formar un gobierno es proteger sus derechos naturales. En el lenguaje filosófico suele denominarse "autonomía", es lo que los liberales asumieron la representación de estos sectores y sostuvieron que los individuos son libres e iguales por naturaleza.</p>
+<p>Para la mayoría de los liberales, esta capacidad de adoptar objetivos propios, proteger la autonomía es lo mismo que proteger la humanidad. Así, a diferencia de otros animales, los seres humanos pueden reflexionar sobre lo que es bueno o malo para ellos y construir planes y proyectos a la luz de esas evaluaciones. Este modo de pensar la relación de los individuos con los grupos y el gobierno subyace una concepción particular del ser humano, que lo presenta como un agente "propositivo" o "intencional". Esto quiere decir que, a diferencia de otros animales, los seres humanos pueden reflexionar sobre lo que es bueno o malo para ellos.</p>
+<p>Esos planes y proyectos de los que hablan los liberales pueden ser simples, como practicar un deporte, tocar un instrumento musical, ir a la iglesia, abrir un canal de YouTube o tener una pareja. Pero también pueden ser más complejos y de largo plazo, como estudiar una carrera, fundar una empresa o formar una familia. En cualquiera de estos casos, lo importante para los liberales es que las personas puedan decidir por sí mismas qué hacer con su vida y buscar la felicidad a su manera sin que nadie les imponga metas o ideales que ellos no comparten o no quieren promover.</p>
+<p>Más allá de sus diferencias, todos los liberales comparten un mismo núcleo conceptual que puede resumirse así: cada persona debe gozar de un amplio ámbito de libertad, protegido por una serie de derechos fundamentales que los demás deben respetar en cualquier contexto imaginable. En consecuencia, nadie puede matar, herir o robar, ni impedir la expresión de ideas, la asociación o la participaciones en interacciones comerciales con otras personas.</p>
+<p>Abriéndose camino a través de los siglos XVIII y XIX, esta nueva filosofía impulsó la adopción de textos constitucionales que protegían la libertad individual y el gobierno limitado. La posibilidad de planificar el propio camino y de progresar mediante el uso libre de las capacidades, al amparo de la seguridad jurídica, creó el marco de las ideas liberales explica en gran medida los impresionantes niveles de bienestar, prosperidad y desarrollo que alcanzaron.</p>
+<p>Si bien la vida de las democracias occidentales está atravesada por una enorme variedad de tradiciones de pensamiento político que van desde el liberalismo y el republicanismo hasta el conservadurismo y el socialismo, la primacia de las ideas liberales se refleja en el hecho de que incluso las corrientes más conservadoras o progresistas aceptan hoy los principios básicos de los derechos individuales, el gobierno limitado y la igualdad ante la ley.</p>
+<p>La tolerancia recíproca es una de las virtudes cardinales del pensamiento liberal. Mientras cada persona respete los derechos de sus semejantes, puede dedicarse a satisfacer sus propias preferencias sin que nadie se meta en su vida. Esta postura queda muy bien plasmada en el famoso "principio del daño", que desde John Stuart Mill (1974) en adelante los liberales invocan en las discusiones sobre legislación y políticas públicas. El principio del daño se formula así: si una acción X, realizada por un individuo I, no genera daños a otras personas, entonces I puede realizar esa acción libremente, sin interferencia de ninguna otra persona ni del Estado.</p>
+<p>En este sentido, para el liberalismo no es relevante si las decisiones que se toman son buenas o malas; lo único relevante es que cada persona decida por sí misma. Si una persona adulta decide de manera informada hacer uso de ellas y toma recaudos para que esto no perjudique a nadie más, el Estado no puede sancionarla, mucho menos con penas de cárcel. Un buen ejemplo es el consumo de sustancias potencialmente nocivas, como el alcohol o la marihuana.</p>
+<p>El compromiso con este principio explica por qué las personas liberales se oponen al paternalismo del gobierno, es decir, interferencias que impiden realizar alguna acción inocua para terceros invocando el propio bienestar. Desde el punto de vista liberal, ser libre implica poder equivocarse y asumir la responsabilidad por los propios errores.</p>
+
+<h3>El núcleo conceptual del liberalismo</h3>
+<p>A partir de este análisis, es posible descomponer el núcleo conceptual del liberalismo en tres grandes principios interrelacionados:</p>
+<p><strong>Derechos individuales.</strong> Como libres e iguales, todos los individuos deben gozar de un amplio ámbito de libertad, protegido por una serie de derechos fundamentales que los demás deben respetar en cualquier contexto imaginable.</p>
+<p><strong>Gobierno limitado.</strong> El Estado existe para servir al individuo y proteger sus derechos, pero pierde su autoridad cuando se excede en sus funciones.</p>
+<p><strong>Igualdad.</strong> Todos los seres humanos son libres e iguales por naturaleza. Nadie goza de privilegios respecto de los demás ni puede tratarlos como sus subordinados.</p>
+<p>Todos los liberales comparten estos tres grandes principios, pero no todos los interpretan del mismo modo. Esto da lugar a la existencia de distintas corrientes liberales que reivindican paquetes de políticas públicas diversos y a menudo opuestos.</p>
+
+<h3>El anarco-capitalismo</h3>
+<p>El primer grupo de autores para examinar son los anarco-capitalistas como Murray Rothbard (2020), frecuentemente asociados al libertarismo. Partiendo de la tesis lockeana de que las personas son libres por naturaleza, estos autores llegan a la conclusión de que la existencia del Estado, entendido como un poder que ejerce autoridad sobre los individuos, no importa si ese Estado es una democracia constitucional o una dictadura, es inviable. Si una persona es libre, sostienen, entonces nadie puede tener autoridad sobre ella a menos que acepte esa autoridad de manera voluntaria.</p>
+<p>Esto implica que el Estado no puede imponer órdenes ni obligar al cumplimiento de sus decisiones sin el consentimiento previo para ello. Así, cuando los gobiernos imponen el pago de impuestos obligatorios o dictan leyes que deben obedecerse, están vulnerando los derechos individuales. Por esta razón, los anarco-capitalistas no pueden sostener que las leyes no son opuestas a la libertad sino constitutivas de ellas.</p>
+
+<h3>El libertarismo, el liberalismo clásico y el neoliberalismo</h3>
+<p>A diferencia de los anarco-capitalistas, los libertarios como Robert Nozick (2011) y los neoliberales como Milton Friedman (2020) no se oponen a la existencia del Estado, pero consideran que este debe ser muy reducido. Esencialmente, el Estado debe limitarse a proteger la vida y la seguridad de la persona, la libertad de acción, la propiedad privada y el cumplimiento de los contratos firmados por los ciudadanos. Esto implica que no puede asumir funciones que excedan ese cometido básico.</p>
+<p>A lo largo de la historia moderna, la necesidad de que el Estado se mantuviera pequeño fue uno de los principios que más influencia tuvo en las políticas públicas de los países occidentales. Los liberales clásicos y los neoliberales sostienen que las economías de mercado son más eficientes a la hora de producir riqueza y que cualquier atajo hacia la prosperidad es una receta condenada al fracaso. La creencia de que las economías de mercado son más eficientes a la hora de producir riqueza cuenta con un amplio respaldo empírico, no solo porque todas las experiencias socialistas acabaron sumiendo a sus ciudadanos en el atraso y la miseria, sino además porque los países con mayor libertad económica son en promedio mucho más ricos que los países económicamente oprimidos y tienen tasas de pobreza significativamente menores.</p>
+<p>Consciente de este problema, Nozick propuso una cláusula alternativa. La cláusula nozickeana establece lo siguiente: un individuo puede apropiarse de recursos naturales si mejora la situación de los demás en comparación con la que tenían antes. En el supuesto de que esto suceda habrá que compensar a esa persona mediante una redistribución de los recursos.</p>
+<p>Los libertarios sostienen que la redistribución del ingreso por parte del Estado es profundamente injusta, ya que supone una forma parcial de esclavitud. Para comprender este argumento, imaginemos a una persona que obtiene un ingreso de $1.000.000 trabajando 100 horas al mes. Esto implica que su ganancia es de $10.000 por hora. En consecuencia, si el Estado le cobrara un impuesto del 30%, esa persona estaría trabajando 30 horas solo para el Estado, como un esclavo temporal.</p>
+<p>La propiedad privada permite desigualdades de riqueza que exceden los límites de lo tolerable. Si esas desigualdades son resultado del esfuerzo y la capacidad de cada uno, bien podrían no ser injustas. Pero a menudo un individuo tiene menos que otros por razones que no dependen de su elección: la suerte, las circunstancias familiares, el lugar de nacimiento.</p>
+
+<h3>El liberalismo igualitario</h3>
+<p>El mayor exponente del liberalismo igualitario es el filósofo estadounidense John Rawls. Igual que Locke, Rawls (1979) supone que las personas son libres e iguales, y que deciden cooperar socialmente con otros para producir bienes públicos como seguridad, oportunidades y riqueza. El gran interrogante, entonces, es cómo distribuir esos bienes de manera que todos reciban una porción justa por su cooperación.</p>
+<p>Para responder a este interrogante Rawls recurre a una situación imaginaria conocida como la "posición original", una suerte de asamblea constituyente donde los ciudadanos discuten sobre los principios más generales que gobernarán su sociedad. Para evitar que los participantes en esta asamblea traten de obtener ventajas para su propio grupo a expensas del resto, Rawls sitúa a los asambleistas tras un "velo de ignorancia" que les impide conocer cierta información sobre sí mismos: su posición social, su religión y sus objetivos existenciales.</p>
+<p>Los liberales igualitarios sostienen que la riqueza no es resultado exclusivo del trabajo individual, sino que depende también de la existencia de un sistema de normas sociales que brinda a las personas un marco adecuado para dedicarse a tareas productivas con mayor eficiencia. Esto incluye la protección del individuo y la propiedad privada, así como la administración de justicia y la defensa exterior. Si estas normas no existieran, los individuos vivirían en un contexto de inseguridad e incertidumbre y su productividad sería seguramente más baja. En consecuencia, dado que la riqueza que los individuos producen con su actividad se ve potenciada por la cooperación social, los liberales igualitarios concluyen que la sociedad puede disponer de parte de ese excedente para compensar a los que quedan en una peor situación a cambio de que respeten las normas comunes de cooperación.</p>
+<p>Mientras que los libertarios, los liberales clásicos y los neoliberales en general se oponen a cualquier interferencia del Estado con el funcionamiento de los mercados y la propiedad privada de las personas, los liberales igualitarios defienden la distribución del ingreso y un Estado que brinde servicios como salud, educación y seguro de desempleo. Para ellos, esto no es una cuestión de caridad, sino de justicia en el reparto de bienes socialmente producidos.</p>
+<p>Sin embargo, incluso los liberales igualitarios reconocen que las regulaciones sobre los mercados y la propiedad privada deben mantenerse a niveles razonables, ya que las regulaciones excesivas repercuten negativamente sobre la generación de riqueza y esto atenta de manera directa contra los derechos individuales.</p>
+
+<h3>Conclusiones</h3>
+<p>A lo largo de este capítulo se analizaron las similitudes y diferencias entre las distintas corrientes que componen la tradición liberal. Todas ellas comparten la idea de que las personas son libres e iguales y gozan de un derecho fundamental a gobernar el curso de sus vidas. Por eso les otorgan alta prioridad a las libertades individuales e insisten en que la razón de ser de los gobiernos es proteger los derechos de sus gobernados sin avanzar sobre sus decisiones privadas en nombre de grandes causas colectivas, del bienestar general o de sus propios intereses.</p>
+<p>Mientras se respeten los derechos de los demás, cada uno puede conducir su vida como quiera. En este sentido, "liberalismo" es sinónimo de diversidad, pluralismo y tolerancia. Los mayores desacuerdos entre los liberales se relacionan con la distribución del ingreso, la intervención del Estado en la economía y el valor de la propiedad privada.</p>
+<p>En todo caso, la discusión entre una perspectiva más igualitaria y otra más conservadora en el plano económico está abierta a la discusión y marca la frontera entre las distintas corrientes que componen la tradición liberal democrática.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Friedman, M. (2020). <em>Capitalism and freedom</em>. University of Chicago Press.</p>
+<p>Hayek, F. A. (2011). <em>The constitution of liberty</em>. University of Chicago Press.</p>
+<p>Locke, J. (1999). <em>Segundo tratado sobre el gobierno civil</em>. Alianza.</p>
+<p>Mill, J. S. (1974). <em>On liberty</em>. Pelican Classics.</p>
+<p>Nozick, R. (1974). <em>Anarchy, state, and utopia</em>. Basic Books.</p>
+<p>Rawls, J. (1979). <em>Teoría de la justicia</em>. Fondo de Cultura Económica.</p>
+<p>Rothbard, M. (2020). <em>For a new liberty: the libertarian manifesto</em>. Mises Institute.</p>
 <p>Von Mises, L. (2005). <em>Liberalism: the classical tradition</em>. Liberty Fund.</p>
     </div>
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
   </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
 </html>
-
-

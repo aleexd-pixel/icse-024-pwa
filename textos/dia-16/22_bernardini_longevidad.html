@@ -2,129 +2,130 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>La nueva longevidad: por qué son importantes las personas mayores — ICSE 024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#1a1a1a;--text:#d4d0c8;--text-muted:#8a8580;--heading:#e8e4dc;--border:#3a3530;--surface:#242220;--accent:#c9854a;--red-soft:#e06060}
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',Georgia,'Times New Roman',serif;font-size:18px;line-height:1.75;padding:0}
-    .page{max-width:680px;margin:0 auto;padding:4rem 2rem 6rem}
-    .metadatos{background:var(--surface);border:1px solid var(--border);padding:2.5rem 2rem;margin-bottom:4rem;text-align:center}
-    .metadatos .titulo-libro{font-family:'DM Sans',sans-serif;font-size:0.75em;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-muted);margin-bottom:1.5rem}
-    .metadatos .titulo-texto{font-family:'Crimson Pro',Georgia,serif;font-size:2em;font-weight:600;color:var(--heading);line-height:1.25;margin-bottom:0.6rem}
-    .metadatos .autor{font-size:1.05em;color:var(--text-muted);margin-bottom:1rem;font-style:italic}
-    .metadatos .info{font-family:'DM Sans',sans-serif;font-size:0.78em;color:var(--text-muted);margin-bottom:0.3rem}
-    .metadatos .badge{display:inline-block;margin-top:1.2rem;padding:0.35rem 1.2rem;background:var(--heading);color: #1a1a1a;font-family:'DM Sans',sans-serif;font-size:0.72em;text-transform:uppercase;letter-spacing:0.1em;border-radius:2px}
-    .contenido p{text-indent:1.5em;margin-bottom:0;text-align:justify;hyphens:auto}
-    .contenido p+p{margin-top:0.9em}
-    .contenido p:first-of-type{text-indent:0}
-    .contenido p.first-of-section{text-indent:0}
-    .contenido h2{font-family:'Crimson Pro',Georgia,serif;font-size:1.5em;font-weight:600;color:var(--heading);margin-top:3rem;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
-    .contenido h3{font-family:'Crimson Pro',Georgia,serif;font-size:1.2em;font-weight:600;font-style:italic;color:var(--heading);margin-top:2.5rem;margin-bottom:0.8rem}
-    .contenido ul,.contenido ol{margin:1.2rem 0 1.2rem 2rem}
-    .contenido li{margin-bottom:0.5em;padding-left:0.3em}
-    .separador{text-align:center;margin:3rem 0;color:var(--border);font-size:1.2em;letter-spacing:0.5em}
-    footer{margin-top:5rem;padding-top:2rem;border-top:1px solid var(--border);text-align:center;font-family:'DM Sans',sans-serif;font-size:0.75em;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
-    @media print{body{background:#fff;font-size:12pt}.page{padding:0;max-width:100%}.metadatos{break-after:page;border:none;background:none}.contenido h2{break-after:avoid}.contenido h3{break-after:avoid}footer{break-before:avoid}}
-    @media(max-width:700px){.page{padding:2rem 1.2rem 4rem}body{font-size:16px}.metadatos .titulo-texto{font-size:1.6em}}
-  </style>
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="../textos.css">
 </head>
 <body>
+
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">La nueva longevidad: por qué son importantes las personas mayores</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
   <div class="page">
     <div class="metadatos">
-      <div class="titulo-libro">Debates para un mundo en transformación</div>
-      <div class="titulo-texto">La nueva longevidad: por qué son importantes las personas mayores</div>
-      <div class="autor">Diego Bernardini</div>
-      <div class="info">Páginas originales: 69–82</div>
+      <div class="titulo-libro">Debates para un mundo en transformación</div>
+      <div class="titulo-texto">La nueva longevidad: por qué son importantes las personas mayores</div>
+      <div class="autor">Diego Bernardini</div>
+      <div class="info">Páginas originales: 69–82</div>
       <div class="badge">Día 16 — Unidad 6</div>
     </div>
 
     <div class="contenido">
-      <h2>Capítulo 4. La nueva longevidad: por qué son importantes las personas mayores</h2>
-<p class="first-of-section">El mundo actual se define, entre otras cosas, por grandes tendencias globales impulsadas por la expansión de la comunicación y la tecnología. Las fronteras y las diferencias horarias han perdido relevancia, lo que da lugar a una sociedad interconectada, en la que los estilos de vida se asemejan y los avances científicos se adoptan con rapidez.</p>
-<p>El cambio climático y la inteligencia artificial (IA) están transformando la sociedad del siglo XXI, aunque aún no se puede determinar con exactitud hasta qué punto ni de qué manera lo harán. Sin embargo, en cuanto a la transición demográfica, los datos ofrecen un panorama más claro.</p>
-<p>Argentina no es ajena a ello. Según los datos del Censo Nacional 2022 (Instituto Nacional de Estadística y Censos, 2024), las personas mayores de 60 años representan el 16,6 % de la población, un crecimiento significativo comparado con el 14,3 % registrado en 2010 y el 9 % en 1960.</p>
-<p>En América Latina y el Caribe, este proceso avanza con rapidez, lo que representa un desafío significativo para la región. En 2025, las personas mayores de 60 años llegarán al 25 %, lo que significa que en solo tres décadas la proporción de adultos mayores casi se duplicará. Este cambio demográfico ha ocurrido el doble de rápido que en Europa, donde se tardó alrededor de 70 años en alcanzar niveles similares de envejecimiento poblacional. Si a ello le sumamos que América Latina tiene grandes desigualdades sociales, altos niveles de pobreza persistente y una fragilidad institucional de la que carece Europa, el reto se convierte en un desafío sin precedentes.</p>
-
-<h3>Una nueva realidad demográfica</h3>
-<p>Actualmente el mundo está experimentando un proceso de envejecimiento demográfico sin precedentes. Nunca en la historia de la humanidad se había dado anteriormente. Las medidas de saneamiento, los antibióticos, las vacunas y los cuidados médicos han permitido que la expectativa de vida se extienda.</p>
-<p>Se entiende por transición demográfica el cambio en la estructura de edades de la población debido al aumento de la esperanza de vida y la disminución de la natalidad. Este proceso plantea desafíos, pero también abre nuevas oportunidades.</p>
-<p>La transformación no es solo numérica (más personas mayores), sino también cualitativa: la manera de experimentar la longevidad está cambiando. Hace un siglo, superar los 60 o 70 años era un privilegio para pocos, pero hoy es una vivencia compartida. La longevidad se ha integrado en la sociedad y forma parte de la vida cotidiana.</p>
-<p>Si se observa con detenimiento, es cada vez más común ver historias de personas que, en la segunda mitad de su vida, rompen récords, inician nuevos proyectos y encuentran un nuevo significado. Esto es solo el comienzo, ya que la mayoría de quienes enfrentan los desafíos de la longevidad no son figuras públicas, pero aun así eligen vivir de manera distinta a las generaciones anteriores.</p>
-<p>Esto ha generado dos fenómenos clave: el aumento en la esperanza de vida y la necesidad de adaptar la sociedad a sus nuevas necesidades, que son muy distintas de las de otros grupos de edad.</p>
-
-<h3>Los cambios en la estructura etaria</h3>
-<p>El proceso de envejecimiento de la población es el resultado de dos grandes cambios demográficos: la disminución de la natalidad y el crecimiento del número de personas mayores.</p>
-<p>En 1914, la mitad de la población tenía hasta 20 años, mientras que solo el 2 % tenía 65 años o más. Para 1970, este grupo alcanzó el 7 % y, en 2022, ya representaba casi el 12 %. En este sentido, resulta interesante la aproximación de Williams (2011), quien plantea que las personas mayores son, ante todo, personas adultas con derechos, incluyendo el derecho a la autonomía.</p>
-<p>La edad mediana de la población alcanzó los 32 años. Esto refleja un país con una estructura demográfica más envejecida, en el que las provincias con mayor proporción de adultos mayores son Buenos Aires, Santa Fe, Córdoba, La Pampa, Mendoza y Entre Ríos, además de la Ciudad de Buenos Aires.</p>
-<p>Otro aspecto fundamental es que el envejecimiento no es homogéneo. No solo crece la proporción de personas mayores en la sociedad, sino que dentro de este grupo aumenta la cantidad de personas de 85 años y más. En 1970, por cada 100 personas mayores de 65 años, había solo 5 de 85 años o más; sin embargo, en 2022, esta cifra se duplicó a 10,4. Este fenómeno también tiene una fuerte diferencia de género, ya que, en 2022, por cada 100 varones de 85 años y más, había 228 mujeres, lo que refleja la mayor esperanza de vida femenina y la feminización del envejecimiento.</p>
-
-<h3>Los desafíos de la nueva longevidad</h3>
-<p>La nueva longevidad es una de las grandes oportunidades del siglo XXI. Nunca en la historia de la humanidad tantas personas han tenido la posibilidad de vivir una segunda mitad de la vida tan activa, diversa y llena de posibilidades. Sin embargo, se sigue organizando a la sociedad con reglas y estructuras heredadas del siglo pasado, que no siempre reflejan esta nueva realidad.</p>
-<p>Ser una persona mayor hoy significa formar parte de una diversidad imposible de encasillar. No existe una única manera de envejecer: hay quienes encuentran en esta etapa un renacer creativo, quienes siguen activos en el mundo, y quienes entienden que seguir aprendiendo, trabajando, emprendiendo y aportando a la sociedad es cada vez más común.</p>
-<p>La longevidad como oportunidad y desafío: envejecer es una experiencia profundamente humana que, lejos de ser un enemigo que desgasta, es también un aliado que otorga sabiduría, experiencias y nuevas perspectivas. Quizás el verdadero reto no sea detener el paso del tiempo, sino aprender a habitarlo plenamente aceptando su misterio y descubriendo en él nuevas formas de ser y estar en el mundo.</p>
-
-<h3>Edadismo y longevidad: derribando mitos</h3>
-<p>Con el paso del tiempo, la salud y el bienestar de las personas mayores requieren apoyo familiar o institucional. Cuatro factores clave impactan en la vida de las personas mayores: el miedo a la muerte, la exaltación de la juventud como ideal, la valoración de la productividad en términos económicos, y la institucionalización de las personas mayores.</p>
-<p>El prejuicio sobre las personas mayores se traduce en la creencia de que tienen menos oportunidades, menos habilidades o menos derecho a participar activamente en la sociedad, cuando en realidad cada etapa de la vida tiene su propio valor y potencial.</p>
-<p>Por otro lado, la juventud atraviesa un momento de sobrevaloración no solo en términos de belleza y éxito, sino también en la percepción de capacidad y éxito. La muerte, con el paso del tiempo, ha sido excluida no solo de la cotidianidad y la dinámica familiar, sino también desterrada como una parte natural del curso de vida. Se la ha extirpado del discurso social, y se ha negado así su papel como elemento constitutivo del ciclo vital.</p>
-<p>Sin embargo, la institucionalización a menudo responde a una mirada edadista que ve a la vejez como una etapa de dependencia, en lugar de promover modelos de cuidado más integrados y personalizados. La mayoría sigue viviendo en sus hogares o en entornos familiares.</p>
-<p>Este edadismo también se refleja en la idea de la institucionalización: existe la creencia de que las personas mayores siempre requieren cuidados institucionales, cuando en realidad la mayoría sigue viviendo en sus hogares. En la actualidad, los mayores votan, consumen, producen y brindan servicios. Un claro ejemplo de su impacto se observó en eventos recientes como el Brexit en el Reino Unido y las elecciones en Estados Unidos, en los que el voto de los mayores fue determinante en los resultados.</p>
-
-<h3>La longevidad como oportunidad</h3>
-<p>Según el reporte Global Longevity Economy Outlook (AARP, 2022), las personas mayores extienden su influencia al ámbito económico. En Argentina, la nueva longevidad se manifiesta en que alrededor del 29 % de los mayores de 65 años realiza tareas voluntarias, más del 25 % participa en viajes turísticos y recreativos, y uno de cada tres se encarga del cuidado de algún niño o familiar cercano sin recibir remuneración.</p>
-<p>El voluntariado es otro aspecto clave de esta transformación. En el Reino Unido, donde hay más de 12,5 millones de personas mayores de 65 años y más de 16 millones con más de 60, cerca del 60 % participa en actividades voluntarias a nivel global. En Irlanda, los abuelos compran el 60 % de los juguetes, lo que refleja su rol clave en el consumo.</p>
-<p>El desafío para la sociedad es garantizar que el derecho a la autonomía sea respetado, tal como ocurre con otros grupos. Williams realiza una comparación clave basada en la edad cronológica: mientras que en la niñez la dependencia se debe a la falta de madurez para tomar decisiones, en la vejez esta incapacidad es impuesta, al limitarse o ignorarse la autonomía de las personas mayores.</p>
-
-<h3>El envejecimiento: entre la biología y la filosofía de la vida</h3>
-<p>Desde una mirada filosófica, el envejecimiento no es solo un cambio en el cuerpo, sino también una transformación en nuestra percepción del tiempo, la identidad y el sentido de la vida. Filósofos como Martin Heidegger (1927/2003) han señalado que la existencia humana está marcada por la conciencia de la finitud, lo que nos obliga a reflexionar sobre cómo vivimos y qué significado le damos al paso del tiempo. En este sentido, envejecer no es solo perder capacidades, sino también ganar perspectivas, recuerdos y sabiduría.</p>
-<p>Si bien las definiciones científicas buscan ser prácticas, también presentan limitaciones. En el caso del envejecimiento, es difícil separar el proceso biológico natural de los efectos acumulativos de enfermedades o deterioros específicos, como la degeneración articular, la pérdida de visión o audición.</p>
-<p>La filosofía invita a preguntarse: ¿cuánto de lo que se llama envejecimiento es realmente una condición natural y cuánto es una construcción cultural basada en expectativas y miedos?</p>
-<p>Pascal Bruckner (2019), filósofo y ensayista francés, reflexiona sobre la longevidad desde una perspectiva crítica y paradójica. Analiza cómo el aumento de la esperanza de vida, lejos de ser únicamente una conquista del progreso, también ha generado nuevas ansiedades y desafíos existenciales. Para él, la sociedad contemporánea ha transformado la vejez en una etapa ambigua: por un lado, se celebra como una extensión del tiempo disponible para el disfrute y la autorrealización; por otro, se convierte en una carga, una instancia en la que la obsesión por la juventud eterna y el rechazo al envejecimiento generan frustración y angustia. Desde su mirada filosófica, la longevidad no es solo un logro biomédico, sino una cuestión cultural y ética que nos obliga a redefinir el sentido de la vida en un mundo donde la frontera entre juventud y vejez se vuelve cada vez más difusa.</p>
-<p>El filósofo Zygmunt Bauman (2003) hablaba de la "modernidad líquida", un tiempo en el que el cambio es constante y las estructuras fijas desaparecen. En este contexto, la nueva longevidad desafía a redefinir el significado de la vejez, no como un final, sino como una fase de reinvención, exploración y participación en la sociedad.</p>
-
-<h3>La pandemia y el reflejo de la longevidad propia</h3>
-<p>Hablar de longevidad y vejez sin mencionar la última pandemia sería ignorar una parte fundamental de esta crisis global. Desde el impacto en la mortalidad de las personas mayores hasta la confrontación con la finitud que implicó para muchos, la pandemia de COVID-19 marcó un antes y un después. Expuso una realidad siempre presente, pero frecuentemente ignorada: la falta de atención y los estereotipos que afectan la vida de quienes envejecen.</p>
-<p>El confinamiento enfrentó a cada persona consigo misma, con sus emociones más íntimas y profundas. Brindó la oportunidad de reflexionar: ¿cómo imaginar la vejez? ¿Cómo deberían ser los últimos años de vida? Para muchos, fue un espejo brutal que reflejó la incertidumbre sobre el futuro. No solo por el virus, sino por el miedo a la soledad, la fragilidad y la falta de control sobre lo que vendrá. Tal vez, dentro de toda la incertidumbre, esta vivencia pueda ayudar a construir una nueva mirada sobre la longevidad, más empática, más consciente y menos temerosa.</p>
-
-<h3>Construyendo una nueva longevidad</h3>
-<p>La manera en que la sociedad percibe y valora a las personas mayores ha cobrado un protagonismo ineludible en el debate público. En un mundo que envejece en términos demográficos, es urgente pasar de la reflexión a la acción y construir una nueva normalidad basada en la evolución y la inclusion.</p>
-<p>En este contexto, la edad cronológica pierde relevancia frente a la diversidad de trayectorias, experiencias y capacidades de las personas mayores. Así como el sector corporativo ha entendido que sus productos y servicios deben orientarse a gustos y necesidades, y no solo a edades, las políticas públicas y la intervención comunitaria deben seguir ese mismo camino: diseñar sociedades que respondan a las personas en toda su diversidad, más allá de los años que tengan.</p>
-<p>Los enfoques aislados ya no son suficientes: hace falta una mirada interdisciplinaria que integre a politólogos, administradores, científicos, economistas y otros expertos, quienes serán clave en el diseño de políticas públicas inclusivas, equitativas y sostenibles para la longevidad.</p>
-<p>Es fundamental educar en una cultura de respeto a la vejez, dejando de lado los prejuicios y el miedo que muchas veces genera la palabra. Para integrarlo, hay que poner en agenda y visibilizar el rol de las personas mayores, recordando que todos, en algún momento, serán parte de esta etapa.</p>
-
-<h3>La longevidad como oportunidad y desafío</h3>
-<p>Hoy, la longevidad es uno de los grandes factores que están moldeando el siglo XXI, junto con la transformación digital, el cambio climático y las migraciones. Más que un problema, el envejecimiento de la población es una oportunidad que nos obliga a replantear cómo queremos envejecer y, sobre todo, cómo debe adaptarse la sociedad a este cambio.</p>
-<p>La verdadera crisis no es el envejecimiento de la población, sino la falta de preparación para aprovechar el potencial de la nueva longevidad. Es necesario: transformar la narrativa sobre el envejecimiento destacando el aporte de las personas mayores al desarrollo social y económico; promover espacios de participación donde las personas mayores sean escuchadas y puedan influir en las decisiones que afectan su vida; garantizar servicios accesibles y flexibles, desde salud y transporte hasta educación; y fomentar encuentros entre jóvenes y mayores en ámbitos educativos, laborales y comunitarios.</p>
-<p>La verdadera crisis no es el envejecimiento en sí, sino la falta de adaptación a nuevas formas de vivir, trabajar, participar y envejecer. Las sociedades no envejecen por sí solas: envejecen las personas que las conforman.</p>
-<p>Por eso, el desafío no es evitar el envejecimiento, sino hacer que sea una etapa representativa, inclusiva y sostenible para todas las edades. Hablar de longevidad con personas jóvenes puede parecer un desafío, ya que es una etapa del camino, una continuidad de la vida que merece ser pensada y valorada. La longevidad como oportunidad y desafío: desde hoy, sin olvidar el viejo refrán que dice: "Así como te ves yo me vi, así como me ves te verás", que, aunque viejo, sigue vigente.</p>
-
-<h3>Referencias bibliográficas</h3>
-<p>AARP. (2022). Global longevity economy outlook: how changing demographics are shaping our economic future. American Association of Retired Persons.</p>
-<p>Bauman, Z. (2003). Modernidad líquida. Fondo de Cultura Económica.</p>
-<p>Bernardini, D. (2019). La segunda mitad: los 50+ vivir la nueva longevidad. Aguilar.</p>
-<p>Bruckner, P. (2019). Une brève éternité: philosophie de la longévité. Grasset.</p>
-<p>Centro de Investigaciones Sociológicas. (2025). Barómetro de enero 2025: edadismo (Estudio n.3493). CIS.</p>
-<p>Heidegger, M. (2003 [1927]). Ser y tiempo. Fondo de Cultura Económica.</p>
-<p>Instituto Nacional de Estadística y Censos. (2024). Dossier estadístico de personas mayores 2024.</p>
-<p>Naciones Unidas, Comisión Económica para América Latina y el Caribe (CEPAL). (2022). Envejecimiento en América Latina y el Caribe: Inclusión y derechos de las personas mayores.</p>
-<p>Pew Research Center. (2009). Growing old in America: Expectations vs. reality.</p>
+      <h2>Capítulo 4. La nueva longevidad: por qué son importantes las personas mayores</h2>
+<p class="first-of-section">El mundo actual se define, entre otras cosas, por grandes tendencias globales impulsadas por la expansión de la comunicación y la tecnología. Las fronteras y las diferencias horarias han perdido relevancia, lo que da lugar a una sociedad interconectada, en la que los estilos de vida se asemejan y los avances científicos se adoptan con rapidez.</p>
+<p>El cambio climático y la inteligencia artificial (IA) están transformando la sociedad del siglo XXI, aunque aún no se puede determinar con exactitud hasta qué punto ni de qué manera lo harán. Sin embargo, en cuanto a la transición demográfica, los datos ofrecen un panorama más claro.</p>
+<p>Argentina no es ajena a ello. Según los datos del Censo Nacional 2022 (Instituto Nacional de Estadística y Censos, 2024), las personas mayores de 60 años representan el 16,6 % de la población, un crecimiento significativo comparado con el 14,3 % registrado en 2010 y el 9 % en 1960.</p>
+<p>En América Latina y el Caribe, este proceso avanza con rapidez, lo que representa un desafío significativo para la región. En 2025, las personas mayores de 60 años llegarán al 25 %, lo que significa que en solo tres décadas la proporción de adultos mayores casi se duplicará. Este cambio demográfico ha ocurrido el doble de rápido que en Europa, donde se tardó alrededor de 70 años en alcanzar niveles similares de envejecimiento poblacional. Si a ello le sumamos que América Latina tiene grandes desigualdades sociales, altos niveles de pobreza persistente y una fragilidad institucional de la que carece Europa, el reto se convierte en un desafío sin precedentes.</p>
+
+<h3>Una nueva realidad demográfica</h3>
+<p>Actualmente el mundo está experimentando un proceso de envejecimiento demográfico sin precedentes. Nunca en la historia de la humanidad se había dado anteriormente. Las medidas de saneamiento, los antibióticos, las vacunas y los cuidados médicos han permitido que la expectativa de vida se extienda.</p>
+<p>Se entiende por transición demográfica el cambio en la estructura de edades de la población debido al aumento de la esperanza de vida y la disminución de la natalidad. Este proceso plantea desafíos, pero también abre nuevas oportunidades.</p>
+<p>La transformación no es solo numérica (más personas mayores), sino también cualitativa: la manera de experimentar la longevidad está cambiando. Hace un siglo, superar los 60 o 70 años era un privilegio para pocos, pero hoy es una vivencia compartida. La longevidad se ha integrado en la sociedad y forma parte de la vida cotidiana.</p>
+<p>Si se observa con detenimiento, es cada vez más común ver historias de personas que, en la segunda mitad de su vida, rompen récords, inician nuevos proyectos y encuentran un nuevo significado. Esto es solo el comienzo, ya que la mayoría de quienes enfrentan los desafíos de la longevidad no son figuras públicas, pero aun así eligen vivir de manera distinta a las generaciones anteriores.</p>
+<p>Esto ha generado dos fenómenos clave: el aumento en la esperanza de vida y la necesidad de adaptar la sociedad a sus nuevas necesidades, que son muy distintas de las de otros grupos de edad.</p>
+
+<h3>Los cambios en la estructura etaria</h3>
+<p>El proceso de envejecimiento de la población es el resultado de dos grandes cambios demográficos: la disminución de la natalidad y el crecimiento del número de personas mayores.</p>
+<p>En 1914, la mitad de la población tenía hasta 20 años, mientras que solo el 2 % tenía 65 años o más. Para 1970, este grupo alcanzó el 7 % y, en 2022, ya representaba casi el 12 %. En este sentido, resulta interesante la aproximación de Williams (2011), quien plantea que las personas mayores son, ante todo, personas adultas con derechos, incluyendo el derecho a la autonomía.</p>
+<p>La edad mediana de la población alcanzó los 32 años. Esto refleja un país con una estructura demográfica más envejecida, en el que las provincias con mayor proporción de adultos mayores son Buenos Aires, Santa Fe, Córdoba, La Pampa, Mendoza y Entre Ríos, además de la Ciudad de Buenos Aires.</p>
+<p>Otro aspecto fundamental es que el envejecimiento no es homogéneo. No solo crece la proporción de personas mayores en la sociedad, sino que dentro de este grupo aumenta la cantidad de personas de 85 años y más. En 1970, por cada 100 personas mayores de 65 años, había solo 5 de 85 años o más; sin embargo, en 2022, esta cifra se duplicó a 10,4. Este fenómeno también tiene una fuerte diferencia de género, ya que, en 2022, por cada 100 varones de 85 años y más, había 228 mujeres, lo que refleja la mayor esperanza de vida femenina y la feminización del envejecimiento.</p>
+
+<h3>Los desafíos de la nueva longevidad</h3>
+<p>La nueva longevidad es una de las grandes oportunidades del siglo XXI. Nunca en la historia de la humanidad tantas personas han tenido la posibilidad de vivir una segunda mitad de la vida tan activa, diversa y llena de posibilidades. Sin embargo, se sigue organizando a la sociedad con reglas y estructuras heredadas del siglo pasado, que no siempre reflejan esta nueva realidad.</p>
+<p>Ser una persona mayor hoy significa formar parte de una diversidad imposible de encasillar. No existe una única manera de envejecer: hay quienes encuentran en esta etapa un renacer creativo, quienes siguen activos en el mundo, y quienes entienden que seguir aprendiendo, trabajando, emprendiendo y aportando a la sociedad es cada vez más común.</p>
+<p>La longevidad como oportunidad y desafío: envejecer es una experiencia profundamente humana que, lejos de ser un enemigo que desgasta, es también un aliado que otorga sabiduría, experiencias y nuevas perspectivas. Quizás el verdadero reto no sea detener el paso del tiempo, sino aprender a habitarlo plenamente aceptando su misterio y descubriendo en él nuevas formas de ser y estar en el mundo.</p>
+
+<h3>Edadismo y longevidad: derribando mitos</h3>
+<p>Con el paso del tiempo, la salud y el bienestar de las personas mayores requieren apoyo familiar o institucional. Cuatro factores clave impactan en la vida de las personas mayores: el miedo a la muerte, la exaltación de la juventud como ideal, la valoración de la productividad en términos económicos, y la institucionalización de las personas mayores.</p>
+<p>El prejuicio sobre las personas mayores se traduce en la creencia de que tienen menos oportunidades, menos habilidades o menos derecho a participar activamente en la sociedad, cuando en realidad cada etapa de la vida tiene su propio valor y potencial.</p>
+<p>Por otro lado, la juventud atraviesa un momento de sobrevaloración no solo en términos de belleza y éxito, sino también en la percepción de capacidad y éxito. La muerte, con el paso del tiempo, ha sido excluida no solo de la cotidianidad y la dinámica familiar, sino también desterrada como una parte natural del curso de vida. Se la ha extirpado del discurso social, y se ha negado así su papel como elemento constitutivo del ciclo vital.</p>
+<p>Sin embargo, la institucionalización a menudo responde a una mirada edadista que ve a la vejez como una etapa de dependencia, en lugar de promover modelos de cuidado más integrados y personalizados. La mayoría sigue viviendo en sus hogares o en entornos familiares.</p>
+<p>Este edadismo también se refleja en la idea de la institucionalización: existe la creencia de que las personas mayores siempre requieren cuidados institucionales, cuando en realidad la mayoría sigue viviendo en sus hogares. En la actualidad, los mayores votan, consumen, producen y brindan servicios. Un claro ejemplo de su impacto se observó en eventos recientes como el Brexit en el Reino Unido y las elecciones en Estados Unidos, en los que el voto de los mayores fue determinante en los resultados.</p>
+
+<h3>La longevidad como oportunidad</h3>
+<p>Según el reporte Global Longevity Economy Outlook (AARP, 2022), las personas mayores extienden su influencia al ámbito económico. En Argentina, la nueva longevidad se manifiesta en que alrededor del 29 % de los mayores de 65 años realiza tareas voluntarias, más del 25 % participa en viajes turísticos y recreativos, y uno de cada tres se encarga del cuidado de algún niño o familiar cercano sin recibir remuneración.</p>
+<p>El voluntariado es otro aspecto clave de esta transformación. En el Reino Unido, donde hay más de 12,5 millones de personas mayores de 65 años y más de 16 millones con más de 60, cerca del 60 % participa en actividades voluntarias a nivel global. En Irlanda, los abuelos compran el 60 % de los juguetes, lo que refleja su rol clave en el consumo.</p>
+<p>El desafío para la sociedad es garantizar que el derecho a la autonomía sea respetado, tal como ocurre con otros grupos. Williams realiza una comparación clave basada en la edad cronológica: mientras que en la niñez la dependencia se debe a la falta de madurez para tomar decisiones, en la vejez esta incapacidad es impuesta, al limitarse o ignorarse la autonomía de las personas mayores.</p>
+
+<h3>El envejecimiento: entre la biología y la filosofía de la vida</h3>
+<p>Desde una mirada filosófica, el envejecimiento no es solo un cambio en el cuerpo, sino también una transformación en nuestra percepción del tiempo, la identidad y el sentido de la vida. Filósofos como Martin Heidegger (1927/2003) han señalado que la existencia humana está marcada por la conciencia de la finitud, lo que nos obliga a reflexionar sobre cómo vivimos y qué significado le damos al paso del tiempo. En este sentido, envejecer no es solo perder capacidades, sino también ganar perspectivas, recuerdos y sabiduría.</p>
+<p>Si bien las definiciones científicas buscan ser prácticas, también presentan limitaciones. En el caso del envejecimiento, es difícil separar el proceso biológico natural de los efectos acumulativos de enfermedades o deterioros específicos, como la degeneración articular, la pérdida de visión o audición.</p>
+<p>La filosofía invita a preguntarse: ¿cuánto de lo que se llama envejecimiento es realmente una condición natural y cuánto es una construcción cultural basada en expectativas y miedos?</p>
+<p>Pascal Bruckner (2019), filósofo y ensayista francés, reflexiona sobre la longevidad desde una perspectiva crítica y paradójica. Analiza cómo el aumento de la esperanza de vida, lejos de ser únicamente una conquista del progreso, también ha generado nuevas ansiedades y desafíos existenciales. Para él, la sociedad contemporánea ha transformado la vejez en una etapa ambigua: por un lado, se celebra como una extensión del tiempo disponible para el disfrute y la autorrealización; por otro, se convierte en una carga, una instancia en la que la obsesión por la juventud eterna y el rechazo al envejecimiento generan frustración y angustia. Desde su mirada filosófica, la longevidad no es solo un logro biomédico, sino una cuestión cultural y ética que nos obliga a redefinir el sentido de la vida en un mundo donde la frontera entre juventud y vejez se vuelve cada vez más difusa.</p>
+<p>El filósofo Zygmunt Bauman (2003) hablaba de la "modernidad líquida", un tiempo en el que el cambio es constante y las estructuras fijas desaparecen. En este contexto, la nueva longevidad desafía a redefinir el significado de la vejez, no como un final, sino como una fase de reinvención, exploración y participación en la sociedad.</p>
+
+<h3>La pandemia y el reflejo de la longevidad propia</h3>
+<p>Hablar de longevidad y vejez sin mencionar la última pandemia sería ignorar una parte fundamental de esta crisis global. Desde el impacto en la mortalidad de las personas mayores hasta la confrontación con la finitud que implicó para muchos, la pandemia de COVID-19 marcó un antes y un después. Expuso una realidad siempre presente, pero frecuentemente ignorada: la falta de atención y los estereotipos que afectan la vida de quienes envejecen.</p>
+<p>El confinamiento enfrentó a cada persona consigo misma, con sus emociones más íntimas y profundas. Brindó la oportunidad de reflexionar: ¿cómo imaginar la vejez? ¿Cómo deberían ser los últimos años de vida? Para muchos, fue un espejo brutal que reflejó la incertidumbre sobre el futuro. No solo por el virus, sino por el miedo a la soledad, la fragilidad y la falta de control sobre lo que vendrá. Tal vez, dentro de toda la incertidumbre, esta vivencia pueda ayudar a construir una nueva mirada sobre la longevidad, más empática, más consciente y menos temerosa.</p>
+
+<h3>Construyendo una nueva longevidad</h3>
+<p>La manera en que la sociedad percibe y valora a las personas mayores ha cobrado un protagonismo ineludible en el debate público. En un mundo que envejece en términos demográficos, es urgente pasar de la reflexión a la acción y construir una nueva normalidad basada en la evolución y la inclusion.</p>
+<p>En este contexto, la edad cronológica pierde relevancia frente a la diversidad de trayectorias, experiencias y capacidades de las personas mayores. Así como el sector corporativo ha entendido que sus productos y servicios deben orientarse a gustos y necesidades, y no solo a edades, las políticas públicas y la intervención comunitaria deben seguir ese mismo camino: diseñar sociedades que respondan a las personas en toda su diversidad, más allá de los años que tengan.</p>
+<p>Los enfoques aislados ya no son suficientes: hace falta una mirada interdisciplinaria que integre a politólogos, administradores, científicos, economistas y otros expertos, quienes serán clave en el diseño de políticas públicas inclusivas, equitativas y sostenibles para la longevidad.</p>
+<p>Es fundamental educar en una cultura de respeto a la vejez, dejando de lado los prejuicios y el miedo que muchas veces genera la palabra. Para integrarlo, hay que poner en agenda y visibilizar el rol de las personas mayores, recordando que todos, en algún momento, serán parte de esta etapa.</p>
+
+<h3>La longevidad como oportunidad y desafío</h3>
+<p>Hoy, la longevidad es uno de los grandes factores que están moldeando el siglo XXI, junto con la transformación digital, el cambio climático y las migraciones. Más que un problema, el envejecimiento de la población es una oportunidad que nos obliga a replantear cómo queremos envejecer y, sobre todo, cómo debe adaptarse la sociedad a este cambio.</p>
+<p>La verdadera crisis no es el envejecimiento de la población, sino la falta de preparación para aprovechar el potencial de la nueva longevidad. Es necesario: transformar la narrativa sobre el envejecimiento destacando el aporte de las personas mayores al desarrollo social y económico; promover espacios de participación donde las personas mayores sean escuchadas y puedan influir en las decisiones que afectan su vida; garantizar servicios accesibles y flexibles, desde salud y transporte hasta educación; y fomentar encuentros entre jóvenes y mayores en ámbitos educativos, laborales y comunitarios.</p>
+<p>La verdadera crisis no es el envejecimiento en sí, sino la falta de adaptación a nuevas formas de vivir, trabajar, participar y envejecer. Las sociedades no envejecen por sí solas: envejecen las personas que las conforman.</p>
+<p>Por eso, el desafío no es evitar el envejecimiento, sino hacer que sea una etapa representativa, inclusiva y sostenible para todas las edades. Hablar de longevidad con personas jóvenes puede parecer un desafío, ya que es una etapa del camino, una continuidad de la vida que merece ser pensada y valorada. La longevidad como oportunidad y desafío: desde hoy, sin olvidar el viejo refrán que dice: "Así como te ves yo me vi, así como me ves te verás", que, aunque viejo, sigue vigente.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>AARP. (2022). Global longevity economy outlook: how changing demographics are shaping our economic future. American Association of Retired Persons.</p>
+<p>Bauman, Z. (2003). Modernidad líquida. Fondo de Cultura Económica.</p>
+<p>Bernardini, D. (2019). La segunda mitad: los 50+ vivir la nueva longevidad. Aguilar.</p>
+<p>Bruckner, P. (2019). Une brève éternité: philosophie de la longévité. Grasset.</p>
+<p>Centro de Investigaciones Sociológicas. (2025). Barómetro de enero 2025: edadismo (Estudio n.3493). CIS.</p>
+<p>Heidegger, M. (2003 [1927]). Ser y tiempo. Fondo de Cultura Económica.</p>
+<p>Instituto Nacional de Estadística y Censos. (2024). Dossier estadístico de personas mayores 2024.</p>
+<p>Naciones Unidas, Comisión Económica para América Latina y el Caribe (CEPAL). (2022). Envejecimiento en América Latina y el Caribe: Inclusión y derechos de las personas mayores.</p>
+<p>Pew Research Center. (2009). Growing old in America: Expectations vs. reality.</p>
 <p>Williams, J. (2011). An international convention on the rights of older people? En M. Odello y S. Cavandoli (Eds.), Emerging human rights in the 21st century. Routledge.</p>
     </div>
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
   </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
 </html>
-
-
-
-

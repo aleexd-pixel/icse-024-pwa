@@ -2,373 +2,141 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>China y América Latina: ¿cooperación o imperialismo? — ICSE 024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-        :root {
-      --bg: #1a1a1a;
-      --text: #d4d0c8;
-      --text-muted: #8a8580;
-      --heading: #e8e4dc;
-      --border: #3a3530;
-      --surface: #242220;
-      --accent: #c9854a;
-      --red-soft: #e06060;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      font-size: 18px;
-      line-height: 1.75;
-      padding: 0;
-    }
-
-    .page {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 4rem 2rem 6rem;
-    }
-
-    .metadatos {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
-    .metadatos .titulo-libro {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .metadatos .titulo-texto {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 2em;
-      font-weight: 600;
-      color: var(--heading);
-      line-height: 1.25;
-      margin-bottom: 0.6rem;
-    }
-
-    .metadatos .autor {
-      font-size: 1.05em;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-
-    .metadatos .info {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78em;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .metadatos .badge {
-      display: inline-block;
-      margin-top: 1.2rem;
-      padding: 0.35rem 1.2rem;
-      background: var(--heading);
-      color: #1a1a1a;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72em;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border-radius: 2px;
-    }
-
-    .contenido p {
-      text-indent: 1.5em;
-      margin-bottom: 0;
-      text-align: justify;
-      hyphens: auto;
-    }
-
-    .contenido p + p {
-      margin-top: 0.9em;
-    }
-
-    .contenido p:first-of-type {
-      text-indent: 0;
-    }
-
-    .contenido p.first-of-section {
-      text-indent: 0;
-    }
-
-    .contenido h2 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 600;
-      color: var(--heading);
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido h3 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.2em;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--heading);
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .contenido h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contenido blockquote {
-      margin: 2rem 0 2rem 1.5rem;
-      padding: 1rem 1.5rem;
-      border-left: 3px solid var(--accent);
-      font-style: italic;
-      color: var(--text-muted);
-      background: var(--surface);
-      font-size: 0.95em;
-    }
-
-    .contenido blockquote p {
-      text-indent: 0;
-      text-align: left;
-    }
-
-    .contenido ul,
-    .contenido ol {
-      margin: 1.2rem 0 1.2rem 2rem;
-    }
-
-    .contenido li {
-      margin-bottom: 0.5em;
-      padding-left: 0.3em;
-    }
-
-    .contenido table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.9em;
-    }
-
-    .contenido table th {
-      background: var(--surface);
-      color: var(--heading);
-      padding: 0.7rem 1rem;
-      text-align: left;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 0.85em;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    border-bottom: 2px solid var(--accent); }
-
-    .contenido table td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contenido table tr:nth-child(even) {
-      background: var(--surface);
-    }
-
-    .contenido .ilegible {
-      color: var(--red-soft);
-      font-weight: 600;
-      background: #3a2020;
-      padding: 0.1em 0.3em;
-      border-radius: 2px;
-    }
-
-    .contenido .nota-num {
-      font-size: 0.75em;
-      vertical-align: super;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .notas {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .notas h2 {
-      font-size: 1.1em;
-      margin-bottom: 1rem;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .notas p {
-      font-size: 0.85em;
-      text-indent: 0;
-      margin-bottom: 0.6em;
-      color: var(--text-muted);
-      text-align: left;
-    }
-
-    .separador {
-      text-align: center;
-      margin: 3rem 0;
-      color: var(--border);
-      font-size: 1.2em;
-      letter-spacing: 0.5em;
-    }
-
-    footer {
-      margin-top: 5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    @media print {
-      body { background: #fff; font-size: 12pt; }
-      .page { padding: 0; max-width: 100%; }
-      .metadatos { break-after: page; border: none; background: none; }
-      .contenido h2 { break-after: avoid; }
-      .contenido h3 { break-after: avoid; }
-      blockquote { break-inside: avoid; }
-      table { break-inside: avoid; }
-      footer { break-before: avoid; }
-    }
-
-    @media (max-width: 700px) {
-      .page { padding: 2rem 1.2rem 4rem; }
-      body { font-size: 16px; }
-      .metadatos .titulo-texto { font-size: 1.6em; }
-    }
-  </style>
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="../textos.css">
 </head>
 <body>
+
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">China y América Latina: ¿cooperación o imperialismo?</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
   <div class="page">
     <div class="metadatos">
-      <div class="titulo-libro">Debates para un mundo en transformación</div>
-      <div class="titulo-texto">China y América Latina: ¿cooperación o imperialismo?</div>
-      <div class="autor">Max Povse</div>
-      <div class="info">Páginas originales: 153–170 (aprox.)</div>
+      <div class="titulo-libro">Debates para un mundo en transformación</div>
+      <div class="titulo-texto">China y América Latina: ¿cooperación o imperialismo?</div>
+      <div class="autor">Max Povse</div>
+      <div class="info">Páginas originales: 153–170 (aprox.)</div>
       <div class="badge">Día 15 — Unidad 5</div>
     </div>
 
     <div class="contenido">
-      <h2>Capítulo 9. China y América Latina: ¿cooperación o imperialismo?</h2>
-<p class="first-of-section">China es el segundo país más grande del mundo por población y tamaño de la economía, y el cuarto más grande por territorio. Estas condiciones lo convierten en una potencia natural, es decir, un país con la suficiente capacidad para influir sobre otros. Su gobierno está formado por el Partido Comunista Chino (PCC), la segunda organización más grande del mundo por cantidad de afiliados, con casi cien millones. Este partido, fundado por Mao Zedong en 1921, ha gobernado el país desde 1949. Al ser un régimen político de partido único, China es el país autoritario más grande del mundo.</p>
-<p>Sin embargo, China es más que una potencia o el gobierno del PCC: es también una civilización milenaria que ha influido a toda Asia y el resto del mundo.</p>
-
-<h3>¿Cómo es China? Desmitificar y desorientalizar</h3>
-<p>A pesar de la enorme influencia política, económica y cultural que China ha ejercido históricamente, a partir de la Modernidad y la instauración del colonialismo europeo primero, y la revolución industrial después, desde Occidente se pintó a China como una sociedad atrasada, con una burocracia desmedida, tecnología obsoleta y capital humano desaprovechado.</p>
-<p>Esta imagen fue cimentada con la "gran hambruna" de fines de los años cincuenta y comienzos de los años sesenta, que mostró la ineficiencia del aparato gubernamental del maoismo en su expresión más extrema.</p>
-<p>A partir de la instauración del régimen comunista a mediados del siglo pasado bajo el gobierno de Mao Zedong, una seguidilla de políticas fallidas produjo un colapso económico y hambrunas generalizadas que debilitaron aún más a China y, consecuentemente, la imagen con la que se presentaba internacionalmente. Recién a partir de 1978, luego de la muerte de Mao y con la instauración de la política de Reforma y Apertura por Deng Xiaoping, que introdujo el capitalismo en China, el país comenzó a recuperarse de los reveses del siglo de humillación y el maoismo.</p>
-<p>Así, el país pasó de un sistema comunista rígido, donde casi toda la economía era controlada por el Estado, a un modelo que permitió el crecimiento del sector privado, la inversión extranjera y el comercio internacional. Se impulsó la modernización de la agricultura, la industria, la tecnología y la defensa.</p>
-<p>Gracias a estas reformas, China entró en una etapa de crecimiento acelerado, veloz y sostenido, lo que la llevó a pasar del puesto 11.° al 2.° en la economía global. Durante muchos años, su PBI creció a más del 10 % anual, un fenómeno tan excepcional que se empezó a hablar de las "tasas chinas" para referirse a ese crecimiento. Este boom económico hizo que China pasara de ser un país de ingresos bajos a uno de ingresos medios altos en menos de veinticinco años, desde 1987 a 2010.</p>
-<p>Las dos maneras en que muchos ven a China —ya sea a través de la información generalmente negativa o por la propia China (las visiones unicamente positivas)— se basan en una idea llamada orientalismo (Said, 2007). Este concepto consiste en simplificar las culturas asiáticas con estereotipos presentándolas como algo exótico o misterioso en lugar de entenderlas en su verdadera diversidad y complejidad. De esta forma, se describe a China desde experiencias y mitos ficticios sobre China que los extranjeros —principalmente occidentales— han alimentado a través de aprendizajes poco críticos sobre el país. Estos aprendizajes a veces están mediados por las potencias occidentales (las calificaciones) y muchas veces son avivados por el experiencialismo turístico, es decir, lo poco que ve el turista al visitar China.</p>
-<p>Ambos mitos, el de la China atrasada y el de la futurista, son representaciones de uno sobre una China atrasada a una superavanzada y futurista, donde se ha transformado (Ellis, 2022). La combinación de ambos factores, crecimiento económico y avance tecnológico también meteórico impulsado en parte por una aplicación de uno de los enunciados taxativos sobre China, busque fuentes autóctonas y comprenda a la china, desde una perspectiva crítica que descrea inicialmente y en especial la china, preste atención a la diversidad de los análisis que los propios chinos hacen de su país.</p>
-
-<h3>El imperialismo chino</h3>
-<p>La posición privilegiada de la que ha gozado desde sus orígenes históricos lo que hoy se conoce como China hizo que una vez que los distintos pueblos chinos quedaran bajo un solo gobierno centralizado, en el siglo III antes de nuestra era, se estableciera un imperio que ha durado, en una forma u otra, hasta nuestros días.</p>
-<p>La principal doctrina de este imperio es tianxia, que significa "todo bajo el cielo" e implica el derecho divino del emperador de gobernar sobre todo el mundo en círculos concéntricos de influencia (Zhao, 2021). Así, el territorio propio de China es el centro del mundo (China significa literalmente "país del centro" en mandarín), mientras que el resto de los países son vasallos.</p>
-<p>Esta doctrina guió la política exterior china por milenios hasta que, después de las derrotas en las Guerras del Opio contra el Reino Unido en la segunda mitad del siglo XIX, comenzó el "siglo de las humillaciones". En este siglo —que en el que fue "humillada" por potencias extranjeras con derrotas militares y coerción— China perdió su capacidad de proyectarse internacionalmente como potencia una vez que la influencia de la época imperial, que finalmente sentó las bases para la nueva influencia de la época imperial en China. En 1911, una coalición de revolucionarios derrotó al imperio y fundó la República, pero el país tuvo poco tiempo como gobierno centralizado debido al surgimiento de diferentes caudillos, la insurgencia del PCC y, luego, la invasión de Japón en 1937. Estos hechos mostraron la debilidad del país y dejaron el anhelo de retorno al centro.</p>
-<p>En las últimas décadas, China pasó de ser un país cerrado y subdesarrollado a ser una potencia global con interés en cambiar el orden global liberal. Al recuperar su capacidad económica, también revivió su vieja política de tianxia, especialmente a partir del gobierno de Xi Jinping desde 2012 (Xi, 2018).</p>
-
-<h3>China en América Latina</h3>
-<p>Ello ha ocurrido principalmente por tres motivos: comercio e inversiones, afinidad ideológica y vacío de poder, en ese orden.</p>
-<p>En noviembre de 2005 se realizó la IV Cumbre de las Américas en Mar del Plata, un evento que reunió a todos los presidentes americanos para poner en marcha un área de libre comercio en el continente llamada "Área de Libre Comercio de las Américas" o ALCA. Los gobiernos de izquierda de la región, como los de Hugo Chávez, Lula da Silva y Néstor Kirchner, se opusieron a esta propuesta. El momento bisagra fue el mencionado rechazo al ALCA, y desde entonces las posiciones antiestadounidenses de los gobiernos de la marea rosa han marcado un fuerte alejamiento geopolítico de América Latina del antiguo hegemon de la región.</p>
-<p>Mientras que Estados Unidos era el principal socio comercial de todos los países latinoamericanos en los años 2000, en la actualidad solo sigue siéndolo de los países caribeños y México. La mayoría de los países sudamericanos, la Argentina incluida, actualmente le compra y vende más a China que a Estados Unidos. Esto marcó el ascenso de China como socio comercial.</p>
-
-<h4>Comercio e inversiones</h4>
-<p>En los casos en los que la relación económica bilateral con China es desfavorable, la ideología "antimperialista" de los distintos gobiernos ha jugado a favor de la narrativa oficial de China como proveedor de inversiones y beneficios económicos.</p>
-<p>Para medir las relaciones con una potencia como China o Estados Unidos, no solo se debe analizar la suma de todo lo que se le compra y vende a la contraparte (el comercio bilateral), sino, más importante, se debe analizar cómo los países usan su ubicación para relacionarse entre sí.</p>
-<p>Esto sucede principalmente por el fenómeno de reprimarización, es decir, la tendencia de los países de la región a producir principalmente materias primas y exportarlas sin añadirles valor. Un ejemplo es la venta de porotos de soja en vez de harina o aceite de soja, que son productos más caros. Este proceso quita productos con mayor valor agregado desde China (Svampa y Slipak, 2015).</p>
-<p>En este sentido, China ha sido consciente de este desbalance por el cual quita valor a las exportaciones de los países de la región y a la vez obliga a importar productos con mayor valor agregado desde China. Por eso ha desarrollado la Iniciativa de la Franja y la Ruta, una suerte de megaproyecto de inversiones en infraestructura alrededor del globo.</p>
-<p>A pesar de estas desventajas, la narrativa tanto del gobierno chino como de los gobiernos latinoamericanos ha sido la de crear una visión utópica en la que China ofrece beneficios económicos a cambio de apoyar su propuesta de un nuevo orden global.</p>
-<p>Sin embargo, al analizar el verdadero impacto de los proyectos chinos y su comparación con la crónica fuga de capitales hacia Beijing, es claro que el aspecto económico de la relación no podría ser el único por el cual los países de la región se han acercado a China en las últimas décadas, especialmente si han perdido tanto dinero al hacerlo.</p>
-<p>En la Argentina, por ejemplo, de los siete centros internacionales de investigación del Conicet, cuatro son financiados por China, incluyendo el proyecto CART, que implica la construcción de un radiotelescopio. De manera similar, en Brasil una empresa estatal china se encuentra construyendo el telescopio Bingo en cooperación con científicos brasileños. Por su parte, el CONICYT en Chile tiene un programa posdoctoral en conjunto con la Academia de Ciencias de China. Estos acuerdos institucionales presuponen la transferencia de tecnología y conocimiento de ambas partes.</p>
-
-<h4>La enseñanza del idioma chino</h4>
-<p>El gobierno chino también ha generado una política de apropiación cultural por la que las únicas instituciones autorizadas para enseñar el idioma y demás aspectos culturales en el exterior son los institutos Confucio. Estos institutos, que son organizaciones no gubernamentales organizadas desde el Estado chino, no solo tienen a su cargo la enseñanza del idioma, sino que también tienen una injerencia importante en los sistemas científico-tecnológicos de los países latinoamericanos.</p>
-<p>A pesar de que estas becas son bilaterales, muchos más estudiantes latinoamericanos van a China que chinos a países de Latinoamérica. Esto genera una disparidad que refuerza el objetivo de cimentar la mitificación sobre China, en la que tanto los estudiantes latinoamericanos son adoctrinados de acuerdo con las pautas del PCC, pero pocos estudiantes chinos tienen la posibilidad de conocer de cerca América Latina e interactuar con latinoamericanos.</p>
-
-<h4>Los intercambios educativos</h4>
-<p>Desde comienzos de los años 2000, China ha establecido una serie de mecanismos para facilitar la movilidad de estudiantes desde y hacia América Latina. Así ha creado las becas del gobierno chino tanto en acuerdos bilaterales con doce gobiernos latinoamericanos (Argentina, Brasil, Cuba, Venezuela y otros) como a nivel de universidades (incluidas las más grandes de la región, como las de Buenos Aires, San Pablo y la Autónoma de México). A esto se suman muchos más acuerdos específicos entre universidades, y a través de instituciones internacionales como las Becas de la Gran Muralla, cofinanciadas por la UNESCO.</p>
-
-<h3>La influencia china en la cultura latinoamericana</h3>
-<p>Sin embargo, debido a barreras culturales e idiomáticas, muchos miembros de la diáspora continúan utilizando los medios de comunicación del ecosistema chino (que se encuentra separado del resto del mundo por un sistema de censura digital llamado Gran Cortafuegos, que impide acceder a los principales sitios web extranjeros desde China). Esto genera que los medios de comunicación cooptados por el PCC y las redes sociales censuradas por este sigan siendo empleadas en América Latina por los miembros de la diáspora, lo que impide su integración en los sistemas político-culturales locales y lleva a que sean utilizados a veces como disseminadores de propaganda. A esto se deben sumar los servicios de noticias oficiales chinas en español, como Xinhua y CGTN, que tienen amplia cobertura en la esfera mediática en América Latina (Álvarez y Portela, 2023).</p>
-
-<h3>La influencia china en la política latinoamericana</h3>
-<p>China influencia la política latinoamericana a través de las dos formas anteriores, usando vínculos partidarios y también a través de la diplomacia tradicional.</p>
-
-<h4>La influencia política a través de la economía</h4>
-<p>China utiliza los préstamos como una forma de influencia sobre los gobiernos latinoamericanos. Estos son de distintos tipos, desde préstamos para la construcción de infraestructura chinos y latinoamericanos. Estos préstamos muchas veces son condicionales en algún tipo de acuerdo político, como la firma de memorandums o la quita del reconocimiento diplomático a Taiwan, algo que se demuestra en que los países que reciben más financiamiento chino tienden a votar más en sintonía con China en las Naciones Unidas (Povse, 2025).</p>
-
-<h4>Vínculos partidarios</h4>
-<p>A través de las relaciones con los partidos que constituyeron gobiernos en América Latina durante la marea rosa (agrupados en el Foro de San Pablo y el Grupo de Puebla), el PCC ejerce su influencia ideológica y geopolítica sobre las contrapartes latinoamericanas. Esto se ve en los foros bilaterales habituales y en las convergencias programáticas entre ambas partes (Niu, 2017).</p>
-
-<h4>Diplomacia tradicional</h4>
-<p>El gobierno chino utiliza también los mecanismos diplomáticos tradicionales para resaltar el acercamiento con los países latinoamericanos. El principal formato para ello es el Foro China-CELAC, que reúne periódicamente a los ministros de diferentes áreas de todos los países latinoamericanos y caribeños con su contraparte china. De manera bilateral, los esfuerzos chinos se concentran en lograr el reconocimiento diplomático por parte de aquellos países de la región que siguen reconociendo al gobierno de la República de China en Taiwan. Así, desde 2017, el gobierno chino ha logrado el reconocimiento por parte de cinco países centroamericanos que antes reconocían al gobierno en Taiwan.</p>
-
-<h4>Influencia política a través de la cultura</h4>
-<p>Los exbecarios en China, que suelen agruparse en asociaciones financiadas por el gobierno chino, son una importante herramienta para continuar los mitos positivos sobre China en la región y para blindar al gobierno de críticas, especialmente en materias relacionadas con los abusos a los derechos humanos cometidos en Hong Kong, el Tíbet, el Turquestán Oriental y durante la pandemia de COVID-19.</p>
-<p>Esto funciona particularmente bien debido a que muchos exbecarios se autodenominan "sinólogos", es decir, expertos en China, y por lo tanto son considerados palabra autorizada en los medios de comunicación (Chaguaceda y Povse, 2023). La sinología es un concepto orientalista que presupone la necesidad de nombrar los estudios sobre China de manera diferenciada a los estudios sobre el resto de los países apelando a una idea de unicidad de "lo chino" que no puede ser estudiado con las herramientas intelectuales de las ciencias sociales convencionales.</p>
-<p>Asimismo, China mantiene la influencia sobre su diáspora también a través de las "comisarías" clandestinas en Buenos Aires, Río de Janeiro, São Paulo, Viña del Mar, Quito y Guayaquil. Estas organizaciones son oficinas de la policía china en el extranjero encargadas de aplicar las leyes chinas (en particular las relacionadas con la subversión frente al PCC) sobre la diáspora china, en otra muestra de la imposición de extraterritorialidad informal por parte del gobierno chino en la región (Barletti, 2023).</p>
-<p>De manera similar, a través del ordenamiento jurídico interno chino, empresas como Huawei y ZTE están obligadas a compartir la información que colectan en sus proyectos. La extraterritorialidad es el derecho por el que un territorio se considera que se encuentra. La extraterritorialidad informal de los terrenos donde se desarrollan sus proyectos. Por ejemplo, la estación espacial en Neuquén, que es controlada por el Ejército Popular de Liberación, el brazo armado del PCC, y el puerto de Chancay, en cuya operatoria la empresa estatal china Cosco aplica la normativa de su país.</p>
-
-<h3>Conclusiones</h3>
-<p>En este texto se describieron las características del imperialismo chino, sus formas de influencia sobre América Latina y cómo el uso de mitos sobre lo que es China ha generado políticas desacertadas que han promovido los intereses del PCC por sobre los intereses latinoamericanos. De esta manera, se proporcionaron las herramientas intelectuales para analizar si la relación con la potencia china se trata de una relación cooperativa o una nueva muestra de imperialismo, sobre América Latina.</p>
-<p>En este sentido, se reflexionó sobre la importancia del pensamiento crítico a la hora de analizar países con rasgos culturales, filosóficos e históricos distintos de los occidentales a fin de incentivar formas de relacionamiento informadas y beneficiosas para ambas partes, sin relegar el valor del posicionamiento político (y geopolítico) autónomo.</p>
-
-<h3>Referencias bibliográficas</h3>
-<p>Álvarez, L. R. y Portela, T. B. (2023). Análisis de las estrategias propagandísticas en redes sociales de la República Popular China. Almanaque, (42), 47-82.</p>
-<p>Barletti, A. (2023). El hambre del dragón: el plan de China para comerse al mundo. Editorial Delos Cuatro Vientos.</p>
-<p>Chaguaceda, A. y Povse, M. (2023). China y Latinoamérica: influencia autoritaria y resiliencia democrática. Gobierno y Análisis Político, Asociación Civil.</p>
-<p>Ellis, R. E. (2022). El avance digital de China en América Latina. Revista Exterior, 34(194), 96-115.</p>
-<p>Lamarque, A. H. (2024). Cooperación espacial y riesgos de usos ambiguos: el caso de las estaciones espaciales de China en Argentina. Expediente Abierto.</p>
-<p>Niu, H. (2017). Las políticas y estrategias de China hacia América Latina y el Caribe. En E. Pastrana Buelvas y H. Gehring (Eds.), La proyección de China en América Latina y el Caribe: perspectivas de la región. Fundación Andrés Bello.</p>
-<p>Nolte, D. (2022). Auge y declive del regionalismo latinoamericano en la primera marea rosa. Lecciones para el presente. Ciclos en la historia, la economía y la sociedad, 29(59), 3-26.</p>
-<p>Povse, M. (2022). China: Estrategias de influencia en América Latina. En F. Pedrosa, A. Chaguaceda y M. I. Puerta (Eds.), China y Latinoamérica: construyendo un mundo multipolar. Consejo Latinoamericano de Ciencias Sociales.</p>
-<p>Povse, M. (2025). La iniciativa de la Franja y la Ruta de la Seda en América Latina: beneficios económicos y condicionamientos políticos. Editorial Teseo.</p>
-<p>Ray, R., Albright, Z. C. y Dussel Peters, E. (2024). Boletín Económico China-América Latina y el Caribe, Edición 2024. Boston University Global Development Policy Center.</p>
-<p>Roth, K. (2020). China, amenaza para los derechos humanos. Política Exterior.</p>
-<p>Said, E. (2007). Orientalismo. Debolsillo.</p>
-<p>Svampa, M. y Slipak, A. (2015). China en América Latina. Del consenso de los commodities al consenso de Beijing. Ensambles, 1(3), 34-63.</p>
-<p>Xi, J. (2018). La gobernanza global y las estrategias de China.</p>
+      <h2>Capítulo 9. China y América Latina: ¿cooperación o imperialismo?</h2>
+<p class="first-of-section">China es el segundo país más grande del mundo por población y tamaño de la economía, y el cuarto más grande por territorio. Estas condiciones lo convierten en una potencia natural, es decir, un país con la suficiente capacidad para influir sobre otros. Su gobierno está formado por el Partido Comunista Chino (PCC), la segunda organización más grande del mundo por cantidad de afiliados, con casi cien millones. Este partido, fundado por Mao Zedong en 1921, ha gobernado el país desde 1949. Al ser un régimen político de partido único, China es el país autoritario más grande del mundo.</p>
+<p>Sin embargo, China es más que una potencia o el gobierno del PCC: es también una civilización milenaria que ha influido a toda Asia y el resto del mundo.</p>
+
+<h3>¿Cómo es China? Desmitificar y desorientalizar</h3>
+<p>A pesar de la enorme influencia política, económica y cultural que China ha ejercido históricamente, a partir de la Modernidad y la instauración del colonialismo europeo primero, y la revolución industrial después, desde Occidente se pintó a China como una sociedad atrasada, con una burocracia desmedida, tecnología obsoleta y capital humano desaprovechado.</p>
+<p>Esta imagen fue cimentada con la "gran hambruna" de fines de los años cincuenta y comienzos de los años sesenta, que mostró la ineficiencia del aparato gubernamental del maoismo en su expresión más extrema.</p>
+<p>A partir de la instauración del régimen comunista a mediados del siglo pasado bajo el gobierno de Mao Zedong, una seguidilla de políticas fallidas produjo un colapso económico y hambrunas generalizadas que debilitaron aún más a China y, consecuentemente, la imagen con la que se presentaba internacionalmente. Recién a partir de 1978, luego de la muerte de Mao y con la instauración de la política de Reforma y Apertura por Deng Xiaoping, que introdujo el capitalismo en China, el país comenzó a recuperarse de los reveses del siglo de humillación y el maoismo.</p>
+<p>Así, el país pasó de un sistema comunista rígido, donde casi toda la economía era controlada por el Estado, a un modelo que permitió el crecimiento del sector privado, la inversión extranjera y el comercio internacional. Se impulsó la modernización de la agricultura, la industria, la tecnología y la defensa.</p>
+<p>Gracias a estas reformas, China entró en una etapa de crecimiento acelerado, veloz y sostenido, lo que la llevó a pasar del puesto 11.° al 2.° en la economía global. Durante muchos años, su PBI creció a más del 10 % anual, un fenómeno tan excepcional que se empezó a hablar de las "tasas chinas" para referirse a ese crecimiento. Este boom económico hizo que China pasara de ser un país de ingresos bajos a uno de ingresos medios altos en menos de veinticinco años, desde 1987 a 2010.</p>
+<p>Las dos maneras en que muchos ven a China —ya sea a través de la información generalmente negativa o por la propia China (las visiones unicamente positivas)— se basan en una idea llamada orientalismo (Said, 2007). Este concepto consiste en simplificar las culturas asiáticas con estereotipos presentándolas como algo exótico o misterioso en lugar de entenderlas en su verdadera diversidad y complejidad. De esta forma, se describe a China desde experiencias y mitos ficticios sobre China que los extranjeros —principalmente occidentales— han alimentado a través de aprendizajes poco críticos sobre el país. Estos aprendizajes a veces están mediados por las potencias occidentales (las calificaciones) y muchas veces son avivados por el experiencialismo turístico, es decir, lo poco que ve el turista al visitar China.</p>
+<p>Ambos mitos, el de la China atrasada y el de la futurista, son representaciones de uno sobre una China atrasada a una superavanzada y futurista, donde se ha transformado (Ellis, 2022). La combinación de ambos factores, crecimiento económico y avance tecnológico también meteórico impulsado en parte por una aplicación de uno de los enunciados taxativos sobre China, busque fuentes autóctonas y comprenda a la china, desde una perspectiva crítica que descrea inicialmente y en especial la china, preste atención a la diversidad de los análisis que los propios chinos hacen de su país.</p>
+
+<h3>El imperialismo chino</h3>
+<p>La posición privilegiada de la que ha gozado desde sus orígenes históricos lo que hoy se conoce como China hizo que una vez que los distintos pueblos chinos quedaran bajo un solo gobierno centralizado, en el siglo III antes de nuestra era, se estableciera un imperio que ha durado, en una forma u otra, hasta nuestros días.</p>
+<p>La principal doctrina de este imperio es tianxia, que significa "todo bajo el cielo" e implica el derecho divino del emperador de gobernar sobre todo el mundo en círculos concéntricos de influencia (Zhao, 2021). Así, el territorio propio de China es el centro del mundo (China significa literalmente "país del centro" en mandarín), mientras que el resto de los países son vasallos.</p>
+<p>Esta doctrina guió la política exterior china por milenios hasta que, después de las derrotas en las Guerras del Opio contra el Reino Unido en la segunda mitad del siglo XIX, comenzó el "siglo de las humillaciones". En este siglo —que en el que fue "humillada" por potencias extranjeras con derrotas militares y coerción— China perdió su capacidad de proyectarse internacionalmente como potencia una vez que la influencia de la época imperial, que finalmente sentó las bases para la nueva influencia de la época imperial en China. En 1911, una coalición de revolucionarios derrotó al imperio y fundó la República, pero el país tuvo poco tiempo como gobierno centralizado debido al surgimiento de diferentes caudillos, la insurgencia del PCC y, luego, la invasión de Japón en 1937. Estos hechos mostraron la debilidad del país y dejaron el anhelo de retorno al centro.</p>
+<p>En las últimas décadas, China pasó de ser un país cerrado y subdesarrollado a ser una potencia global con interés en cambiar el orden global liberal. Al recuperar su capacidad económica, también revivió su vieja política de tianxia, especialmente a partir del gobierno de Xi Jinping desde 2012 (Xi, 2018).</p>
+
+<h3>China en América Latina</h3>
+<p>Ello ha ocurrido principalmente por tres motivos: comercio e inversiones, afinidad ideológica y vacío de poder, en ese orden.</p>
+<p>En noviembre de 2005 se realizó la IV Cumbre de las Américas en Mar del Plata, un evento que reunió a todos los presidentes americanos para poner en marcha un área de libre comercio en el continente llamada "Área de Libre Comercio de las Américas" o ALCA. Los gobiernos de izquierda de la región, como los de Hugo Chávez, Lula da Silva y Néstor Kirchner, se opusieron a esta propuesta. El momento bisagra fue el mencionado rechazo al ALCA, y desde entonces las posiciones antiestadounidenses de los gobiernos de la marea rosa han marcado un fuerte alejamiento geopolítico de América Latina del antiguo hegemon de la región.</p>
+<p>Mientras que Estados Unidos era el principal socio comercial de todos los países latinoamericanos en los años 2000, en la actualidad solo sigue siéndolo de los países caribeños y México. La mayoría de los países sudamericanos, la Argentina incluida, actualmente le compra y vende más a China que a Estados Unidos. Esto marcó el ascenso de China como socio comercial.</p>
+
+<h4>Comercio e inversiones</h4>
+<p>En los casos en los que la relación económica bilateral con China es desfavorable, la ideología "antimperialista" de los distintos gobiernos ha jugado a favor de la narrativa oficial de China como proveedor de inversiones y beneficios económicos.</p>
+<p>Para medir las relaciones con una potencia como China o Estados Unidos, no solo se debe analizar la suma de todo lo que se le compra y vende a la contraparte (el comercio bilateral), sino, más importante, se debe analizar cómo los países usan su ubicación para relacionarse entre sí.</p>
+<p>Esto sucede principalmente por el fenómeno de reprimarización, es decir, la tendencia de los países de la región a producir principalmente materias primas y exportarlas sin añadirles valor. Un ejemplo es la venta de porotos de soja en vez de harina o aceite de soja, que son productos más caros. Este proceso quita productos con mayor valor agregado desde China (Svampa y Slipak, 2015).</p>
+<p>En este sentido, China ha sido consciente de este desbalance por el cual quita valor a las exportaciones de los países de la región y a la vez obliga a importar productos con mayor valor agregado desde China. Por eso ha desarrollado la Iniciativa de la Franja y la Ruta, una suerte de megaproyecto de inversiones en infraestructura alrededor del globo.</p>
+<p>A pesar de estas desventajas, la narrativa tanto del gobierno chino como de los gobiernos latinoamericanos ha sido la de crear una visión utópica en la que China ofrece beneficios económicos a cambio de apoyar su propuesta de un nuevo orden global.</p>
+<p>Sin embargo, al analizar el verdadero impacto de los proyectos chinos y su comparación con la crónica fuga de capitales hacia Beijing, es claro que el aspecto económico de la relación no podría ser el único por el cual los países de la región se han acercado a China en las últimas décadas, especialmente si han perdido tanto dinero al hacerlo.</p>
+<p>En la Argentina, por ejemplo, de los siete centros internacionales de investigación del Conicet, cuatro son financiados por China, incluyendo el proyecto CART, que implica la construcción de un radiotelescopio. De manera similar, en Brasil una empresa estatal china se encuentra construyendo el telescopio Bingo en cooperación con científicos brasileños. Por su parte, el CONICYT en Chile tiene un programa posdoctoral en conjunto con la Academia de Ciencias de China. Estos acuerdos institucionales presuponen la transferencia de tecnología y conocimiento de ambas partes.</p>
+
+<h4>La enseñanza del idioma chino</h4>
+<p>El gobierno chino también ha generado una política de apropiación cultural por la que las únicas instituciones autorizadas para enseñar el idioma y demás aspectos culturales en el exterior son los institutos Confucio. Estos institutos, que son organizaciones no gubernamentales organizadas desde el Estado chino, no solo tienen a su cargo la enseñanza del idioma, sino que también tienen una injerencia importante en los sistemas científico-tecnológicos de los países latinoamericanos.</p>
+<p>A pesar de que estas becas son bilaterales, muchos más estudiantes latinoamericanos van a China que chinos a países de Latinoamérica. Esto genera una disparidad que refuerza el objetivo de cimentar la mitificación sobre China, en la que tanto los estudiantes latinoamericanos son adoctrinados de acuerdo con las pautas del PCC, pero pocos estudiantes chinos tienen la posibilidad de conocer de cerca América Latina e interactuar con latinoamericanos.</p>
+
+<h4>Los intercambios educativos</h4>
+<p>Desde comienzos de los años 2000, China ha establecido una serie de mecanismos para facilitar la movilidad de estudiantes desde y hacia América Latina. Así ha creado las becas del gobierno chino tanto en acuerdos bilaterales con doce gobiernos latinoamericanos (Argentina, Brasil, Cuba, Venezuela y otros) como a nivel de universidades (incluidas las más grandes de la región, como las de Buenos Aires, San Pablo y la Autónoma de México). A esto se suman muchos más acuerdos específicos entre universidades, y a través de instituciones internacionales como las Becas de la Gran Muralla, cofinanciadas por la UNESCO.</p>
+
+<h3>La influencia china en la cultura latinoamericana</h3>
+<p>Sin embargo, debido a barreras culturales e idiomáticas, muchos miembros de la diáspora continúan utilizando los medios de comunicación del ecosistema chino (que se encuentra separado del resto del mundo por un sistema de censura digital llamado Gran Cortafuegos, que impide acceder a los principales sitios web extranjeros desde China). Esto genera que los medios de comunicación cooptados por el PCC y las redes sociales censuradas por este sigan siendo empleadas en América Latina por los miembros de la diáspora, lo que impide su integración en los sistemas político-culturales locales y lleva a que sean utilizados a veces como disseminadores de propaganda. A esto se deben sumar los servicios de noticias oficiales chinas en español, como Xinhua y CGTN, que tienen amplia cobertura en la esfera mediática en América Latina (Álvarez y Portela, 2023).</p>
+
+<h3>La influencia china en la política latinoamericana</h3>
+<p>China influencia la política latinoamericana a través de las dos formas anteriores, usando vínculos partidarios y también a través de la diplomacia tradicional.</p>
+
+<h4>La influencia política a través de la economía</h4>
+<p>China utiliza los préstamos como una forma de influencia sobre los gobiernos latinoamericanos. Estos son de distintos tipos, desde préstamos para la construcción de infraestructura chinos y latinoamericanos. Estos préstamos muchas veces son condicionales en algún tipo de acuerdo político, como la firma de memorandums o la quita del reconocimiento diplomático a Taiwan, algo que se demuestra en que los países que reciben más financiamiento chino tienden a votar más en sintonía con China en las Naciones Unidas (Povse, 2025).</p>
+
+<h4>Vínculos partidarios</h4>
+<p>A través de las relaciones con los partidos que constituyeron gobiernos en América Latina durante la marea rosa (agrupados en el Foro de San Pablo y el Grupo de Puebla), el PCC ejerce su influencia ideológica y geopolítica sobre las contrapartes latinoamericanas. Esto se ve en los foros bilaterales habituales y en las convergencias programáticas entre ambas partes (Niu, 2017).</p>
+
+<h4>Diplomacia tradicional</h4>
+<p>El gobierno chino utiliza también los mecanismos diplomáticos tradicionales para resaltar el acercamiento con los países latinoamericanos. El principal formato para ello es el Foro China-CELAC, que reúne periódicamente a los ministros de diferentes áreas de todos los países latinoamericanos y caribeños con su contraparte china. De manera bilateral, los esfuerzos chinos se concentran en lograr el reconocimiento diplomático por parte de aquellos países de la región que siguen reconociendo al gobierno de la República de China en Taiwan. Así, desde 2017, el gobierno chino ha logrado el reconocimiento por parte de cinco países centroamericanos que antes reconocían al gobierno en Taiwan.</p>
+
+<h4>Influencia política a través de la cultura</h4>
+<p>Los exbecarios en China, que suelen agruparse en asociaciones financiadas por el gobierno chino, son una importante herramienta para continuar los mitos positivos sobre China en la región y para blindar al gobierno de críticas, especialmente en materias relacionadas con los abusos a los derechos humanos cometidos en Hong Kong, el Tíbet, el Turquestán Oriental y durante la pandemia de COVID-19.</p>
+<p>Esto funciona particularmente bien debido a que muchos exbecarios se autodenominan "sinólogos", es decir, expertos en China, y por lo tanto son considerados palabra autorizada en los medios de comunicación (Chaguaceda y Povse, 2023). La sinología es un concepto orientalista que presupone la necesidad de nombrar los estudios sobre China de manera diferenciada a los estudios sobre el resto de los países apelando a una idea de unicidad de "lo chino" que no puede ser estudiado con las herramientas intelectuales de las ciencias sociales convencionales.</p>
+<p>Asimismo, China mantiene la influencia sobre su diáspora también a través de las "comisarías" clandestinas en Buenos Aires, Río de Janeiro, São Paulo, Viña del Mar, Quito y Guayaquil. Estas organizaciones son oficinas de la policía china en el extranjero encargadas de aplicar las leyes chinas (en particular las relacionadas con la subversión frente al PCC) sobre la diáspora china, en otra muestra de la imposición de extraterritorialidad informal por parte del gobierno chino en la región (Barletti, 2023).</p>
+<p>De manera similar, a través del ordenamiento jurídico interno chino, empresas como Huawei y ZTE están obligadas a compartir la información que colectan en sus proyectos. La extraterritorialidad es el derecho por el que un territorio se considera que se encuentra. La extraterritorialidad informal de los terrenos donde se desarrollan sus proyectos. Por ejemplo, la estación espacial en Neuquén, que es controlada por el Ejército Popular de Liberación, el brazo armado del PCC, y el puerto de Chancay, en cuya operatoria la empresa estatal china Cosco aplica la normativa de su país.</p>
+
+<h3>Conclusiones</h3>
+<p>En este texto se describieron las características del imperialismo chino, sus formas de influencia sobre América Latina y cómo el uso de mitos sobre lo que es China ha generado políticas desacertadas que han promovido los intereses del PCC por sobre los intereses latinoamericanos. De esta manera, se proporcionaron las herramientas intelectuales para analizar si la relación con la potencia china se trata de una relación cooperativa o una nueva muestra de imperialismo, sobre América Latina.</p>
+<p>En este sentido, se reflexionó sobre la importancia del pensamiento crítico a la hora de analizar países con rasgos culturales, filosóficos e históricos distintos de los occidentales a fin de incentivar formas de relacionamiento informadas y beneficiosas para ambas partes, sin relegar el valor del posicionamiento político (y geopolítico) autónomo.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Álvarez, L. R. y Portela, T. B. (2023). Análisis de las estrategias propagandísticas en redes sociales de la República Popular China. Almanaque, (42), 47-82.</p>
+<p>Barletti, A. (2023). El hambre del dragón: el plan de China para comerse al mundo. Editorial Delos Cuatro Vientos.</p>
+<p>Chaguaceda, A. y Povse, M. (2023). China y Latinoamérica: influencia autoritaria y resiliencia democrática. Gobierno y Análisis Político, Asociación Civil.</p>
+<p>Ellis, R. E. (2022). El avance digital de China en América Latina. Revista Exterior, 34(194), 96-115.</p>
+<p>Lamarque, A. H. (2024). Cooperación espacial y riesgos de usos ambiguos: el caso de las estaciones espaciales de China en Argentina. Expediente Abierto.</p>
+<p>Niu, H. (2017). Las políticas y estrategias de China hacia América Latina y el Caribe. En E. Pastrana Buelvas y H. Gehring (Eds.), La proyección de China en América Latina y el Caribe: perspectivas de la región. Fundación Andrés Bello.</p>
+<p>Nolte, D. (2022). Auge y declive del regionalismo latinoamericano en la primera marea rosa. Lecciones para el presente. Ciclos en la historia, la economía y la sociedad, 29(59), 3-26.</p>
+<p>Povse, M. (2022). China: Estrategias de influencia en América Latina. En F. Pedrosa, A. Chaguaceda y M. I. Puerta (Eds.), China y Latinoamérica: construyendo un mundo multipolar. Consejo Latinoamericano de Ciencias Sociales.</p>
+<p>Povse, M. (2025). La iniciativa de la Franja y la Ruta de la Seda en América Latina: beneficios económicos y condicionamientos políticos. Editorial Teseo.</p>
+<p>Ray, R., Albright, Z. C. y Dussel Peters, E. (2024). Boletín Económico China-América Latina y el Caribe, Edición 2024. Boston University Global Development Policy Center.</p>
+<p>Roth, K. (2020). China, amenaza para los derechos humanos. Política Exterior.</p>
+<p>Said, E. (2007). Orientalismo. Debolsillo.</p>
+<p>Svampa, M. y Slipak, A. (2015). China en América Latina. Del consenso de los commodities al consenso de Beijing. Ensambles, 1(3), 34-63.</p>
+<p>Xi, J. (2018). La gobernanza global y las estrategias de China.</p>
 <p>Zhao, T. (2021). El principio tianxia. </p>
     </div>
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
   </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
 </html>
-
-

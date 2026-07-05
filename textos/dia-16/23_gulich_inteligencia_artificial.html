@@ -2,132 +2,133 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Inteligencia Artificial: la sociedad entre la realidad y la ciencia-ficción — ICSE 024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#1a1a1a;--text:#d4d0c8;--text-muted:#8a8580;--heading:#e8e4dc;--border:#3a3530;--surface:#242220;--accent:#c9854a;--red-soft:#e06060}
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',Georgia,'Times New Roman',serif;font-size:18px;line-height:1.75;padding:0}
-    .page{max-width:680px;margin:0 auto;padding:4rem 2rem 6rem}
-    .metadatos{background:var(--surface);border:1px solid var(--border);padding:2.5rem 2rem;margin-bottom:4rem;text-align:center}
-    .metadatos .titulo-libro{font-family:'DM Sans',sans-serif;font-size:0.75em;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-muted);margin-bottom:1.5rem}
-    .metadatos .titulo-texto{font-family:'Crimson Pro',Georgia,serif;font-size:2em;font-weight:600;color:var(--heading);line-height:1.25;margin-bottom:0.6rem}
-    .metadatos .autor{font-size:1.05em;color:var(--text-muted);margin-bottom:1rem;font-style:italic}
-    .metadatos .info{font-family:'DM Sans',sans-serif;font-size:0.78em;color:var(--text-muted);margin-bottom:0.3rem}
-    .metadatos .badge{display:inline-block;margin-top:1.2rem;padding:0.35rem 1.2rem;background:var(--heading);color: #1a1a1a;font-family:'DM Sans',sans-serif;font-size:0.72em;text-transform:uppercase;letter-spacing:0.1em;border-radius:2px}
-    .contenido p{text-indent:1.5em;margin-bottom:0;text-align:justify;hyphens:auto}
-    .contenido p+p{margin-top:0.9em}
-    .contenido p:first-of-type{text-indent:0}
-    .contenido p.first-of-section{text-indent:0}
-    .contenido h2{font-family:'Crimson Pro',Georgia,serif;font-size:1.5em;font-weight:600;color:var(--heading);margin-top:3rem;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
-    .contenido h3{font-family:'Crimson Pro',Georgia,serif;font-size:1.2em;font-weight:600;font-style:italic;color:var(--heading);margin-top:2.5rem;margin-bottom:0.8rem}
-    .contenido ul,.contenido ol{margin:1.2rem 0 1.2rem 2rem}
-    .contenido li{margin-bottom:0.5em;padding-left:0.3em}
-    .contenido blockquote{margin:2rem 0 2rem 1.5rem;padding:1rem 1.5rem;border-left:3px solid var(--accent);font-style:italic;color:var(--text-muted);background:var(--surface);font-size:0.95em}
-    .contenido blockquote p{text-indent:0;text-align:left}
-    .separador{text-align:center;margin:3rem 0;color:var(--border);font-size:1.2em;letter-spacing:0.5em}
-    footer{margin-top:5rem;padding-top:2rem;border-top:1px solid var(--border);text-align:center;font-family:'DM Sans',sans-serif;font-size:0.75em;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
-    @media print{body{background:#fff;font-size:12pt}.page{padding:0;max-width:100%}.metadatos{break-after:page;border:none;background:none}.contenido h2{break-after:avoid}.contenido h3{break-after:avoid}footer{break-before:avoid}}
-    @media(max-width:700px){.page{padding:2rem 1.2rem 4rem}body{font-size:16px}.metadatos .titulo-texto{font-size:1.6em}}
-  </style>
-  <link rel="stylesheet" href="../../css/app.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="../textos.css">
 </head>
 <body>
+
+  <!-- Sticky reader header -->
+  <nav class="reader-nav">
+    <a class="nav-back" onclick="history.back()">←</a>
+    <span class="nav-title">Inteligencia Artificial: la sociedad entre la realidad y la ciencia-ficción</span>
+    <button class="nav-sound-toggle" id="soundToggle" title="Sonido ambiental">������</button>
+    <button class="nav-bionic-toggle" id="bionicToggle">Bionic</button>
+    <span class="nav-timer" id="sessionTimer">0:00</span>
+    <span class="nav-streak" style="display:none"></span>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- Section dots (right side) -->
+  <div class="section-dots" id="sectionDots"></div>
+
   <div class="page">
     <div class="metadatos">
-      <div class="titulo-libro">Debates para un mundo en transformación</div>
-      <div class="titulo-texto">Inteligencia Artificial: la sociedad entre la realidad y la ciencia-ficción</div>
-      <div class="autor">Damián Gulich</div>
-      <div class="info">Páginas originales: 55–67</div>
+      <div class="titulo-libro">Debates para un mundo en transformación</div>
+      <div class="titulo-texto">Inteligencia Artificial: la sociedad entre la realidad y la ciencia-ficción</div>
+      <div class="autor">Damián Gulich</div>
+      <div class="info">Páginas originales: 55–67</div>
       <div class="badge">Día 16 — Unidad 6</div>
     </div>
 
     <div class="contenido">
-      <h2>Capítulo 3. Inteligencia artificial: la sociedad entre la realidad y la ciencia ficción</h2>
-<p class="first-of-section">La inteligencia artificial (IA) es una de las tecnologías más famosas de nuestro tiempo, pero también una de las más incomprendidas. Aunque se la asocia con innovaciones recientes y espectaculares avances como los grandes modelos de lenguaje o los vehículos autónomos, su historia es mucho más extensa y está marcada tanto por expectativas desmesuradas como por prolongados períodos de estancamiento. A caballo entre la ciencia y la ficción, la IA ha capturado la imaginación colectiva y generado debates sobre su impacto en el discurso público sobre la inteligencia artificial. El propósito es ofrecer una visión tanto de los avances concretos como de las ideas equivocadas que suelen acompañar a este tema.</p>
-<p>Consideremos la siguiente cita: "No es mi intención sorprenderlos ni conmocionarlos, pero la forma más sencilla en que puedo resumirlo es diciendo que ahora hay en el mundo máquinas que piensan, que aprenden y que crean. Además, su capacidad para hacer la gama de problemas que puedan resolver será igual a la gama a la que se ha aplicado la mente humana." Esta frase es del año 1958 (Graubard, 1993, p. 29) y es de uno de los pioneros del campo de la IA —que posteriormente recibió el Premio Nobel de Economía— Herbert A. Simon.</p>
-
-<h3>El largo camino de la inteligencia artificial</h3>
-<p>¿Por qué, dada la frase eufórica de Simon, no vivieron nuestros abuelos en un mundo lleno de inteligencias artificiales? Es solo en los últimos años que se escucha hablar cada vez más de la IA. Esta tecnología ahora parece estar en todas partes: en los teléfonos, en las aplicaciones que usamos, en los robots y hasta en las recomendaciones de series o música. Pero, aunque pueda parecer una novedad exclusiva del siglo XXI, la idea tiene una historia mucho más larga y no tiene un solo protagonista.</p>
-<p>Las etapas del desarrollo de la IA, que según Russell y Norvig (2011) pueden ser definidas considerando hitos y procesos, son las siguientes:</p>
-
-<h3>Gestación (1943 a 1955)</h3>
-<p>En esta etapa inicial se tomó como base la biología, en particular se desarrollaron modelos sencillos del comportamiento de las neuronas humanas. McCulloch y Walter Pitts son reconocidos como los autores del primer artículo sobre el modelo de neurona artificial (simulable) en 1943.</p>
-
-<h3>Nacimiento formal (1956)</h3>
-<p>Durante el verano de 1956, John McCarthy realizó un taller de dos meses en el Dartmouth College (Estados Unidos) con la finalidad de aumentar el interés de los investigadores de ese país en las temáticas de teoría de autómatas, redes neuronales y el estudio de la inteligencia. En este taller se acuñó el término "inteligencia artificial" para nombrar a la disciplina, basada desde entonces en la informática. Con reticencia se aceptó el término, que se mantiene como nombre hasta nuestros días. Queda manifiesta la intención desde el origen, de usar las computadoras para otras actividades diferentes al mero cálculo numérico: intentar duplicar capacidades humanas tales como el lenguaje, el aprendizaje y la creatividad.</p>
-<p>Con las técnicas de IA comienzan a desarrollarse toda clase de programas capaces de reaccionar de manera no exactamente prefijada. Estas implementaciones permitían resolver tareas tales como el razonamiento estructurado para la demostración de teoremas en geometría, la resolución de problemas de álgebra elemental, acomodar ciertos objetos o jugar a las damas en un nivel comparable al de un amateur.</p>
-
-<h3>Esperanzas y euforia (1952 a 1969)</h3>
-<p>En el campo de las redes neuronales, en 1957 Frank Rosenblatt implementó, con auspicio de la Marina estadounidense, el perceptrón, un modelo neuronal en redes aplicado a la visión. Corriendo inicialmente en una computadora y podía implicar a los circuitos analógicos específicos. Como referencia, recién en 1946 fue presentada la Electronic Numerical Integrator and Computer (ENIAC), considerada la primera computadora electrónica de uso general (programable), que pesaba 27 toneladas y ocupaba una gran habitación. En comparación, el teléfono celular moderno que llevamos en nuestro bolsillo tiene millones de veces más capacidad de cómputo que la ENIAC.</p>
-<p>Tras una conferencia de prensa brindada por Rosenblatt en julio de 1958 —que hoy consideraríamos una operación promocional— The New York Times reportó que la Marina reveló el embrión de una computadora electrónica que espera pueda caminar, hablar, ver, escribir, reproducirse y ser consciente de su existencia. Más adelante, los perceptrones podrán reconocer a las personas, llamarlas por sus nombres y traducir instantáneamente el habla en otro idioma.</p>
-
-<h3>Límites, estancamiento e "invierno" (1966 a 2000)</h3>
-<p>Los sistemas de la era anterior funcionaban bien en casos sencillos, pero fracasaban en tareas un poco más complicadas. Por ejemplo, al inicio de la carrera espacial, se creyó que sería relativamente fácil escalar estas técnicas para lograr la traducción automática de textos científicos rusos al inglés, pero dado que los sistemas no tenían información sobre los temas tratados, no lograban resolver las ambigüedades y las traducciones se volvían disparatadas.</p>
-<p>En el fondo, se subestimó la complejidad de las tareas: cualquier problema levemente más complicado que los elementales requería de un tiempo de cómputo descomunal (dentro de lo disponible en la época). En otras palabras, la inversión en equipamiento informático se hacía muy alta y lo que a cambio se obtenía en habilidades en estos sistemas era marginal. Esto llevó a que se retirara el generoso financiamiento que hubo en la etapa anterior, por lo que se concentraron los esfuerzos en los llamados sistemas expertos, una línea de investigación que se agotó y contribuyó a lo más gélido del llamado invierno de la IA hacia la década de 1980.</p>
-<p>Se suele considerar que las predicciones realizadas por los autores en este libro sobre las limitaciones de los modelos de perceptrón de Rosenblatt en redes fueron responsables de un cambio en la dirección de la investigación en IA en cuanto a la financiación. A partir de entonces, mermaron las innovaciones y solo progresaron algunas implementaciones de sistemas expertos (recomendaciones basadas en información previa), aplicados por ejemplo a bioquímica y medicina. A esta merma se la conoce como el primer "invierno" de la IA, y fue entre 1974 y 1980.</p>
-<p>Los sistemas expertos fueron adoptados paulatinamente por distintas industrias, a punto tal que casi todas las grandes compañías estadounidenses montaron su propia división de IA para implementar estos sistemas en busca de optimizar sus cadenas de producción y diseño, como una herramienta más. En esta época, desarrollaron su trabajo John J. Hopfield y Geoffrey Hinton, quienes recibieron el Premio Nobel de Física de 2024 "por descubrimientos en redes neuronales artificiales". Sin embargo, sobrevino un nuevo invierno aproximadamente entre 1987 y casi el año 2000.</p>
-
-<h3>Industrialización (2000 a la fecha)</h3>
-<p>En este período aumentó considerablemente la potencia de procesamiento disponible, al mismo tiempo que bajó el precio de la memoria. Esto permitió incursionar en primer lugar en la minería de datos, consistente en extraer información útil de grandes catálogos de información. Desde el año 2000, la inteligencia artificial ha tenido un impacto inicialmente discreto, pero siempre creciente en nuestra vida cotidiana a través de aplicaciones prácticas.</p>
-<p>En las comunicaciones, por ejemplo, Gmail revolucionó el correo electrónico con su avanzado sistema de filtrado de spam, mientras que Google Translate hizo posible traducir idiomas con creciente precisión. Tecnologías como el OCR (reconocimiento óptico de caracteres) facilitaron la digitalización de documentos físicos, y el reconocimiento de voz permitió el desarrollo de asistentes virtuales como Alexa, capaces de interactuar de manera fluida con los usuarios. Además, los sistemas de recomendación como los de Spotify y Netflix cambiaron la forma en que descubrimos música, películas y series, y demostraron cómo las técnicas dentro del campo de la IA pueden personalizar nuestras experiencias de consumo.</p>
-<p>En el transporte, comenzamos a vivir en la era de los vehículos que se manejan solos, mientras la robotización inteligente, antes solo reservada a las más sofisticadas industrias, llega a nuestros hogares con aspiradoras autónomas.</p>
-<p>El ejemplo más conocido de estos avances fue el lanzamiento, a finales de 2022, de ChatGPT, un modelo de lenguaje desarrollado por OpenAI. ChatGPT es un modelo que puede responder preguntas, mantener conversaciones y realizar tareas de escritura. Estos modelos funcionan tomando entrenamiento con enormes cantidades de textos para aprender patrones en el lenguaje humano. Gracias a esto, las novedades en el campo de la IA son casi diarias porque desde el lanzamiento de ChatGPT y proyectos equivalentes se ha desatado una carrera de innovación. Sin embargo, como veremos a continuación, su funcionamiento se basa en predicciones matemáticas, no en un entendimiento real del mundo.</p>
-
-<h3>La dosis de realidad</h3>
-<p>Relevar en detalle los más recientes avances en el campo de la IA condenaría a este texto a una rápida obsolescencia. Lo más astuto quizás sea ahora enfocarse en qué se puede esperar y qué no de los modelos basados en redes de neuronas simuladas. Como mencionamos más arriba, las técnicas de IA basadas en redes neuronales lo hacen sobre un modelo reducido de neurona.</p>
-<p>La inteligencia artificial general (AGI, es su sigla en inglés) es un tipo hipotético de IA capaz de realizar cualquier tarea intelectual que un ser humano pueda hacer, comprendiendo, aprendiendo y adaptándose de manera autónoma a diferentes contextos. Aún no se ha desarrollado y representa, también —con la misma euforia de los años 50— se hablaba de la llegada a la AGI. Los modelos actuales funcionan con un hambre insaciable de datos, hardware y energía eléctrica.</p>
-<p>En la ciencia, en particular la física, un modelo es una descripción de la realidad, corroborables, según el detalle de la descripción. Por ejemplo, para describir solamente el movimiento de la Tierra en la escala del sistema solar, usualmente basta con considerarla como un esferoide y extenso que gira sobre su eje y así sucesivamente, aumentando el detalle y capacidades del modelo.</p>
-<p>De qué hablamos cuando hablamos de neurona humana? La neurona es una célula principal del sistema nervioso, especializada en transmisoras eléctricas, gracias a la excitabilidad de su membrana. Conecta con otras neuronas o células, como las musculares, a través de sinapsis. Su tamaño es del orden de milímetro y su masa es del orden de 50 millonésimas de millonésima de gramo (Mota y Herculano-Houzel, 2014). A pesar de estos modestos números, se puede hoy simular un cerebro de forma realista en una computadora? La respuesta es que la simulación de un cerebro humano realista está por encima de las capacidades de cómputo actuales y del futuro previsible.</p>
-<p>El perceptrón, como contamos antes, es un modelo extremadamente simplificado de neurona (ver imagen 2) conocido como una neurona artificial, y es el abuelo de los modelos que se usan hoy en día. La idea es describir de manera simple como una neurona procesa señales eléctricas. Se muestra esquemáticamente en la imagen 1, y es algo que con pocos números e instrucciones es muy fácilmente implementable hoy día.</p>
-<p>Para hacer un modelo sencillo que toma pequeñas imágenes de números (del 0 al 9) escritos a mano y que logra decir el número escrito satisfactoriamente empleando un total de 894 neuronas artificiales, lo cual es muy fácilmente implementable hoy día. Es como si siguieran recetas de cocina sin saber realmente qué es comer. Aunque las computadoras pueden responder preguntas o crear imágenes, carecen de la capacidad para entender o pensar como lo hacemos nosotros.</p>
-<p>Así, se hace evidente la enorme diferencia esperable entre las propiedades emergentes de esos dos sistemas no sean las mismas. Dicho de otra manera: los sistemas complejos de neuronas reales interactuantes tienen como consecuencia estas propiedades que vemos en los humanos, a las que llamamos inteligencia. Esto no está limitado solo a lo fisiológico, los humanos desarrollan su comportamiento por interactuar con otros humanos y el entorno. Por el lado de la IA, tenemos redes interactuantes de representaciones simplificadas de neuronas.</p>
-<p>Resumiendo, la inteligencia artificial es admirable en la medida en que suplementa la inteligencia natural, es ridícula si la proponemos como modelo realista de ella, y peligrosa si la proponemos como su sustituto. Los computadores no piensan, pero pueden copiar los pensamientos —si son del tipo de los usados para entrenarlo, pero no observados previamente. Los computadores pueden imitar algunas acciones humanas, igual que hacen los chimpancés; a diferencia de estos, sin embargo, no inician por sí mismos esas imitaciones. Los computadores son procesadores de información.</p>
-<p>Como tales se supone que no desechan información (como hace todo el tiempo el cerebro de los primates) ni originan información (como hace el cerebro de los primates). Si fueran censores y creadores no nos podríamos fiar de ellos. Dicho de otro modo, en los computadores siempre valoramos la fiabilidad mientras que en los cerebros lo que valoramos frecuentemente es la falta de esa fiabilidad.</p>
-<p>Terminaremos tratando brevemente el problema de la inteligencia artificial. El pensamiento ha de ser solo una función de determinados sistemas neurales? Solo lo pueden hacer los animales dotados de sistemas neurales plásticos. Según la definición que hemos dado los computadores no piensan, ya que la programación de las instrucciones puede hacer que la máquina se dedique a calcular. Lo que es capaz de calcular es el sistema formado por el programador.</p>
-
-<h3>La mirada de la ciencia ficción</h3>
-<p>Hoy, la IA está transformando nuestra manera de vivir y trabajar, no tan dramáticamente como se temió cuando se lanzó ChatGPT. Al mismo tiempo, también está planteando grandes preguntas, aparentemente nuevas. Sin embargo, en su obra de ciencia ficción Asimov detalló muchos problemas actuales en la forma de cuentos y novelas sobre robots.</p>
-<p>Desde una etapa muy temprana, a Asimov le intereso el tema de la seguridad en esta tecnología ficticia (Asimov, 1942). Para evitar que los robots causaran problemas, creó un conjunto de reglas básicas de seguridad para cualquier herramienta: (1) Ser segura para un usuario, (2) Cumplir con su función salvo que se torne peligrosa y (3) Preservarse a sí misma salvo conflicto con las dos reglas anteriores.</p>
-<p>Las Tres Leyes de la Robótica de Asimov no son nada más que un resumen de reglas básicas de seguridad. La Ley Cero de la Robotica está más allá del alcance de este artículo. Estas leyes ayudaron a Asimov a plantear problemas que surgían en general cuando un humano cometía algún error de diseño, de uso o de abuso deliberado. Los robots de Asimov siempre se comportaron en su obra como seres racionales y benevolentes porque son inteligencias controladas: en general no tienen la capacidad de emitir juicios morales sobre sus usuarios.</p>
-<p>Un problema muy actual es quién es responsable en un accidente con un coche autónomo que se maneja sin control humano. Asimov lo resolvió en su obra haciendo que todos sus robots siempre sigan siendo propiedad de la empresa fabricante, y que la gente los tuviera solo en comodato. La empresa era la que absorbía los infrecuentes problemas por los fallos, por lo que siempre estaba tremendamente preocupada ante cualquier anomalía en el funcionamiento de sus unidades. Hoy en día, los ingenieros e informáticos enfrentan dilemas al diseñar sistemas como los autos autónomos, que deben tomar decisiones rápidas en situaciones críticas.</p>
-<p>La militarización de la IA es algo preocupante que está sucediendo de forma sostenida y silenciosa actualmente, porque por definición los usos deliberados en armas son éticamente reprobables. Para destacar el peligro de una verdadera AGI, Stephen Moffat en la serie de fantasía Doctor Who nos cuenta sobre "El Momento": un arma de destrucción masiva creada por los antiguos de Gallifrey, tan poderosa que su sistema operativo se volvió consciente (una AGI plena). Esto le otorgó la capacidad de emitir juicios morales sobre sus usuarios, lo que la volvió más que un arma, un juez, por lo que finalmente nadie se atrevió a usarla.</p>
-
-<h3>Más dilemas actuales</h3>
-<p>La IA está planteando preguntas y desafíos importantes. Por ejemplo:</p>
-<ul>
-<li><strong>La privacidad:</strong> muchas aplicaciones de IA recolectan datos personales. Esto genera dudas sobre cómo se usan estos datos y quién tiene acceso a ellos. Más aún, el entrenamiento de muchos modelos de IA se basa en grandes bases de datos de origen humano no siempre obtenidos con consentimiento de los autores.</li>
-<li><strong>El control:</strong> cómo asegurar que la IA sea usada para el bien y no para causar mal, así como las cosas que se pueden o no hacer en una jurisdicción. Los usos perversos de la IA pueden ser tan diversos como la maldad humana: desde campañas personalizadas para manipular información hasta vigilancia masiva de la población.</li>
-<li><strong>La ética:</strong> la IA debe tomar decisiones éticas en muchas situaciones. Pero ¿quién decide qué es lo correcto? Diseñar una máquina para que "haga lo correcto" es mucho más complicado de lo que parece.</li>
-<li><strong>La legislación:</strong> ¿es necesaria una legislación detallada sobre una tecnología que evoluciona día a día? ¿O es mejor una legislación general, enfocada más bien en los derechos de los usuarios? El marco legal es el que determina las responsabilidades y castigos cuando las cosas salen mal.</li>
-<li><strong>Energía e infraestructura:</strong> tanto el entrenamiento de los modelos actuales de IA como su despliegue en aplicaciones desde un centro de datos requiere de infraestructura energética y de conectividad. También hay preferencia por regiones frías para economizar en refrigeración de los servidores.</li>
-<li><strong>La pérdida de empleos:</strong> ¿qué pasará con quienes pierdan su trabajo? ¿Tendrán acceso a distintos empleos? La IA crea oportunidades para hacer cosas que antes solo podían ser realizadas por máquinas.</li>
-</ul>
-<p>Dado que es una industria internacional, ¿qué retorno se ofrece para la economía del país de radicación? ¿Es ponderado el impacto ambiental al decidir la radicación de estos centros en determinado lugar? ¿Se deben financiar obras o permitir que las realicen los privados?</p>
-
-<h3>Conclusiones</h3>
-<p>En resumen, la IA está cambiando el mundo de maneras que aún estamos tratando de entender. Es una herramienta poderosa, pero también plantea dilemas que debemos enfrentar con cuidado y responsabilidad. Al aprender sobre ella, podemos contribuir a que sea utilizada de manera justa y beneficiosa para todos. En este artículo se ha hecho un esfuerzo para demostrar que es posible plantear preguntas válidas sobre este fenómeno sin necesariamente tener un conocimiento técnico detallado del tema.</p>
-
-<h3>Referencias bibliográficas</h3>
-<p>Asimov, I. (1942). Runaround. Astounding Science Fiction, 29(1), 94-103.</p>
-<p>Asimov, I. (1983). More thinking about thinking. The Magazine of Fantasy & Science Fiction, 65(5), 131-141.</p>
-<p>Bunge, M. (1988). El problema mente-cerebro. Tecnos.</p>
-<p>Graubard, S. (1993). El nuevo debate sobre la inteligencia artificial. Gedisa Editorial.</p>
-<p>Mota, B. y Herculano-Houzel, S. (2014). All brains are made of this: a fundamental building block of brain matter with matching neuronal and glial masses. Frontiers in Neuroanatomy, 8.</p>
-<p>Russell, S. J. y Norvig, P. (2011). Inteligencia artificial: un enfoque moderno. Pearson Educación.</p>
+      <h2>Capítulo 3. Inteligencia artificial: la sociedad entre la realidad y la ciencia ficción</h2>
+<p class="first-of-section">La inteligencia artificial (IA) es una de las tecnologías más famosas de nuestro tiempo, pero también una de las más incomprendidas. Aunque se la asocia con innovaciones recientes y espectaculares avances como los grandes modelos de lenguaje o los vehículos autónomos, su historia es mucho más extensa y está marcada tanto por expectativas desmesuradas como por prolongados períodos de estancamiento. A caballo entre la ciencia y la ficción, la IA ha capturado la imaginación colectiva y generado debates sobre su impacto en el discurso público sobre la inteligencia artificial. El propósito es ofrecer una visión tanto de los avances concretos como de las ideas equivocadas que suelen acompañar a este tema.</p>
+<p>Consideremos la siguiente cita: "No es mi intención sorprenderlos ni conmocionarlos, pero la forma más sencilla en que puedo resumirlo es diciendo que ahora hay en el mundo máquinas que piensan, que aprenden y que crean. Además, su capacidad para hacer la gama de problemas que puedan resolver será igual a la gama a la que se ha aplicado la mente humana." Esta frase es del año 1958 (Graubard, 1993, p. 29) y es de uno de los pioneros del campo de la IA —que posteriormente recibió el Premio Nobel de Economía— Herbert A. Simon.</p>
+
+<h3>El largo camino de la inteligencia artificial</h3>
+<p>¿Por qué, dada la frase eufórica de Simon, no vivieron nuestros abuelos en un mundo lleno de inteligencias artificiales? Es solo en los últimos años que se escucha hablar cada vez más de la IA. Esta tecnología ahora parece estar en todas partes: en los teléfonos, en las aplicaciones que usamos, en los robots y hasta en las recomendaciones de series o música. Pero, aunque pueda parecer una novedad exclusiva del siglo XXI, la idea tiene una historia mucho más larga y no tiene un solo protagonista.</p>
+<p>Las etapas del desarrollo de la IA, que según Russell y Norvig (2011) pueden ser definidas considerando hitos y procesos, son las siguientes:</p>
+
+<h3>Gestación (1943 a 1955)</h3>
+<p>En esta etapa inicial se tomó como base la biología, en particular se desarrollaron modelos sencillos del comportamiento de las neuronas humanas. McCulloch y Walter Pitts son reconocidos como los autores del primer artículo sobre el modelo de neurona artificial (simulable) en 1943.</p>
+
+<h3>Nacimiento formal (1956)</h3>
+<p>Durante el verano de 1956, John McCarthy realizó un taller de dos meses en el Dartmouth College (Estados Unidos) con la finalidad de aumentar el interés de los investigadores de ese país en las temáticas de teoría de autómatas, redes neuronales y el estudio de la inteligencia. En este taller se acuñó el término "inteligencia artificial" para nombrar a la disciplina, basada desde entonces en la informática. Con reticencia se aceptó el término, que se mantiene como nombre hasta nuestros días. Queda manifiesta la intención desde el origen, de usar las computadoras para otras actividades diferentes al mero cálculo numérico: intentar duplicar capacidades humanas tales como el lenguaje, el aprendizaje y la creatividad.</p>
+<p>Con las técnicas de IA comienzan a desarrollarse toda clase de programas capaces de reaccionar de manera no exactamente prefijada. Estas implementaciones permitían resolver tareas tales como el razonamiento estructurado para la demostración de teoremas en geometría, la resolución de problemas de álgebra elemental, acomodar ciertos objetos o jugar a las damas en un nivel comparable al de un amateur.</p>
+
+<h3>Esperanzas y euforia (1952 a 1969)</h3>
+<p>En el campo de las redes neuronales, en 1957 Frank Rosenblatt implementó, con auspicio de la Marina estadounidense, el perceptrón, un modelo neuronal en redes aplicado a la visión. Corriendo inicialmente en una computadora y podía implicar a los circuitos analógicos específicos. Como referencia, recién en 1946 fue presentada la Electronic Numerical Integrator and Computer (ENIAC), considerada la primera computadora electrónica de uso general (programable), que pesaba 27 toneladas y ocupaba una gran habitación. En comparación, el teléfono celular moderno que llevamos en nuestro bolsillo tiene millones de veces más capacidad de cómputo que la ENIAC.</p>
+<p>Tras una conferencia de prensa brindada por Rosenblatt en julio de 1958 —que hoy consideraríamos una operación promocional— The New York Times reportó que la Marina reveló el embrión de una computadora electrónica que espera pueda caminar, hablar, ver, escribir, reproducirse y ser consciente de su existencia. Más adelante, los perceptrones podrán reconocer a las personas, llamarlas por sus nombres y traducir instantáneamente el habla en otro idioma.</p>
+
+<h3>Límites, estancamiento e "invierno" (1966 a 2000)</h3>
+<p>Los sistemas de la era anterior funcionaban bien en casos sencillos, pero fracasaban en tareas un poco más complicadas. Por ejemplo, al inicio de la carrera espacial, se creyó que sería relativamente fácil escalar estas técnicas para lograr la traducción automática de textos científicos rusos al inglés, pero dado que los sistemas no tenían información sobre los temas tratados, no lograban resolver las ambigüedades y las traducciones se volvían disparatadas.</p>
+<p>En el fondo, se subestimó la complejidad de las tareas: cualquier problema levemente más complicado que los elementales requería de un tiempo de cómputo descomunal (dentro de lo disponible en la época). En otras palabras, la inversión en equipamiento informático se hacía muy alta y lo que a cambio se obtenía en habilidades en estos sistemas era marginal. Esto llevó a que se retirara el generoso financiamiento que hubo en la etapa anterior, por lo que se concentraron los esfuerzos en los llamados sistemas expertos, una línea de investigación que se agotó y contribuyó a lo más gélido del llamado invierno de la IA hacia la década de 1980.</p>
+<p>Se suele considerar que las predicciones realizadas por los autores en este libro sobre las limitaciones de los modelos de perceptrón de Rosenblatt en redes fueron responsables de un cambio en la dirección de la investigación en IA en cuanto a la financiación. A partir de entonces, mermaron las innovaciones y solo progresaron algunas implementaciones de sistemas expertos (recomendaciones basadas en información previa), aplicados por ejemplo a bioquímica y medicina. A esta merma se la conoce como el primer "invierno" de la IA, y fue entre 1974 y 1980.</p>
+<p>Los sistemas expertos fueron adoptados paulatinamente por distintas industrias, a punto tal que casi todas las grandes compañías estadounidenses montaron su propia división de IA para implementar estos sistemas en busca de optimizar sus cadenas de producción y diseño, como una herramienta más. En esta época, desarrollaron su trabajo John J. Hopfield y Geoffrey Hinton, quienes recibieron el Premio Nobel de Física de 2024 "por descubrimientos en redes neuronales artificiales". Sin embargo, sobrevino un nuevo invierno aproximadamente entre 1987 y casi el año 2000.</p>
+
+<h3>Industrialización (2000 a la fecha)</h3>
+<p>En este período aumentó considerablemente la potencia de procesamiento disponible, al mismo tiempo que bajó el precio de la memoria. Esto permitió incursionar en primer lugar en la minería de datos, consistente en extraer información útil de grandes catálogos de información. Desde el año 2000, la inteligencia artificial ha tenido un impacto inicialmente discreto, pero siempre creciente en nuestra vida cotidiana a través de aplicaciones prácticas.</p>
+<p>En las comunicaciones, por ejemplo, Gmail revolucionó el correo electrónico con su avanzado sistema de filtrado de spam, mientras que Google Translate hizo posible traducir idiomas con creciente precisión. Tecnologías como el OCR (reconocimiento óptico de caracteres) facilitaron la digitalización de documentos físicos, y el reconocimiento de voz permitió el desarrollo de asistentes virtuales como Alexa, capaces de interactuar de manera fluida con los usuarios. Además, los sistemas de recomendación como los de Spotify y Netflix cambiaron la forma en que descubrimos música, películas y series, y demostraron cómo las técnicas dentro del campo de la IA pueden personalizar nuestras experiencias de consumo.</p>
+<p>En el transporte, comenzamos a vivir en la era de los vehículos que se manejan solos, mientras la robotización inteligente, antes solo reservada a las más sofisticadas industrias, llega a nuestros hogares con aspiradoras autónomas.</p>
+<p>El ejemplo más conocido de estos avances fue el lanzamiento, a finales de 2022, de ChatGPT, un modelo de lenguaje desarrollado por OpenAI. ChatGPT es un modelo que puede responder preguntas, mantener conversaciones y realizar tareas de escritura. Estos modelos funcionan tomando entrenamiento con enormes cantidades de textos para aprender patrones en el lenguaje humano. Gracias a esto, las novedades en el campo de la IA son casi diarias porque desde el lanzamiento de ChatGPT y proyectos equivalentes se ha desatado una carrera de innovación. Sin embargo, como veremos a continuación, su funcionamiento se basa en predicciones matemáticas, no en un entendimiento real del mundo.</p>
+
+<h3>La dosis de realidad</h3>
+<p>Relevar en detalle los más recientes avances en el campo de la IA condenaría a este texto a una rápida obsolescencia. Lo más astuto quizás sea ahora enfocarse en qué se puede esperar y qué no de los modelos basados en redes de neuronas simuladas. Como mencionamos más arriba, las técnicas de IA basadas en redes neuronales lo hacen sobre un modelo reducido de neurona.</p>
+<p>La inteligencia artificial general (AGI, es su sigla en inglés) es un tipo hipotético de IA capaz de realizar cualquier tarea intelectual que un ser humano pueda hacer, comprendiendo, aprendiendo y adaptándose de manera autónoma a diferentes contextos. Aún no se ha desarrollado y representa, también —con la misma euforia de los años 50— se hablaba de la llegada a la AGI. Los modelos actuales funcionan con un hambre insaciable de datos, hardware y energía eléctrica.</p>
+<p>En la ciencia, en particular la física, un modelo es una descripción de la realidad, corroborables, según el detalle de la descripción. Por ejemplo, para describir solamente el movimiento de la Tierra en la escala del sistema solar, usualmente basta con considerarla como un esferoide y extenso que gira sobre su eje y así sucesivamente, aumentando el detalle y capacidades del modelo.</p>
+<p>De qué hablamos cuando hablamos de neurona humana? La neurona es una célula principal del sistema nervioso, especializada en transmisoras eléctricas, gracias a la excitabilidad de su membrana. Conecta con otras neuronas o células, como las musculares, a través de sinapsis. Su tamaño es del orden de milímetro y su masa es del orden de 50 millonésimas de millonésima de gramo (Mota y Herculano-Houzel, 2014). A pesar de estos modestos números, se puede hoy simular un cerebro de forma realista en una computadora? La respuesta es que la simulación de un cerebro humano realista está por encima de las capacidades de cómputo actuales y del futuro previsible.</p>
+<p>El perceptrón, como contamos antes, es un modelo extremadamente simplificado de neurona (ver imagen 2) conocido como una neurona artificial, y es el abuelo de los modelos que se usan hoy en día. La idea es describir de manera simple como una neurona procesa señales eléctricas. Se muestra esquemáticamente en la imagen 1, y es algo que con pocos números e instrucciones es muy fácilmente implementable hoy día.</p>
+<p>Para hacer un modelo sencillo que toma pequeñas imágenes de números (del 0 al 9) escritos a mano y que logra decir el número escrito satisfactoriamente empleando un total de 894 neuronas artificiales, lo cual es muy fácilmente implementable hoy día. Es como si siguieran recetas de cocina sin saber realmente qué es comer. Aunque las computadoras pueden responder preguntas o crear imágenes, carecen de la capacidad para entender o pensar como lo hacemos nosotros.</p>
+<p>Así, se hace evidente la enorme diferencia esperable entre las propiedades emergentes de esos dos sistemas no sean las mismas. Dicho de otra manera: los sistemas complejos de neuronas reales interactuantes tienen como consecuencia estas propiedades que vemos en los humanos, a las que llamamos inteligencia. Esto no está limitado solo a lo fisiológico, los humanos desarrollan su comportamiento por interactuar con otros humanos y el entorno. Por el lado de la IA, tenemos redes interactuantes de representaciones simplificadas de neuronas.</p>
+<p>Resumiendo, la inteligencia artificial es admirable en la medida en que suplementa la inteligencia natural, es ridícula si la proponemos como modelo realista de ella, y peligrosa si la proponemos como su sustituto. Los computadores no piensan, pero pueden copiar los pensamientos —si son del tipo de los usados para entrenarlo, pero no observados previamente. Los computadores pueden imitar algunas acciones humanas, igual que hacen los chimpancés; a diferencia de estos, sin embargo, no inician por sí mismos esas imitaciones. Los computadores son procesadores de información.</p>
+<p>Como tales se supone que no desechan información (como hace todo el tiempo el cerebro de los primates) ni originan información (como hace el cerebro de los primates). Si fueran censores y creadores no nos podríamos fiar de ellos. Dicho de otro modo, en los computadores siempre valoramos la fiabilidad mientras que en los cerebros lo que valoramos frecuentemente es la falta de esa fiabilidad.</p>
+<p>Terminaremos tratando brevemente el problema de la inteligencia artificial. El pensamiento ha de ser solo una función de determinados sistemas neurales? Solo lo pueden hacer los animales dotados de sistemas neurales plásticos. Según la definición que hemos dado los computadores no piensan, ya que la programación de las instrucciones puede hacer que la máquina se dedique a calcular. Lo que es capaz de calcular es el sistema formado por el programador.</p>
+
+<h3>La mirada de la ciencia ficción</h3>
+<p>Hoy, la IA está transformando nuestra manera de vivir y trabajar, no tan dramáticamente como se temió cuando se lanzó ChatGPT. Al mismo tiempo, también está planteando grandes preguntas, aparentemente nuevas. Sin embargo, en su obra de ciencia ficción Asimov detalló muchos problemas actuales en la forma de cuentos y novelas sobre robots.</p>
+<p>Desde una etapa muy temprana, a Asimov le intereso el tema de la seguridad en esta tecnología ficticia (Asimov, 1942). Para evitar que los robots causaran problemas, creó un conjunto de reglas básicas de seguridad para cualquier herramienta: (1) Ser segura para un usuario, (2) Cumplir con su función salvo que se torne peligrosa y (3) Preservarse a sí misma salvo conflicto con las dos reglas anteriores.</p>
+<p>Las Tres Leyes de la Robótica de Asimov no son nada más que un resumen de reglas básicas de seguridad. La Ley Cero de la Robotica está más allá del alcance de este artículo. Estas leyes ayudaron a Asimov a plantear problemas que surgían en general cuando un humano cometía algún error de diseño, de uso o de abuso deliberado. Los robots de Asimov siempre se comportaron en su obra como seres racionales y benevolentes porque son inteligencias controladas: en general no tienen la capacidad de emitir juicios morales sobre sus usuarios.</p>
+<p>Un problema muy actual es quién es responsable en un accidente con un coche autónomo que se maneja sin control humano. Asimov lo resolvió en su obra haciendo que todos sus robots siempre sigan siendo propiedad de la empresa fabricante, y que la gente los tuviera solo en comodato. La empresa era la que absorbía los infrecuentes problemas por los fallos, por lo que siempre estaba tremendamente preocupada ante cualquier anomalía en el funcionamiento de sus unidades. Hoy en día, los ingenieros e informáticos enfrentan dilemas al diseñar sistemas como los autos autónomos, que deben tomar decisiones rápidas en situaciones críticas.</p>
+<p>La militarización de la IA es algo preocupante que está sucediendo de forma sostenida y silenciosa actualmente, porque por definición los usos deliberados en armas son éticamente reprobables. Para destacar el peligro de una verdadera AGI, Stephen Moffat en la serie de fantasía Doctor Who nos cuenta sobre "El Momento": un arma de destrucción masiva creada por los antiguos de Gallifrey, tan poderosa que su sistema operativo se volvió consciente (una AGI plena). Esto le otorgó la capacidad de emitir juicios morales sobre sus usuarios, lo que la volvió más que un arma, un juez, por lo que finalmente nadie se atrevió a usarla.</p>
+
+<h3>Más dilemas actuales</h3>
+<p>La IA está planteando preguntas y desafíos importantes. Por ejemplo:</p>
+<ul>
+<li><strong>La privacidad:</strong> muchas aplicaciones de IA recolectan datos personales. Esto genera dudas sobre cómo se usan estos datos y quién tiene acceso a ellos. Más aún, el entrenamiento de muchos modelos de IA se basa en grandes bases de datos de origen humano no siempre obtenidos con consentimiento de los autores.</li>
+<li><strong>El control:</strong> cómo asegurar que la IA sea usada para el bien y no para causar mal, así como las cosas que se pueden o no hacer en una jurisdicción. Los usos perversos de la IA pueden ser tan diversos como la maldad humana: desde campañas personalizadas para manipular información hasta vigilancia masiva de la población.</li>
+<li><strong>La ética:</strong> la IA debe tomar decisiones éticas en muchas situaciones. Pero ¿quién decide qué es lo correcto? Diseñar una máquina para que "haga lo correcto" es mucho más complicado de lo que parece.</li>
+<li><strong>La legislación:</strong> ¿es necesaria una legislación detallada sobre una tecnología que evoluciona día a día? ¿O es mejor una legislación general, enfocada más bien en los derechos de los usuarios? El marco legal es el que determina las responsabilidades y castigos cuando las cosas salen mal.</li>
+<li><strong>Energía e infraestructura:</strong> tanto el entrenamiento de los modelos actuales de IA como su despliegue en aplicaciones desde un centro de datos requiere de infraestructura energética y de conectividad. También hay preferencia por regiones frías para economizar en refrigeración de los servidores.</li>
+<li><strong>La pérdida de empleos:</strong> ¿qué pasará con quienes pierdan su trabajo? ¿Tendrán acceso a distintos empleos? La IA crea oportunidades para hacer cosas que antes solo podían ser realizadas por máquinas.</li>
+</ul>
+<p>Dado que es una industria internacional, ¿qué retorno se ofrece para la economía del país de radicación? ¿Es ponderado el impacto ambiental al decidir la radicación de estos centros en determinado lugar? ¿Se deben financiar obras o permitir que las realicen los privados?</p>
+
+<h3>Conclusiones</h3>
+<p>En resumen, la IA está cambiando el mundo de maneras que aún estamos tratando de entender. Es una herramienta poderosa, pero también plantea dilemas que debemos enfrentar con cuidado y responsabilidad. Al aprender sobre ella, podemos contribuir a que sea utilizada de manera justa y beneficiosa para todos. En este artículo se ha hecho un esfuerzo para demostrar que es posible plantear preguntas válidas sobre este fenómeno sin necesariamente tener un conocimiento técnico detallado del tema.</p>
+
+<h3>Referencias bibliográficas</h3>
+<p>Asimov, I. (1942). Runaround. Astounding Science Fiction, 29(1), 94-103.</p>
+<p>Asimov, I. (1983). More thinking about thinking. The Magazine of Fantasy & Science Fiction, 65(5), 131-141.</p>
+<p>Bunge, M. (1988). El problema mente-cerebro. Tecnos.</p>
+<p>Graubard, S. (1993). El nuevo debate sobre la inteligencia artificial. Gedisa Editorial.</p>
+<p>Mota, B. y Herculano-Houzel, S. (2014). All brains are made of this: a fundamental building block of brain matter with matching neuronal and glial masses. Frontiers in Neuroanatomy, 8.</p>
+<p>Russell, S. J. y Norvig, P. (2011). Inteligencia artificial: un enfoque moderno. Pearson Educación.</p>
 <p>United Press International. (8 de julio de 1958). New Navy device learns by doing: psychologist shows embryo of computer designed to read and grow wiser. The New York Times.</p>
     </div>
+    
 
     <footer>
       ICSE 024 — Cátedra Pedrosa — UBA XXI
     </footer>
   </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn">↑</button>
+
+  <!-- Reading complete toast -->
+  <div class="reading-toast" id="readingToast">¡Lectura completada!</div>
+
+  <script src="../reader.js"></script>
 </body>
 </html>
-
-
